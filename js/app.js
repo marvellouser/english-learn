@@ -9,7 +9,7 @@
 //
 // EXTENSION POINTS for later tasks are marked with `// [EXTENSION POINT]`.
 
-import { BASE_PATH, DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT } from './config.js';
+import { BASE_PATH, DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT, DATA_VERSION } from './config.js';
 import { openDB, getSetting, putSetting, importWords } from './db.js';
 import { initReminders } from './reminder.js';
 import makeStudyView from './views/study.js';
@@ -69,8 +69,11 @@ export function mount(viewFn) {
 // 'home' is the default landing view (empty hash -> home). 'settings' renders
 // the settings/backup view. Both come from their dedicated view modules.
 //
-// 'study' segment 'mistakes' is special: '#/study/mistakes' enters the 错题本
-// review mode (source='mistakes'), NOT a tag filter. Any other segment is a tag.
+// 'study' segments 'mistakes' and 'extra' are special, NOT tag filters:
+//   '#/study/mistakes' -> 错题本 review mode (source='mistakes').
+//   '#/study/extra'    -> "继续学习更多新词" mode (source='extra'), studying unseen
+//                         new words beyond the daily cap.
+// Any other segment is treated as a tag filter (e.g. '#/study/programming').
 const routes = {
   '': makeHomeView(),
   home: makeHomeView(),
@@ -78,7 +81,9 @@ const routes = {
   study: (params) =>
     params[0] === 'mistakes'
       ? makeStudyView({ source: 'mistakes' })
-      : makeStudyView({ tagFilter: params[0] || null }),
+      : params[0] === 'extra'
+        ? makeStudyView({ source: 'extra' })
+        : makeStudyView({ tagFilter: params[0] || null }),
   // '#/words'            -> filter = 'all'
   // '#/words/learned'    -> filter = 'learned' (also new/due/programming or any tag)
   words: (params) => makeWordListView({ filter: params[0] || 'all' }),
@@ -178,36 +183,56 @@ function renderBottomNav(activeName) {
 // ---------------------------------------------------------------------------
 
 /**
- * Open the database and, on first launch only, import the bundled vocabulary
- * into IndexedDB. Idempotent: guarded by the 'seeded' setting so reloads do
- * not re-import. Failures are logged but do not crash the app shell.
+ * Open the database and import the bundled vocabulary into IndexedDB.
+ *
+ * Runs on first launch AND whenever the bundled dataset version (DATA_VERSION)
+ * differs from what was last imported — so an already-seeded install picks up
+ * an expanded/updated dataset (e.g. 441 -> 7500 words, new `freq` field,
+ * enriched examples) instead of being stuck on the old data.
+ *
+ * The re-import is NON-DESTRUCTIVE: importWords() overwrites word records
+ * (updating definitions/freq/examples/root_affix) and creates review state
+ * only for words that don't have one yet, so existing learning progress is
+ * preserved. Failures are logged but do not crash the app shell.
  */
 async function initData() {
   try {
     await openDB();
 
-    const seeded = await getSetting('seeded', false);
-    if (seeded === true) {
+    const firstRun = (await getSetting('seeded', false)) !== true;
+    const storedDataVersion = await getSetting('dataVersion', null);
+    const needsSync = firstRun || storedDataVersion !== DATA_VERSION;
+    if (!needsSync) {
       return;
     }
 
-    const res = await fetch('./data/seed-words.json');
+    const res = await fetch('./data/seed-words.json', { cache: 'no-cache' });
     if (!res.ok) {
       throw new Error(`seed fetch failed: ${res.status} ${res.statusText}`);
     }
     const seed = await res.json();
 
-    await importWords(seed, { source: 'seed' });
+    // Updates existing word records + adds new words; preserves review state.
+    const result = await importWords(seed, { source: 'seed' });
+    console.info(
+      `[app] vocabulary synced to ${DATA_VERSION}:`,
+      result || `${seed.length} words`,
+    );
 
-    // Persist defaults so later tasks (study/settings) have a baseline.
-    await putSetting('dailyNewLimit', DEFAULT_DAILY_NEW_LIMIT);
-    await putSetting('dailyReviewLimit', DEFAULT_DAILY_REVIEW_LIMIT);
-    await putSetting('streak', 0);
-    // Pronunciation is OFF by default (phonetic-only); opt-in via settings.
-    await putSetting('ttsEnabled', false);
+    // Persist baseline defaults on the very first run only (don't clobber
+    // user-changed settings on later re-syncs).
+    if (firstRun) {
+      await putSetting('dailyNewLimit', DEFAULT_DAILY_NEW_LIMIT);
+      await putSetting('dailyReviewLimit', DEFAULT_DAILY_REVIEW_LIMIT);
+      await putSetting('streak', 0);
+      // Pronunciation is OFF by default (phonetic-only); opt-in via settings.
+      await putSetting('ttsEnabled', false);
+    }
 
-    // Mark seeded last, so an interrupted run retries on next launch.
+    // Mark seeded + record the synced data version last, so an interrupted
+    // run retries on next launch.
     await putSetting('seeded', true);
+    await putSetting('dataVersion', DATA_VERSION);
   } catch (err) {
     console.error('[app] data init/seed failed:', err);
   }

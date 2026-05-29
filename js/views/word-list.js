@@ -12,18 +12,28 @@
 // layer; this module only loads + renders DOM. Pure, theme-consistent markup.
 
 import { today, getAllWords, getAllReviewState } from '../db.js';
+import { difficultyOf, DIFFICULTY_LABELS } from '../srs.js';
 import { navigate } from '../app.js';
+import { renderExampleItems, renderDefWithPos } from './study.js';
 
 const PROGRAMMING_TAG = 'programming';
 
+// Difficulty filter keys -> their tier (used so #/words/easy|medium|hard work as
+// difficulty filters). Keys are kept distinct from status filters.
+const DIFFICULTY_FILTERS = { easy: 'easy', medium: 'medium', hard: 'hard' };
+
 // Built-in status filters (in addition to any raw tag name like 'cet4').
-// key matches the URL segment; label is the chip text.
+// key matches the URL segment; label is the chip text. The trailing three are
+// difficulty filters (#/words/easy|medium|hard).
 const FILTERS = [
   { key: 'all', label: '全部' },
   { key: 'learned', label: '已学' },
   { key: 'new', label: '未学' },
   { key: 'due', label: '待复习' },
   { key: 'programming', label: '编程' },
+  { key: 'easy', label: DIFFICULTY_LABELS.easy },
+  { key: 'medium', label: DIFFICULTY_LABELS.medium },
+  { key: 'hard', label: DIFFICULTY_LABELS.hard },
 ];
 const FILTER_KEYS = new Set(FILTERS.map((f) => f.key));
 
@@ -129,6 +139,11 @@ export async function renderWordList(root, { filter = 'all' } = {}) {
         return isDue(entry.state, todayISO);
       case 'programming':
         return isProgramming(entry.word);
+      case 'easy':
+      case 'medium':
+      case 'hard':
+        // Difficulty filters (#/words/easy|medium|hard).
+        return difficultyOf(entry.word) === DIFFICULTY_FILTERS[activeFilter];
       default: {
         // Treat an unknown filter as a tag name match.
         const tags = Array.isArray(entry.word.tags) ? entry.word.tags : [];
@@ -228,15 +243,14 @@ export async function renderWordList(root, { filter = 'all' } = {}) {
         const examples = Array.isArray(w.examples) ? w.examples : [];
         const tags = Array.isArray(w.tags) ? w.tags : [];
 
+        const exampleItems = renderExampleItems(examples);
         const detailHtml = open
           ? `
             <div class="wordlist-detail">
-              ${w.def_en ? `<p class="wordlist-def-en">${esc(w.def_en)}</p>` : ''}
+              ${w.def_en ? `<p class="wordlist-def-en">${renderDefWithPos(w.def_en)}</p>` : ''}
               ${
-                examples.length
-                  ? `<ul class="wordlist-examples">${examples
-                      .map((ex) => `<li>${esc(ex)}</li>`)
-                      .join('')}</ul>`
+                exampleItems
+                  ? `<ul class="wordlist-examples">${exampleItems}</ul>`
                   : ''
               }
               ${
@@ -257,15 +271,21 @@ export async function renderWordList(root, { filter = 'all' } = {}) {
             </div>`
           : '';
 
+        const diff = difficultyOf(w);
+        const diffBadge = `<span class="diff-badge diff-${diff}">${esc(DIFFICULTY_LABELS[diff])}</span>`;
+
         return `
           <div class="wordlist-row${open ? ' is-open' : ''}">
             <button class="wordlist-row-head" type="button" data-toggle="${esc(w.id)}"
                     aria-expanded="${open ? 'true' : 'false'}">
               <span class="wordlist-row-main">
-                <span class="wordlist-row-word">${esc(w.word)}</span>
+                <span class="wordlist-row-word-line">
+                  <span class="wordlist-row-word">${esc(w.word)}</span>
+                  ${diffBadge}
+                </span>
                 ${w.phonetic ? `<span class="wordlist-row-phonetic">${esc(w.phonetic)}</span>` : ''}
               </span>
-              <span class="wordlist-row-def">${esc(w.def_zh)}</span>
+              <span class="wordlist-row-def">${renderDefWithPos(w.def_zh)}</span>
             </button>
             ${detailHtml}
           </div>`;

@@ -14,6 +14,12 @@ import {
   importData,
 } from '../settings.js';
 import { DEFAULT_DAILY_NEW_LIMIT } from '../config.js';
+import {
+  DIFFICULTY_THRESHOLDS,
+  DIFFICULTY_LABELS,
+  DEFAULT_DIFFICULTY_MIX,
+  normalizeDifficultyMix,
+} from '../srs.js';
 import { navigate } from '../app.js';
 
 /**
@@ -66,6 +72,11 @@ export async function renderSettings(root) {
     ? Number(settings.dailyNewLimit)
     : DEFAULT_DAILY_NEW_LIMIT;
   const ttsEnabled = settings.ttsEnabled === true;
+
+  // Daily difficulty mix (validated/normalized by getSettings; fall back to the
+  // default 20/50/30 defensively).
+  const mix = normalizeDifficultyMix(settings.difficultyMix || DEFAULT_DIFFICULTY_MIX);
+  const mixTotal = mix.easy + mix.medium + mix.hard;
 
   // Study-plan / reminder state (defaults applied in getSettings).
   // WEEKDAY CONVENTION: studyDays uses JS Date.getDay() indexes (0=Sun..6=Sat).
@@ -121,6 +132,48 @@ export async function renderSettings(root) {
                data-field="ttsEnabled" aria-label="朗读发音"${ttsEnabled ? ' checked' : ''} />
       </label>
       <p class="settings-hint muted">默认关闭，仅显示音标。开启后学习卡片显示朗读按钮（系统语音音质有限）。</p>
+    </section>
+
+    <section class="card settings-section">
+      <h2 class="settings-heading">每日难度配比</h2>
+      <p class="settings-hint muted">设置每天引入新词时三个难度的比例，合计应为 100%。某档学完了会自动从其它档补足，不浪费当日名额。</p>
+
+      <div class="diffmix-grid" data-region="diffmix">
+        <label class="diffmix-field">
+          <span class="diffmix-label"><span class="diff-badge diff-easy">${esc(DIFFICULTY_LABELS.easy)}</span></span>
+          <span class="diffmix-input-wrap">
+            <input class="settings-input diffmix-input" type="number" inputmode="numeric"
+                   min="0" max="100" step="1" value="${esc(mix.easy)}"
+                   data-mix="easy" aria-label="简单百分比" />
+            <span class="diffmix-pct">%</span>
+          </span>
+        </label>
+        <label class="diffmix-field">
+          <span class="diffmix-label"><span class="diff-badge diff-medium">${esc(DIFFICULTY_LABELS.medium)}</span></span>
+          <span class="diffmix-input-wrap">
+            <input class="settings-input diffmix-input" type="number" inputmode="numeric"
+                   min="0" max="100" step="1" value="${esc(mix.medium)}"
+                   data-mix="medium" aria-label="中等百分比" />
+            <span class="diffmix-pct">%</span>
+          </span>
+        </label>
+        <label class="diffmix-field">
+          <span class="diffmix-label"><span class="diff-badge diff-hard">${esc(DIFFICULTY_LABELS.hard)}</span></span>
+          <span class="diffmix-input-wrap">
+            <input class="settings-input diffmix-input" type="number" inputmode="numeric"
+                   min="0" max="100" step="1" value="${esc(mix.hard)}"
+                   data-mix="hard" aria-label="困难百分比" />
+            <span class="diffmix-pct">%</span>
+          </span>
+        </label>
+      </div>
+
+      <p class="settings-hint diffmix-total" data-region="diffmix-total">合计 ${esc(mixTotal)}%</p>
+      <p class="settings-hint muted">简单=最常用 ${esc(DIFFICULTY_THRESHOLDS.easyMax)} 词内 · 中等=${esc(
+        DIFFICULTY_THRESHOLDS.easyMax + 1
+      )}–${esc(DIFFICULTY_THRESHOLDS.mediumMax)} · 困难=${esc(
+        DIFFICULTY_THRESHOLDS.mediumMax
+      )} 名以外/生僻词</p>
     </section>
 
     <section class="card settings-section">
@@ -213,6 +266,60 @@ function wire(root) {
         feedback('保存失败，请重试。', 'error');
       }
     });
+  }
+
+  // --- Daily difficulty mix ----------------------------------------------
+  // Three percentage inputs with a live "合计 N%" indicator. On change we
+  // normalize the trio to sum exactly 100 (scaling), persist difficultyMix, and
+  // reflect the normalized values back into the inputs.
+  const mixInputs = Array.from(root.querySelectorAll('[data-mix]'));
+  const mixTotalEl = root.querySelector('[data-region="diffmix-total"]');
+
+  /** Read the current three inputs as raw non-negative numbers (NaN -> 0). */
+  function readMixInputs() {
+    const out = { easy: 0, medium: 0, hard: 0 };
+    for (const el of mixInputs) {
+      const tier = el.dataset.mix;
+      const n = Number(el.value);
+      out[tier] = Number.isFinite(n) && n >= 0 ? n : 0;
+    }
+    return out;
+  }
+
+  /** Update the live "合计 N%" indicator from the raw input values. */
+  function refreshMixTotal() {
+    if (!mixTotalEl) return;
+    const raw = readMixInputs();
+    const total = raw.easy + raw.medium + raw.hard;
+    mixTotalEl.textContent = `合计 ${total}%`;
+    mixTotalEl.classList.toggle('diffmix-total-off', total !== 100);
+  }
+
+  if (mixInputs.length) {
+    mixInputs.forEach((el) => {
+      // Live total as the user types.
+      el.addEventListener('input', refreshMixTotal);
+      // Persist on change: normalize to sum 100 and write back.
+      el.addEventListener('change', async () => {
+        const normalized = normalizeDifficultyMix(readMixInputs());
+        // Reflect the normalized trio back into the inputs.
+        for (const inp of mixInputs) {
+          inp.value = String(normalized[inp.dataset.mix]);
+        }
+        refreshMixTotal();
+        try {
+          await updateSetting('difficultyMix', normalized);
+          feedback(
+            `已保存难度配比：简单 ${normalized.easy}% · 中等 ${normalized.medium}% · 困难 ${normalized.hard}%`,
+            'ok'
+          );
+        } catch (err) {
+          console.error('[settings] failed to save difficultyMix:', err);
+          feedback('保存失败，请重试。', 'error');
+        }
+      });
+    });
+    refreshMixTotal();
   }
 
   // Pronunciation toggle (ttsEnabled): persist on change.

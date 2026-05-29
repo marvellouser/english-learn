@@ -30,6 +30,87 @@
 export const MIN_EASE = 1.3;
 export const INITIAL_EASE = 2.5;
 
+// ---------------------------------------------------------------------------
+// Difficulty model (PURE; derived from the per-word COCA frequency rank `freq`)
+// ---------------------------------------------------------------------------
+
+// Frequency-rank cutoffs defining the 3 difficulty tiers. `freq` is the word's
+// COCA rank (1 = most common). The boundaries are inclusive on the upper edge:
+//   easy   : 1 .. easyMax            (the most common words)
+//   medium : easyMax+1 .. mediumMax  (mid-frequency words)
+//   hard   : > mediumMax, OR freq missing/0 (unranked / rare / specialized)
+export const DIFFICULTY_THRESHOLDS = { easyMax: 2000, mediumMax: 5000 };
+
+// Localized labels for the three difficulty tiers (Chinese UI).
+export const DIFFICULTY_LABELS = { easy: '简单', medium: '中等', hard: '困难' };
+
+// Default daily new-word difficulty mix (percentages summing to 100). Used as
+// the fallback when settings omit / supply an invalid difficultyMix.
+export const DEFAULT_DIFFICULTY_MIX = { easy: 20, medium: 50, hard: 30 };
+
+/**
+ * Classify a word into a difficulty tier from its COCA frequency rank `freq`.
+ * A numeric, positive freq within easyMax is 'easy'; within mediumMax is
+ * 'medium'; anything beyond mediumMax is 'hard'. A missing / zero / non-positive
+ * freq means unranked (rare / specialized) and is treated as 'hard'.
+ *
+ * @param {{freq?:number}} word
+ * @returns {('easy'|'medium'|'hard')}
+ */
+export function difficultyOf(word) {
+  const f = word && typeof word.freq === 'number' ? word.freq : 0;
+  if (f >= 1 && f <= DIFFICULTY_THRESHOLDS.easyMax) return 'easy';
+  if (f > DIFFICULTY_THRESHOLDS.easyMax && f <= DIFFICULTY_THRESHOLDS.mediumMax) return 'medium';
+  // f > mediumMax OR missing / 0 / non-positive -> hard (rare / unranked).
+  return 'hard';
+}
+
+/**
+ * Validate + normalize a difficulty-mix object to whole-number percentages that
+ * sum to exactly 100. Invalid / partial input falls back to the default mix.
+ * The normalization scales each tier proportionally, then fixes any rounding
+ * drift by absorbing it into the largest tier so the three values always sum to
+ * 100 (and never go negative).
+ *
+ * @param {*} mix - candidate { easy, medium, hard } (percentages)
+ * @returns {{easy:number, medium:number, hard:number}} normalized to sum 100
+ */
+export function normalizeDifficultyMix(mix) {
+  const pick = (v) => {
+    const n = Number(v);
+    return Number.isFinite(n) && n >= 0 ? n : NaN;
+  };
+  let e = mix ? pick(mix.easy) : NaN;
+  let m = mix ? pick(mix.medium) : NaN;
+  let h = mix ? pick(mix.hard) : NaN;
+
+  // Any invalid tier, or an all-zero total, falls back to the default mix.
+  if (Number.isNaN(e) || Number.isNaN(m) || Number.isNaN(h)) {
+    return { ...DEFAULT_DIFFICULTY_MIX };
+  }
+  const total = e + m + h;
+  if (total <= 0) {
+    return { ...DEFAULT_DIFFICULTY_MIX };
+  }
+
+  // Scale to 100 and round; absorb rounding drift into the largest tier.
+  let re = Math.round((e / total) * 100);
+  let rm = Math.round((m / total) * 100);
+  let rh = Math.round((h / total) * 100);
+  const drift = 100 - (re + rm + rh);
+  if (drift !== 0) {
+    // Add the drift to whichever tier is currently largest (stable: easy>med>hard).
+    if (re >= rm && re >= rh) re += drift;
+    else if (rm >= rh) rm += drift;
+    else rh += drift;
+  }
+  // Guard against a negative produced by a large negative drift on a tiny tier.
+  re = Math.max(0, re);
+  rm = Math.max(0, rm);
+  rh = Math.max(0, rh);
+  return { easy: re, medium: rm, hard: rh };
+}
+
 // Default daily caps (used as fallbacks when settings omit them). These match
 // config.js: DEFAULT_DAILY_NEW_LIMIT = 15, DEFAULT_DAILY_REVIEW_LIMIT = null.
 export const DEFAULT_DAILY_NEW_LIMIT = 15;
@@ -320,6 +401,134 @@ function normalizeCap(value) {
 }
 
 /**
+ * Build the word index + tag-scope predicate shared by the queue builders.
+ * @param {Array<object>} words
+ * @param {string|null} tagFilter
+ * @returns {{wordById: Map<string,object>, inScope: (id:string)=>boolean}}
+ */
+function buildScope(words, tagFilter) {
+  const wordById = new Map();
+  let allowedIds = null;
+  if (tagFilter != null && tagFilter !== '') {
+    allowedIds = new Set();
+  }
+  for (const w of words) {
+    if (!w || typeof w.id !== 'string') continue;
+    wordById.set(w.id, w);
+    if (allowedIds) {
+      const tags = Array.isArray(w.tags) ? w.tags : [];
+      if (tags.includes(tagFilter)) allowedIds.add(w.id);
+    }
+  }
+  const inScope = (id) => wordById.has(id) && (allowedIds === null || allowedIds.has(id));
+  return { wordById, inScope };
+}
+
+/**
+ * Stable freq-asc comparator (then tag tier, then day-stable hash, then id) used
+ * to order NEW candidates. Shared by both queue builders so their ordering is
+ * identical.
+ * @param {Map<string,object>} wordById
+ * @param {string} today
+ * @returns {(a:{id:string}, b:{id:string}) => number}
+ */
+function newCardComparator(wordById, today) {
+  return (a, b) => {
+    const wa = wordById.get(a.id);
+    const wb = wordById.get(b.id);
+    const fa = freqRank(wa);
+    const fb = freqRank(wb);
+    if (fa !== fb) return fa - fb;
+    const ra = tierRank(wa);
+    const rb = tierRank(wb);
+    if (ra !== rb) return ra - rb;
+    const ha = stableHash(`${a.id}|${today}`);
+    const hb = stableHash(`${b.id}|${today}`);
+    if (ha !== hb) return ha - hb;
+    return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+  };
+}
+
+/**
+ * Compose up to `budget` NEW cards from freq-ordered candidates honoring the
+ * difficulty mix (with cross-tier backfill), then re-sort the picked set by
+ * freq-asc for a smooth session. PURE: returns a NEW array of states.
+ *
+ * The per-tier whole-day targets come from `mix` scaled to `targetN`; the
+ * per-tier `introduced` counts reduce each tier's remaining quota (resume
+ * support); the running total never exceeds `budget`. buildDailyQueue passes
+ * targetN === budget (whole-day budget). buildExtraQueue passes targetN ===
+ * budget === limit with introduced all-zero (no daily-cap accounting).
+ *
+ * @param {Array<{id:string}>} newCards - freq-ordered new candidate states
+ * @param {Map<string,object>} wordById
+ * @param {{easy:number, medium:number, hard:number}} mix - normalized to 100
+ * @param {number} targetN - N used to derive per-tier targets
+ * @param {number} budget - hard cap on the number of cards returned
+ * @param {{easy:number, medium:number, hard:number}} introduced - per-tier already-taken
+ * @param {string} today - 'YYYY-MM-DD' for the day-stable hash
+ * @returns {Array<{id:string}>} composed + freq-ordered picks
+ */
+function composeNewCards(newCards, wordById, mix, targetN, budget, introduced, today) {
+  // Whole-day per-tier targets. Hard absorbs the rounding remainder so the
+  // three targets sum to exactly targetN.
+  const tEasy = Math.round((targetN * mix.easy) / 100);
+  const tMed = Math.round((targetN * mix.medium) / 100);
+  const tHard = targetN - tEasy - tMed;
+  const target = { easy: tEasy, medium: tMed, hard: Math.max(0, tHard) };
+
+  // Group the freq-ordered candidates by difficulty (order preserved).
+  const candByTier = { easy: [], medium: [], hard: [] };
+  for (const s of newCards) {
+    const w = wordById.get(s.id);
+    candByTier[difficultyOf(w)].push(s);
+  }
+
+  const overallAllowance = Math.max(0, budget);
+
+  // First pass: take up to each tier's remaining quota (target - introduced),
+  // but never let the running total exceed overallAllowance.
+  const picked = [];
+  const pickedIds = new Set();
+  const cursor = { easy: 0, medium: 0, hard: 0 };
+  for (const tier of ['easy', 'medium', 'hard']) {
+    const remaining = Math.max(0, target[tier] - introduced[tier]);
+    const list = candByTier[tier];
+    let taken = 0;
+    while (taken < remaining && cursor[tier] < list.length && picked.length < overallAllowance) {
+      const s = list[cursor[tier]];
+      cursor[tier] += 1;
+      picked.push(s);
+      pickedIds.add(s.id);
+      taken += 1;
+    }
+  }
+
+  // Backfill: if the first pass picked fewer than overallAllowance, fill the
+  // shortfall from the remaining unseen candidates of ALL tiers, ordered freq-asc.
+  if (picked.length < overallAllowance) {
+    const leftovers = [];
+    for (const tier of ['easy', 'medium', 'hard']) {
+      const list = candByTier[tier];
+      for (let i = cursor[tier]; i < list.length; i += 1) {
+        if (!pickedIds.has(list[i].id)) leftovers.push(list[i]);
+      }
+    }
+    leftovers.sort(newCardComparator(wordById, today));
+    for (const s of leftovers) {
+      if (picked.length >= overallAllowance) break;
+      if (pickedIds.has(s.id)) continue;
+      picked.push(s);
+      pickedIds.add(s.id);
+    }
+  }
+
+  // Final new list ordered by freq asc (stable) for a smooth session.
+  picked.sort(newCardComparator(wordById, today));
+  return picked;
+}
+
+/**
  * Build the bounded, ordered daily study queue from already-loaded data.
  * PURE: takes plain arrays/objects, returns a new ordered array.
  *
@@ -355,31 +564,8 @@ export function buildDailyQueue({
       : DEFAULT_DAILY_REVIEW_LIMIT
   );
 
-  // How many new cards were already introduced today (across the whole deck,
-  // not just the in-scope/tag-filtered subset): this is the per-day budget that
-  // makes re-entering the session RESUME rather than restart.
-  let introducedToday = 0;
-  for (const s of reviewStates) {
-    if (s && s.introducedOn === today) introducedToday += 1;
-  }
-  const newAllowance = Math.max(0, newCap - introducedToday);
-
   // Index words by id, and pre-filter the allowed id set by tag if requested.
-  const wordById = new Map();
-  let allowedIds = null;
-  if (tagFilter != null && tagFilter !== '') {
-    allowedIds = new Set();
-  }
-  for (const w of words) {
-    if (!w || typeof w.id !== 'string') continue;
-    wordById.set(w.id, w);
-    if (allowedIds) {
-      const tags = Array.isArray(w.tags) ? w.tags : [];
-      if (tags.includes(tagFilter)) allowedIds.add(w.id);
-    }
-  }
-
-  const inScope = (id) => wordById.has(id) && (allowedIds === null || allowedIds.has(id));
+  const { wordById, inScope } = buildScope(words, tagFilter);
 
   // Partition review states into "due reviews" and "new cards".
   const dueReviews = [];
@@ -412,32 +598,119 @@ export function buildDailyQueue({
   // pedagogy); tierRank only orders words whose freq is missing/0; the hash makes
   // the within-day order deterministic (stable for resume) yet vary across days
   // and never alphabetical.
-  newCards.sort((a, b) => {
-    const wa = wordById.get(a.id);
-    const wb = wordById.get(b.id);
-    const fa = freqRank(wa);
-    const fb = freqRank(wb);
-    if (fa !== fb) return fa - fb;
-    // Equal/both-unranked frequency: fall back to coarse tag tier.
-    const ra = tierRank(wa);
-    const rb = tierRank(wb);
-    if (ra !== rb) return ra - rb;
-    const ha = stableHash(`${a.id}|${today}`);
-    const hb = stableHash(`${b.id}|${today}`);
-    if (ha !== hb) return ha - hb;
-    // Final deterministic tie-break by id (hash collisions only).
-    return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
-  });
+  newCards.sort(newCardComparator(wordById, today));
 
   const cappedReviews = reviewCap === null ? dueReviews : dueReviews.slice(0, reviewCap);
-  // Cap new cards by the REMAINING daily allowance (limit minus already
-  // introduced today), so resuming a session never restarts and never overflows
-  // the daily new-card limit.
-  const cappedNew = newCards.slice(0, newAllowance);
+
+  // --- NEW-card composition by difficulty mix (with backfill) --------------
+  // N = whole-day new-card budget (dailyNewLimit). Per-tier whole-day targets
+  // come from the user's difficultyMix; per-tier "already introduced today"
+  // counts (across the whole deck, grouped by difficulty) reduce each tier's
+  // remaining quota so re-entering the session RESUMES rather than restarts.
+  const N = newCap;
+  const mix = normalizeDifficultyMix(settings.difficultyMix);
+
+  // Per-tier already-introduced-today: count states stamped introducedOn=today
+  // across the WHOLE deck (the daily budget is deck-wide), grouped by the
+  // difficulty of their word. States whose word is unknown are ignored.
+  const introduced = { easy: 0, medium: 0, hard: 0 };
+  let introducedToday = 0;
+  for (const s of reviewStates) {
+    if (!s || s.introducedOn !== today) continue;
+    introducedToday += 1;
+    const w = wordById.get(s.id);
+    if (!w) continue;
+    introduced[difficultyOf(w)] += 1;
+  }
+
+  // The whole-day allowance left after accounting for everything already
+  // introduced today (deck-wide). The composed new list never exceeds this, so
+  // the daily new-card cap is honored even when some introduced-today states
+  // belong to out-of-scope words.
+  const overallAllowance = Math.max(0, N - introducedToday);
+
+  const cappedNew = composeNewCards(
+    newCards,
+    wordById,
+    mix,
+    N,
+    overallAllowance,
+    introduced,
+    today
+  );
 
   // Reviews first, then new cards.
   const queue = [];
   for (const s of cappedReviews) queue.push({ wordId: s.id, isNew: false });
   for (const s of cappedNew) queue.push({ wordId: s.id, isNew: true });
   return queue;
+}
+
+/**
+ * Build an EXTRA study queue of unseen new words, IGNORING the daily
+ * `introducedToday` cap. PURE.
+ *
+ * Used by the "继续学习更多新词" flow: after finishing the daily set (or when the
+ * daily queue is empty on entry), the learner can keep going through fresh
+ * vocabulary. Each call returns up to `limit` brand-new words
+ * (reps === 0 && lastReviewed === null), composed by the SAME difficulty-mix
+ * logic as buildDailyQueue (with cross-tier backfill) and ordered freq-asc, but
+ * WITHOUT subtracting anything already introduced today — the whole point of an
+ * "extra" batch is to go beyond the daily quota.
+ *
+ * Rating these cards still flows through applyReview/putReviewState in the UI;
+ * they get scheduled normally and stamped introducedOn=today (harmless: the cap
+ * is deliberately bypassed here). Calling again after finishing a batch yields
+ * the NEXT `limit` unseen words, because the studied ones are no longer new.
+ *
+ * @param {object} args
+ * @param {Array<object>} args.words - all word records
+ * @param {Array<object>} args.reviewStates - all review-state records
+ * @param {object} [args.settings] - { difficultyMix } (only the mix is read)
+ * @param {string|Date} args.todayISO - 'YYYY-MM-DD' (or Date) "today"
+ * @param {string|null} [args.tagFilter] - restrict to words carrying this tag
+ * @param {number} [args.limit=20] - max unseen words to return
+ * @returns {Array<{wordId:string, isNew:boolean}>} ordered queue (all isNew:true)
+ */
+export function buildExtraQueue({
+  words = [],
+  reviewStates = [],
+  settings = {},
+  todayISO,
+  tagFilter = null,
+  limit = 20,
+} = {}) {
+  const today = isoDate(todayISO);
+
+  // A non-positive / invalid limit yields an empty batch.
+  const cap = Number.isFinite(Number(limit)) ? Math.max(0, Math.floor(Number(limit))) : 0;
+  if (cap === 0) return [];
+
+  const { wordById, inScope } = buildScope(words, tagFilter);
+
+  // Collect every brand-new (unseen) in-scope card.
+  const newCards = [];
+  for (const s of reviewStates) {
+    if (!s || typeof s.id !== 'string') continue;
+    if (!inScope(s.id)) continue;
+    if (isNewState(s)) newCards.push(s);
+  }
+
+  // Order by the same freq-asc / tier / day-stable-hash key as the daily queue.
+  newCards.sort(newCardComparator(wordById, today));
+
+  // Compose up to `cap` cards by the difficulty mix, IGNORING the daily cap:
+  // introduced counts are all-zero and both targetN and budget are the limit.
+  const mix = normalizeDifficultyMix(settings.difficultyMix);
+  const picked = composeNewCards(
+    newCards,
+    wordById,
+    mix,
+    cap,
+    cap,
+    { easy: 0, medium: 0, hard: 0 },
+    today
+  );
+
+  return picked.map((s) => ({ wordId: s.id, isNew: true }));
 }

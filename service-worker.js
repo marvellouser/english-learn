@@ -2,7 +2,7 @@
 // Manual, dependency-free cache-first service worker for the vocab PWA.
 // Keep CACHE_NAME in sync with CACHE_NAME in js/config.js.
 
-const CACHE_NAME = 'vocab-pwa-v3';
+const CACHE_NAME = 'vocab-pwa-v7';
 
 // App shell assets to precache on install.
 // All paths are relative to the service worker scope (the app root), so the
@@ -77,6 +77,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Only handle same-origin http(s) requests. Skip cross-origin requests and
+  // non-http schemes such as chrome-extension:// — the Cache API throws on
+  // cache.put() for those, and we only own same-origin app assets anyway.
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) {
+    return;
+  }
+
   event.respondWith(
     caches.match(request).then((cached) => {
       if (cached) {
@@ -92,9 +100,9 @@ self.addEventListener('fetch', (event) => {
             (response.type === 'basic' || response.type === 'default')
           ) {
             const copy = response.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, copy);
-            });
+            caches.open(CACHE_NAME)
+              .then((cache) => cache.put(request, copy))
+              .catch(() => {});
           }
           return response;
         })

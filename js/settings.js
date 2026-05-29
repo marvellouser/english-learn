@@ -23,7 +23,7 @@ import {
   getSetting,
   putSetting,
 } from './db.js';
-import { INITIAL_EASE } from './srs.js';
+import { INITIAL_EASE, DEFAULT_DIFFICULTY_MIX, normalizeDifficultyMix } from './srs.js';
 import { DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT } from './config.js';
 
 // Backup envelope identity. Imports are validated against this app tag.
@@ -45,6 +45,7 @@ const SETTING_KEYS = [
   'studyDays',
   'reminderEnabled',
   'reminderTime',
+  'difficultyMix',
 ];
 
 // Pronunciation (TTS) is OFF by default: phonetic-only cards. Opt-in via settings.
@@ -64,7 +65,9 @@ const DEFAULT_REMINDER_TIME = '20:00';
 /**
  * Read the user-facing settings with sensible defaults.
  * studyDays uses JS Date.getDay() indexes (0=Sun..6=Sat).
- * @returns {Promise<{ dailyNewLimit: number, dailyReviewLimit: (number|null), ttsEnabled: boolean, studyDays: Array<number>, reminderEnabled: boolean, reminderTime: string }>}
+ * difficultyMix is always returned validated + normalized to sum 100, defaulting
+ * to 20/50/30 when absent/invalid.
+ * @returns {Promise<{ dailyNewLimit: number, dailyReviewLimit: (number|null), ttsEnabled: boolean, studyDays: Array<number>, reminderEnabled: boolean, reminderTime: string, difficultyMix: {easy:number, medium:number, hard:number} }>}
  */
 export async function getSettings() {
   const [
@@ -74,6 +77,7 @@ export async function getSettings() {
     studyDays,
     reminderEnabled,
     reminderTime,
+    difficultyMix,
   ] = await Promise.all([
     getSetting('dailyNewLimit', DEFAULT_DAILY_NEW_LIMIT),
     getSetting('dailyReviewLimit', DEFAULT_DAILY_REVIEW_LIMIT),
@@ -81,6 +85,7 @@ export async function getSettings() {
     getSetting('studyDays', DEFAULT_STUDY_DAYS),
     getSetting('reminderEnabled', DEFAULT_REMINDER_ENABLED),
     getSetting('reminderTime', DEFAULT_REMINDER_TIME),
+    getSetting('difficultyMix', DEFAULT_DIFFICULTY_MIX),
   ]);
   return {
     dailyNewLimit,
@@ -89,6 +94,8 @@ export async function getSettings() {
     studyDays: Array.isArray(studyDays) ? studyDays : DEFAULT_STUDY_DAYS,
     reminderEnabled: reminderEnabled === true,
     reminderTime: typeof reminderTime === 'string' ? reminderTime : DEFAULT_REMINDER_TIME,
+    // Always validated + normalized to sum 100 (default 20/50/30 when invalid).
+    difficultyMix: normalizeDifficultyMix(difficultyMix),
   };
 }
 

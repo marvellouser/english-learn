@@ -32,9 +32,17 @@ export const DB_NAME = 'vocab-pwa';
 export const DB_VERSION = 1;
 
 // Service worker cache version. Must match CACHE_NAME in service-worker.js.
-// Bumped v1 -> v2 so existing installs drop the old cache and fetch the new
-// ~7500-word frequency-ranked data/seed-words.json.
-export const CACHE_NAME = 'vocab-pwa-v3';
+// Bump whenever shipped code/data changes so existing installs drop the old
+// cache and fetch fresh assets (incl. the latest data/seed-words.json).
+export const CACHE_NAME = 'vocab-pwa-v7';
+
+// Bundled-dataset version. Bump this whenever data/seed-words.json changes
+// (new words, new fields like `freq`, enriched examples). On launch the app
+// re-imports the seed when the stored version differs — non-destructively:
+// word records are updated and new words added, while existing review
+// progress is preserved. This is what lets an already-seeded install pick up
+// the expanded 7500-word dataset instead of staying on the old 441 words.
+export const DATA_VERSION = '2026-05-29.3';
 
 // --- Helpers ----------------------------------------------------------------
 

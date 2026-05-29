@@ -10,6 +10,7 @@ import {
   gradeFromRating,
   applyReview,
   buildDailyQueue,
+  buildExtraQueue,
   addDays,
   isoDate,
   tierRank,
@@ -17,6 +18,11 @@ import {
   stableHash,
   MIN_EASE,
   INITIAL_EASE,
+  difficultyOf,
+  DIFFICULTY_THRESHOLDS,
+  DIFFICULTY_LABELS,
+  DEFAULT_DIFFICULTY_MIX,
+  normalizeDifficultyMix,
 } from '../js/srs.js';
 
 const TODAY = '2026-05-29';
@@ -648,4 +654,382 @@ test('buildDailyQueue: within a tagFilter set, tier ties so hash-shuffle (not al
     words, reviewStates, settings: { dailyNewLimit: 15 }, todayISO: TODAY, tagFilter: 'programming',
   }).map((i) => i.wordId);
   assert.deepEqual(order, same, 'deterministic per day');
+});
+
+// --------------------------------------------------------------------------
+// Difficulty model: difficultyOf + thresholds + labels + mix normalization
+// --------------------------------------------------------------------------
+
+test('difficultyOf: thresholds (easy<=2000, medium<=5000, hard beyond/unranked)', () => {
+  assert.equal(DIFFICULTY_THRESHOLDS.easyMax, 2000);
+  assert.equal(DIFFICULTY_THRESHOLDS.mediumMax, 5000);
+
+  // easy: 1 .. 2000 inclusive.
+  assert.equal(difficultyOf({ freq: 1 }), 'easy', 'rank 1 = easy');
+  assert.equal(difficultyOf({ freq: 1500 }), 'easy');
+  assert.equal(difficultyOf({ freq: 2000 }), 'easy', 'easyMax boundary inclusive');
+
+  // medium: 2001 .. 5000 inclusive.
+  assert.equal(difficultyOf({ freq: 2001 }), 'medium', 'just past easyMax = medium');
+  assert.equal(difficultyOf({ freq: 3500 }), 'medium');
+  assert.equal(difficultyOf({ freq: 5000 }), 'medium', 'mediumMax boundary inclusive');
+
+  // hard: beyond 5000.
+  assert.equal(difficultyOf({ freq: 5001 }), 'hard', 'just past mediumMax = hard');
+  assert.equal(difficultyOf({ freq: 9000 }), 'hard');
+
+  // hard: missing / 0 / non-positive freq -> unranked / rare / specialized.
+  assert.equal(difficultyOf({ freq: 0 }), 'hard', 'freq 0 = hard (unranked)');
+  assert.equal(difficultyOf({}), 'hard', 'missing freq = hard');
+  assert.equal(difficultyOf({ freq: -3 }), 'hard', 'negative freq = hard');
+  assert.equal(difficultyOf(null), 'hard', 'null word = hard');
+});
+
+test('DIFFICULTY_LABELS maps tiers to localized labels', () => {
+  assert.equal(DIFFICULTY_LABELS.easy, '简单');
+  assert.equal(DIFFICULTY_LABELS.medium, '中等');
+  assert.equal(DIFFICULTY_LABELS.hard, '困难');
+});
+
+test('normalizeDifficultyMix: default fallback + normalization to sum 100', () => {
+  // Default mix is 20/50/30 and sums to 100.
+  assert.deepEqual(DEFAULT_DIFFICULTY_MIX, { easy: 20, medium: 50, hard: 30 });
+  const dflt = normalizeDifficultyMix(undefined);
+  assert.deepEqual(dflt, { easy: 20, medium: 50, hard: 30 }, 'absent -> default');
+  assert.deepEqual(normalizeDifficultyMix({}), { easy: 20, medium: 50, hard: 30 }, 'empty -> default');
+  assert.deepEqual(
+    normalizeDifficultyMix({ easy: 'x', medium: 50, hard: 30 }),
+    { easy: 20, medium: 50, hard: 30 },
+    'invalid tier -> default'
+  );
+  assert.deepEqual(
+    normalizeDifficultyMix({ easy: 0, medium: 0, hard: 0 }),
+    { easy: 20, medium: 50, hard: 30 },
+    'all-zero -> default'
+  );
+
+  // Already-valid mix passes through.
+  assert.deepEqual(normalizeDifficultyMix({ easy: 30, medium: 40, hard: 30 }), { easy: 30, medium: 40, hard: 30 });
+
+  // Non-100 sums are scaled to 100.
+  const scaled = normalizeDifficultyMix({ easy: 10, medium: 25, hard: 15 }); // sum 50 -> *2
+  assert.equal(scaled.easy + scaled.medium + scaled.hard, 100, 'scaled sum = 100');
+  assert.deepEqual(scaled, { easy: 20, medium: 50, hard: 30 });
+
+  // Rounding drift is absorbed so the three values always sum to exactly 100.
+  const odd = normalizeDifficultyMix({ easy: 1, medium: 1, hard: 1 }); // 33.33 each
+  assert.equal(odd.easy + odd.medium + odd.hard, 100, 'drift absorbed -> sum 100');
+});
+
+// --------------------------------------------------------------------------
+// buildDailyQueue: NEW-card composition by difficulty mix (+ backfill)
+// --------------------------------------------------------------------------
+
+// Helper: count picked new cards per difficulty tier from a built queue.
+function newCountsByTier(queue, words) {
+  const byId = new Map(words.map((w) => [w.id, w]));
+  const counts = { easy: 0, medium: 0, hard: 0 };
+  for (const item of queue) {
+    if (!item.isNew) continue;
+    counts[difficultyOf(byId.get(item.wordId))] += 1;
+  }
+  return counts;
+}
+
+// Build `n` brand-new word + state pairs of a given difficulty (via freq).
+function tierPool(prefix, freq, n) {
+  const words = [];
+  const states = [];
+  for (let i = 0; i < n; i += 1) {
+    const id = `${prefix}${i}`;
+    // Distinct freq within the tier band so ordering is deterministic.
+    words.push({ id, word: id, tags: ['common'], freq: freq + i });
+    states.push({ id, ease: 2.5, interval: 0, reps: 0, due: TODAY, lastReviewed: null, introducedOn: null });
+  }
+  return { words, states };
+}
+
+test('buildDailyQueue mix: N=10 with 30/40/30 picks ~3/4/3 by difficulty', () => {
+  // Plenty of unseen candidates per tier (10 each) so the mix is fully honored.
+  const easy = tierPool('e', 100, 10);   // freq 100.. -> easy
+  const med = tierPool('m', 3000, 10);   // freq 3000.. -> medium
+  const hard = tierPool('h', 6000, 10);  // freq 6000.. -> hard
+  const words = [...easy.words, ...med.words, ...hard.words];
+  const reviewStates = [...easy.states, ...med.states, ...hard.states];
+
+  const queue = buildDailyQueue({
+    words,
+    reviewStates,
+    settings: { dailyNewLimit: 10, difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+  });
+
+  const counts = newCountsByTier(queue, words);
+  // round(10*0.3)=3 easy, round(10*0.4)=4 medium, hard = 10-3-4 = 3.
+  assert.deepEqual(counts, { easy: 3, medium: 4, hard: 3 }, 'picks 3/4/3 by difficulty');
+  // Total new equals N.
+  assert.equal(queue.filter((i) => i.isNew).length, 10, 'total new = N');
+  // New list ordered by freq ascending (smooth session).
+  const newFreqs = queue
+    .filter((i) => i.isNew)
+    .map((i) => words.find((w) => w.id === i.wordId).freq);
+  const sorted = newFreqs.slice().sort((a, b) => a - b);
+  assert.deepEqual(newFreqs, sorted, 'new cards ordered by freq ascending');
+});
+
+test('buildDailyQueue mix: default 20/50/30 with N=15 yields 3/8/4 by difficulty', () => {
+  const easy = tierPool('e', 100, 20);
+  const med = tierPool('m', 3000, 20);
+  const hard = tierPool('h', 6000, 20);
+  const words = [...easy.words, ...med.words, ...hard.words];
+  const reviewStates = [...easy.states, ...med.states, ...hard.states];
+
+  // No difficultyMix in settings -> default 20/50/30.
+  const queue = buildDailyQueue({
+    words, reviewStates, settings: { dailyNewLimit: 15 }, todayISO: TODAY,
+  });
+  const counts = newCountsByTier(queue, words);
+  // round(15*0.2)=3 easy, round(15*0.5)=8 medium ("7-8"), hard = 15-3-8 = 4.
+  assert.deepEqual(counts, { easy: 3, medium: 8, hard: 4 }, 'default mix -> 3/8/4');
+  assert.equal(queue.filter((i) => i.isNew).length, 15);
+});
+
+test('buildDailyQueue backfill: a short tier is topped up from other tiers to reach N', () => {
+  // Only 1 medium candidate, but plenty of easy + hard. N=10, mix 30/40/30.
+  const easy = tierPool('e', 100, 10);
+  const med = tierPool('m', 3000, 1);   // medium pool nearly empty
+  const hard = tierPool('h', 6000, 10);
+  const words = [...easy.words, ...med.words, ...hard.words];
+  const reviewStates = [...easy.states, ...med.states, ...hard.states];
+
+  const queue = buildDailyQueue({
+    words,
+    reviewStates,
+    settings: { dailyNewLimit: 10, difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+  });
+
+  const counts = newCountsByTier(queue, words);
+  // Medium target was 4 but only 1 medium exists -> the 3-shortfall backfills
+  // from easy/hard so the total still reaches N=10.
+  assert.equal(counts.medium, 1, 'medium exhausted at its single candidate');
+  assert.equal(counts.easy + counts.medium + counts.hard, 10, 'backfill reaches N total');
+  assert.equal(queue.filter((i) => i.isNew).length, 10, 'daily quota not wasted');
+});
+
+test('buildDailyQueue backfill: limited total candidates -> picks all (capped by overallAllowance)', () => {
+  // Fewer total candidates than N -> picks them all, no overflow.
+  const easy = tierPool('e', 100, 2);
+  const med = tierPool('m', 3000, 1);
+  const hard = tierPool('h', 6000, 1);
+  const words = [...easy.words, ...med.words, ...hard.words];
+  const reviewStates = [...easy.states, ...med.states, ...hard.states];
+
+  const queue = buildDailyQueue({
+    words,
+    reviewStates,
+    settings: { dailyNewLimit: 10, difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+  });
+  assert.equal(queue.filter((i) => i.isNew).length, 4, 'all 4 available picked, no overflow');
+});
+
+test('buildDailyQueue mix: per-tier introducedToday reduces that tier remaining (resume)', () => {
+  // N=10, mix 30/40/30 -> targets 3 easy / 4 medium / 3 hard.
+  // Pre-introduce 2 easy + 1 medium TODAY (in scope, so grouped per tier).
+  const easy = tierPool('e', 100, 10);
+  const med = tierPool('m', 3000, 10);
+  const hard = tierPool('h', 6000, 10);
+  const words = [...easy.words, ...med.words, ...hard.words];
+
+  // Mark e0,e1 (easy) and m0 (medium) as introduced today (no longer "new").
+  const introducedIds = new Set(['e0', 'e1', 'm0']);
+  const reviewStates = [...easy.states, ...med.states, ...hard.states].map((s) =>
+    introducedIds.has(s.id)
+      ? { ...s, reps: 1, interval: 1, due: addDays(TODAY, 1), lastReviewed: TODAY, introducedOn: TODAY }
+      : s
+  );
+
+  const queue = buildDailyQueue({
+    words,
+    reviewStates,
+    settings: { dailyNewLimit: 10, difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+  });
+
+  const counts = newCountsByTier(queue, words);
+  // easy: target 3 - 2 introduced = 1 remaining.
+  assert.equal(counts.easy, 1, 'easy remaining reduced by introducedToday');
+  // medium: target 4 - 1 introduced = 3 remaining.
+  assert.equal(counts.medium, 3, 'medium remaining reduced by introducedToday');
+  // hard: target 3 - 0 = 3 remaining.
+  assert.equal(counts.hard, 3, 'hard remaining unchanged');
+  // overallAllowance = N - introducedToday(3) = 7 -> total new = 1+3+3 = 7.
+  assert.equal(queue.filter((i) => i.isNew).length, 7, 'overall allowance honored on resume');
+});
+
+test('buildDailyQueue mix: reviews still included alongside the mixed new cards', () => {
+  const easy = tierPool('e', 100, 5);
+  const med = tierPool('m', 3000, 5);
+  const hard = tierPool('h', 6000, 5);
+  const words = [
+    ...easy.words, ...med.words, ...hard.words,
+    { id: 'rev1', word: 'rev1', tags: ['common'], freq: 50 },
+  ];
+  const reviewStates = [
+    ...easy.states, ...med.states, ...hard.states,
+    // A due review (introduced earlier).
+    { id: 'rev1', ease: 2.5, interval: 3, reps: 2, due: '2026-05-28', lastReviewed: '2026-05-25', introducedOn: '2026-05-25' },
+  ];
+
+  const queue = buildDailyQueue({
+    words,
+    reviewStates,
+    settings: { dailyNewLimit: 6, difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+  });
+
+  // Review first.
+  assert.deepEqual(queue[0], { wordId: 'rev1', isNew: false }, 'due review leads the queue');
+  // round(6*.3)=2 easy / round(6*.4)=2 medium / 6-2-2=2 hard.
+  const counts = newCountsByTier(queue, words);
+  assert.deepEqual(counts, { easy: 2, medium: 2, hard: 2 }, 'mix applied to new cards');
+  assert.equal(queue.filter((i) => i.isNew).length, 6);
+});
+
+// --------------------------------------------------------------------------
+// buildExtraQueue: unlimited "继续学习" beyond the daily cap
+// --------------------------------------------------------------------------
+
+test('buildExtraQueue: ignores the daily introducedToday cap (returns new words even when day saturated)', () => {
+  // 30 unseen new words available + a deck already saturated for the day.
+  const pool = tierPool('x', 100, 30);
+  // 20 states stamped introducedOn=today (deck saturated under the daily cap).
+  const introducedStates = [];
+  for (let i = 0; i < 20; i += 1) {
+    introducedStates.push({
+      id: `done${i}`, ease: 2.5, interval: 1, reps: 1,
+      due: addDays(TODAY, 1), lastReviewed: TODAY, introducedOn: TODAY,
+    });
+  }
+  const reviewStates = [...introducedStates, ...pool.states];
+
+  // The daily queue would introduce 0 new (cap fully consumed).
+  const daily = buildDailyQueue({
+    words: pool.words, reviewStates, settings: { dailyNewLimit: 15 }, todayISO: TODAY,
+  });
+  assert.equal(daily.filter((i) => i.isNew).length, 0, 'daily cap consumed -> 0 new');
+
+  // The extra queue ignores that cap and still serves a fresh batch.
+  const extra = buildExtraQueue({
+    words: pool.words, reviewStates, settings: {}, todayISO: TODAY, limit: 20,
+  });
+  assert.equal(extra.length, 20, 'extra ignores daily cap and serves the full limit');
+  assert.ok(extra.every((i) => i.isNew === true), 'every extra item is flagged new');
+});
+
+test('buildExtraQueue: respects the limit (default 20, custom honored, capped at availability)', () => {
+  const pool = tierPool('x', 100, 50);
+  const reviewStates = pool.states;
+
+  // Default limit is 20.
+  const dflt = buildExtraQueue({ words: pool.words, reviewStates, todayISO: TODAY });
+  assert.equal(dflt.length, 20, 'default limit = 20');
+
+  // Custom limit honored.
+  const five = buildExtraQueue({ words: pool.words, reviewStates, todayISO: TODAY, limit: 5 });
+  assert.equal(five.length, 5, 'custom limit honored');
+
+  // Limit capped at the number of available unseen words.
+  const small = tierPool('y', 100, 3);
+  const capped = buildExtraQueue({
+    words: small.words, reviewStates: small.states, todayISO: TODAY, limit: 20,
+  });
+  assert.equal(capped.length, 3, 'capped at availability when fewer unseen than limit');
+
+  // A zero / invalid limit yields an empty batch.
+  assert.deepEqual(
+    buildExtraQueue({ words: pool.words, reviewStates, todayISO: TODAY, limit: 0 }),
+    [],
+    'limit 0 -> empty'
+  );
+});
+
+test('buildExtraQueue: only returns UNSEEN words (skips introduced / reviewed cards)', () => {
+  const words = [
+    { id: 'fresh1', word: 'fresh1', tags: ['common'], freq: 100 },
+    { id: 'fresh2', word: 'fresh2', tags: ['common'], freq: 200 },
+    // Already introduced today (not new).
+    { id: 'seen1', word: 'seen1', tags: ['common'], freq: 50 },
+    // A mature review card (not new).
+    { id: 'mature', word: 'mature', tags: ['common'], freq: 10 },
+  ];
+  const reviewStates = [
+    { id: 'fresh1', ease: 2.5, interval: 0, reps: 0, due: TODAY, lastReviewed: null, introducedOn: null },
+    { id: 'fresh2', ease: 2.5, interval: 0, reps: 0, due: TODAY, lastReviewed: null, introducedOn: null },
+    { id: 'seen1', ease: 2.5, interval: 1, reps: 1, due: addDays(TODAY, 1), lastReviewed: TODAY, introducedOn: TODAY },
+    { id: 'mature', ease: 2.6, interval: 30, reps: 5, due: addDays(TODAY, 30), lastReviewed: '2026-05-01', introducedOn: '2026-04-01' },
+  ];
+
+  const extra = buildExtraQueue({ words, reviewStates, todayISO: TODAY, limit: 20 });
+  const ids = extra.map((i) => i.wordId);
+  assert.deepEqual(ids.sort(), ['fresh1', 'fresh2'], 'only unseen words returned');
+  assert.ok(!ids.includes('seen1'), 'introduced-today card excluded');
+  assert.ok(!ids.includes('mature'), 'mature review card excluded');
+});
+
+test('buildExtraQueue: composes a batch by the difficulty mix (with backfill)', () => {
+  // Plenty per tier so the mix is fully honored at limit=10.
+  const easy = tierPool('e', 100, 10);   // easy
+  const med = tierPool('m', 3000, 10);   // medium
+  const hard = tierPool('h', 6000, 10);  // hard
+  const words = [...easy.words, ...med.words, ...hard.words];
+  const reviewStates = [...easy.states, ...med.states, ...hard.states];
+
+  const extra = buildExtraQueue({
+    words,
+    reviewStates,
+    settings: { difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+    limit: 10,
+  });
+  const counts = newCountsByTier(extra, words);
+  // round(10*0.3)=3 easy, round(10*0.4)=4 medium, hard = 10-3-4 = 3.
+  assert.deepEqual(counts, { easy: 3, medium: 4, hard: 3 }, 'mix applied to extra batch');
+  assert.equal(extra.length, 10, 'extra batch reaches the limit');
+
+  // Backfill: medium pool short -> shortfall topped up from other tiers.
+  const easy2 = tierPool('e2', 100, 10);
+  const med2 = tierPool('m2', 3000, 1); // medium nearly empty
+  const hard2 = tierPool('h2', 6000, 10);
+  const words2 = [...easy2.words, ...med2.words, ...hard2.words];
+  const states2 = [...easy2.states, ...med2.states, ...hard2.states];
+  const extra2 = buildExtraQueue({
+    words: words2,
+    reviewStates: states2,
+    settings: { difficultyMix: { easy: 30, medium: 40, hard: 30 } },
+    todayISO: TODAY,
+    limit: 10,
+  });
+  const counts2 = newCountsByTier(extra2, words2);
+  assert.equal(counts2.medium, 1, 'medium exhausted at its single candidate');
+  assert.equal(extra2.length, 10, 'backfill reaches the full limit');
+});
+
+test('buildExtraQueue: tagFilter restricts to matching unseen words, ordered freq-asc', () => {
+  const words = [
+    { id: 'p1', word: 'p1', tags: ['programming'], freq: 300 },
+    { id: 'p2', word: 'p2', tags: ['programming'], freq: 100 },
+    { id: 'c1', word: 'c1', tags: ['common'], freq: 5 },
+  ];
+  const reviewStates = words.map((w) => ({
+    id: w.id, ease: 2.5, interval: 0, reps: 0, due: TODAY, lastReviewed: null, introducedOn: null,
+  }));
+
+  const extra = buildExtraQueue({
+    words, reviewStates, todayISO: TODAY, tagFilter: 'programming', limit: 20,
+  });
+  const ids = extra.map((i) => i.wordId);
+  // Only programming words, freq-asc (p2 freq 100 before p1 freq 300); c1 excluded.
+  assert.deepEqual(ids, ['p2', 'p1'], 'tagFilter restricts + freq-asc order');
 });

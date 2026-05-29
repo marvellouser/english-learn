@@ -1398,3 +1398,122 @@ button.home-stat:active {
   color: var(--color-again-dark);
   letter-spacing: 0.03em;
 }
+
+/* === Difficulty system (3-level: 简单 / 中等 / 困难) ===================== */
+/* Difficulty badge: shown on study cards + word-list rows. Color-coded by tier:
+   easy=green, medium=amber, hard=red (reusing the rating palette variables). */
+.diff-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.diff-badge.diff-easy {
+  background: #ecfdf5;
+  color: var(--color-good-dark);
+}
+.diff-badge.diff-medium {
+  background: #fffbeb;
+  color: var(--color-hard-dark);
+}
+.diff-badge.diff-hard {
+  background: #fef2f2;
+  color: var(--color-again-dark);
+}
+
+/* Group the state + difficulty badges on a study card. */
+.study-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+/* Word-list row: keep the word and its difficulty badge on one inline line. */
+.wordlist-row-word-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Settings: daily difficulty-mix controls. */
+.diffmix-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0 4px;
+}
+.diffmix-field {
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.diffmix-label {
+  font-size: 0.85rem;
+}
+.diffmix-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.diffmix-input {
+  width: 100%;
+  text-align: center;
+}
+.diffmix-pct {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+.diffmix-total {
+  font-weight: 600;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+/* Highlight the total when it does not equal 100% (will be normalized on save). */
+.diffmix-total.diffmix-total-off {
+  color: var(--color-hard-dark);
+}
+
+/* --- Bilingual examples (English sentence + muted 中文 translation) ------- */
+/* Used in both the study card back (.study-examples li) and the word-list
+   detail (.wordlist-examples li). Each example is a stacked pair: the English
+   sentence on top, its Chinese translation muted/smaller beneath (hidden when
+   the zh field is empty). */
+.example-item {
+  margin-bottom: 8px;
+}
+.example-en {
+  display: block;
+}
+.example-zh {
+  display: block;
+  margin-top: 2px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* --- Part-of-speech abbreviation tooltip (n. / vt. / adj. ...) ------------ */
+/* Rendered as <abbr class="pos" title="中文">vt.</abbr>: a subtle dotted
+   underline with a help cursor so hovering reveals the Chinese gloss without
+   distracting from the definition text that follows. */
+abbr.pos {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  cursor: help;
+  font-style: normal;
+  color: var(--color-primary);
+}
+
+/* "全部单词都学过啦" note on the study summary / done screens. */
+.study-all-learned {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+}
