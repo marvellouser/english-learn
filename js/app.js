@@ -1,0 +1,237 @@
+// app.js
+// Application entry point. Native ES module, no bundler.
+//
+// Responsibilities:
+//   1. Register the service worker (offline support).
+//   2. Provide a minimal hash-based router + mount skeleton.
+//   3. Expose a bootstrap() startup hook that later tasks extend
+//      (DB open + first-run seed in TASK-002, view wiring in TASK-005/006).
+//
+// EXTENSION POINTS for later tasks are marked with `// [EXTENSION POINT]`.
+
+import { BASE_PATH, DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT } from './config.js';
+import { openDB, getSetting, putSetting, importWords } from './db.js';
+import makeStudyView from './views/study.js';
+import makeHomeView from './views/home.js';
+import makeSettingsView from './views/settings-view.js';
+import makeVocabTestView from './views/vocab-test.js';
+import makeWordListView from './views/word-list.js';
+
+// ---------------------------------------------------------------------------
+// Service worker registration
+// ---------------------------------------------------------------------------
+
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) {
+    return;
+  }
+  window.addEventListener('load', () => {
+    // Relative path so the SW scope matches the deployment base path.
+    navigator.serviceWorker
+      .register('./service-worker.js')
+      .catch((err) => console.error('[app] SW registration failed:', err));
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Mount + router skeleton
+// ---------------------------------------------------------------------------
+
+const appEl = () => document.getElementById('app');
+
+/**
+ * Render a view into #app.
+ * @param {(root: HTMLElement) => void | string} viewFn
+ *   Either a function that receives the root element and populates it, or a
+ *   string of HTML to inject. Later view modules will pass render functions.
+ */
+export function mount(viewFn) {
+  const root = appEl();
+  if (!root) return;
+  root.innerHTML = '';
+  if (typeof viewFn === 'function') {
+    viewFn(root);
+  } else if (typeof viewFn === 'string') {
+    root.innerHTML = viewFn;
+  }
+}
+
+// Route table. Real views register here.
+//
+// A route value is either a view function (mount-compatible) or a factory
+// receiving the remaining hash segments (params) and returning a view function.
+// 'study' uses the factory form so an optional tag filter can flow in from the
+// URL: '#/study'            -> all words
+//      '#/study/programming' -> tagFilter = 'programming'.
+//
+// 'home' is the default landing view (empty hash -> home). 'settings' renders
+// the settings/backup view. Both come from their dedicated view modules.
+const routes = {
+  '': makeHomeView(),
+  home: makeHomeView(),
+  settings: makeSettingsView(),
+  study: (params) => makeStudyView({ tagFilter: params[0] || null }),
+  // '#/words'            -> filter = 'all'
+  // '#/words/learned'    -> filter = 'learned' (also new/due/programming or any tag)
+  words: (params) => makeWordListView({ filter: params[0] || 'all' }),
+  'vocab-test': makeVocabTestView(),
+};
+
+/**
+ * Navigate to a named route by updating the location hash.
+ * The hashchange handler performs the actual mount.
+ * @param {string} route
+ */
+export function navigate(route) {
+  const target = `#/${route}`;
+  if (location.hash === target) {
+    renderCurrentRoute();
+  } else {
+    location.hash = target;
+  }
+}
+
+function currentRouteSegments() {
+  // Hash format: "#/route/param/...". Strip the leading "#/" and split.
+  const raw = location.hash.replace(/^#\/?/, '');
+  return raw.split('/').filter((s) => s.length > 0);
+}
+
+function renderCurrentRoute() {
+  const segments = currentRouteSegments();
+  const name = segments[0] || '';
+  const params = segments.slice(1);
+  const entry = routes[name] || routes[''];
+  // Factory routes take the remaining segments and return a view function;
+  // plain view functions are mounted directly.
+  const view = isRouteFactory(name) ? entry(params) : entry;
+  mount(view);
+  // Keep the persistent bottom nav's active tab in sync with the route. The
+  // home view re-runs its render on every (re)mount, so returning from study
+  // shows refreshed dashboard stats automatically.
+  renderBottomNav(name);
+}
+
+// Routes whose value is a factory(params) -> viewFn rather than a direct view.
+function isRouteFactory(name) {
+  return name === 'study' || name === 'words';
+}
+
+// ---------------------------------------------------------------------------
+// Persistent bottom navigation
+// ---------------------------------------------------------------------------
+
+// Tabs shown in the persistent bottom nav. `match` decides which tab is active
+// for the current route name; the study tab also activates the home tab's
+// neighbour conceptually but keeps its own highlight.
+const NAV_TABS = [
+  { route: 'home', label: '首页', icon: '🏠', match: (name) => name === '' || name === 'home' },
+  { route: 'study', label: '学习', icon: '📖', match: (name) => name === 'study' },
+  { route: 'settings', label: '设置', icon: '⚙️', match: (name) => name === 'settings' },
+];
+
+/**
+ * Render (or update) the persistent bottom nav, highlighting the active tab.
+ * The bar lives outside #app so it survives view swaps. Idempotent: builds the
+ * element once, then only refreshes the active state.
+ * @param {string} activeName - current route name ('' | 'home' | 'study' | 'settings')
+ */
+function renderBottomNav(activeName) {
+  let bar = document.getElementById('bottom-nav');
+  if (!bar) {
+    bar = document.createElement('nav');
+    bar.id = 'bottom-nav';
+    bar.className = 'bottom-nav';
+    bar.innerHTML = NAV_TABS.map(
+      (t) =>
+        `<button class="bottom-nav-item" type="button" data-route="${t.route}">
+          <span class="bottom-nav-icon">${t.icon}</span>
+          <span class="bottom-nav-label">${t.label}</span>
+        </button>`
+    ).join('');
+    document.body.appendChild(bar);
+    bar.querySelectorAll('[data-route]').forEach((el) => {
+      el.addEventListener('click', () => navigate(el.dataset.route));
+    });
+  }
+
+  const items = bar.querySelectorAll('.bottom-nav-item');
+  NAV_TABS.forEach((t, i) => {
+    const el = items[i];
+    if (!el) return;
+    el.classList.toggle('is-active', t.match(activeName));
+  });
+}
+
+// ---------------------------------------------------------------------------
+// First-run seeding (TASK-002)
+// ---------------------------------------------------------------------------
+
+/**
+ * Open the database and, on first launch only, import the bundled vocabulary
+ * into IndexedDB. Idempotent: guarded by the 'seeded' setting so reloads do
+ * not re-import. Failures are logged but do not crash the app shell.
+ */
+async function initData() {
+  try {
+    await openDB();
+
+    const seeded = await getSetting('seeded', false);
+    if (seeded === true) {
+      return;
+    }
+
+    const res = await fetch('./data/seed-words.json');
+    if (!res.ok) {
+      throw new Error(`seed fetch failed: ${res.status} ${res.statusText}`);
+    }
+    const seed = await res.json();
+
+    await importWords(seed, { source: 'seed' });
+
+    // Persist defaults so later tasks (study/settings) have a baseline.
+    await putSetting('dailyNewLimit', DEFAULT_DAILY_NEW_LIMIT);
+    await putSetting('dailyReviewLimit', DEFAULT_DAILY_REVIEW_LIMIT);
+    await putSetting('streak', 0);
+    // Pronunciation is OFF by default (phonetic-only); opt-in via settings.
+    await putSetting('ttsEnabled', false);
+
+    // Mark seeded last, so an interrupted run retries on next launch.
+    await putSetting('seeded', true);
+  } catch (err) {
+    console.error('[app] data init/seed failed:', err);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Bootstrap
+// ---------------------------------------------------------------------------
+
+/**
+ * Application startup hook.
+ * Later tasks extend this to:
+ *   - open IndexedDB (TASK-002)  [done]
+ *   - run first-run seeding from ./data/seed-words.json (TASK-002)  [done]
+ *   - register additional routes/views (TASK-005/006)
+ */
+export async function bootstrap() {
+  // [EXTENSION POINT] open DB + first-run seed (TASK-002).
+  // Runs before the home view renders so data is ready for later views.
+  await initData();
+
+  // Home/study/settings routes are registered statically in the `routes` table
+  // above; the persistent bottom nav is rendered on each route change.
+
+  window.addEventListener('hashchange', renderCurrentRoute);
+  renderCurrentRoute();
+}
+
+// ---------------------------------------------------------------------------
+// Init
+// ---------------------------------------------------------------------------
+
+registerServiceWorker();
+bootstrap().catch((err) => console.error('[app] bootstrap failed:', err));
+
+// Expose BASE_PATH on the window for quick debugging in dev tools (harmless).
+window.__VOCAB_BASE_PATH__ = BASE_PATH;

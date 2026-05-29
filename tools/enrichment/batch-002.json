@@ -1,0 +1,1844 @@
+{
+  "n't": {
+    "examples": [
+      "She does n't like waiting in long lines."
+    ]
+  },
+  "one": {
+    "examples": [
+      "Only one student answered the question correctly."
+    ]
+  },
+  "two": {
+    "examples": [
+      "We waited two hours for the late train."
+    ]
+  },
+  "even": {
+    "examples": [
+      "The carpenter sanded the board until it was even."
+    ]
+  },
+  "after": {
+    "examples": [
+      "We went for a walk after dinner last night."
+    ]
+  },
+  "still": {
+    "examples": [
+      "The lake was perfectly still in the early morning."
+    ]
+  },
+  "three": {
+    "examples": [
+      "There are three apples left in the bowl."
+    ]
+  },
+  "never": {
+    "examples": [
+      "I have never tasted such delicious soup before."
+    ]
+  },
+  "while": {
+    "examples": [
+      "She read a book while waiting for the bus."
+    ]
+  },
+  "always": {
+    "examples": [
+      "He always brushes his teeth before bed."
+    ]
+  },
+  "without": {
+    "examples": [
+      "You cannot enter the building without a pass."
+    ]
+  },
+  "before": {
+    "examples": [
+      "Wash your hands before you eat dinner."
+    ]
+  },
+  "four": {
+    "examples": [
+      "The hotel room has four small wooden chairs."
+    ]
+  },
+  "yes": {
+    "examples": [
+      "She said yes to his polite invitation."
+    ]
+  },
+  "since": {
+    "examples": [
+      "We have known each other since childhood."
+    ]
+  },
+  "until": {
+    "examples": [
+      "The shop stays open until ten every night."
+    ]
+  },
+  "often": {
+    "examples": [
+      "They often go hiking on the weekend."
+    ]
+  },
+  "yet": {
+    "examples": [
+      "The package has not arrived yet."
+    ]
+  },
+  "among": {
+    "examples": [
+      "She was the tallest among all her friends."
+    ]
+  },
+  "ever": {
+    "examples": [
+      "Have you ever visited a foreign country?"
+    ]
+  },
+  "five": {
+    "examples": [
+      "The bakery sells five kinds of fresh bread."
+    ]
+  },
+  "within": {
+    "examples": [
+      "Please reply within three working days."
+    ]
+  },
+  "himself": {
+    "examples": [
+      "He cooked the whole meal by himself."
+    ]
+  },
+  "toward": {
+    "examples": [
+      "She walked slowly toward the open door."
+    ]
+  },
+  "six": {
+    "examples": [
+      "The class starts at six in the evening."
+    ]
+  },
+  "yeah": {
+    "examples": [
+      "Yeah, that sounds like a great idea."
+    ]
+  },
+  "sometimes": {
+    "examples": [
+      "Sometimes I forget where I put my keys."
+    ]
+  },
+  "themselves": {
+    "examples": [
+      "The children dressed themselves this morning."
+    ]
+  },
+  "itself": {
+    "examples": [
+      "The cat cleaned itself in the warm sun."
+    ]
+  },
+  "myself": {
+    "examples": [
+      "I made this cake all by myself."
+    ]
+  },
+  "upon": {
+    "examples": [
+      "Once upon a time, a king ruled the land."
+    ]
+  },
+  "factor": {
+    "examples": [
+      "Price was the main factor in our decision."
+    ]
+  },
+  "decade": {
+    "examples": [
+      "The town has changed greatly over the last decade."
+    ],
+    "root_affix": "词根 dec(十) + -ade→ 十年"
+  },
+  "shoot": {
+    "examples": [
+      "The hunter raised his rifle to shoot the target."
+    ]
+  },
+  "east": {
+    "examples": [
+      "The sun rises in the east every morning."
+    ]
+  },
+  "seven": {
+    "examples": [
+      "There are seven days in a single week."
+    ]
+  },
+  "save": {
+    "examples": [
+      "We try to save money for the holidays."
+    ]
+  },
+  "artist": {
+    "examples": [
+      "The young artist painted a beautiful sunset."
+    ],
+    "root_affix": "词根 art(技艺) + 后缀 -ist(…者)→ 从事技艺的人→ 艺术家"
+  },
+  "scene": {
+    "examples": [
+      "The opening scene of the film was very tense."
+    ]
+  },
+  "eight": {
+    "examples": [
+      "The meeting will begin at eight tomorrow."
+    ]
+  },
+  "stock": {
+    "examples": [
+      "The shop keeps a large stock of fresh fruit."
+    ]
+  },
+  "career": {
+    "examples": [
+      "She built a successful career in medicine."
+    ]
+  },
+  "despite": {
+    "examples": [
+      "Despite the rain, the match went ahead."
+    ]
+  },
+  "central": {
+    "examples": [
+      "The hotel is in the central part of town."
+    ],
+    "root_affix": "词根 centr(中心) + 后缀 -al(…的)→ 中心的"
+  },
+  "thus": {
+    "examples": [
+      "He missed the bus and thus arrived late."
+    ]
+  },
+  "treatment": {
+    "examples": [
+      "The doctor recommended a new treatment for the illness."
+    ],
+    "root_affix": "词根 treat(对待;处理) + 后缀 -ment(名词)→ 治疗;处理"
+  },
+  "beyond": {
+    "examples": [
+      "The mountains stretched far beyond the river."
+    ]
+  },
+  "happy": {
+    "examples": [
+      "She felt happy when she saw her old friends."
+    ]
+  },
+  "exactly": {
+    "examples": [
+      "Tell me exactly what happened at the meeting."
+    ]
+  },
+  "lie": {
+    "examples": [
+      "He likes to lie on the grass and watch clouds."
+    ]
+  },
+  "size": {
+    "examples": [
+      "These shoes are not the right size for me."
+    ]
+  },
+  "dog": {
+    "examples": [
+      "Their friendly dog barked at the mail carrier."
+    ]
+  },
+  "fund": {
+    "examples": [
+      "The school set up a fund to help poor students."
+    ]
+  },
+  "occur": {
+    "examples": [
+      "Earthquakes rarely occur in this quiet region."
+    ],
+    "root_affix": "前缀 oc-(朝向) + 词根 cur(跑)→ 朝你跑来→ 发生"
+  },
+  "media": {
+    "examples": [
+      "The news spread quickly through social media."
+    ]
+  },
+  "ready": {
+    "examples": [
+      "Dinner is ready, so please come to the table."
+    ]
+  },
+  "sign": {
+    "examples": [
+      "A road sign warned drivers about the sharp turn."
+    ]
+  },
+  "list": {
+    "examples": [
+      "She wrote a shopping list before going out."
+    ]
+  },
+  "individual": {
+    "examples": [
+      "Each individual has the right to be heard."
+    ],
+    "root_affix": "前缀 in-(不) + 词根 divid(分开) + -ual→ 不可再分的→ 个体"
+  },
+  "resource": {
+    "examples": [
+      "Clean water is a precious natural resource."
+    ],
+    "root_affix": "前缀 re-(再) + 词根 sourc(涌出)→ 可再涌出的→ 资源"
+  },
+  "identify": {
+    "examples": [
+      "Police could not identify the man in the photo."
+    ]
+  },
+  "determine": {
+    "examples": [
+      "The judge will determine the final outcome."
+    ],
+    "root_affix": "前缀 de-(完全) + 词根 termin(界限)→ 划定界限→ 决定"
+  },
+  "disease": {
+    "examples": [
+      "Doctors are working hard to cure the disease."
+    ]
+  },
+  "whatever": {
+    "examples": [
+      "You may order whatever you like from the menu."
+    ]
+  },
+  "success": {
+    "examples": [
+      "Her hard work finally led to great success."
+    ],
+    "root_affix": "前缀 suc-(向上) + 词根 cess(走)→ 步步上升→ 成功"
+  },
+  "cup": {
+    "examples": [
+      "She poured hot tea into a small cup."
+    ]
+  },
+  "particularly": {
+    "examples": [
+      "I particularly enjoyed the last chapter of the book."
+    ]
+  },
+  "staff": {
+    "examples": [
+      "The hotel staff were friendly and helpful."
+    ]
+  },
+  "indicate": {
+    "examples": [
+      "Dark clouds usually indicate that rain is coming."
+    ],
+    "root_affix": "前缀 in-(向内) + 词根 dic(说;指示)→ 指出→ 显示"
+  },
+  "growth": {
+    "examples": [
+      "Regular exercise supports healthy bone growth."
+    ]
+  },
+  "loss": {
+    "examples": [
+      "The team accepted their loss with good grace."
+    ]
+  },
+  "degree": {
+    "examples": [
+      "She earned a degree in biology last year."
+    ],
+    "root_affix": "前缀 de-(向下) + 词根 gree(步)→ 台阶;等级→ 程度;度"
+  },
+  "wonder": {
+    "examples": [
+      "I wonder why the lights suddenly went out."
+    ]
+  },
+  "attack": {
+    "examples": [
+      "The army planned a surprise attack at dawn."
+    ]
+  },
+  "herself": {
+    "examples": [
+      "She finished the difficult puzzle all by herself."
+    ]
+  },
+  "region": {
+    "examples": [
+      "This region is famous for its sweet grapes."
+    ],
+    "root_affix": "词根 reg(统治;划界) + -ion→ 划定的范围→ 区域"
+  },
+  "television": {
+    "examples": [
+      "They watched the news on television last night."
+    ]
+  },
+  "box": {
+    "examples": [
+      "He kept his old letters in a wooden box."
+    ]
+  },
+  "pretty": {
+    "examples": [
+      "The garden looks pretty with all the flowers."
+    ]
+  },
+  "everybody": {
+    "examples": [
+      "Everybody clapped when the singer finished."
+    ]
+  },
+  "trade": {
+    "examples": [
+      "The two countries agreed to increase trade."
+    ]
+  },
+  "election": {
+    "examples": [
+      "Citizens voted carefully in the local election."
+    ],
+    "root_affix": "前缀 e-(出) + 词根 lect(选;挑)→ 选出→ 选举"
+  },
+  "general": {
+    "examples": [
+      "The talk gave a general overview of the topic."
+    ]
+  },
+  "standard": {
+    "examples": [
+      "The factory keeps a high standard of quality."
+    ]
+  },
+  "message": {
+    "examples": [
+      "She left a short message on my phone."
+    ],
+    "root_affix": "词根 mess(送;传)→ 被传送的内容→ 消息"
+  },
+  "fail": {
+    "examples": [
+      "Don't worry if you fail the first attempt."
+    ]
+  },
+  "outside": {
+    "examples": [
+      "The children played outside until it got dark."
+    ]
+  },
+  "analysis": {
+    "examples": [
+      "The report included a careful analysis of the data."
+    ],
+    "root_affix": "前缀 ana-(分开) + 词根 lys(松开;分解)→ 拆开来看→ 分析"
+  },
+  "sex": {
+    "examples": [
+      "The form asks for your name, age, and sex."
+    ]
+  },
+  "forward": {
+    "examples": [
+      "She leaned forward to hear the speaker better."
+    ]
+  },
+  "lawyer": {
+    "examples": [
+      "The lawyer explained the contract to her client."
+    ],
+    "root_affix": "law(法律) + 后缀 -yer(…者)→ 从事法律的人→ 律师"
+  },
+  "section": {
+    "examples": [
+      "The library has a quiet section for reading."
+    ],
+    "root_affix": "词根 sect(切;割) + -ion→ 切分出的部分→ 部分"
+  },
+  "environmental": {
+    "examples": [
+      "The factory must follow strict environmental rules."
+    ],
+    "root_affix": "environ(环绕) + -ment + -al→ 与环境有关的"
+  },
+  "glass": {
+    "examples": [
+      "She filled the glass with cold orange juice."
+    ]
+  },
+  "skill": {
+    "examples": [
+      "Cooking is a skill that improves with practice."
+    ]
+  },
+  "sister": {
+    "examples": [
+      "My younger sister loves drawing animals."
+    ]
+  },
+  "professor": {
+    "examples": [
+      "The professor explained the theory very clearly."
+    ]
+  },
+  "operation": {
+    "examples": [
+      "The whole operation took only two hours."
+    ],
+    "root_affix": "词根 oper(工作) + -ation→ 操作;运转"
+  },
+  "crime": {
+    "examples": [
+      "The police are working to reduce crime in the city."
+    ]
+  },
+  "stage": {
+    "examples": [
+      "The singer walked onto the brightly lit stage."
+    ]
+  },
+  "authority": {
+    "examples": [
+      "The mayor has the authority to approve the plan."
+    ],
+    "root_affix": "词根 auctor/author(创始;权威) + -ity→ 权威;权力"
+  },
+  "miss": {
+    "examples": [
+      "Hurry, or we will miss the early train."
+    ]
+  },
+  "design": {
+    "examples": [
+      "The architect showed us the new building design."
+    ]
+  },
+  "sort": {
+    "examples": [
+      "Please sort these papers by date."
+    ]
+  },
+  "act": {
+    "examples": [
+      "It takes courage to act in front of a crowd."
+    ]
+  },
+  "ten": {
+    "examples": [
+      "The recipe needs ten minutes of baking."
+    ]
+  },
+  "gun": {
+    "examples": [
+      "The soldier cleaned his gun after the drill."
+    ]
+  },
+  "station": {
+    "examples": [
+      "We met our friends at the train station."
+    ],
+    "root_affix": "词根 stat(站立) + -ion→ 停留的地方→ 车站"
+  },
+  "blue": {
+    "examples": [
+      "The clear sky was a deep, bright blue."
+    ]
+  },
+  "strategy": {
+    "examples": [
+      "The coach explained the team's new strategy."
+    ]
+  },
+  "clearly": {
+    "examples": [
+      "Please speak clearly so everyone can hear you."
+    ]
+  },
+  "discuss": {
+    "examples": [
+      "Let's discuss the plan over a cup of coffee."
+    ]
+  },
+  "indeed": {
+    "examples": [
+      "The trip was indeed the best part of our year."
+    ]
+  },
+  "truth": {
+    "examples": [
+      "She finally told us the truth about the accident."
+    ]
+  },
+  "song": {
+    "examples": [
+      "The children sang a cheerful song together."
+    ]
+  },
+  "democratic": {
+    "examples": [
+      "The country held its first democratic election."
+    ],
+    "root_affix": "词根 demo(人民) + crat(统治) + -ic→ 人民统治的→ 民主的"
+  },
+  "check": {
+    "examples": [
+      "Please check your answers before handing in the test."
+    ]
+  },
+  "leg": {
+    "examples": [
+      "He hurt his leg while playing football."
+    ]
+  },
+  "dark": {
+    "examples": [
+      "It was already dark when we left the office."
+    ]
+  },
+  "rather": {
+    "examples": [
+      "I would rather stay home than go out tonight."
+    ]
+  },
+  "laugh": {
+    "examples": [
+      "Her funny story made everyone laugh out loud."
+    ]
+  },
+  "guess": {
+    "examples": [
+      "I can't guess how old that old tree is."
+    ]
+  },
+  "executive": {
+    "examples": [
+      "The company hired a new executive last month."
+    ],
+    "root_affix": "前缀 ex-(出) + 词根 secut(跟随;执行)→ 执行的人"
+  },
+  "prove": {
+    "examples": [
+      "The lawyer could not prove that he was guilty."
+    ],
+    "root_affix": "前缀 pro-(向前) + 词根 prob/prov(证明;检验)→ 证明"
+  },
+  "hang": {
+    "examples": [
+      "Please hang your coat on the hook by the door."
+    ]
+  },
+  "entire": {
+    "examples": [
+      "She spent the entire afternoon cleaning the house."
+    ]
+  },
+  "rock": {
+    "examples": [
+      "The children threw a flat rock across the pond."
+    ]
+  },
+  "claim": {
+    "examples": [
+      "He made a bold claim about his new invention."
+    ]
+  },
+  "remove": {
+    "examples": [
+      "Please remove your shoes before entering the room."
+    ],
+    "root_affix": "前缀 re-(回;离) + 词根 move(移动)→ 移走→ 去除"
+  },
+  "manager": {
+    "examples": [
+      "The store manager handled the complaint politely."
+    ],
+    "root_affix": "manage(管理) + 后缀 -er(…者)→ 管理者→ 经理"
+  },
+  "enjoy": {
+    "examples": [
+      "We always enjoy long walks by the sea."
+    ],
+    "root_affix": "前缀 en-(使) + joy(快乐)→ 使快乐→ 享受"
+  },
+  "network": {
+    "examples": [
+      "A strong network helps you find new jobs."
+    ],
+    "root_affix": "net(网) + work(工作)→ 网状结构→ 网络"
+  },
+  "legal": {
+    "examples": [
+      "Driving without a licence is not legal."
+    ],
+    "root_affix": "词根 leg(法律) + 后缀 -al(…的)→ 法律的;合法的"
+  },
+  "religious": {
+    "examples": [
+      "She comes from a deeply religious family."
+    ],
+    "root_affix": "词根 relig(联结;敬神) + -ous→ 虔诚的;宗教的"
+  },
+  "cold": {
+    "examples": [
+      "The water in the lake felt very cold."
+    ]
+  },
+  "final": {
+    "examples": [
+      "They reached the final stage of the competition."
+    ],
+    "root_affix": "词根 fin(结束;界限) + 后缀 -al(…的)→ 最后的"
+  },
+  "main": {
+    "examples": [
+      "The main road into town was closed for repairs."
+    ]
+  },
+  "green": {
+    "examples": [
+      "The hills turned green after the spring rain."
+    ]
+  },
+  "card": {
+    "examples": [
+      "He sent his grandmother a birthday card."
+    ]
+  },
+  "above": {
+    "examples": [
+      "A bright lamp hung above the kitchen table."
+    ]
+  },
+  "seat": {
+    "examples": [
+      "Please take a seat while you wait."
+    ]
+  },
+  "cell": {
+    "examples": [
+      "Every living thing is made of tiny cells."
+    ]
+  },
+  "nice": {
+    "examples": [
+      "It was very nice of you to help me."
+    ]
+  },
+  "trial": {
+    "examples": [
+      "The new medicine passed its first safety trial."
+    ]
+  },
+  "expert": {
+    "examples": [
+      "She is an expert in ancient Roman history."
+    ],
+    "root_affix": "前缀 ex-(出) + 词根 per(尝试;经历)→ 经验丰富的人→ 专家"
+  },
+  "spring": {
+    "examples": [
+      "Flowers begin to bloom in early spring."
+    ]
+  },
+  "firm": {
+    "examples": [
+      "She gave the rope a firm, steady pull."
+    ]
+  },
+  "democrat": {
+    "examples": [
+      "The young democrat campaigned for fair voting."
+    ],
+    "root_affix": "词根 demo(人民) + crat(统治)→ 主张人民统治者→ 民主主义者"
+  },
+  "radio": {
+    "examples": [
+      "We listened to music on the car radio."
+    ]
+  },
+  "visit": {
+    "examples": [
+      "We plan to visit our grandparents next week."
+    ],
+    "root_affix": "前缀 vis-(看) + -it→ 前去看望→ 拜访"
+  },
+  "management": {
+    "examples": [
+      "Good time management helps you finish work early."
+    ],
+    "root_affix": "manage(管理) + 后缀 -ment(名词)→ 管理"
+  },
+  "tonight": {
+    "examples": [
+      "There is a free concert in the park tonight."
+    ]
+  },
+  "huge": {
+    "examples": [
+      "A huge crowd gathered to watch the parade."
+    ]
+  },
+  "ball": {
+    "examples": [
+      "The boy kicked the ball over the fence."
+    ]
+  },
+  "yourself": {
+    "examples": [
+      "Please help yourself to some cake and tea."
+    ]
+  },
+  "finish": {
+    "examples": [
+      "Try to finish your homework before dinner."
+    ],
+    "root_affix": "词根 fin(结束) + -ish→ 使结束→ 完成"
+  },
+  "theory": {
+    "examples": [
+      "Her theory explained why the bridge collapsed."
+    ]
+  },
+  "impact": {
+    "examples": [
+      "The new law had a big impact on small shops."
+    ],
+    "root_affix": "前缀 im-(向内) + 词根 pact(压紧)→ 压入→ 冲击;影响"
+  },
+  "respond": {
+    "examples": [
+      "Please respond to my email as soon as possible."
+    ],
+    "root_affix": "前缀 re-(回) + 词根 spond(承诺;回答)→ 回应→ 回答"
+  },
+  "maintain": {
+    "examples": [
+      "It is hard to maintain a clean desk all week."
+    ],
+    "root_affix": "词根 main(手;manu) + tain(握)→ 用手保持→ 维持"
+  },
+  "charge": {
+    "examples": [
+      "The waiter said there is no charge for the water."
+    ]
+  },
+  "traditional": {
+    "examples": [
+      "They served traditional dishes at the wedding."
+    ],
+    "root_affix": "词根 trad(交付;传递) + -ition + -al→ 一代代传下来的→ 传统的"
+  },
+  "onto": {
+    "examples": [
+      "The cat jumped onto the warm windowsill."
+    ]
+  },
+  "direction": {
+    "examples": [
+      "We walked in the wrong direction and got lost."
+    ],
+    "root_affix": "前缀 di-(分开) + 词根 rect(直;引导) + -ion→ 引导的方向"
+  },
+  "weapon": {
+    "examples": [
+      "The knight carried a heavy steel weapon."
+    ]
+  },
+  "employee": {
+    "examples": [
+      "Every employee received a small holiday gift."
+    ],
+    "root_affix": "前缀 em-(使) + ploy(使用) + -ee(被…者)→ 被雇用的人→ 雇员"
+  },
+  "contain": {
+    "examples": [
+      "This bottle can contain two litres of water."
+    ]
+  },
+  "cultural": {
+    "examples": [
+      "The festival celebrates the town's cultural history."
+    ],
+    "root_affix": "词根 cult(耕作;培养) + -ural→ 与文化有关的"
+  },
+  "peace": {
+    "examples": [
+      "After years of war, the country longed for peace."
+    ]
+  },
+  "pain": {
+    "examples": [
+      "She felt a sharp pain in her left knee."
+    ]
+  },
+  "wide": {
+    "examples": [
+      "The river is very wide near its mouth."
+    ]
+  },
+  "shake": {
+    "examples": [
+      "Be sure to shake the bottle before you drink."
+    ]
+  },
+  "fly": {
+    "examples": [
+      "Birds fly south when the weather turns cold."
+    ]
+  },
+  "interview": {
+    "examples": [
+      "She felt nervous before her first job interview."
+    ]
+  },
+  "chair": {
+    "examples": [
+      "He pulled out a chair and sat down quietly."
+    ]
+  },
+  "fish": {
+    "examples": [
+      "They caught three small fish in the lake."
+    ]
+  },
+  "camera": {
+    "examples": [
+      "She took a photo of the sunset with her camera."
+    ]
+  },
+  "structure": {
+    "examples": [
+      "The old bridge has a very strong structure."
+    ]
+  },
+  "politics": {
+    "examples": [
+      "He has been interested in politics since college."
+    ]
+  },
+  "perform": {
+    "examples": [
+      "The band will perform live this Saturday night."
+    ]
+  },
+  "weight": {
+    "examples": [
+      "The doctor checked the baby's height and weight."
+    ]
+  },
+  "candidate": {
+    "examples": [
+      "Each candidate gave a short speech to the crowd."
+    ]
+  },
+  "production": {
+    "examples": [
+      "The factory increased its production of toys."
+    ]
+  },
+  "treat": {
+    "examples": [
+      "My uncle promised to treat us to ice cream."
+    ]
+  },
+  "trip": {
+    "examples": [
+      "We are planning a short trip to the mountains."
+    ]
+  },
+  "affect": {
+    "examples": [
+      "Loud noise can affect your ability to sleep."
+    ]
+  },
+  "inside": {
+    "examples": [
+      "It started raining, so we stayed inside."
+    ]
+  },
+  "conference": {
+    "examples": [
+      "Scientists from many countries joined the conference."
+    ]
+  },
+  "unit": {
+    "examples": [
+      "Each apartment is a separate living unit."
+    ],
+    "root_affix": "词根 uni(一;单一) + -t→ 单一的整体→ 单位"
+  },
+  "style": {
+    "examples": [
+      "She has a simple but elegant style of dress."
+    ]
+  },
+  "adult": {
+    "examples": [
+      "Every adult must show a ticket at the gate."
+    ],
+    "root_affix": "前缀 ad-(向) + 词根 ult/ol(成长)→ 已长成的→ 成人"
+  },
+  "range": {
+    "examples": [
+      "The shop sells a wide range of fresh fruit."
+    ]
+  },
+  "deep": {
+    "examples": [
+      "The well was too deep to see the bottom."
+    ]
+  },
+  "edge": {
+    "examples": [
+      "She stood at the edge of the cliff and looked down."
+    ]
+  },
+  "specific": {
+    "examples": [
+      "Please give me a specific time for the meeting."
+    ]
+  },
+  "writer": {
+    "examples": [
+      "The writer signed copies of her new book."
+    ],
+    "root_affix": "write(写) + 后缀 -er(…者)→ 写作的人→ 作家"
+  },
+  "throughout": {
+    "examples": [
+      "It rained steadily throughout the whole night."
+    ]
+  },
+  "fear": {
+    "examples": [
+      "She tried to hide her fear of the dark."
+    ]
+  },
+  "shoulder": {
+    "examples": [
+      "He carried the heavy bag on one shoulder."
+    ]
+  },
+  "institution": {
+    "examples": [
+      "The hospital is a respected medical institution."
+    ],
+    "root_affix": "前缀 in-(向上) + 词根 stitut(建立) + -ion→ 建立起来的机构"
+  },
+  "middle": {
+    "examples": [
+      "A small table stood in the middle of the room."
+    ]
+  },
+  "sea": {
+    "examples": [
+      "They sailed across the calm blue sea."
+    ]
+  },
+  "dream": {
+    "examples": [
+      "Becoming a pilot was her childhood dream."
+    ]
+  },
+  "bar": {
+    "examples": [
+      "An iron bar blocked the old gate."
+    ]
+  },
+  "property": {
+    "examples": [
+      "They bought a small property near the lake."
+    ]
+  },
+  "stuff": {
+    "examples": [
+      "Please move your stuff off the kitchen table."
+    ]
+  },
+  "detail": {
+    "examples": [
+      "She explained every detail of the plan carefully."
+    ]
+  },
+  "somebody": {
+    "examples": [
+      "Somebody left an umbrella on the bus."
+    ]
+  },
+  "magazine": {
+    "examples": [
+      "He read a sports magazine on the long train ride."
+    ]
+  },
+  "hotel": {
+    "examples": [
+      "We stayed in a small hotel near the beach."
+    ]
+  },
+  "soldier": {
+    "examples": [
+      "The brave soldier returned home after the war."
+    ]
+  },
+  "reflect": {
+    "examples": [
+      "The still water can reflect the tall trees."
+    ]
+  },
+  "heavy": {
+    "examples": [
+      "This box is too heavy for me to lift alone."
+    ]
+  },
+  "sexual": {
+    "examples": [
+      "The film deals with serious sexual themes."
+    ]
+  },
+  "bag": {
+    "examples": [
+      "She packed her books into a small bag."
+    ]
+  },
+  "heat": {
+    "examples": [
+      "The heat of the fire warmed the whole room."
+    ]
+  },
+  "marriage": {
+    "examples": [
+      "Their marriage has lasted over thirty years."
+    ],
+    "root_affix": "词根 marr(结婚) + -iage→ 婚姻"
+  },
+  "tough": {
+    "examples": [
+      "Climbing the steep hill was really tough."
+    ]
+  },
+  "sing": {
+    "examples": [
+      "The children love to sing in the school choir."
+    ]
+  },
+  "exist": {
+    "examples": [
+      "Many strange creatures exist deep in the ocean."
+    ],
+    "root_affix": "前缀 ex-(出) + 词根 sist(站立)→ 站出来→ 存在"
+  },
+  "pattern": {
+    "examples": [
+      "Her dress had a pretty floral pattern."
+    ]
+  },
+  "skin": {
+    "examples": [
+      "Sunscreen protects your skin from the sun."
+    ]
+  },
+  "agent": {
+    "examples": [
+      "A travel agent helped us book the flights."
+    ],
+    "root_affix": "词根 ag(做;行动) + -ent(…者)→ 替人行事的人→ 代理人"
+  },
+  "owner": {
+    "examples": [
+      "The dog ran happily to its owner."
+    ],
+    "root_affix": "own(拥有) + 后缀 -er(…者)→ 拥有者→ 物主"
+  },
+  "machine": {
+    "examples": [
+      "The washing machine broke down this morning."
+    ]
+  },
+  "gas": {
+    "examples": [
+      "They turned off the gas before leaving home."
+    ]
+  },
+  "ahead": {
+    "examples": [
+      "There is heavy traffic on the road ahead."
+    ]
+  },
+  "commercial": {
+    "examples": [
+      "A funny commercial appeared during the show."
+    ]
+  },
+  "address": {
+    "examples": [
+      "Please write your full address on the form."
+    ]
+  },
+  "cancer": {
+    "examples": [
+      "Early checks can help doctors find cancer sooner."
+    ]
+  },
+  "item": {
+    "examples": [
+      "Each item on the list has its own price."
+    ]
+  },
+  "reality": {
+    "examples": [
+      "In reality, the journey took much longer than planned."
+    ],
+    "root_affix": "real(真实的) + 后缀 -ity(名词)→ 真实的状态→ 现实"
+  },
+  "coach": {
+    "examples": [
+      "The football coach praised the team's effort."
+    ]
+  },
+  "yard": {
+    "examples": [
+      "The children played happily in the back yard."
+    ]
+  },
+  "violence": {
+    "examples": [
+      "The film contains too much violence for children."
+    ],
+    "root_affix": "词根 viol(暴力;猛烈) + -ence→ 暴力"
+  },
+  "total": {
+    "examples": [
+      "Add the prices to find the total cost."
+    ]
+  },
+  "tend": {
+    "examples": [
+      "Older people tend to wake up early."
+    ]
+  },
+  "investment": {
+    "examples": [
+      "Buying that house was a wise investment."
+    ],
+    "root_affix": "前缀 in-(向内) + 词根 vest(穿衣;投入) + -ment→ 把钱投入→ 投资"
+  },
+  "finger": {
+    "examples": [
+      "She cut her finger while slicing bread."
+    ]
+  },
+  "collection": {
+    "examples": [
+      "He has a large collection of old coins."
+    ]
+  },
+  "task": {
+    "examples": [
+      "Cleaning the whole house is a big task."
+    ]
+  },
+  "partner": {
+    "examples": [
+      "She danced gracefully with her partner."
+    ]
+  },
+  "positive": {
+    "examples": [
+      "Try to keep a positive attitude during hard times."
+    ],
+    "root_affix": "前缀 pos(放置) + -itive→ 明确放定的→ 肯定的;积极的"
+  },
+  "civil": {
+    "examples": [
+      "Citizens enjoy many civil rights under the law."
+    ],
+    "root_affix": "词根 civ(公民;城市) + -il→ 公民的"
+  },
+  "consumer": {
+    "examples": [
+      "The new law protects consumer rights."
+    ]
+  },
+  "budget": {
+    "examples": [
+      "We must plan a careful budget for the trip."
+    ]
+  },
+  "wish": {
+    "examples": [
+      "I wish you a safe journey home."
+    ]
+  },
+  "scientist": {
+    "examples": [
+      "The scientist studied tiny cells under a microscope."
+    ],
+    "root_affix": "科学 science + 后缀 -ist(…者)→ 从事科学的人→ 科学家"
+  },
+  "safe": {
+    "examples": [
+      "Keep your passport in a safe place while traveling."
+    ]
+  },
+  "mouth": {
+    "examples": [
+      "She covered her mouth and yawned quietly."
+    ]
+  },
+  "nor": {
+    "examples": [
+      "He neither called nor sent a message."
+    ]
+  },
+  "victim": {
+    "examples": [
+      "The flood victim received food and shelter."
+    ]
+  },
+  "newspaper": {
+    "examples": [
+      "He reads the morning newspaper with his coffee."
+    ],
+    "root_affix": "news(新闻) + paper(纸张)→ 印新闻的纸→ 报纸"
+  },
+  "threat": {
+    "examples": [
+      "Pollution is a serious threat to wildlife."
+    ]
+  },
+  "smile": {
+    "examples": [
+      "A warm smile spread across her tired face."
+    ]
+  },
+  "attorney": {
+    "examples": [
+      "The attorney advised her client to stay silent."
+    ]
+  },
+  "score": {
+    "examples": [
+      "Our team won the game by a narrow score."
+    ]
+  },
+  "account": {
+    "examples": [
+      "She opened a savings account at the bank."
+    ],
+    "root_affix": "前缀 ac-(朝向) + 词根 count(计算)→ 算清楚→ 帐目"
+  },
+  "audience": {
+    "examples": [
+      "The audience clapped loudly after the play."
+    ],
+    "root_affix": "词根 audi(听) + -ence→ 听者→ 观众;听众"
+  },
+  "rich": {
+    "examples": [
+      "The soil here is rich and good for farming."
+    ]
+  },
+  "dinner": {
+    "examples": [
+      "We invited our neighbors over for dinner."
+    ]
+  },
+  "vote": {
+    "examples": [
+      "Every citizen has the right to vote."
+    ]
+  },
+  "western": {
+    "examples": [
+      "The western sky glowed orange at sunset."
+    ]
+  },
+  "relate": {
+    "examples": [
+      "Can you relate this story to your own life?"
+    ],
+    "root_affix": "前缀 re-(回) + 词根 lat(带;拿)→ 带回联系→ 关联"
+  },
+  "debate": {
+    "examples": [
+      "The two leaders had a lively public debate."
+    ],
+    "root_affix": "前缀 de-(向下) + 词根 bat(打)→ 互相辩驳→ 辩论"
+  },
+  "majority": {
+    "examples": [
+      "The majority of students passed the exam."
+    ],
+    "root_affix": "major(较大的) + 后缀 -ity→ 较大的部分→ 多数"
+  },
+  "front": {
+    "examples": [
+      "A tall tree stands in front of the house."
+    ]
+  },
+  "senior": {
+    "examples": [
+      "The senior students helped the younger ones."
+    ],
+    "root_affix": "词根 sen(老;年长) + -ior→ 较年长的→ 资深的"
+  },
+  "assume": {
+    "examples": [
+      "Don't assume the worst before you hear the facts."
+    ],
+    "root_affix": "前缀 as-(朝向) + 词根 sum(拿取)→ 拿过来当作→ 假定;承担"
+  },
+  "wind": {
+    "examples": [
+      "A cold wind blew leaves across the street."
+    ]
+  },
+  "key": {
+    "examples": [
+      "She turned the key and opened the front door."
+    ]
+  },
+  "mission": {
+    "examples": [
+      "Their mission was to deliver food to the village."
+    ]
+  },
+  "fast": {
+    "examples": [
+      "He runs very fast in the morning races."
+    ]
+  },
+  "alone": {
+    "examples": [
+      "She likes to walk alone through the quiet park."
+    ]
+  },
+  "customer": {
+    "examples": [
+      "The shop treats every customer with respect."
+    ]
+  },
+  "suffer": {
+    "examples": [
+      "Many plants suffer during a long dry summer."
+    ]
+  },
+  "speech": {
+    "examples": [
+      "The mayor gave a short speech at the opening."
+    ]
+  },
+  "successful": {
+    "examples": [
+      "The launch of the new product was very successful."
+    ],
+    "root_affix": "success(成功) + 后缀 -ful(充满…的)→ 成功的"
+  },
+  "option": {
+    "examples": [
+      "Walking to work is a healthy option."
+    ],
+    "root_affix": "前缀 opt(选择) + -ion→ 选择;选项"
+  },
+  "participant": {
+    "examples": [
+      "Each participant received a small medal."
+    ],
+    "root_affix": "前缀 part-(部分) + 词根 cip(取) + -ant→ 取得一份的人→ 参与者"
+  },
+  "southern": {
+    "examples": [
+      "They moved to a warm southern town."
+    ]
+  },
+  "eventually": {
+    "examples": [
+      "After many tries, she eventually solved the puzzle."
+    ]
+  },
+  "fresh": {
+    "examples": [
+      "We bought fresh vegetables at the market."
+    ]
+  },
+  "video": {
+    "examples": [
+      "He recorded a short video of the concert."
+    ],
+    "root_affix": "词根 vid(看)→ 看到的影像→ 视频"
+  },
+  "global": {
+    "examples": [
+      "Climate change is a serious global problem."
+    ],
+    "root_affix": "词根 glob(球;球体) + -al→ 全球的"
+  },
+  "senate": {
+    "examples": [
+      "The new law was approved by the senate."
+    ]
+  },
+  "reform": {
+    "examples": [
+      "The government promised to reform the tax system."
+    ]
+  },
+  "access": {
+    "examples": [
+      "Students need a card to access the library."
+    ],
+    "root_affix": "前缀 ac-(朝向) + 词根 cess(走)→ 走近→ 进入;通路"
+  },
+  "restaurant": {
+    "examples": [
+      "We had a lovely meal at a small restaurant."
+    ]
+  },
+  "judge": {
+    "examples": [
+      "The judge listened carefully to both sides."
+    ]
+  },
+  "publish": {
+    "examples": [
+      "She hopes to publish her first novel next year."
+    ],
+    "root_affix": "词根 publ(公众) + -ish→ 公之于众→ 出版;发表"
+  },
+  "relation": {
+    "examples": [
+      "There is a close relation between sleep and health."
+    ],
+    "root_affix": "前缀 re-(回) + 词根 lat(带) + -ion→ 相互带连→ 关系"
+  },
+  "release": {
+    "examples": [
+      "The band will release a new album soon."
+    ],
+    "root_affix": "前缀 re-(松) + 词根 leas(放松)→ 放开→ 释放;发行"
+  },
+  "bird": {
+    "examples": [
+      "A small bird sang sweetly outside the window."
+    ]
+  },
+  "labor": {
+    "examples": [
+      "Building the road took months of hard labor."
+    ]
+  },
+  "credit": {
+    "examples": [
+      "She bought the sofa using store credit."
+    ]
+  },
+  "critical": {
+    "examples": [
+      "The next few hours are critical for the patient."
+    ],
+    "root_affix": "词根 crit(判断;区分) + -ical→ 关键的;批评的"
+  },
+  "corner": {
+    "examples": [
+      "The shop sits on a busy street corner."
+    ]
+  },
+  "recall": {
+    "examples": [
+      "I cannot recall where I left my umbrella."
+    ],
+    "root_affix": "前缀 re-(回) + call(叫)→ 把记忆叫回来→ 回想"
+  },
+  "version": {
+    "examples": [
+      "This is the newest version of the software."
+    ],
+    "root_affix": "前缀 vers(转) + -ion→ 转化出的形式→ 版本"
+  },
+  "stare": {
+    "examples": [
+      "It is rude to stare at strangers."
+    ]
+  },
+  "effective": {
+    "examples": [
+      "Honey is an effective remedy for a sore throat."
+    ]
+  },
+  "neighborhood": {
+    "examples": [
+      "Our neighborhood is quiet and very friendly."
+    ],
+    "root_affix": "neighbor(邻居) + 后缀 -hood(状态;范围)→ 邻里;街区"
+  },
+  "troop": {
+    "examples": [
+      "A small troop of soldiers guarded the bridge."
+    ]
+  },
+  "income": {
+    "examples": [
+      "Her monthly income covers all the bills."
+    ],
+    "root_affix": "in(进入) + come(来)→ 进来的钱→ 收入"
+  },
+  "directly": {
+    "examples": [
+      "The road leads directly to the city center."
+    ]
+  },
+  "species": {
+    "examples": [
+      "This forest is home to many bird species."
+    ]
+  },
+  "track": {
+    "examples": [
+      "The hikers followed a narrow mountain track."
+    ]
+  },
+  "strike": {
+    "examples": [
+      "The workers decided to go on strike for higher pay."
+    ]
+  },
+  "sky": {
+    "examples": [
+      "Not a single cloud marked the clear sky."
+    ]
+  },
+  "absolutely": {
+    "examples": [
+      "You are absolutely right about the answer."
+    ]
+  },
+  "plane": {
+    "examples": [
+      "Our plane landed safely despite the storm."
+    ]
+  },
+  "nobody": {
+    "examples": [
+      "Nobody answered the door when I knocked."
+    ]
+  },
+  "nine": {
+    "examples": [
+      "The store opens at nine every morning."
+    ]
+  },
+  "refer": {
+    "examples": [
+      "Please refer to page ten for the full rules."
+    ],
+    "root_affix": "前缀 re-(回) + 词根 fer(带)→ 带回去查→ 提及;查阅"
+  },
+  "concept": {
+    "examples": [
+      "The teacher explained a difficult concept simply."
+    ]
+  },
+  "powerful": {
+    "examples": [
+      "The new engine is surprisingly powerful."
+    ],
+    "root_affix": "power(力量) + 后缀 -ful(充满…的)→ 强大的"
+  },
+  "perfect": {
+    "examples": [
+      "The weather was perfect for a long walk."
+    ]
+  },
+  "conduct": {
+    "examples": [
+      "The teacher praised the students' good conduct."
+    ]
+  },
+  "touch": {
+    "examples": [
+      "Please do not touch the wet paint."
+    ]
+  },
+  "please": {
+    "examples": [
+      "Could you please close the window?"
+    ]
+  },
+  "attend": {
+    "examples": [
+      "Hundreds of people will attend the concert."
+    ]
+  },
+  "variety": {
+    "examples": [
+      "The garden has a wide variety of flowers."
+    ],
+    "root_affix": "词根 vari(变化) + -ety→ 多样;种类"
+  },
+  "sleep": {
+    "examples": [
+      "Babies need a lot of sleep to grow well."
+    ]
+  },
+  "investigation": {
+    "examples": [
+      "The police opened an investigation into the theft."
+    ],
+    "root_affix": "前缀 in-(向内) + 词根 vestig(足迹) + -ation→ 追踪足迹→ 调查"
+  },
+  "nuclear": {
+    "examples": [
+      "The country built a new nuclear power plant."
+    ],
+    "root_affix": "词根 nucle(核;核心) + -ar→ 核的"
+  },
+  "researcher": {
+    "examples": [
+      "The researcher collected data for three years."
+    ],
+    "root_affix": "re-(再) + search(搜寻) + -er→ 反复探寻的人→ 研究人员"
+  },
+  "press": {
+    "examples": [
+      "Press the green button to start the machine."
+    ]
+  },
+  "conflict": {
+    "examples": [
+      "There was a conflict over who owned the land."
+    ]
+  },
+  "spirit": {
+    "examples": [
+      "She faced the bad news with a brave spirit."
+    ]
+  },
+  "camp": {
+    "examples": [
+      "We set up our camp beside the quiet river."
+    ]
+  },
+  "brain": {
+    "examples": [
+      "Reading regularly keeps the brain active."
+    ]
+  },
+  "dozen": {
+    "examples": [
+      "She bought a dozen fresh eggs at the market."
+    ]
+  },
+  "possibility": {
+    "examples": [
+      "There is a real possibility of rain tomorrow."
+    ],
+    "root_affix": "possible(可能的) + 后缀 -ity(名词)→ 可能性"
+  },
+  "insurance": {
+    "examples": [
+      "They bought travel insurance before the trip."
+    ],
+    "root_affix": "前缀 in-(使) + sure(确定) + -ance→ 使有保障→ 保险"
+  },
+  "department": {
+    "examples": [
+      "She works in the marketing department."
+    ],
+    "root_affix": "前缀 de-(分开) + 词根 part(部分) + -ment→ 分出的部分→ 部门"
+  },
+  "battle": {
+    "examples": [
+      "The soldiers were tired after the long battle."
+    ]
+  },
+  "date": {
+    "examples": [
+      "Please write today's date at the top of the page."
+    ]
+  },
+  "generally": {
+    "examples": [
+      "People generally feel happier in the sunshine."
+    ]
+  },
+  "sorry": {
+    "examples": [
+      "I'm sorry for keeping you waiting so long."
+    ]
+  },
+  "crisis": {
+    "examples": [
+      "The country faced a serious water crisis."
+    ]
+  },
+  "fan": {
+    "examples": [
+      "She turned on the fan to cool the warm room."
+    ]
+  },
+  "stick": {
+    "examples": [
+      "The dog ran to fetch the wooden stick."
+    ]
+  },
+  "define": {
+    "examples": [
+      "Can you define this word in simple terms?"
+    ],
+    "root_affix": "前缀 de-(完全) + 词根 fin(界限)→ 划定界限→ 定义"
+  },
+  "easily": {
+    "examples": [
+      "She finished the simple test very easily."
+    ]
+  },
+  "hole": {
+    "examples": [
+      "There is a small hole in my left sock."
+    ]
+  },
+  "element": {
+    "examples": [
+      "Trust is a key element of any friendship."
+    ]
+  },
+  "status": {
+    "examples": [
+      "Please check the current status of your order."
+    ],
+    "root_affix": "词根 stat(站立;状态)→ 所处的状态→ 地位"
+  },
+  "vision": {
+    "examples": [
+      "The doctor said her vision was perfectly normal."
+    ],
+    "root_affix": "词根 vis(看) + -ion→ 看的能力→ 视觉"
+  },
+  "normal": {
+    "examples": [
+      "His temperature is back to normal today."
+    ],
+    "root_affix": "词根 norm(规范;标准) + -al→ 符合标准的→ 正常的"
+  }
+}

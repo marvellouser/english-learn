@@ -1,0 +1,6297 @@
+[
+  {
+    "id": "w0001",
+    "word": "ability",
+    "phonetic": "/əˈbɪləti/",
+    "def_zh": "能力",
+    "def_en": "the power or skill to do something",
+    "examples": [
+      "She has the ability to learn languages quickly."
+    ],
+    "root_affix": "abil-(能,拉丁 habilis)+ -ity",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0002",
+    "word": "accept",
+    "phonetic": "/əkˈsept/",
+    "def_zh": "接受",
+    "def_en": "to agree to receive or take something",
+    "examples": [
+      "He accepted the job offer at once."
+    ],
+    "root_affix": "ac-(朝向)+ cept-(拿,拉丁 capere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0003",
+    "word": "achieve",
+    "phonetic": "/əˈtʃiːv/",
+    "def_zh": "实现;达到",
+    "def_en": "to successfully reach a goal through effort",
+    "examples": [
+      "They achieved record sales this year."
+    ],
+    "root_affix": "a-(向)+ chieve(头/目标,法语 chef)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0004",
+    "word": "active",
+    "phonetic": "/ˈæktɪv/",
+    "def_zh": "积极的;活跃的",
+    "def_en": "engaging in action; energetic",
+    "examples": [
+      "She stays active by cycling daily."
+    ],
+    "root_affix": "act-(做,拉丁 agere)+ -ive",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0005",
+    "word": "actually",
+    "phonetic": "/ˈæktʃuəli/",
+    "def_zh": "实际上",
+    "def_en": "in fact; really",
+    "examples": [
+      "It looks hard, but it is actually simple."
+    ],
+    "root_affix": "actual(真实的)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0006",
+    "word": "admit",
+    "phonetic": "/ədˈmɪt/",
+    "def_zh": "承认;准许进入",
+    "def_en": "to confess, or to allow to enter",
+    "examples": [
+      "He admitted that he was wrong."
+    ],
+    "root_affix": "ad-(向)+ mit-(送,拉丁 mittere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0007",
+    "word": "advance",
+    "phonetic": "/ədˈvɑːns/",
+    "def_zh": "前进;进步",
+    "def_en": "to move forward or make progress",
+    "examples": [
+      "Technology advances every year."
+    ],
+    "root_affix": "源自古法语 avancer(向前,拉丁 abante)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0008",
+    "word": "advice",
+    "phonetic": "/ədˈvaɪs/",
+    "def_zh": "建议",
+    "def_en": "an opinion offered to guide action",
+    "examples": [
+      "Take my advice and rest tonight."
+    ],
+    "root_affix": "ad-(向)+ vis-(看,拉丁 videre);本义“看法”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0009",
+    "word": "afford",
+    "phonetic": "/əˈfɔːd/",
+    "def_zh": "负担得起",
+    "def_en": "to have enough money or time for something",
+    "examples": [
+      "We can't afford a new car right now."
+    ],
+    "root_affix": "源自古英语 geforthian(促成,提供)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0010",
+    "word": "afraid",
+    "phonetic": "/əˈfreɪd/",
+    "def_zh": "害怕的",
+    "def_en": "feeling fear or worry",
+    "examples": [
+      "She is afraid of the dark."
+    ],
+    "root_affix": "源自古法语 affraier(惊吓)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0011",
+    "word": "agree",
+    "phonetic": "/əˈɡriː/",
+    "def_zh": "同意",
+    "def_en": "to have the same opinion or to consent",
+    "examples": [
+      "I agree with your plan."
+    ],
+    "root_affix": "a-(向)+ gree(喜欢,拉丁 gratus 令人愉快)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0012",
+    "word": "allow",
+    "phonetic": "/əˈlaʊ/",
+    "def_zh": "允许",
+    "def_en": "to permit something to happen",
+    "examples": [
+      "The rules allow two guests each."
+    ],
+    "root_affix": "源自古法语 alouer(认可,准许)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0013",
+    "word": "almost",
+    "phonetic": "/ˈɔːlməʊst/",
+    "def_zh": "几乎",
+    "def_en": "very nearly but not completely",
+    "examples": [
+      "We are almost finished."
+    ],
+    "root_affix": "all(全)+ most(最)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0014",
+    "word": "already",
+    "phonetic": "/ɔːlˈredi/",
+    "def_zh": "已经",
+    "def_en": "before now or before a given time",
+    "examples": [
+      "She has already left."
+    ],
+    "root_affix": "all(完全)+ ready(准备好)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0015",
+    "word": "although",
+    "phonetic": "/ɔːlˈðəʊ/",
+    "def_zh": "虽然",
+    "def_en": "in spite of the fact that",
+    "examples": [
+      "Although it rained, we went out."
+    ],
+    "root_affix": "all(全)+ though(尽管)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0016",
+    "word": "amount",
+    "phonetic": "/əˈmaʊnt/",
+    "def_zh": "数量;总额",
+    "def_en": "a quantity of something",
+    "examples": [
+      "A large amount of work remains."
+    ],
+    "root_affix": "a-(向)+ mount(山/上升,拉丁 mons)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0017",
+    "word": "ancient",
+    "phonetic": "/ˈeɪnʃənt/",
+    "def_zh": "古代的",
+    "def_en": "belonging to the very distant past",
+    "examples": [
+      "They studied ancient Greek history."
+    ],
+    "root_affix": "anci-(在前,拉丁 ante)+ -ent",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0018",
+    "word": "angry",
+    "phonetic": "/ˈæŋɡri/",
+    "def_zh": "生气的",
+    "def_en": "feeling strong displeasure",
+    "examples": [
+      "He was angry about the delay."
+    ],
+    "root_affix": "anger(愤怒)+ -y(形容词后缀)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0019",
+    "word": "animal",
+    "phonetic": "/ˈænɪml/",
+    "def_zh": "动物",
+    "def_en": "a living organism that can move and feel",
+    "examples": [
+      "The zoo protects rare animals."
+    ],
+    "root_affix": "anim-(气息/生命,拉丁 anima)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0020",
+    "word": "announce",
+    "phonetic": "/əˈnaʊns/",
+    "def_zh": "宣布",
+    "def_en": "to make something known publicly",
+    "examples": [
+      "They announced the winner on stage."
+    ],
+    "root_affix": "an-(向)+ nounce(报告,拉丁 nuntiare)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0021",
+    "word": "answer",
+    "phonetic": "/ˈɑːnsə(r)/",
+    "def_zh": "回答;答案",
+    "def_en": "a reply to a question",
+    "examples": [
+      "She gave a clear answer."
+    ],
+    "root_affix": "源自古英语 andswaru(回应,反对之誓)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0022",
+    "word": "anxious",
+    "phonetic": "/ˈæŋkʃəs/",
+    "def_zh": "焦虑的;渴望的",
+    "def_en": "feeling worried, or eagerly wanting",
+    "examples": [
+      "She felt anxious before the exam."
+    ],
+    "root_affix": "anx-(压迫,拉丁 angere)+ -ious",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0023",
+    "word": "appear",
+    "phonetic": "/əˈpɪə(r)/",
+    "def_zh": "出现;似乎",
+    "def_en": "to come into sight or to seem",
+    "examples": [
+      "A rainbow appeared after the rain."
+    ],
+    "root_affix": "ap-(向)+ pear(显现,拉丁 parere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0024",
+    "word": "apply",
+    "phonetic": "/əˈplaɪ/",
+    "def_zh": "申请;应用",
+    "def_en": "to make a formal request, or to put into use",
+    "examples": [
+      "Apply the rule to every case."
+    ],
+    "root_affix": "ap-(向)+ ply(折叠,拉丁 plicare);本义“贴上”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0025",
+    "word": "appreciate",
+    "phonetic": "/əˈpriːʃieɪt/",
+    "def_zh": "感激;赏识",
+    "def_en": "to be grateful for, or to value highly",
+    "examples": [
+      "I appreciate your help."
+    ],
+    "root_affix": "ap-(向)+ preci-(价格/价值,拉丁 pretium)+ -ate",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0026",
+    "word": "approach",
+    "phonetic": "/əˈprəʊtʃ/",
+    "def_zh": "接近;方法",
+    "def_en": "to come near, or a way of doing something",
+    "examples": [
+      "Winter is approaching fast."
+    ],
+    "root_affix": "ap-(向)+ proach(更近,拉丁 prope 近)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0027",
+    "word": "argue",
+    "phonetic": "/ˈɑːɡjuː/",
+    "def_zh": "争论;论证",
+    "def_en": "to give reasons for or against; to quarrel",
+    "examples": [
+      "They argued about the price."
+    ],
+    "root_affix": "源自拉丁 arguere(使清楚,主张)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0028",
+    "word": "arrive",
+    "phonetic": "/əˈraɪv/",
+    "def_zh": "到达",
+    "def_en": "to reach a destination",
+    "examples": [
+      "We arrived at noon."
+    ],
+    "root_affix": "ar-(向)+ rive(岸,拉丁 ripa);本义“靠岸”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0029",
+    "word": "article",
+    "phonetic": "/ˈɑːtɪkl/",
+    "def_zh": "文章;物品;冠词",
+    "def_en": "a piece of writing, an item, or a grammar word",
+    "examples": [
+      "She wrote an article about birds."
+    ],
+    "root_affix": "源自拉丁 articulus(小关节,小段)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0030",
+    "word": "aspect",
+    "phonetic": "/ˈæspekt/",
+    "def_zh": "方面",
+    "def_en": "a particular part or feature of something",
+    "examples": [
+      "Consider every aspect of the plan."
+    ],
+    "root_affix": "a-(向)+ spect(看,拉丁 specere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0031",
+    "word": "attempt",
+    "phonetic": "/əˈtempt/",
+    "def_zh": "尝试",
+    "def_en": "to try to do something",
+    "examples": [
+      "He attempted to fix it himself."
+    ],
+    "root_affix": "at-(向)+ tempt(试探,拉丁 temptare)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0032",
+    "word": "attention",
+    "phonetic": "/əˈtenʃn/",
+    "def_zh": "注意;关注",
+    "def_en": "the act of focusing the mind on something",
+    "examples": [
+      "Pay attention to the details."
+    ],
+    "root_affix": "at-(向)+ tent-(伸,拉丁 tendere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0033",
+    "word": "attitude",
+    "phonetic": "/ˈætɪtjuːd/",
+    "def_zh": "态度",
+    "def_en": "a settled way of thinking or feeling",
+    "examples": [
+      "She has a positive attitude."
+    ],
+    "root_affix": "源自拉丁 aptitudo(适合,姿态)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0034",
+    "word": "attract",
+    "phonetic": "/əˈtrækt/",
+    "def_zh": "吸引",
+    "def_en": "to draw interest or attention",
+    "examples": [
+      "The lights attract insects."
+    ],
+    "root_affix": "at-(向)+ tract(拉,拉丁 trahere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0035",
+    "word": "available",
+    "phonetic": "/əˈveɪləbl/",
+    "def_zh": "可获得的;可用的",
+    "def_en": "able to be used or obtained",
+    "examples": [
+      "Is the room available tonight?"
+    ],
+    "root_affix": "avail(有用,源自拉丁 valere 强健)+ -able",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0036",
+    "word": "average",
+    "phonetic": "/ˈævərɪdʒ/",
+    "def_zh": "平均;平均的",
+    "def_en": "a typical or middle value",
+    "examples": [
+      "The average score was eighty."
+    ],
+    "root_affix": "源自阿拉伯 awariya(货损分摊),经法语 avarie",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0037",
+    "word": "avoid",
+    "phonetic": "/əˈvɔɪd/",
+    "def_zh": "避免",
+    "def_en": "to keep away from something",
+    "examples": [
+      "Avoid driving in the storm."
+    ],
+    "root_affix": "a-(出)+ void(空,拉丁 vacuus);本义“使空出”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0038",
+    "word": "aware",
+    "phonetic": "/əˈweə(r)/",
+    "def_zh": "意识到的",
+    "def_en": "having knowledge of something",
+    "examples": [
+      "Be aware of the risks."
+    ],
+    "root_affix": "源自古英语 gewaer(警觉的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0039",
+    "word": "balance",
+    "phonetic": "/ˈbæləns/",
+    "def_zh": "平衡;余额",
+    "def_en": "a state of equilibrium, or remaining money",
+    "examples": [
+      "Keep a balance between work and rest."
+    ],
+    "root_affix": "bi-(二)+ lanc(盘,拉丁 lanx);本义“双盘天平”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0040",
+    "word": "basic",
+    "phonetic": "/ˈbeɪsɪk/",
+    "def_zh": "基本的",
+    "def_en": "forming an essential foundation",
+    "examples": [
+      "Learn the basic rules first."
+    ],
+    "root_affix": "bas-(基础,希腊 basis)+ -ic",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0041",
+    "word": "beautiful",
+    "phonetic": "/ˈbjuːtɪfl/",
+    "def_zh": "美丽的",
+    "def_en": "pleasing to the senses",
+    "examples": [
+      "What a beautiful sunset."
+    ],
+    "root_affix": "beauty(美)+ -ful(充满…的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0042",
+    "word": "become",
+    "phonetic": "/bɪˈkʌm/",
+    "def_zh": "成为;变得",
+    "def_en": "to start to be something",
+    "examples": [
+      "She became a doctor."
+    ],
+    "root_affix": "be-(变)+ come(来)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0043",
+    "word": "begin",
+    "phonetic": "/bɪˈɡɪn/",
+    "def_zh": "开始",
+    "def_en": "to start",
+    "examples": [
+      "The film begins at eight."
+    ],
+    "root_affix": "源自古英语 beginnan(着手)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0044",
+    "word": "behavior",
+    "phonetic": "/bɪˈheɪvjə(r)/",
+    "def_zh": "行为",
+    "def_en": "the way someone acts",
+    "examples": [
+      "His behavior surprised everyone."
+    ],
+    "root_affix": "be-(加强)+ have(持有)+ -ior;本义“自我把持”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0045",
+    "word": "believe",
+    "phonetic": "/bɪˈliːv/",
+    "def_zh": "相信",
+    "def_en": "to accept something as true",
+    "examples": [
+      "I believe you."
+    ],
+    "root_affix": "be-(使)+ lieve(亲爱/信任,古英语 lyfan)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0046",
+    "word": "benefit",
+    "phonetic": "/ˈbenɪfɪt/",
+    "def_zh": "益处;受益",
+    "def_en": "an advantage gained from something",
+    "examples": [
+      "Exercise has many benefits."
+    ],
+    "root_affix": "bene-(好,拉丁 bene)+ fit(做,拉丁 facere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0047",
+    "word": "between",
+    "phonetic": "/bɪˈtwiːn/",
+    "def_zh": "在…之间",
+    "def_en": "in the space or time separating two things",
+    "examples": [
+      "Sit between us."
+    ],
+    "root_affix": "be-(在)+ tween(二,古英语 twegen)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0048",
+    "word": "border",
+    "phonetic": "/ˈbɔːdə(r)/",
+    "def_zh": "边界;边缘",
+    "def_en": "a line separating regions, or an edge",
+    "examples": [
+      "They crossed the border at dawn."
+    ],
+    "root_affix": "源自古法语 bordure(边缘)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0049",
+    "word": "borrow",
+    "phonetic": "/ˈbɒrəʊ/",
+    "def_zh": "借入",
+    "def_en": "to take and use something with intent to return it",
+    "examples": [
+      "May I borrow your pen?"
+    ],
+    "root_affix": "源自古英语 borgian(借,担保)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0050",
+    "word": "brave",
+    "phonetic": "/breɪv/",
+    "def_zh": "勇敢的",
+    "def_en": "showing courage",
+    "examples": [
+      "It was brave of her to speak up."
+    ],
+    "root_affix": "源自意大利 bravo(勇敢,拉丁 barbarus)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0051",
+    "word": "breathe",
+    "phonetic": "/briːð/",
+    "def_zh": "呼吸",
+    "def_en": "to take air into and out of the lungs",
+    "examples": [
+      "Breathe slowly and relax."
+    ],
+    "root_affix": "源自古英语 braeth(气息,水汽)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0052",
+    "word": "bright",
+    "phonetic": "/braɪt/",
+    "def_zh": "明亮的;聪明的",
+    "def_en": "giving out much light; clever",
+    "examples": [
+      "The room is bright and airy."
+    ],
+    "root_affix": "源自古英语 beorht(闪亮的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0053",
+    "word": "bring",
+    "phonetic": "/brɪŋ/",
+    "def_zh": "带来",
+    "def_en": "to carry or take to a place",
+    "examples": [
+      "Bring your umbrella."
+    ],
+    "root_affix": "源自古英语 bringan(携来)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0054",
+    "word": "build",
+    "phonetic": "/bɪld/",
+    "def_zh": "建造",
+    "def_en": "to construct by putting parts together",
+    "examples": [
+      "They build houses of wood."
+    ],
+    "root_affix": "源自古英语 byldan(建房)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0055",
+    "word": "business",
+    "phonetic": "/ˈbɪznəs/",
+    "def_zh": "商业;事务",
+    "def_en": "trade and commerce, or a matter to deal with",
+    "examples": [
+      "She runs a small business."
+    ],
+    "root_affix": "busy(忙)+ -ness(状态)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0056",
+    "word": "calculate",
+    "phonetic": "/ˈkælkjuleɪt/",
+    "def_zh": "计算",
+    "def_en": "to work out a number or amount",
+    "examples": [
+      "Calculate the total cost."
+    ],
+    "root_affix": "calcul-(小石子,拉丁 calculus 计数用)+ -ate",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0057",
+    "word": "capital",
+    "phonetic": "/ˈkæpɪtl/",
+    "def_zh": "首都;资本;大写",
+    "def_en": "a chief city, money for investment, or an uppercase letter",
+    "examples": [
+      "Paris is the capital of France."
+    ],
+    "root_affix": "capit-(头,拉丁 caput)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0058",
+    "word": "careful",
+    "phonetic": "/ˈkeəfl/",
+    "def_zh": "小心的",
+    "def_en": "taking care to avoid harm or mistakes",
+    "examples": [
+      "Be careful on the ice."
+    ],
+    "root_affix": "care(关心)+ -ful",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0059",
+    "word": "celebrate",
+    "phonetic": "/ˈselɪbreɪt/",
+    "def_zh": "庆祝",
+    "def_en": "to mark a happy event",
+    "examples": [
+      "They celebrated the victory."
+    ],
+    "root_affix": "源自拉丁 celebrare(频繁举行,赞颂)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0060",
+    "word": "century",
+    "phonetic": "/ˈsentʃəri/",
+    "def_zh": "世纪;一百年",
+    "def_en": "a period of one hundred years",
+    "examples": [
+      "The cathedral is a century old."
+    ],
+    "root_affix": "cent-(百,拉丁 centum)+ -ury",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0061",
+    "word": "certain",
+    "phonetic": "/ˈsɜːtn/",
+    "def_zh": "确定的;某些",
+    "def_en": "sure; known but not specified",
+    "examples": [
+      "I am certain he will come."
+    ],
+    "root_affix": "源自拉丁 certus(确定的,cernere 辨别)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0062",
+    "word": "challenge",
+    "phonetic": "/ˈtʃælɪndʒ/",
+    "def_zh": "挑战",
+    "def_en": "a demanding task, or to question",
+    "examples": [
+      "Learning a language is a challenge."
+    ],
+    "root_affix": "源自拉丁 calumnia(诬告,争辩)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0063",
+    "word": "change",
+    "phonetic": "/tʃeɪndʒ/",
+    "def_zh": "改变;零钱",
+    "def_en": "to make or become different",
+    "examples": [
+      "We need to change the plan."
+    ],
+    "root_affix": "源自拉丁 cambiare(交换)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0064",
+    "word": "character",
+    "phonetic": "/ˈkærəktə(r)/",
+    "def_zh": "性格;角色;字符",
+    "def_en": "personal nature, a role, or a written symbol",
+    "examples": [
+      "He has a kind character."
+    ],
+    "root_affix": "源自希腊 charakter(刻印的标记)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0065",
+    "word": "choose",
+    "phonetic": "/tʃuːz/",
+    "def_zh": "选择",
+    "def_en": "to pick from options",
+    "examples": [
+      "Choose the answer you prefer."
+    ],
+    "root_affix": "源自古英语 ceosan(挑选)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0066",
+    "word": "citizen",
+    "phonetic": "/ˈsɪtɪzn/",
+    "def_zh": "公民",
+    "def_en": "a legally recognized member of a country",
+    "examples": [
+      "Every citizen can vote."
+    ],
+    "root_affix": "源自古法语 citeain(城里人,拉丁 civis)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0067",
+    "word": "climate",
+    "phonetic": "/ˈklaɪmət/",
+    "def_zh": "气候",
+    "def_en": "the typical weather of a region over time",
+    "examples": [
+      "The climate here is mild."
+    ],
+    "root_affix": "源自希腊 klima(地带,倾斜)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0068",
+    "word": "collect",
+    "phonetic": "/kəˈlekt/",
+    "def_zh": "收集",
+    "def_en": "to gather things together",
+    "examples": [
+      "She collects old stamps."
+    ],
+    "root_affix": "col-(一起)+ lect(选/拿,拉丁 legere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0069",
+    "word": "comfort",
+    "phonetic": "/ˈkʌmfət/",
+    "def_zh": "安慰;舒适",
+    "def_en": "a state of ease, or to console",
+    "examples": [
+      "The warm bed gave great comfort."
+    ],
+    "root_affix": "com-(加强)+ fort(强,拉丁 fortis)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0070",
+    "word": "common",
+    "phonetic": "/ˈkɒmən/",
+    "def_zh": "常见的;共同的",
+    "def_en": "occurring often; shared by many",
+    "examples": [
+      "Colds are common in winter."
+    ],
+    "root_affix": "com-(一起)+ mun(义务,拉丁 munus);本义“共享职责”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0071",
+    "word": "compare",
+    "phonetic": "/kəmˈpeə(r)/",
+    "def_zh": "比较",
+    "def_en": "to examine similarities and differences",
+    "examples": [
+      "Compare the two prices."
+    ],
+    "root_affix": "com-(一起)+ par(相等,拉丁 par)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0072",
+    "word": "compete",
+    "phonetic": "/kəmˈpiːt/",
+    "def_zh": "竞争",
+    "def_en": "to strive against others for a goal",
+    "examples": [
+      "They compete for the prize."
+    ],
+    "root_affix": "com-(一起)+ pete(追求,拉丁 petere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0073",
+    "word": "complete",
+    "phonetic": "/kəmˈpliːt/",
+    "def_zh": "完成;完整的",
+    "def_en": "to finish; having all parts",
+    "examples": [
+      "Complete the form in full."
+    ],
+    "root_affix": "com-(完全)+ plete(填满,拉丁 plere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0074",
+    "word": "concern",
+    "phonetic": "/kənˈsɜːn/",
+    "def_zh": "担心;关系到",
+    "def_en": "worry, or to relate to",
+    "examples": [
+      "Her safety is my main concern."
+    ],
+    "root_affix": "con-(一起)+ cern(筛/辨别,拉丁 cernere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0075",
+    "word": "condition",
+    "phonetic": "/kənˈdɪʃn/",
+    "def_zh": "条件;状况",
+    "def_en": "a state of being, or a requirement",
+    "examples": [
+      "The car is in good condition."
+    ],
+    "root_affix": "con-(一起)+ dit-(说,拉丁 dicere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0076",
+    "word": "confidence",
+    "phonetic": "/ˈkɒnfɪdəns/",
+    "def_zh": "信心",
+    "def_en": "belief in oneself or in something",
+    "examples": [
+      "She spoke with confidence."
+    ],
+    "root_affix": "con-(完全)+ fid-(信任,拉丁 fidere)+ -ence",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0077",
+    "word": "connect",
+    "phonetic": "/kəˈnekt/",
+    "def_zh": "连接",
+    "def_en": "to join things together",
+    "examples": [
+      "Connect the cable to the port."
+    ],
+    "root_affix": "con-(一起)+ nect(系,拉丁 nectere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0078",
+    "word": "consider",
+    "phonetic": "/kənˈsɪdə(r)/",
+    "def_zh": "考虑;认为",
+    "def_en": "to think carefully about",
+    "examples": [
+      "Consider all the options."
+    ],
+    "root_affix": "con-(一起)+ sider(星,拉丁 sidus);本义“观星思量”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0079",
+    "word": "continue",
+    "phonetic": "/kənˈtɪnjuː/",
+    "def_zh": "继续",
+    "def_en": "to keep going without stopping",
+    "examples": [
+      "Please continue your story."
+    ],
+    "root_affix": "con-(一起)+ tin(持有,拉丁 tenere)+ -ue",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0080",
+    "word": "control",
+    "phonetic": "/kənˈtrəʊl/",
+    "def_zh": "控制",
+    "def_en": "to direct or manage something",
+    "examples": [
+      "He kept the car under control."
+    ],
+    "root_affix": "源自中世纪拉丁 contrarotulus(对照账册)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0081",
+    "word": "convenient",
+    "phonetic": "/kənˈviːniənt/",
+    "def_zh": "方便的",
+    "def_en": "suited to one's needs; easy to use",
+    "examples": [
+      "The shop is in a convenient spot."
+    ],
+    "root_affix": "con-(一起)+ veni-(来,拉丁 venire)+ -ent",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0082",
+    "word": "country",
+    "phonetic": "/ˈkʌntri/",
+    "def_zh": "国家;乡村",
+    "def_en": "a nation, or rural land",
+    "examples": [
+      "China is a vast country."
+    ],
+    "root_affix": "源自古法语 contree(对面伸展的土地)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0083",
+    "word": "courage",
+    "phonetic": "/ˈkʌrɪdʒ/",
+    "def_zh": "勇气",
+    "def_en": "the ability to face fear or danger",
+    "examples": [
+      "It took courage to go on."
+    ],
+    "root_affix": "cour-(心,拉丁 cor)+ -age",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0084",
+    "word": "create",
+    "phonetic": "/kriˈeɪt/",
+    "def_zh": "创造",
+    "def_en": "to bring something into existence",
+    "examples": [
+      "Artists create new worlds."
+    ],
+    "root_affix": "源自拉丁 creare(产生,生育)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0085",
+    "word": "culture",
+    "phonetic": "/ˈkʌltʃə(r)/",
+    "def_zh": "文化",
+    "def_en": "the shared customs and beliefs of a group",
+    "examples": [
+      "They study ancient cultures."
+    ],
+    "root_affix": "cult-(耕作/培养,拉丁 colere)+ -ure",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0086",
+    "word": "curious",
+    "phonetic": "/ˈkjʊəriəs/",
+    "def_zh": "好奇的",
+    "def_en": "eager to know or learn",
+    "examples": [
+      "Children are naturally curious."
+    ],
+    "root_affix": "cur-(关心,拉丁 cura)+ -ious",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0087",
+    "word": "damage",
+    "phonetic": "/ˈdæmɪdʒ/",
+    "def_zh": "损害",
+    "def_en": "physical harm, or to harm",
+    "examples": [
+      "The storm caused great damage."
+    ],
+    "root_affix": "源自拉丁 damnum(损失)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0088",
+    "word": "danger",
+    "phonetic": "/ˈdeɪndʒə(r)/",
+    "def_zh": "危险",
+    "def_en": "the possibility of harm",
+    "examples": [
+      "Keep away from danger."
+    ],
+    "root_affix": "源自古法语 dangier(权力/伤害,拉丁 dominium)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0089",
+    "word": "decide",
+    "phonetic": "/dɪˈsaɪd/",
+    "def_zh": "决定",
+    "def_en": "to make a choice",
+    "examples": [
+      "She decided to stay home."
+    ],
+    "root_affix": "de-(离)+ cide(切,拉丁 caedere);本义“切断疑虑”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0090",
+    "word": "decrease",
+    "phonetic": "/dɪˈkriːs/",
+    "def_zh": "减少",
+    "def_en": "to become or make smaller",
+    "examples": [
+      "Sales decreased last month."
+    ],
+    "root_affix": "de-(向下)+ creas(增长,拉丁 crescere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0091",
+    "word": "deliver",
+    "phonetic": "/dɪˈlɪvə(r)/",
+    "def_zh": "递送;发表",
+    "def_en": "to bring to a destination, or to give a speech",
+    "examples": [
+      "They deliver mail each morning."
+    ],
+    "root_affix": "de-(完全)+ liver(释放,拉丁 liberare)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0092",
+    "word": "demand",
+    "phonetic": "/dɪˈmɑːnd/",
+    "def_zh": "要求;需求",
+    "def_en": "to ask firmly, or a need for goods",
+    "examples": [
+      "Workers demand higher pay."
+    ],
+    "root_affix": "de-(加强)+ mand(命令,拉丁 mandare)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0093",
+    "word": "describe",
+    "phonetic": "/dɪˈskraɪb/",
+    "def_zh": "描述",
+    "def_en": "to give an account in words",
+    "examples": [
+      "Describe what you saw."
+    ],
+    "root_affix": "de-(下)+ scribe(写,拉丁 scribere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0094",
+    "word": "develop",
+    "phonetic": "/dɪˈveləp/",
+    "def_zh": "发展;开发",
+    "def_en": "to grow or cause to grow gradually",
+    "examples": [
+      "They develop new products."
+    ],
+    "root_affix": "源自古法语 desveloper(展开,解开)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0095",
+    "word": "difference",
+    "phonetic": "/ˈdɪfrəns/",
+    "def_zh": "差异",
+    "def_en": "a way in which things are not the same",
+    "examples": [
+      "There is a big difference between them."
+    ],
+    "root_affix": "dif-(分开)+ fer(带,拉丁 ferre)+ -ence",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0096",
+    "word": "difficult",
+    "phonetic": "/ˈdɪfɪkəlt/",
+    "def_zh": "困难的",
+    "def_en": "hard to do or understand",
+    "examples": [
+      "The exam was difficult."
+    ],
+    "root_affix": "dif-(不)+ ficult(容易,拉丁 facilis)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0097",
+    "word": "discover",
+    "phonetic": "/dɪˈskʌvə(r)/",
+    "def_zh": "发现",
+    "def_en": "to find or learn something for the first time",
+    "examples": [
+      "They discovered a hidden cave."
+    ],
+    "root_affix": "dis-(去除)+ cover(覆盖);本义“揭开”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0098",
+    "word": "distance",
+    "phonetic": "/ˈdɪstəns/",
+    "def_zh": "距离",
+    "def_en": "the amount of space between two points",
+    "examples": [
+      "The distance is ten kilometers."
+    ],
+    "root_affix": "di-(分开)+ stant(站,拉丁 stare)+ -ce",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0099",
+    "word": "doubt",
+    "phonetic": "/daʊt/",
+    "def_zh": "怀疑",
+    "def_en": "a feeling of uncertainty",
+    "examples": [
+      "I have no doubt about it."
+    ],
+    "root_affix": "源自拉丁 dubitare(犹豫,二选其一)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0100",
+    "word": "during",
+    "phonetic": "/ˈdjʊərɪŋ/",
+    "def_zh": "在…期间",
+    "def_en": "throughout the time of",
+    "examples": [
+      "Stay quiet during the film."
+    ],
+    "root_affix": "源自 dure(持续,拉丁 durare)+ -ing",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0101",
+    "word": "eager",
+    "phonetic": "/ˈiːɡə(r)/",
+    "def_zh": "热切的",
+    "def_en": "strongly wanting to do something",
+    "examples": [
+      "She was eager to begin."
+    ],
+    "root_affix": "源自拉丁 acer(尖锐的,热切的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0102",
+    "word": "early",
+    "phonetic": "/ˈɜːli/",
+    "def_zh": "早的;早地",
+    "def_en": "before the usual time",
+    "examples": [
+      "We left early to beat traffic."
+    ],
+    "root_affix": "源自古英语 aerlice(在前地)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0103",
+    "word": "economy",
+    "phonetic": "/ɪˈkɒnəmi/",
+    "def_zh": "经济",
+    "def_en": "the system of production and trade in a region",
+    "examples": [
+      "The economy is growing slowly."
+    ],
+    "root_affix": "eco-(家,希腊 oikos)+ -nomy(管理,nomos 法则)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0104",
+    "word": "educate",
+    "phonetic": "/ˈedʒukeɪt/",
+    "def_zh": "教育",
+    "def_en": "to teach knowledge and skills",
+    "examples": [
+      "Schools educate the young."
+    ],
+    "root_affix": "e-(出)+ duc(引导,拉丁 ducere)+ -ate;本义“引出”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0105",
+    "word": "effect",
+    "phonetic": "/ɪˈfekt/",
+    "def_zh": "效果;影响",
+    "def_en": "a result produced by a cause",
+    "examples": [
+      "The medicine had a strong effect."
+    ],
+    "root_affix": "ef-(出)+ fect(做,拉丁 facere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0106",
+    "word": "effort",
+    "phonetic": "/ˈefət/",
+    "def_zh": "努力",
+    "def_en": "energy put into doing something",
+    "examples": [
+      "Success takes effort."
+    ],
+    "root_affix": "ef-(出)+ fort(力,拉丁 fortis)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0107",
+    "word": "either",
+    "phonetic": "/ˈaɪðə(r)/",
+    "def_zh": "任一;也(否定)",
+    "def_en": "one or the other of two",
+    "examples": [
+      "Take either road; both work."
+    ],
+    "root_affix": "源自古英语 aeghwaether(每一个之一)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0108",
+    "word": "emotion",
+    "phonetic": "/ɪˈməʊʃn/",
+    "def_zh": "情绪;情感",
+    "def_en": "a strong feeling such as joy or anger",
+    "examples": [
+      "Music can stir deep emotion."
+    ],
+    "root_affix": "e-(出)+ mot(移动,拉丁 movere)+ -ion;本义“内心激动”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0109",
+    "word": "encourage",
+    "phonetic": "/ɪnˈkʌrɪdʒ/",
+    "def_zh": "鼓励",
+    "def_en": "to give support and confidence",
+    "examples": [
+      "Teachers encourage curiosity."
+    ],
+    "root_affix": "en-(使)+ courage(勇气)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0110",
+    "word": "energy",
+    "phonetic": "/ˈenədʒi/",
+    "def_zh": "能量;精力",
+    "def_en": "the power to do work or be active",
+    "examples": [
+      "Solar energy is clean."
+    ],
+    "root_affix": "en-(在内)+ erg(工作,希腊 ergon)+ -y",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0111",
+    "word": "enough",
+    "phonetic": "/ɪˈnʌf/",
+    "def_zh": "足够的",
+    "def_en": "as much as is needed",
+    "examples": [
+      "We have enough food."
+    ],
+    "root_affix": "源自古英语 genog(充足)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0112",
+    "word": "environment",
+    "phonetic": "/ɪnˈvaɪrənmənt/",
+    "def_zh": "环境",
+    "def_en": "the surroundings in which one lives",
+    "examples": [
+      "We must protect the environment."
+    ],
+    "root_affix": "en-(使)+ viron(围绕,法语 virer 转)+ -ment",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0113",
+    "word": "equal",
+    "phonetic": "/ˈiːkwəl/",
+    "def_zh": "相等的",
+    "def_en": "the same in amount or value",
+    "examples": [
+      "Cut the cake into equal pieces."
+    ],
+    "root_affix": "源自拉丁 aequalis(均等的,aequus 平)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0114",
+    "word": "escape",
+    "phonetic": "/ɪˈskeɪp/",
+    "def_zh": "逃脱",
+    "def_en": "to break free from confinement or danger",
+    "examples": [
+      "The bird escaped from its cage."
+    ],
+    "root_affix": "es-(出,拉丁 ex)+ cape(斗篷,拉丁 cappa);本义“脱下斗篷溜走”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0115",
+    "word": "establish",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "def_zh": "建立",
+    "def_en": "to set up firmly or permanently",
+    "examples": [
+      "They established a new school."
+    ],
+    "root_affix": "源自拉丁 stabilire(使稳固,stabilis 稳)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0116",
+    "word": "examine",
+    "phonetic": "/ɪɡˈzæmɪn/",
+    "def_zh": "检查",
+    "def_en": "to inspect closely",
+    "examples": [
+      "The doctor examined the patient."
+    ],
+    "root_affix": "源自拉丁 examinare(称量,examen 天平指针)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0117",
+    "word": "example",
+    "phonetic": "/ɪɡˈzɑːmpl/",
+    "def_zh": "例子",
+    "def_en": "a thing that illustrates a rule or idea",
+    "examples": [
+      "Give me an example."
+    ],
+    "root_affix": "源自拉丁 exemplum(样本,取出之物)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0118",
+    "word": "excellent",
+    "phonetic": "/ˈeksələnt/",
+    "def_zh": "优秀的",
+    "def_en": "extremely good",
+    "examples": [
+      "She did an excellent job."
+    ],
+    "root_affix": "ex-(出)+ cell(高耸,拉丁 cellere)+ -ent;本义“高出众人”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0119",
+    "word": "exercise",
+    "phonetic": "/ˈeksəsaɪz/",
+    "def_zh": "锻炼;练习",
+    "def_en": "physical activity, or a practice task",
+    "examples": [
+      "Daily exercise keeps you fit."
+    ],
+    "root_affix": "ex-(出)+ erc(围栏/约束,拉丁 arcere);本义“放出活动”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0120",
+    "word": "expect",
+    "phonetic": "/ɪkˈspekt/",
+    "def_zh": "期待;预料",
+    "def_en": "to think something will happen",
+    "examples": [
+      "We expect rain tomorrow."
+    ],
+    "root_affix": "ex-(出)+ spect(看,拉丁 specere);本义“向外看待”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0121",
+    "word": "experience",
+    "phonetic": "/ɪkˈspɪəriəns/",
+    "def_zh": "经验;经历",
+    "def_en": "knowledge from doing or seeing things",
+    "examples": [
+      "She has years of experience."
+    ],
+    "root_affix": "ex-(出)+ peri(尝试,拉丁 periri)+ -ence",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0122",
+    "word": "explain",
+    "phonetic": "/ɪkˈspleɪn/",
+    "def_zh": "解释",
+    "def_en": "to make something clear",
+    "examples": [
+      "Explain how it works."
+    ],
+    "root_affix": "ex-(出)+ plain(平,拉丁 planus);本义“铺平使清楚”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0123",
+    "word": "express",
+    "phonetic": "/ɪkˈspres/",
+    "def_zh": "表达;快速的",
+    "def_en": "to convey thoughts, or fast",
+    "examples": [
+      "Express your ideas clearly."
+    ],
+    "root_affix": "ex-(出)+ press(压,拉丁 premere);本义“挤出”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0124",
+    "word": "famous",
+    "phonetic": "/ˈfeɪməs/",
+    "def_zh": "著名的",
+    "def_en": "well known to many people",
+    "examples": [
+      "A famous painter lived here."
+    ],
+    "root_affix": "fam-(名声,拉丁 fama)+ -ous",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0125",
+    "word": "favorite",
+    "phonetic": "/ˈfeɪvərɪt/",
+    "def_zh": "最喜爱的",
+    "def_en": "preferred above all others",
+    "examples": [
+      "Blue is my favorite color."
+    ],
+    "root_affix": "favor(偏爱,拉丁 favere)+ -ite",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0126",
+    "word": "feature",
+    "phonetic": "/ˈfiːtʃə(r)/",
+    "def_zh": "特征;特色",
+    "def_en": "a distinctive attribute",
+    "examples": [
+      "The phone's best feature is its camera."
+    ],
+    "root_affix": "源自拉丁 factura(制作,形态)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0127",
+    "word": "financial",
+    "phonetic": "/faɪˈnænʃl/",
+    "def_zh": "财务的;金融的",
+    "def_en": "relating to money matters",
+    "examples": [
+      "They face financial trouble."
+    ],
+    "root_affix": "fin-(结束/结清,拉丁 finis)+ -ancial",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0128",
+    "word": "flexible",
+    "phonetic": "/ˈfleksəbl/",
+    "def_zh": "灵活的;柔韧的",
+    "def_en": "able to bend or adapt easily",
+    "examples": [
+      "Our schedule is flexible."
+    ],
+    "root_affix": "flex-(弯曲,拉丁 flectere)+ -ible",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0129",
+    "word": "follow",
+    "phonetic": "/ˈfɒləʊ/",
+    "def_zh": "跟随;遵循",
+    "def_en": "to go after or to obey",
+    "examples": [
+      "Follow the instructions."
+    ],
+    "root_affix": "源自古英语 folgian(跟从)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0130",
+    "word": "foreign",
+    "phonetic": "/ˈfɒrən/",
+    "def_zh": "外国的",
+    "def_en": "from another country",
+    "examples": [
+      "She speaks three foreign languages."
+    ],
+    "root_affix": "源自拉丁 foras(在门外)",
+    "tags": [
+      "common",
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0131",
+    "word": "forget",
+    "phonetic": "/fəˈɡet/",
+    "def_zh": "忘记",
+    "def_en": "to fail to remember",
+    "examples": [
+      "Don't forget your keys."
+    ],
+    "root_affix": "for-(失去)+ get(获得);本义“失去所得”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0132",
+    "word": "forgive",
+    "phonetic": "/fəˈɡɪv/",
+    "def_zh": "原谅",
+    "def_en": "to stop feeling anger toward someone",
+    "examples": [
+      "Please forgive my mistake."
+    ],
+    "root_affix": "for-(完全)+ give(给);本义“完全给予(宽恕)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0133",
+    "word": "freedom",
+    "phonetic": "/ˈfriːdəm/",
+    "def_zh": "自由",
+    "def_en": "the state of being free",
+    "examples": [
+      "They fought for freedom."
+    ],
+    "root_affix": "free(自由的)+ -dom(状态/领域)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0134",
+    "word": "frequent",
+    "phonetic": "/ˈfriːkwənt/",
+    "def_zh": "频繁的",
+    "def_en": "happening often",
+    "examples": [
+      "He is a frequent visitor."
+    ],
+    "root_affix": "源自拉丁 frequens(拥挤的,频繁的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0135",
+    "word": "friendly",
+    "phonetic": "/ˈfrendli/",
+    "def_zh": "友好的",
+    "def_en": "kind and pleasant",
+    "examples": [
+      "The staff were very friendly."
+    ],
+    "root_affix": "friend(朋友)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0136",
+    "word": "further",
+    "phonetic": "/ˈfɜːðə(r)/",
+    "def_zh": "进一步;更远的",
+    "def_en": "to a greater extent or distance",
+    "examples": [
+      "We need further information."
+    ],
+    "root_affix": "源自古英语 furthra(更前的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0137",
+    "word": "future",
+    "phonetic": "/ˈfjuːtʃə(r)/",
+    "def_zh": "未来",
+    "def_en": "time that is yet to come",
+    "examples": [
+      "Plan for the future."
+    ],
+    "root_affix": "源自拉丁 futurus(将来的,esse 的将来分词)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0138",
+    "word": "gather",
+    "phonetic": "/ˈɡæðə(r)/",
+    "def_zh": "聚集;收集",
+    "def_en": "to bring or come together",
+    "examples": [
+      "A crowd gathered outside."
+    ],
+    "root_affix": "源自古英语 gaderian(聚拢,together 同源)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0139",
+    "word": "generation",
+    "phonetic": "/ˌdʒenəˈreɪʃn/",
+    "def_zh": "一代人;产生",
+    "def_en": "all people born around the same time",
+    "examples": [
+      "The younger generation loves the app."
+    ],
+    "root_affix": "gener-(产生/种,拉丁 generare)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0140",
+    "word": "gentle",
+    "phonetic": "/ˈdʒentl/",
+    "def_zh": "温柔的;轻柔的",
+    "def_en": "mild and kind in manner",
+    "examples": [
+      "She has a gentle voice."
+    ],
+    "root_affix": "源自拉丁 gentilis(同族的,高贵的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0141",
+    "word": "government",
+    "phonetic": "/ˈɡʌvənmənt/",
+    "def_zh": "政府",
+    "def_en": "the body that rules a country",
+    "examples": [
+      "The government raised taxes."
+    ],
+    "root_affix": "govern(统治,希腊 kybernan 掌舵)+ -ment",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0142",
+    "word": "gradually",
+    "phonetic": "/ˈɡrædʒuəli/",
+    "def_zh": "逐渐地",
+    "def_en": "in slow stages",
+    "examples": [
+      "The pain faded gradually."
+    ],
+    "root_affix": "grad-(步,拉丁 gradus)+ -ual + -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0143",
+    "word": "grateful",
+    "phonetic": "/ˈɡreɪtfl/",
+    "def_zh": "感激的",
+    "def_en": "feeling thankful",
+    "examples": [
+      "I am grateful for your support."
+    ],
+    "root_affix": "grat-(令人愉快,拉丁 gratus)+ -ful",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0144",
+    "word": "guarantee",
+    "phonetic": "/ˌɡærənˈtiː/",
+    "def_zh": "保证",
+    "def_en": "a promise that something will happen",
+    "examples": [
+      "We guarantee fast delivery."
+    ],
+    "root_affix": "源自古法语 garant(担保人)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0145",
+    "word": "happen",
+    "phonetic": "/ˈhæpən/",
+    "def_zh": "发生",
+    "def_en": "to take place",
+    "examples": [
+      "What happened last night?"
+    ],
+    "root_affix": "源自古诺斯 happ(运气,机遇)+ -en",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0146",
+    "word": "healthy",
+    "phonetic": "/ˈhelθi/",
+    "def_zh": "健康的",
+    "def_en": "in good physical condition",
+    "examples": [
+      "Eat a healthy diet."
+    ],
+    "root_affix": "health(健康)+ -y",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0147",
+    "word": "history",
+    "phonetic": "/ˈhɪstri/",
+    "def_zh": "历史",
+    "def_en": "the study of past events",
+    "examples": [
+      "She teaches modern history."
+    ],
+    "root_affix": "源自希腊 historia(探询所得的知识)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0148",
+    "word": "honest",
+    "phonetic": "/ˈɒnɪst/",
+    "def_zh": "诚实的",
+    "def_en": "truthful and sincere",
+    "examples": [
+      "Give me an honest answer."
+    ],
+    "root_affix": "源自拉丁 honestus(可敬的,honos 荣誉)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0149",
+    "word": "however",
+    "phonetic": "/haʊˈevə(r)/",
+    "def_zh": "然而",
+    "def_en": "in spite of that",
+    "examples": [
+      "It rained; however, we went out."
+    ],
+    "root_affix": "how(如何)+ ever(无论)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0150",
+    "word": "imagine",
+    "phonetic": "/ɪˈmædʒɪn/",
+    "def_zh": "想象",
+    "def_en": "to form a mental picture",
+    "examples": [
+      "Imagine a world without cars."
+    ],
+    "root_affix": "imag-(像,拉丁 imago)+ -ine",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0151",
+    "word": "immediately",
+    "phonetic": "/ɪˈmiːdiətli/",
+    "def_zh": "立即",
+    "def_en": "without any delay",
+    "examples": [
+      "Call me immediately."
+    ],
+    "root_affix": "im-(不)+ mediate(中间的,拉丁 medius)+ -ly;本义“无中间隔”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0152",
+    "word": "important",
+    "phonetic": "/ɪmˈpɔːtnt/",
+    "def_zh": "重要的",
+    "def_en": "of great significance",
+    "examples": [
+      "This is an important decision."
+    ],
+    "root_affix": "im-(进入)+ port(承载,拉丁 portare)+ -ant",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0153",
+    "word": "improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "def_zh": "改善",
+    "def_en": "to make or become better",
+    "examples": [
+      "Practice improves your skills."
+    ],
+    "root_affix": "im-(进入)+ prove(利益,古法语 prou)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0154",
+    "word": "include",
+    "phonetic": "/ɪnˈkluːd/",
+    "def_zh": "包括",
+    "def_en": "to contain as part of a whole",
+    "examples": [
+      "The price includes tax."
+    ],
+    "root_affix": "in-(在内)+ clude(关闭,拉丁 claudere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0155",
+    "word": "increase",
+    "phonetic": "/ɪnˈkriːs/",
+    "def_zh": "增加",
+    "def_en": "to become or make greater",
+    "examples": [
+      "Prices increased sharply."
+    ],
+    "root_affix": "in-(向上)+ creas(增长,拉丁 crescere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0156",
+    "word": "industry",
+    "phonetic": "/ˈɪndəstri/",
+    "def_zh": "工业;行业",
+    "def_en": "the production of goods, or a trade sector",
+    "examples": [
+      "The car industry is huge."
+    ],
+    "root_affix": "indu-(在内)+ stru(建造,拉丁 struere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0157",
+    "word": "influence",
+    "phonetic": "/ˈɪnfluəns/",
+    "def_zh": "影响",
+    "def_en": "the power to affect others",
+    "examples": [
+      "Friends influence our choices."
+    ],
+    "root_affix": "in-(向内)+ flu(流,拉丁 fluere)+ -ence;本义“流入”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0158",
+    "word": "inform",
+    "phonetic": "/ɪnˈfɔːm/",
+    "def_zh": "通知",
+    "def_en": "to tell someone facts",
+    "examples": [
+      "Please inform us of any change."
+    ],
+    "root_affix": "in-(进入)+ form(形状);本义“赋予形态/告知”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0159",
+    "word": "instead",
+    "phonetic": "/ɪnˈsted/",
+    "def_zh": "代替;反而",
+    "def_en": "as an alternative",
+    "examples": [
+      "Take tea instead of coffee."
+    ],
+    "root_affix": "in-(在)+ stead(位置,古英语 stede)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0160",
+    "word": "interest",
+    "phonetic": "/ˈɪntrəst/",
+    "def_zh": "兴趣;利息",
+    "def_en": "curiosity, or money paid for a loan",
+    "examples": [
+      "She has a deep interest in art."
+    ],
+    "root_affix": "inter-(之间)+ est(是,拉丁 esse);本义“介于其间的关系”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0161",
+    "word": "introduce",
+    "phonetic": "/ˌɪntrəˈdjuːs/",
+    "def_zh": "介绍;引入",
+    "def_en": "to present someone or bring in something new",
+    "examples": [
+      "Let me introduce my friend."
+    ],
+    "root_affix": "intro-(向内)+ duce(引导,拉丁 ducere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0162",
+    "word": "invent",
+    "phonetic": "/ɪnˈvent/",
+    "def_zh": "发明",
+    "def_en": "to create something new",
+    "examples": [
+      "He invented a clever tool."
+    ],
+    "root_affix": "in-(在内)+ vent(来,拉丁 venire);本义“想出来”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0163",
+    "word": "journey",
+    "phonetic": "/ˈdʒɜːni/",
+    "def_zh": "旅程",
+    "def_en": "an act of traveling from one place to another",
+    "examples": [
+      "The journey took three days."
+    ],
+    "root_affix": "源自古法语 jornee(一天的行程,拉丁 diurnum)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0164",
+    "word": "knowledge",
+    "phonetic": "/ˈnɒlɪdʒ/",
+    "def_zh": "知识",
+    "def_en": "information and understanding gained through experience",
+    "examples": [
+      "Knowledge is power."
+    ],
+    "root_affix": "know(知道)+ -ledge(行为/状态后缀)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0165",
+    "word": "language",
+    "phonetic": "/ˈlæŋɡwɪdʒ/",
+    "def_zh": "语言",
+    "def_en": "a system of communication using words",
+    "examples": [
+      "English is a global language."
+    ],
+    "root_affix": "源自拉丁 lingua(舌头,语言)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0166",
+    "word": "library",
+    "phonetic": "/ˈlaɪbrəri/",
+    "def_zh": "图书馆",
+    "def_en": "a place where books are kept for reading or borrowing",
+    "examples": [
+      "Study at the public library."
+    ],
+    "root_affix": "libr-(书,拉丁 liber)+ -ary(场所)",
+    "tags": [
+      "common",
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0167",
+    "word": "listen",
+    "phonetic": "/ˈlɪsn/",
+    "def_zh": "听",
+    "def_en": "to pay attention to sound",
+    "examples": [
+      "Listen carefully to the music."
+    ],
+    "root_affix": "源自古英语 hlysnan(注意听)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0168",
+    "word": "manage",
+    "phonetic": "/ˈmænɪdʒ/",
+    "def_zh": "管理;设法",
+    "def_en": "to control, or to succeed in doing",
+    "examples": [
+      "She manages a large team."
+    ],
+    "root_affix": "源自意大利 maneggiare(驾驭,拉丁 manus 手)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0169",
+    "word": "material",
+    "phonetic": "/məˈtɪəriəl/",
+    "def_zh": "材料;物质的",
+    "def_en": "the matter from which something is made",
+    "examples": [
+      "Wood is a natural material."
+    ],
+    "root_affix": "mater-(母/源,拉丁 mater)+ -ial",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0170",
+    "word": "measure",
+    "phonetic": "/ˈmeʒə(r)/",
+    "def_zh": "测量;措施",
+    "def_en": "to find size or amount, or an action taken",
+    "examples": [
+      "Measure the length twice."
+    ],
+    "root_affix": "源自拉丁 mensura(测量,metiri 量)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0171",
+    "word": "medicine",
+    "phonetic": "/ˈmedsn/",
+    "def_zh": "药;医学",
+    "def_en": "a substance to treat illness, or the science of healing",
+    "examples": [
+      "Take the medicine after meals."
+    ],
+    "root_affix": "medi-(治疗,拉丁 mederi)+ -cine",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0172",
+    "word": "memory",
+    "phonetic": "/ˈmeməri/",
+    "def_zh": "记忆;内存",
+    "def_en": "the ability to remember; computer storage",
+    "examples": [
+      "She has a great memory for names."
+    ],
+    "root_affix": "memor-(记得,拉丁 memor)+ -y",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0173",
+    "word": "mention",
+    "phonetic": "/ˈmenʃn/",
+    "def_zh": "提及",
+    "def_en": "to refer to briefly",
+    "examples": [
+      "He mentioned your name."
+    ],
+    "root_affix": "源自拉丁 mentio(提起,mens 心智)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0174",
+    "word": "method",
+    "phonetic": "/ˈmeθəd/",
+    "def_zh": "方法",
+    "def_en": "a systematic way of doing something",
+    "examples": [
+      "Try a different method."
+    ],
+    "root_affix": "meta-(沿)+ hodos(路,希腊);本义“途径”",
+    "tags": [
+      "common",
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0175",
+    "word": "modern",
+    "phonetic": "/ˈmɒdn/",
+    "def_zh": "现代的",
+    "def_en": "relating to the present time",
+    "examples": [
+      "Modern life is fast."
+    ],
+    "root_affix": "源自拉丁 modernus(当下的,modo 刚才)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0176",
+    "word": "moment",
+    "phonetic": "/ˈməʊmənt/",
+    "def_zh": "片刻;时刻",
+    "def_en": "a very short period of time",
+    "examples": [
+      "Wait a moment, please."
+    ],
+    "root_affix": "源自拉丁 momentum(运动/瞬间,movere 移动)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0177",
+    "word": "nature",
+    "phonetic": "/ˈneɪtʃə(r)/",
+    "def_zh": "自然;本性",
+    "def_en": "the physical world, or essential character",
+    "examples": [
+      "They love hiking in nature."
+    ],
+    "root_affix": "nat-(出生,拉丁 nasci)+ -ure",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0178",
+    "word": "necessary",
+    "phonetic": "/ˈnesəsəri/",
+    "def_zh": "必要的",
+    "def_en": "needed; essential",
+    "examples": [
+      "Sleep is necessary for health."
+    ],
+    "root_affix": "ne-(不)+ cess(让步,拉丁 cedere)+ -ary;本义“不可回避的”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0179",
+    "word": "neighbor",
+    "phonetic": "/ˈneɪbə(r)/",
+    "def_zh": "邻居",
+    "def_en": "a person living nearby",
+    "examples": [
+      "Our neighbors are friendly."
+    ],
+    "root_affix": "源自古英语 neah(近)+ gebur(居民)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0180",
+    "word": "notice",
+    "phonetic": "/ˈnəʊtɪs/",
+    "def_zh": "注意;通知",
+    "def_en": "to observe, or an announcement",
+    "examples": [
+      "I didn't notice the sign."
+    ],
+    "root_affix": "源自拉丁 notitia(知晓,notus 已知)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0181",
+    "word": "obvious",
+    "phonetic": "/ˈɒbviəs/",
+    "def_zh": "明显的",
+    "def_en": "easily seen or understood",
+    "examples": [
+      "The answer is obvious."
+    ],
+    "root_affix": "ob-(朝)+ via(路,拉丁);本义“就在路上的”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0182",
+    "word": "offer",
+    "phonetic": "/ˈɒfə(r)/",
+    "def_zh": "提供;提议",
+    "def_en": "to present for acceptance",
+    "examples": [
+      "They offered her a job."
+    ],
+    "root_affix": "of-(向)+ fer(带,拉丁 ferre)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0183",
+    "word": "opinion",
+    "phonetic": "/əˈpɪnjən/",
+    "def_zh": "意见",
+    "def_en": "a personal view or judgment",
+    "examples": [
+      "In my opinion, it's too risky."
+    ],
+    "root_affix": "源自拉丁 opinari(认为,推测)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0184",
+    "word": "opportunity",
+    "phonetic": "/ˌɒpəˈtjuːnəti/",
+    "def_zh": "机会",
+    "def_en": "a favorable chance to do something",
+    "examples": [
+      "Don't miss this opportunity."
+    ],
+    "root_affix": "ob-(朝)+ port(港口,拉丁 portus);本义“朝向港口(顺风)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0185",
+    "word": "organize",
+    "phonetic": "/ˈɔːɡənaɪz/",
+    "def_zh": "组织",
+    "def_en": "to arrange or coordinate",
+    "examples": [
+      "They organized a charity event."
+    ],
+    "root_affix": "organ(器官/工具,希腊 organon)+ -ize",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0186",
+    "word": "original",
+    "phonetic": "/əˈrɪdʒənl/",
+    "def_zh": "原始的;独创的",
+    "def_en": "first; not copied",
+    "examples": [
+      "Keep the original document."
+    ],
+    "root_affix": "origin(起源,拉丁 oriri 升起)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0187",
+    "word": "particular",
+    "phonetic": "/pəˈtɪkjələ(r)/",
+    "def_zh": "特定的;特别的",
+    "def_en": "specific; individual",
+    "examples": [
+      "Is there a particular book you want?"
+    ],
+    "root_affix": "part-(部分,拉丁 pars)+ -icular",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0188",
+    "word": "patient",
+    "phonetic": "/ˈpeɪʃnt/",
+    "def_zh": "耐心的;病人",
+    "def_en": "able to wait calmly; a person under care",
+    "examples": [
+      "Be patient with beginners."
+    ],
+    "root_affix": "pati-(忍受,拉丁 pati)+ -ent",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0189",
+    "word": "perhaps",
+    "phonetic": "/pəˈhæps/",
+    "def_zh": "也许",
+    "def_en": "possibly; maybe",
+    "examples": [
+      "Perhaps it will rain later."
+    ],
+    "root_affix": "per-(通过)+ hap(运气,古诺斯 happ)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0190",
+    "word": "permit",
+    "phonetic": "/pəˈmɪt/",
+    "def_zh": "允许;许可证",
+    "def_en": "to allow, or an official document",
+    "examples": [
+      "Smoking is not permitted here."
+    ],
+    "root_affix": "per-(通过)+ mit(送,拉丁 mittere);本义“放行”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0191",
+    "word": "personal",
+    "phonetic": "/ˈpɜːsənl/",
+    "def_zh": "个人的",
+    "def_en": "belonging to one particular person",
+    "examples": [
+      "Keep your personal data safe."
+    ],
+    "root_affix": "person(人,拉丁 persona 面具)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0192",
+    "word": "popular",
+    "phonetic": "/ˈpɒpjələ(r)/",
+    "def_zh": "受欢迎的",
+    "def_en": "liked by many people",
+    "examples": [
+      "The song became very popular."
+    ],
+    "root_affix": "popul-(人民,拉丁 populus)+ -ar",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0193",
+    "word": "position",
+    "phonetic": "/pəˈzɪʃn/",
+    "def_zh": "位置;职位",
+    "def_en": "a place or a job",
+    "examples": [
+      "She holds a senior position."
+    ],
+    "root_affix": "posit-(放置,拉丁 ponere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0194",
+    "word": "possible",
+    "phonetic": "/ˈpɒsəbl/",
+    "def_zh": "可能的",
+    "def_en": "able to happen or be done",
+    "examples": [
+      "Is it possible to finish today?"
+    ],
+    "root_affix": "poss-(能,拉丁 posse)+ -ible",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0195",
+    "word": "practice",
+    "phonetic": "/ˈpræktɪs/",
+    "def_zh": "练习;实践",
+    "def_en": "repeated activity to improve, or actual application",
+    "examples": [
+      "Practice makes perfect."
+    ],
+    "root_affix": "源自希腊 praktikos(实践的,prassein 做)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0196",
+    "word": "prepare",
+    "phonetic": "/prɪˈpeə(r)/",
+    "def_zh": "准备",
+    "def_en": "to make ready",
+    "examples": [
+      "Prepare dinner for six."
+    ],
+    "root_affix": "pre-(预先)+ pare(备好,拉丁 parare)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0197",
+    "word": "present",
+    "phonetic": "/ˈpreznt/",
+    "def_zh": "礼物;现在的;出席的",
+    "def_en": "a gift, the current time, or being there",
+    "examples": [
+      "He gave her a present."
+    ],
+    "root_affix": "pre-(在前)+ sent(在/是,拉丁 esse 的分词);本义“在面前”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0198",
+    "word": "pressure",
+    "phonetic": "/ˈpreʃə(r)/",
+    "def_zh": "压力",
+    "def_en": "force applied, or mental strain",
+    "examples": [
+      "She works well under pressure."
+    ],
+    "root_affix": "press-(压,拉丁 premere)+ -ure",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0199",
+    "word": "prevent",
+    "phonetic": "/prɪˈvent/",
+    "def_zh": "阻止;预防",
+    "def_en": "to stop something from happening",
+    "examples": [
+      "Wash hands to prevent illness."
+    ],
+    "root_affix": "pre-(预先)+ vent(来,拉丁 venire);本义“抢先到来”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0200",
+    "word": "probably",
+    "phonetic": "/ˈprɒbəbli/",
+    "def_zh": "很可能",
+    "def_en": "almost certainly",
+    "examples": [
+      "She will probably arrive late."
+    ],
+    "root_affix": "prob-(证明,拉丁 probare)+ -ably",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0201",
+    "word": "produce",
+    "phonetic": "/prəˈdjuːs/",
+    "def_zh": "生产;制造",
+    "def_en": "to make or create",
+    "examples": [
+      "The factory produces cars."
+    ],
+    "root_affix": "pro-(向前)+ duce(引导,拉丁 ducere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0202",
+    "word": "progress",
+    "phonetic": "/ˈprəʊɡres/",
+    "def_zh": "进步;进展",
+    "def_en": "forward movement toward a goal",
+    "examples": [
+      "She made good progress."
+    ],
+    "root_affix": "pro-(向前)+ gress(走,拉丁 gradi)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0203",
+    "word": "promise",
+    "phonetic": "/ˈprɒmɪs/",
+    "def_zh": "承诺",
+    "def_en": "a declaration that one will do something",
+    "examples": [
+      "He kept his promise."
+    ],
+    "root_affix": "pro-(向前)+ mis(送,拉丁 mittere);本义“预先送出(保证)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0204",
+    "word": "protect",
+    "phonetic": "/prəˈtekt/",
+    "def_zh": "保护",
+    "def_en": "to keep safe from harm",
+    "examples": [
+      "Helmets protect your head."
+    ],
+    "root_affix": "pro-(在前)+ tect(覆盖,拉丁 tegere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0205",
+    "word": "provide",
+    "phonetic": "/prəˈvaɪd/",
+    "def_zh": "提供",
+    "def_en": "to make available for use",
+    "examples": [
+      "The hotel provides free breakfast."
+    ],
+    "root_affix": "pro-(预先)+ vide(看,拉丁 videre);本义“预先看顾”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0206",
+    "word": "public",
+    "phonetic": "/ˈpʌblɪk/",
+    "def_zh": "公共的;公众",
+    "def_en": "open to or shared by all people",
+    "examples": [
+      "The park is open to the public."
+    ],
+    "root_affix": "源自拉丁 publicus(人民的,populus)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0207",
+    "word": "purpose",
+    "phonetic": "/ˈpɜːpəs/",
+    "def_zh": "目的",
+    "def_en": "the reason for which something is done",
+    "examples": [
+      "What is the purpose of this meeting?"
+    ],
+    "root_affix": "pur-(向前,拉丁 pro)+ pose(放置,拉丁 ponere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0208",
+    "word": "quality",
+    "phonetic": "/ˈkwɒləti/",
+    "def_zh": "质量;品质",
+    "def_en": "the standard or nature of something",
+    "examples": [
+      "This cloth is of high quality."
+    ],
+    "root_affix": "源自拉丁 qualitas(性质,qualis 怎样的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0209",
+    "word": "quantity",
+    "phonetic": "/ˈkwɒntəti/",
+    "def_zh": "数量",
+    "def_en": "an amount or number",
+    "examples": [
+      "Buy a small quantity first."
+    ],
+    "root_affix": "源自拉丁 quantitas(多少,quantus 多大)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0210",
+    "word": "reason",
+    "phonetic": "/ˈriːzn/",
+    "def_zh": "原因;理由",
+    "def_en": "a cause or justification",
+    "examples": [
+      "Give me one good reason."
+    ],
+    "root_affix": "源自拉丁 ratio(计算,理性)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0211",
+    "word": "receive",
+    "phonetic": "/rɪˈsiːv/",
+    "def_zh": "收到",
+    "def_en": "to get or accept something given",
+    "examples": [
+      "I received your letter."
+    ],
+    "root_affix": "re-(回)+ ceive(拿,拉丁 capere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0212",
+    "word": "recognize",
+    "phonetic": "/ˈrekəɡnaɪz/",
+    "def_zh": "认出;承认",
+    "def_en": "to identify from past knowledge",
+    "examples": [
+      "I recognized her at once."
+    ],
+    "root_affix": "re-(再)+ cogn(知道,拉丁 cognoscere)+ -ize",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0213",
+    "word": "recommend",
+    "phonetic": "/ˌrekəˈmend/",
+    "def_zh": "推荐",
+    "def_en": "to suggest as good or suitable",
+    "examples": [
+      "I recommend this book."
+    ],
+    "root_affix": "re-(加强)+ commend(托付/称赞,拉丁 commendare)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0214",
+    "word": "reduce",
+    "phonetic": "/rɪˈdjuːs/",
+    "def_zh": "减少",
+    "def_en": "to make smaller or less",
+    "examples": [
+      "Reduce the speed near schools."
+    ],
+    "root_affix": "re-(回)+ duce(引导,拉丁 ducere);本义“领回(变少)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0215",
+    "word": "regular",
+    "phonetic": "/ˈreɡjələ(r)/",
+    "def_zh": "规律的;经常的",
+    "def_en": "happening at even intervals; usual",
+    "examples": [
+      "Take regular breaks."
+    ],
+    "root_affix": "源自拉丁 regula(规则,尺子)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0216",
+    "word": "relationship",
+    "phonetic": "/rɪˈleɪʃnʃɪp/",
+    "def_zh": "关系",
+    "def_en": "the way two or more things are connected",
+    "examples": [
+      "They have a close relationship."
+    ],
+    "root_affix": "re-(回)+ lat(带,拉丁 ferre 的分词 latus)+ -ionship",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0217",
+    "word": "remember",
+    "phonetic": "/rɪˈmembə(r)/",
+    "def_zh": "记得",
+    "def_en": "to keep in or recall to mind",
+    "examples": [
+      "Remember to lock the door."
+    ],
+    "root_affix": "re-(再)+ member(留心,拉丁 memor 记得)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0218",
+    "word": "remind",
+    "phonetic": "/rɪˈmaɪnd/",
+    "def_zh": "提醒",
+    "def_en": "to cause someone to remember",
+    "examples": [
+      "Remind me to call him."
+    ],
+    "root_affix": "re-(再)+ mind(心智);本义“再次放入心中”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0219",
+    "word": "repeat",
+    "phonetic": "/rɪˈpiːt/",
+    "def_zh": "重复",
+    "def_en": "to say or do again",
+    "examples": [
+      "Please repeat the question."
+    ],
+    "root_affix": "re-(再)+ peat(寻求,拉丁 petere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0220",
+    "word": "replace",
+    "phonetic": "/rɪˈpleɪs/",
+    "def_zh": "替换",
+    "def_en": "to take the place of, or put back",
+    "examples": [
+      "Replace the broken part."
+    ],
+    "root_affix": "re-(再)+ place(放置)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0221",
+    "word": "require",
+    "phonetic": "/rɪˈkwaɪə(r)/",
+    "def_zh": "需要;要求",
+    "def_en": "to need or to demand",
+    "examples": [
+      "The job requires patience."
+    ],
+    "root_affix": "re-(再)+ quire(寻求,拉丁 quaerere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0222",
+    "word": "research",
+    "phonetic": "/rɪˈsɜːtʃ/",
+    "def_zh": "研究",
+    "def_en": "careful study to discover facts",
+    "examples": [
+      "She does cancer research."
+    ],
+    "root_affix": "re-(加强)+ search(搜寻,拉丁 circare 绕行)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0223",
+    "word": "respect",
+    "phonetic": "/rɪˈspekt/",
+    "def_zh": "尊重",
+    "def_en": "regard for the worth of someone",
+    "examples": [
+      "Show respect to your elders."
+    ],
+    "root_affix": "re-(回)+ spect(看,拉丁 specere);本义“回头看重”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0224",
+    "word": "responsible",
+    "phonetic": "/rɪˈspɒnsəbl/",
+    "def_zh": "负责的",
+    "def_en": "having a duty to deal with something",
+    "examples": [
+      "She is responsible for safety."
+    ],
+    "root_affix": "re-(回)+ spons(承诺,拉丁 spondere)+ -ible",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0225",
+    "word": "result",
+    "phonetic": "/rɪˈzʌlt/",
+    "def_zh": "结果",
+    "def_en": "an outcome or consequence",
+    "examples": [
+      "The result was a surprise."
+    ],
+    "root_affix": "re-(回)+ sult(跳,拉丁 salire);本义“跳回(产生)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0226",
+    "word": "return",
+    "phonetic": "/rɪˈtɜːn/",
+    "def_zh": "返回;归还",
+    "def_en": "to come or give back",
+    "examples": [
+      "Return the book by Friday."
+    ],
+    "root_affix": "re-(回)+ turn(转)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0227",
+    "word": "reveal",
+    "phonetic": "/rɪˈviːl/",
+    "def_zh": "揭示",
+    "def_en": "to make known something hidden",
+    "examples": [
+      "The study revealed surprising facts."
+    ],
+    "root_affix": "re-(去除)+ veal(面纱,拉丁 velum);本义“揭开面纱”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0228",
+    "word": "safety",
+    "phonetic": "/ˈseɪfti/",
+    "def_zh": "安全",
+    "def_en": "the condition of being protected from harm",
+    "examples": [
+      "Wear a belt for your safety."
+    ],
+    "root_affix": "safe(安全的,拉丁 salvus)+ -ty",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0229",
+    "word": "satisfy",
+    "phonetic": "/ˈsætɪsfaɪ/",
+    "def_zh": "满足",
+    "def_en": "to meet a need or desire",
+    "examples": [
+      "The meal satisfied everyone."
+    ],
+    "root_affix": "satis-(足够,拉丁 satis)+ fy(做,facere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0230",
+    "word": "schedule",
+    "phonetic": "/ˈʃedjuːl/",
+    "def_zh": "日程;安排",
+    "def_en": "a plan of times for events",
+    "examples": [
+      "Check the train schedule."
+    ],
+    "root_affix": "源自拉丁 schedula(小纸条)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0231",
+    "word": "science",
+    "phonetic": "/ˈsaɪəns/",
+    "def_zh": "科学",
+    "def_en": "the systematic study of the natural world",
+    "examples": [
+      "She loves science."
+    ],
+    "root_affix": "源自拉丁 scientia(知识,scire 知道)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0232",
+    "word": "season",
+    "phonetic": "/ˈsiːzn/",
+    "def_zh": "季节",
+    "def_en": "one of the four divisions of the year",
+    "examples": [
+      "Autumn is my favorite season."
+    ],
+    "root_affix": "源自拉丁 satio(播种时节)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0233",
+    "word": "separate",
+    "phonetic": "/ˈsepəreɪt/",
+    "def_zh": "分开;单独的",
+    "def_en": "to set or be apart",
+    "examples": [
+      "Separate the recycling from the trash."
+    ],
+    "root_affix": "se-(分开)+ par(准备/排列,拉丁 parare)+ -ate",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0234",
+    "word": "serious",
+    "phonetic": "/ˈsɪəriəs/",
+    "def_zh": "严肃的;严重的",
+    "def_en": "grave; not joking; significant",
+    "examples": [
+      "This is a serious matter."
+    ],
+    "root_affix": "源自拉丁 serius(沉重的,认真的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0235",
+    "word": "similar",
+    "phonetic": "/ˈsɪmələ(r)/",
+    "def_zh": "相似的",
+    "def_en": "alike but not identical",
+    "examples": [
+      "The two cases are similar."
+    ],
+    "root_affix": "源自拉丁 similis(相像的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0236",
+    "word": "simple",
+    "phonetic": "/ˈsɪmpl/",
+    "def_zh": "简单的",
+    "def_en": "easy to understand or do",
+    "examples": [
+      "Keep the design simple."
+    ],
+    "root_affix": "源自拉丁 simplus(单一的,一重的)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0237",
+    "word": "situation",
+    "phonetic": "/ˌsɪtʃuˈeɪʃn/",
+    "def_zh": "情况;处境",
+    "def_en": "a set of circumstances",
+    "examples": [
+      "The situation is improving."
+    ],
+    "root_affix": "situ-(位置,拉丁 situs)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0238",
+    "word": "society",
+    "phonetic": "/səˈsaɪəti/",
+    "def_zh": "社会",
+    "def_en": "people living together in a community",
+    "examples": [
+      "Technology shapes society."
+    ],
+    "root_affix": "soci-(伙伴,拉丁 socius)+ -ety",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0239",
+    "word": "solution",
+    "phonetic": "/səˈluːʃn/",
+    "def_zh": "解决方案;溶液",
+    "def_en": "an answer to a problem; a liquid mixture",
+    "examples": [
+      "We found a clever solution."
+    ],
+    "root_affix": "solu-(松开,拉丁 solvere)+ -tion;本义“解开”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0240",
+    "word": "special",
+    "phonetic": "/ˈspeʃl/",
+    "def_zh": "特别的",
+    "def_en": "better or different from usual",
+    "examples": [
+      "Today is a special day."
+    ],
+    "root_affix": "speci-(种类,拉丁 species)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0241",
+    "word": "succeed",
+    "phonetic": "/səkˈsiːd/",
+    "def_zh": "成功;接续",
+    "def_en": "to achieve a goal, or to follow after",
+    "examples": [
+      "She succeeded in her plan."
+    ],
+    "root_affix": "suc-(下/接着)+ ceed(走,拉丁 cedere);本义“紧随而上”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0242",
+    "word": "suggest",
+    "phonetic": "/səˈdʒest/",
+    "def_zh": "建议;暗示",
+    "def_en": "to put forward an idea",
+    "examples": [
+      "I suggest we leave early."
+    ],
+    "root_affix": "sug-(下)+ gest(带,拉丁 gerere);本义“从下托出”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0243",
+    "word": "support",
+    "phonetic": "/səˈpɔːt/",
+    "def_zh": "支持;支撑",
+    "def_en": "to help or hold up",
+    "examples": [
+      "Friends support each other."
+    ],
+    "root_affix": "sup-(下)+ port(承载,拉丁 portare);本义“从下托住”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0244",
+    "word": "suppose",
+    "phonetic": "/səˈpəʊz/",
+    "def_zh": "假定;猜想",
+    "def_en": "to assume to be true",
+    "examples": [
+      "Suppose it rains tomorrow."
+    ],
+    "root_affix": "sup-(下)+ pose(放置,拉丁 ponere);本义“置于其下(为前提)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0245",
+    "word": "surface",
+    "phonetic": "/ˈsɜːfɪs/",
+    "def_zh": "表面",
+    "def_en": "the outer or top layer of something",
+    "examples": [
+      "The surface of the lake was calm."
+    ],
+    "root_affix": "sur-(上,拉丁 super)+ face(面)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0246",
+    "word": "surprise",
+    "phonetic": "/səˈpraɪz/",
+    "def_zh": "惊讶;使惊讶",
+    "def_en": "an unexpected event or feeling",
+    "examples": [
+      "The gift was a lovely surprise."
+    ],
+    "root_affix": "sur-(上)+ prise(抓,拉丁 prendere);本义“突然抓住”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0247",
+    "word": "survive",
+    "phonetic": "/səˈvaɪv/",
+    "def_zh": "幸存;存活",
+    "def_en": "to continue to live, especially after danger",
+    "examples": [
+      "Few plants survive the cold."
+    ],
+    "root_affix": "sur-(超过,拉丁 super)+ vive(活,拉丁 vivere)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0248",
+    "word": "system",
+    "phonetic": "/ˈsɪstəm/",
+    "def_zh": "系统",
+    "def_en": "a set of connected things working together",
+    "examples": [
+      "The transport system is efficient."
+    ],
+    "root_affix": "源自希腊 systema(组合,放在一起)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0249",
+    "word": "teach",
+    "phonetic": "/tiːtʃ/",
+    "def_zh": "教",
+    "def_en": "to give knowledge or skill",
+    "examples": [
+      "She teaches math."
+    ],
+    "root_affix": "源自古英语 taecan(指示,展示)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0250",
+    "word": "technology",
+    "phonetic": "/tekˈnɒlədʒi/",
+    "def_zh": "技术;科技",
+    "def_en": "the application of scientific knowledge",
+    "examples": [
+      "New technology changes daily life."
+    ],
+    "root_affix": "techno-(技艺,希腊 techne)+ -logy(学科)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0251",
+    "word": "temperature",
+    "phonetic": "/ˈtemprətʃə(r)/",
+    "def_zh": "温度",
+    "def_en": "the degree of heat or cold",
+    "examples": [
+      "The temperature dropped at night."
+    ],
+    "root_affix": "temper-(调和,拉丁 temperare)+ -ature",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0252",
+    "word": "therefore",
+    "phonetic": "/ˈðeəfɔː(r)/",
+    "def_zh": "因此",
+    "def_en": "for that reason",
+    "examples": [
+      "He was ill; therefore he stayed home."
+    ],
+    "root_affix": "there(那)+ fore(在前)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0253",
+    "word": "though",
+    "phonetic": "/ðəʊ/",
+    "def_zh": "虽然",
+    "def_en": "despite the fact that",
+    "examples": [
+      "Though tired, she kept working."
+    ],
+    "root_affix": "源自古英语 theah(尽管)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0254",
+    "word": "thought",
+    "phonetic": "/θɔːt/",
+    "def_zh": "思想;想法",
+    "def_en": "an idea produced by thinking",
+    "examples": [
+      "A sudden thought struck her."
+    ],
+    "root_affix": "think(想)的古英语名词形式 thoht",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0255",
+    "word": "through",
+    "phonetic": "/θruː/",
+    "def_zh": "穿过;通过",
+    "def_en": "from one side or end to the other",
+    "examples": [
+      "Walk through the gate."
+    ],
+    "root_affix": "源自古英语 thurh(穿过)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0256",
+    "word": "together",
+    "phonetic": "/təˈɡeðə(r)/",
+    "def_zh": "一起",
+    "def_en": "with each other",
+    "examples": [
+      "They work together well."
+    ],
+    "root_affix": "to-(向)+ gether(聚,古英语 gaderian)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0257",
+    "word": "tradition",
+    "phonetic": "/trəˈdɪʃn/",
+    "def_zh": "传统",
+    "def_en": "a long-established custom",
+    "examples": [
+      "Tea is part of their tradition."
+    ],
+    "root_affix": "tra-(越过,拉丁 trans)+ dit(给,拉丁 dare)+ -ion;本义“世代传递”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0258",
+    "word": "translate",
+    "phonetic": "/trænzˈleɪt/",
+    "def_zh": "翻译",
+    "def_en": "to express in another language",
+    "examples": [
+      "Translate this into Chinese."
+    ],
+    "root_affix": "trans-(越过)+ lat(带,拉丁 latus);本义“搬运过去”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0259",
+    "word": "travel",
+    "phonetic": "/ˈtrævl/",
+    "def_zh": "旅行",
+    "def_en": "to go from one place to another",
+    "examples": [
+      "They travel every summer."
+    ],
+    "root_affix": "源自古法语 travailler(劳作,旅途艰辛)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0260",
+    "word": "trouble",
+    "phonetic": "/ˈtrʌbl/",
+    "def_zh": "麻烦;困难",
+    "def_en": "difficulty or problems",
+    "examples": [
+      "The car gave us trouble."
+    ],
+    "root_affix": "源自拉丁 turbidus(混乱的,turba 骚动)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0261",
+    "word": "understand",
+    "phonetic": "/ˌʌndəˈstænd/",
+    "def_zh": "理解",
+    "def_en": "to grasp the meaning of something",
+    "examples": [
+      "I understand your point."
+    ],
+    "root_affix": "under-(在下/在间)+ stand(站);本义“站在其中(领会)”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0262",
+    "word": "university",
+    "phonetic": "/ˌjuːnɪˈvɜːsəti/",
+    "def_zh": "大学",
+    "def_en": "an institution of higher education",
+    "examples": [
+      "He studies at a famous university."
+    ],
+    "root_affix": "uni-(一)+ vers(转,拉丁 vertere)+ -ity;本义“整体团体”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0263",
+    "word": "useful",
+    "phonetic": "/ˈjuːsfl/",
+    "def_zh": "有用的",
+    "def_en": "able to be used for a purpose",
+    "examples": [
+      "This tool is very useful."
+    ],
+    "root_affix": "use(使用)+ -ful",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0264",
+    "word": "usual",
+    "phonetic": "/ˈjuːʒuəl/",
+    "def_zh": "通常的",
+    "def_en": "happening most of the time",
+    "examples": [
+      "He took his usual seat."
+    ],
+    "root_affix": "us-(使用,拉丁 usus)+ -ual",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0265",
+    "word": "valuable",
+    "phonetic": "/ˈvæljuəbl/",
+    "def_zh": "有价值的;贵重的",
+    "def_en": "worth a lot of money or importance",
+    "examples": [
+      "This is valuable advice."
+    ],
+    "root_affix": "valu-(价值,拉丁 valere 强健)+ -able",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0266",
+    "word": "various",
+    "phonetic": "/ˈveəriəs/",
+    "def_zh": "各种各样的",
+    "def_en": "of different kinds",
+    "examples": [
+      "The shop sells various goods."
+    ],
+    "root_affix": "vari-(变化,拉丁 varius)+ -ous",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0267",
+    "word": "victory",
+    "phonetic": "/ˈvɪktəri/",
+    "def_zh": "胜利",
+    "def_en": "success in a contest or battle",
+    "examples": [
+      "The team celebrated their victory."
+    ],
+    "root_affix": "vict-(征服,拉丁 vincere)+ -ory",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0268",
+    "word": "weather",
+    "phonetic": "/ˈweðə(r)/",
+    "def_zh": "天气",
+    "def_en": "the state of the atmosphere",
+    "examples": [
+      "The weather is fine today."
+    ],
+    "root_affix": "源自古英语 weder(天空状况)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0269",
+    "word": "welcome",
+    "phonetic": "/ˈwelkəm/",
+    "def_zh": "欢迎",
+    "def_en": "to greet someone gladly",
+    "examples": [
+      "They welcomed us warmly."
+    ],
+    "root_affix": "源自古英语 wilcuma(令人愉快的来客)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0270",
+    "word": "wonderful",
+    "phonetic": "/ˈwʌndəfl/",
+    "def_zh": "极好的;精彩的",
+    "def_en": "extremely good",
+    "examples": [
+      "We had a wonderful time."
+    ],
+    "root_affix": "wonder(惊奇)+ -ful",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0271",
+    "word": "worry",
+    "phonetic": "/ˈwʌri/",
+    "def_zh": "担心",
+    "def_en": "to feel anxious",
+    "examples": [
+      "Don't worry about the test."
+    ],
+    "root_affix": "源自古英语 wyrgan(掐住,引申为困扰)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0272",
+    "word": "achievement",
+    "phonetic": "/əˈtʃiːvmənt/",
+    "def_zh": "成就",
+    "def_en": "something accomplished through effort",
+    "examples": [
+      "Winning the prize was a great achievement."
+    ],
+    "root_affix": "achieve(实现)+ -ment",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0273",
+    "word": "activity",
+    "phonetic": "/ækˈtɪvəti/",
+    "def_zh": "活动",
+    "def_en": "something done for a purpose or enjoyment",
+    "examples": [
+      "Swimming is my favorite activity."
+    ],
+    "root_affix": "act-(做,拉丁 agere)+ -ivity",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0274",
+    "word": "addition",
+    "phonetic": "/əˈdɪʃn/",
+    "def_zh": "加;增加物",
+    "def_en": "the act of adding, or something added",
+    "examples": [
+      "A garden is a nice addition."
+    ],
+    "root_affix": "ad-(向)+ dit(给,拉丁 dare)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0275",
+    "word": "adventure",
+    "phonetic": "/ədˈventʃə(r)/",
+    "def_zh": "冒险",
+    "def_en": "an exciting or risky experience",
+    "examples": [
+      "Their trip was a real adventure."
+    ],
+    "root_affix": "ad-(向)+ vent(来,拉丁 venire)+ -ure;本义“即将到来之事”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0276",
+    "word": "agreement",
+    "phonetic": "/əˈɡriːmənt/",
+    "def_zh": "协议;一致",
+    "def_en": "an arrangement accepted by all parties",
+    "examples": [
+      "They reached an agreement."
+    ],
+    "root_affix": "agree(同意)+ -ment",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0277",
+    "word": "appointment",
+    "phonetic": "/əˈpɔɪntmənt/",
+    "def_zh": "约会;任命",
+    "def_en": "an arrangement to meet, or assignment to a post",
+    "examples": [
+      "I have a dentist appointment."
+    ],
+    "root_affix": "ap-(向)+ point(指定)+ -ment",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0278",
+    "word": "attractive",
+    "phonetic": "/əˈtræktɪv/",
+    "def_zh": "有吸引力的",
+    "def_en": "pleasing or appealing",
+    "examples": [
+      "The offer is very attractive."
+    ],
+    "root_affix": "at-(向)+ tract(拉,拉丁 trahere)+ -ive",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0279",
+    "word": "comfortable",
+    "phonetic": "/ˈkʌmftəbl/",
+    "def_zh": "舒适的",
+    "def_en": "giving physical ease and relaxation",
+    "examples": [
+      "This chair is very comfortable."
+    ],
+    "root_affix": "comfort(舒适)+ -able",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0280",
+    "word": "communicate",
+    "phonetic": "/kəˈmjuːnɪkeɪt/",
+    "def_zh": "交流;沟通",
+    "def_en": "to share information with others",
+    "examples": [
+      "They communicate by email."
+    ],
+    "root_affix": "commun-(共同,拉丁 communis)+ -icate",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0281",
+    "word": "comparison",
+    "phonetic": "/kəmˈpærɪsn/",
+    "def_zh": "比较",
+    "def_en": "the act of examining differences and similarities",
+    "examples": [
+      "Draw a comparison between the two."
+    ],
+    "root_affix": "com-(一起)+ par(相等,拉丁 par)+ -ison",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0282",
+    "word": "competition",
+    "phonetic": "/ˌkɒmpəˈtɪʃn/",
+    "def_zh": "竞争;比赛",
+    "def_en": "an event where people try to win",
+    "examples": [
+      "She won the singing competition."
+    ],
+    "root_affix": "com-(一起)+ pet(追求,拉丁 petere)+ -ition",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0283",
+    "word": "decision",
+    "phonetic": "/dɪˈsɪʒn/",
+    "def_zh": "决定",
+    "def_en": "a choice made after thought",
+    "examples": [
+      "It was a hard decision."
+    ],
+    "root_affix": "de-(离)+ cis(切,拉丁 caedere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0284",
+    "word": "description",
+    "phonetic": "/dɪˈskrɪpʃn/",
+    "def_zh": "描述",
+    "def_en": "a spoken or written account",
+    "examples": [
+      "Write a short description."
+    ],
+    "root_affix": "de-(下)+ scrip(写,拉丁 scribere)+ -tion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0285",
+    "word": "discussion",
+    "phonetic": "/dɪˈskʌʃn/",
+    "def_zh": "讨论",
+    "def_en": "a conversation examining a topic",
+    "examples": [
+      "We had a long discussion."
+    ],
+    "root_affix": "dis-(分开)+ cuss(摇,拉丁 quatere)+ -ion;本义“反复敲打”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0286",
+    "word": "education",
+    "phonetic": "/ˌedʒuˈkeɪʃn/",
+    "def_zh": "教育",
+    "def_en": "the process of teaching and learning",
+    "examples": [
+      "Education opens doors."
+    ],
+    "root_affix": "e-(出)+ duc(引导,拉丁 ducere)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0287",
+    "word": "entertainment",
+    "phonetic": "/ˌentəˈteɪnmənt/",
+    "def_zh": "娱乐",
+    "def_en": "activity that amuses or pleases",
+    "examples": [
+      "The festival offers great entertainment."
+    ],
+    "root_affix": "enter-(之间,拉丁 inter)+ tain(持有,拉丁 tenere)+ -ment",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0288",
+    "word": "explanation",
+    "phonetic": "/ˌekspləˈneɪʃn/",
+    "def_zh": "解释;说明",
+    "def_en": "a statement that makes something clear",
+    "examples": [
+      "Thanks for the clear explanation."
+    ],
+    "root_affix": "ex-(出)+ plan(平,拉丁 planus)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0289",
+    "word": "imagination",
+    "phonetic": "/ɪˌmædʒɪˈneɪʃn/",
+    "def_zh": "想象力",
+    "def_en": "the ability to form mental images",
+    "examples": [
+      "Children have rich imagination."
+    ],
+    "root_affix": "imag-(像,拉丁 imago)+ -ination",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0290",
+    "word": "information",
+    "phonetic": "/ˌɪnfəˈmeɪʃn/",
+    "def_zh": "信息",
+    "def_en": "facts or knowledge about something",
+    "examples": [
+      "I need more information."
+    ],
+    "root_affix": "in-(进入)+ form(形状)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0291",
+    "word": "invitation",
+    "phonetic": "/ˌɪnvɪˈteɪʃn/",
+    "def_zh": "邀请",
+    "def_en": "a request to attend or take part",
+    "examples": [
+      "She sent out the invitations."
+    ],
+    "root_affix": "in-(向)+ vit(召请,拉丁 invitare)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0292",
+    "word": "intelligence",
+    "phonetic": "/ɪnˈtelɪdʒəns/",
+    "def_zh": "智力;情报",
+    "def_en": "the ability to learn and reason; secret information",
+    "examples": [
+      "He shows great intelligence."
+    ],
+    "root_affix": "inter-(之间)+ leg(选/读,拉丁 legere)+ -ence;本义“辨别取舍”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0293",
+    "word": "organization",
+    "phonetic": "/ˌɔːɡənaɪˈzeɪʃn/",
+    "def_zh": "组织;机构",
+    "def_en": "a structured group of people with a goal",
+    "examples": [
+      "She works for a charity organization."
+    ],
+    "root_affix": "organ(器官/工具,希腊 organon)+ -ization",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0294",
+    "word": "performance",
+    "phonetic": "/pəˈfɔːməns/",
+    "def_zh": "表演;表现",
+    "def_en": "an act of presenting, or how well one does",
+    "examples": [
+      "The band gave a great performance."
+    ],
+    "root_affix": "per-(完全)+ form(完成,古法语 fournir)+ -ance",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0295",
+    "word": "preparation",
+    "phonetic": "/ˌprepəˈreɪʃn/",
+    "def_zh": "准备",
+    "def_en": "the act of getting ready",
+    "examples": [
+      "Good preparation prevents failure."
+    ],
+    "root_affix": "pre-(预先)+ par(备好,拉丁 parare)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0296",
+    "word": "protection",
+    "phonetic": "/prəˈtekʃn/",
+    "def_zh": "保护",
+    "def_en": "the act of keeping safe from harm",
+    "examples": [
+      "Sunscreen offers protection."
+    ],
+    "root_affix": "pro-(在前)+ tect(覆盖,拉丁 tegere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0297",
+    "word": "responsibility",
+    "phonetic": "/rɪˌspɒnsəˈbɪləti/",
+    "def_zh": "责任",
+    "def_en": "a duty or obligation",
+    "examples": [
+      "Safety is everyone's responsibility."
+    ],
+    "root_affix": "re-(回)+ spons(承诺,拉丁 spondere)+ -ibility",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0298",
+    "word": "satisfaction",
+    "phonetic": "/ˌsætɪsˈfækʃn/",
+    "def_zh": "满意;满足",
+    "def_en": "a feeling of contentment",
+    "examples": [
+      "She smiled with satisfaction."
+    ],
+    "root_affix": "satis-(足够)+ fact(做,拉丁 facere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0299",
+    "word": "suggestion",
+    "phonetic": "/səˈdʒestʃən/",
+    "def_zh": "建议",
+    "def_en": "an idea put forward for consideration",
+    "examples": [
+      "That's a helpful suggestion."
+    ],
+    "root_affix": "sug-(下)+ gest(带,拉丁 gerere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0300",
+    "word": "celebration",
+    "phonetic": "/ˌselɪˈbreɪʃn/",
+    "def_zh": "庆祝;庆典",
+    "def_en": "a joyful event marking an occasion",
+    "examples": [
+      "The wedding celebration lasted all night."
+    ],
+    "root_affix": "celebr-(频繁举行,拉丁 celebrare)+ -ation",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0301",
+    "word": "conversation",
+    "phonetic": "/ˌkɒnvəˈseɪʃn/",
+    "def_zh": "交谈",
+    "def_en": "an informal talk between people",
+    "examples": [
+      "We had a long conversation."
+    ],
+    "root_affix": "con-(一起)+ vers(转,拉丁 vertere)+ -ation;本义“来回交谈”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0302",
+    "word": "difficulty",
+    "phonetic": "/ˈdɪfɪkəlti/",
+    "def_zh": "困难",
+    "def_en": "a problem or hard situation",
+    "examples": [
+      "He had difficulty breathing."
+    ],
+    "root_affix": "dif-(不)+ ficult(容易,拉丁 facilis)+ -y",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0303",
+    "word": "excitement",
+    "phonetic": "/ɪkˈsaɪtmənt/",
+    "def_zh": "兴奋",
+    "def_en": "a feeling of great enthusiasm",
+    "examples": [
+      "The news caused great excitement."
+    ],
+    "root_affix": "ex-(出)+ cit(唤起,拉丁 citare)+ -ement",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0304",
+    "word": "hospital",
+    "phonetic": "/ˈhɒspɪtl/",
+    "def_zh": "医院",
+    "def_en": "a place where sick people are treated",
+    "examples": [
+      "She works at the city hospital."
+    ],
+    "root_affix": "源自拉丁 hospitalis(接待客人的,hospes 客人)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0305",
+    "word": "medical",
+    "phonetic": "/ˈmedɪkl/",
+    "def_zh": "医疗的;医学的",
+    "def_en": "relating to medicine or treatment",
+    "examples": [
+      "He needs medical care."
+    ],
+    "root_affix": "medic-(治疗,拉丁 medicus)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0306",
+    "word": "musical",
+    "phonetic": "/ˈmjuːzɪkl/",
+    "def_zh": "音乐的",
+    "def_en": "relating to music; a stage show with songs",
+    "examples": [
+      "She has a musical talent."
+    ],
+    "root_affix": "music(音乐,希腊 mousike)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0307",
+    "word": "national",
+    "phonetic": "/ˈnæʃnəl/",
+    "def_zh": "国家的;全国的",
+    "def_en": "relating to a whole nation",
+    "examples": [
+      "It is a national holiday."
+    ],
+    "root_affix": "nation(国家,拉丁 natio 出生)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0308",
+    "word": "natural",
+    "phonetic": "/ˈnætʃrəl/",
+    "def_zh": "自然的;天生的",
+    "def_en": "existing in nature; not artificial",
+    "examples": [
+      "Honey is a natural sweetener."
+    ],
+    "root_affix": "nat-(出生,拉丁 nasci)+ -ural",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0309",
+    "word": "physical",
+    "phonetic": "/ˈfɪzɪkl/",
+    "def_zh": "身体的;物理的",
+    "def_en": "relating to the body or to matter",
+    "examples": [
+      "Regular physical activity is healthy."
+    ],
+    "root_affix": "physic-(自然,希腊 physis)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0310",
+    "word": "political",
+    "phonetic": "/pəˈlɪtɪkl/",
+    "def_zh": "政治的",
+    "def_en": "relating to government or public affairs",
+    "examples": [
+      "It became a political issue."
+    ],
+    "root_affix": "politic-(城邦,希腊 polis)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0311",
+    "word": "practical",
+    "phonetic": "/ˈpræktɪkl/",
+    "def_zh": "实际的;实用的",
+    "def_en": "concerned with real use rather than theory",
+    "examples": [
+      "Give me a practical example."
+    ],
+    "root_affix": "practic-(实践,希腊 praktikos)+ -al",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0312",
+    "word": "professional",
+    "phonetic": "/prəˈfeʃənl/",
+    "def_zh": "专业的;职业的",
+    "def_en": "relating to a skilled occupation",
+    "examples": [
+      "She gave professional advice."
+    ],
+    "root_affix": "profess(公开声称,拉丁 profiteri)+ -ional",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0313",
+    "word": "recently",
+    "phonetic": "/ˈriːsntli/",
+    "def_zh": "最近",
+    "def_en": "not long ago",
+    "examples": [
+      "I saw him recently."
+    ],
+    "root_affix": "re-(向后)+ cent(新近,拉丁 recens)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0314",
+    "word": "seriously",
+    "phonetic": "/ˈsɪəriəsli/",
+    "def_zh": "认真地;严重地",
+    "def_en": "in a grave or earnest manner",
+    "examples": [
+      "Take the warning seriously."
+    ],
+    "root_affix": "serious(严肃的)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0315",
+    "word": "suddenly",
+    "phonetic": "/ˈsʌdənli/",
+    "def_zh": "突然",
+    "def_en": "quickly and unexpectedly",
+    "examples": [
+      "The lights went out suddenly."
+    ],
+    "root_affix": "sud-(下)+ den(来,拉丁 subitus 突然的)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0316",
+    "word": "completely",
+    "phonetic": "/kəmˈpliːtli/",
+    "def_zh": "完全地",
+    "def_en": "totally; in every way",
+    "examples": [
+      "The plan completely failed."
+    ],
+    "root_affix": "complete(完整的)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0317",
+    "word": "certainly",
+    "phonetic": "/ˈsɜːtnli/",
+    "def_zh": "当然;肯定",
+    "def_en": "without doubt; surely",
+    "examples": [
+      "I will certainly help."
+    ],
+    "root_affix": "certain(确定的)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0318",
+    "word": "possibly",
+    "phonetic": "/ˈpɒsəbli/",
+    "def_zh": "可能",
+    "def_en": "perhaps; maybe",
+    "examples": [
+      "It may possibly snow."
+    ],
+    "root_affix": "possible(可能的)+ -ly",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0319",
+    "word": "breakfast",
+    "phonetic": "/ˈbrekfəst/",
+    "def_zh": "早餐",
+    "def_en": "the first meal of the day",
+    "examples": [
+      "I had eggs for breakfast."
+    ],
+    "root_affix": "break(打破)+ fast(禁食);本义“打破夜间禁食”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0320",
+    "word": "afternoon",
+    "phonetic": "/ˌɑːftəˈnuːn/",
+    "def_zh": "下午",
+    "def_en": "the time from noon until evening",
+    "examples": [
+      "Let's meet in the afternoon."
+    ],
+    "root_affix": "after(在…之后)+ noon(正午)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0321",
+    "word": "birthday",
+    "phonetic": "/ˈbɜːθdeɪ/",
+    "def_zh": "生日",
+    "def_en": "the anniversary of the day one was born",
+    "examples": [
+      "Happy birthday to you."
+    ],
+    "root_affix": "birth(出生)+ day(日)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0322",
+    "word": "holiday",
+    "phonetic": "/ˈhɒlədeɪ/",
+    "def_zh": "假日;假期",
+    "def_en": "a day of rest or celebration",
+    "examples": [
+      "We travel during the holiday."
+    ],
+    "root_affix": "holy(神圣的)+ day(日);本义“宗教节日”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0323",
+    "word": "weekend",
+    "phonetic": "/ˌwiːkˈend/",
+    "def_zh": "周末",
+    "def_en": "Saturday and Sunday",
+    "examples": [
+      "We relax on the weekend."
+    ],
+    "root_affix": "week(周)+ end(末)合成词",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0324",
+    "word": "mountain",
+    "phonetic": "/ˈmaʊntən/",
+    "def_zh": "山",
+    "def_en": "a very high natural elevation of land",
+    "examples": [
+      "They climbed the mountain."
+    ],
+    "root_affix": "源自拉丁 mons(山,montis)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0325",
+    "word": "forest",
+    "phonetic": "/ˈfɒrɪst/",
+    "def_zh": "森林",
+    "def_en": "a large area covered with trees",
+    "examples": [
+      "The forest is full of birds."
+    ],
+    "root_affix": "源自拉丁 forestis(户外的林地,foris 外)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0326",
+    "word": "river",
+    "phonetic": "/ˈrɪvə(r)/",
+    "def_zh": "河流",
+    "def_en": "a large natural stream of water",
+    "examples": [
+      "The river flows to the sea."
+    ],
+    "root_affix": "源自拉丁 riparius(河岸的,ripa 岸)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0327",
+    "word": "garden",
+    "phonetic": "/ˈɡɑːdn/",
+    "def_zh": "花园;菜园",
+    "def_en": "a piece of land for growing plants",
+    "examples": [
+      "She grows roses in the garden."
+    ],
+    "root_affix": "源自日耳曼 gard(围地),与 yard 同源",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0328",
+    "word": "kitchen",
+    "phonetic": "/ˈkɪtʃɪn/",
+    "def_zh": "厨房",
+    "def_en": "a room where food is prepared",
+    "examples": [
+      "He is cooking in the kitchen."
+    ],
+    "root_affix": "源自拉丁 coquina(烹饪处,coquere 煮)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0329",
+    "word": "window",
+    "phonetic": "/ˈwɪndəʊ/",
+    "def_zh": "窗户",
+    "def_en": "an opening in a wall fitted with glass",
+    "examples": [
+      "Open the window for fresh air."
+    ],
+    "root_affix": "源自古诺斯 vindauga(风眼:wind 风 + auga 眼)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0330",
+    "word": "dangerous",
+    "phonetic": "/ˈdeɪndʒərəs/",
+    "def_zh": "危险的",
+    "def_en": "likely to cause harm",
+    "examples": [
+      "The road is dangerous at night."
+    ],
+    "root_affix": "danger(危险)+ -ous",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0331",
+    "word": "expensive",
+    "phonetic": "/ɪkˈspensɪv/",
+    "def_zh": "昂贵的",
+    "def_en": "costing a lot of money",
+    "examples": [
+      "That watch is too expensive."
+    ],
+    "root_affix": "ex-(出)+ pens(花费/称量,拉丁 pendere)+ -ive",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0332",
+    "word": "delicious",
+    "phonetic": "/dɪˈlɪʃəs/",
+    "def_zh": "美味的",
+    "def_en": "very pleasant to taste",
+    "examples": [
+      "The soup is delicious."
+    ],
+    "root_affix": "源自拉丁 deliciosus(令人愉悦的,delicere 诱惑)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0333",
+    "word": "excited",
+    "phonetic": "/ɪkˈsaɪtɪd/",
+    "def_zh": "兴奋的",
+    "def_en": "feeling great enthusiasm",
+    "examples": [
+      "The kids were excited about the trip."
+    ],
+    "root_affix": "ex-(出)+ cit(唤起,拉丁 citare)+ -ed",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0334",
+    "word": "interesting",
+    "phonetic": "/ˈɪntrəstɪŋ/",
+    "def_zh": "有趣的",
+    "def_en": "holding attention; engaging",
+    "examples": [
+      "It's an interesting book."
+    ],
+    "root_affix": "interest(兴趣)+ -ing",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0335",
+    "word": "question",
+    "phonetic": "/ˈkwestʃən/",
+    "def_zh": "问题",
+    "def_en": "a sentence asking for information",
+    "examples": [
+      "May I ask a question?"
+    ],
+    "root_affix": "quest(寻求,拉丁 quaerere)+ -ion",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0336",
+    "word": "problem",
+    "phonetic": "/ˈprɒbləm/",
+    "def_zh": "问题;难题",
+    "def_en": "a matter that is hard to deal with",
+    "examples": [
+      "We solved the problem."
+    ],
+    "root_affix": "pro-(向前)+ blem(投掷,希腊 ballein);本义“摆在面前的难题”",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0337",
+    "word": "courageous",
+    "phonetic": "/kəˈreɪdʒəs/",
+    "def_zh": "勇敢的",
+    "def_en": "showing courage",
+    "examples": [
+      "It was a courageous decision."
+    ],
+    "root_affix": "courage(勇气)+ -ous",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0338",
+    "word": "generous",
+    "phonetic": "/ˈdʒenərəs/",
+    "def_zh": "慷慨的",
+    "def_en": "willing to give freely",
+    "examples": [
+      "He is generous with his time."
+    ],
+    "root_affix": "gener-(出身高贵,拉丁 generosus)+ -ous",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0339",
+    "word": "honesty",
+    "phonetic": "/ˈɒnəsti/",
+    "def_zh": "诚实",
+    "def_en": "the quality of being truthful",
+    "examples": [
+      "Honesty builds trust."
+    ],
+    "root_affix": "honest(诚实的)+ -y",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0340",
+    "word": "kindness",
+    "phonetic": "/ˈkaɪndnəs/",
+    "def_zh": "善良;好意",
+    "def_en": "the quality of being friendly and caring",
+    "examples": [
+      "Thank you for your kindness."
+    ],
+    "root_affix": "kind(善良的)+ -ness",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0341",
+    "word": "patience",
+    "phonetic": "/ˈpeɪʃns/",
+    "def_zh": "耐心",
+    "def_en": "the ability to wait calmly",
+    "examples": [
+      "Teaching requires patience."
+    ],
+    "root_affix": "pati-(忍受,拉丁 pati)+ -ence",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0342",
+    "word": "wisdom",
+    "phonetic": "/ˈwɪzdəm/",
+    "def_zh": "智慧",
+    "def_en": "deep knowledge and good judgment",
+    "examples": [
+      "With age comes wisdom."
+    ],
+    "root_affix": "wise(明智的)+ -dom(状态)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0343",
+    "word": "strength",
+    "phonetic": "/streŋθ/",
+    "def_zh": "力量;优势",
+    "def_en": "physical power, or a strong point",
+    "examples": [
+      "She trained to build strength."
+    ],
+    "root_affix": "strong(强壮的)+ -th(名词后缀)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0344",
+    "word": "weakness",
+    "phonetic": "/ˈwiːknəs/",
+    "def_zh": "弱点;虚弱",
+    "def_en": "a flaw, or lack of strength",
+    "examples": [
+      "Everyone has a weakness."
+    ],
+    "root_affix": "weak(虚弱的)+ -ness",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0345",
+    "word": "breath",
+    "phonetic": "/breθ/",
+    "def_zh": "呼吸;气息",
+    "def_en": "air taken into or let out of the lungs",
+    "examples": [
+      "Take a deep breath."
+    ],
+    "root_affix": "源自古英语 braeth(气味,水汽)",
+    "tags": [
+      "common"
+    ]
+  },
+  {
+    "id": "w0346",
+    "word": "algorithm",
+    "phonetic": "/ˈælɡərɪðəm/",
+    "def_zh": "算法;解决问题的一组规则",
+    "def_en": "a process or set of rules to be followed in calculations or problem-solving",
+    "examples": [
+      "The search algorithm runs in logarithmic time."
+    ],
+    "root_affix": "源自9世纪数学家 al-Khwārizmī 的名字;-rithm 与 arithmetic(算术)同源",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0347",
+    "word": "variable",
+    "phonetic": "/ˈveəriəbl/",
+    "def_zh": "变量;可变的",
+    "def_en": "a named storage location whose value can change during execution",
+    "examples": [
+      "Assign the result to a variable before printing it."
+    ],
+    "root_affix": "vari-(变化,源自拉丁 variare)+ -able(能…的)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0348",
+    "word": "function",
+    "phonetic": "/ˈfʌŋkʃn/",
+    "def_zh": "函数;功能",
+    "def_en": "a reusable block of code that performs a task and may return a value",
+    "examples": [
+      "This function returns the square of its argument."
+    ],
+    "root_affix": "源自拉丁 fungi(执行);funct-(执行)+ -ion(名词后缀)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0349",
+    "word": "compiler",
+    "phonetic": "/kəmˈpaɪlə(r)/",
+    "def_zh": "编译器",
+    "def_en": "a program that translates source code into machine code",
+    "examples": [
+      "The compiler reported a syntax error on line ten."
+    ],
+    "root_affix": "com-(一起)+ pil-(堆积,源自拉丁 compilare)+ -er(执行者)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0350",
+    "word": "recursion",
+    "phonetic": "/rɪˈkɜːʃn/",
+    "def_zh": "递归",
+    "def_en": "a technique where a function calls itself to solve smaller subproblems",
+    "examples": [
+      "Recursion makes the tree traversal elegant but can overflow the stack."
+    ],
+    "root_affix": "re-(回)+ curs-(跑,源自拉丁 currere)+ -ion",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0351",
+    "word": "boolean",
+    "phonetic": "/ˈbuːliən/",
+    "def_zh": "布尔型;真假值",
+    "def_en": "a data type with only two values, true and false",
+    "examples": [
+      "The flag is a boolean that controls the loop."
+    ],
+    "root_affix": "源自数学家 George Boole 的姓 + -ean(…的)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0352",
+    "word": "array",
+    "phonetic": "/əˈreɪ/",
+    "def_zh": "数组",
+    "def_en": "an ordered collection of elements stored under one name and accessed by index",
+    "examples": [
+      "Loop over the array to sum every element."
+    ],
+    "root_affix": "a-(朝向)+ -ray(排列,源自古法语 arei)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0353",
+    "word": "pointer",
+    "phonetic": "/ˈpɔɪntə(r)/",
+    "def_zh": "指针",
+    "def_en": "a variable that stores the memory address of another value",
+    "examples": [
+      "A null pointer dereference crashed the program."
+    ],
+    "root_affix": "point(指向)+ -er(执行者/物)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0354",
+    "word": "syntax",
+    "phonetic": "/ˈsɪntæks/",
+    "def_zh": "语法",
+    "def_en": "the set of rules defining valid structure in a programming language",
+    "examples": [
+      "A missing semicolon is a common syntax error."
+    ],
+    "root_affix": "syn-(一起)+ tax-(排列,源自希腊 tassein)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0355",
+    "word": "debug",
+    "phonetic": "/ˌdiːˈbʌɡ/",
+    "def_zh": "调试;排错",
+    "def_en": "to find and remove errors from software",
+    "examples": [
+      "She spent the afternoon trying to debug the login flow."
+    ],
+    "root_affix": "de-(去除)+ bug(臭虫,引申为程序错误)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0356",
+    "word": "runtime",
+    "phonetic": "/ˈrʌntaɪm/",
+    "def_zh": "运行时;运行期",
+    "def_en": "the period when a program is executing, or the environment that supports it",
+    "examples": [
+      "The error only appears at runtime, not during compilation."
+    ],
+    "root_affix": "run(运行)+ time(时间)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0357",
+    "word": "framework",
+    "phonetic": "/ˈfreɪmwɜːk/",
+    "def_zh": "框架",
+    "def_en": "a reusable platform of code that structures and supports application development",
+    "examples": [
+      "They built the site on a modern web framework."
+    ],
+    "root_affix": "frame(框架)+ work(工作)合成词",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0358",
+    "word": "repository",
+    "phonetic": "/rɪˈpɒzətri/",
+    "def_zh": "仓库;代码库",
+    "def_en": "a central place where code and its version history are stored",
+    "examples": [
+      "Clone the repository before making any changes."
+    ],
+    "root_affix": "re-(回)+ posit-(放置,源自拉丁 ponere)+ -ory(场所)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0359",
+    "word": "commit",
+    "phonetic": "/kəˈmɪt/",
+    "def_zh": "提交(版本控制)",
+    "def_en": "to record a set of changes permanently in a version-control system",
+    "examples": [
+      "Commit your work with a clear message."
+    ],
+    "root_affix": "com-(一起)+ mit-(送,源自拉丁 mittere)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0360",
+    "word": "deploy",
+    "phonetic": "/dɪˈplɔɪ/",
+    "def_zh": "部署",
+    "def_en": "to release and install software so users can run it",
+    "examples": [
+      "We deploy the new build every Friday afternoon."
+    ],
+    "root_affix": "de-(展开)+ ploy(折叠,源自拉丁 plicare);本义“展开”",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0361",
+    "word": "cache",
+    "phonetic": "/kæʃ/",
+    "def_zh": "缓存",
+    "def_en": "fast temporary storage that holds frequently used data",
+    "examples": [
+      "Clearing the cache fixed the stale page."
+    ],
+    "root_affix": "源自法语 cacher(隐藏)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0362",
+    "word": "latency",
+    "phonetic": "/ˈleɪtnsi/",
+    "def_zh": "延迟",
+    "def_en": "the delay between a request and the corresponding response",
+    "examples": [
+      "High latency made the game feel sluggish."
+    ],
+    "root_affix": "lat-(隐藏,源自拉丁 latere)+ -ency(状态)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0363",
+    "word": "concurrency",
+    "phonetic": "/kənˈkʌrənsi/",
+    "def_zh": "并发",
+    "def_en": "the ability of a system to handle multiple tasks in overlapping time periods",
+    "examples": [
+      "Locks help manage concurrency in multithreaded code."
+    ],
+    "root_affix": "con-(一起)+ curr-(跑,拉丁 currere)+ -ency",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0364",
+    "word": "asynchronous",
+    "phonetic": "/eɪˈsɪŋkrənəs/",
+    "def_zh": "异步的",
+    "def_en": "not occurring at the same time; not waiting for one task to finish before starting another",
+    "examples": [
+      "An asynchronous request keeps the UI responsive."
+    ],
+    "root_affix": "a-(无,否定)+ syn-(一起)+ chron-(时间,希腊 chronos)+ -ous",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0365",
+    "word": "refactor",
+    "phonetic": "/ˌriːˈfæktə(r)/",
+    "def_zh": "重构",
+    "def_en": "to restructure existing code without changing its external behavior",
+    "examples": [
+      "We refactored the module to remove duplicate logic."
+    ],
+    "root_affix": "re-(重新)+ factor(因子,源自拉丁 facere 做)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0366",
+    "word": "interface",
+    "phonetic": "/ˈɪntəfeɪs/",
+    "def_zh": "接口;界面",
+    "def_en": "a shared boundary or contract through which components interact",
+    "examples": [
+      "The class implements a logging interface."
+    ],
+    "root_affix": "inter-(之间)+ face(面)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0367",
+    "word": "inheritance",
+    "phonetic": "/ɪnˈherɪtəns/",
+    "def_zh": "继承(面向对象)",
+    "def_en": "a mechanism where a class derives properties and behavior from another class",
+    "examples": [
+      "Inheritance lets the subclass reuse the parent's methods."
+    ],
+    "root_affix": "in-(进入)+ herit-(继承,拉丁 heres 继承人)+ -ance",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0368",
+    "word": "encapsulation",
+    "phonetic": "/ɪnˌkæpsjuˈleɪʃn/",
+    "def_zh": "封装",
+    "def_en": "bundling data with the methods that operate on it and hiding internals",
+    "examples": [
+      "Encapsulation keeps the object's state private."
+    ],
+    "root_affix": "en-(使)+ capsul-(小盒,拉丁 capsula)+ -ation",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0369",
+    "word": "polymorphism",
+    "phonetic": "/ˌpɒliˈmɔːfɪzəm/",
+    "def_zh": "多态",
+    "def_en": "the ability of one interface to operate on objects of different types",
+    "examples": [
+      "Polymorphism lets the same call behave differently per subclass."
+    ],
+    "root_affix": "poly-(多)+ morph-(形态,希腊 morphe)+ -ism",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0370",
+    "word": "iterator",
+    "phonetic": "/ˈɪtəreɪtə(r)/",
+    "def_zh": "迭代器",
+    "def_en": "an object that lets you traverse a collection one element at a time",
+    "examples": [
+      "Use an iterator to walk through the list lazily."
+    ],
+    "root_affix": "iter-(重复,拉丁 iterare 再做)+ -ator(执行者)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0371",
+    "word": "immutable",
+    "phonetic": "/ɪˈmjuːtəbl/",
+    "def_zh": "不可变的",
+    "def_en": "describing data that cannot be changed after creation",
+    "examples": [
+      "Strings are immutable in many languages."
+    ],
+    "root_affix": "im-(不)+ mut-(改变,拉丁 mutare)+ -able",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0372",
+    "word": "closure",
+    "phonetic": "/ˈkləʊʒə(r)/",
+    "def_zh": "闭包",
+    "def_en": "a function bundled with references to the variables in its surrounding scope",
+    "examples": [
+      "The callback forms a closure over the counter variable."
+    ],
+    "root_affix": "clos-(关闭,拉丁 claudere)+ -ure(名词后缀)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0373",
+    "word": "callback",
+    "phonetic": "/ˈkɔːlbæk/",
+    "def_zh": "回调",
+    "def_en": "a function passed as an argument and invoked later by other code",
+    "examples": [
+      "Pass a callback to run after the file loads."
+    ],
+    "root_affix": "call(调用)+ back(回)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0374",
+    "word": "middleware",
+    "phonetic": "/ˈmɪdlweə(r)/",
+    "def_zh": "中间件",
+    "def_en": "software that sits between layers to handle cross-cutting requests",
+    "examples": [
+      "The auth middleware checks the token on every request."
+    ],
+    "root_affix": "middle(中间)+ ware(软件,源自 software)",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0375",
+    "word": "schema",
+    "phonetic": "/ˈskiːmə/",
+    "def_zh": "模式;架构(数据库)",
+    "def_en": "a formal description of the structure of data",
+    "examples": [
+      "Define the table schema before inserting rows."
+    ],
+    "root_affix": "源自希腊 schema(形状,计划)",
+    "tags": [
+      "programming",
+      "data",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0376",
+    "word": "query",
+    "phonetic": "/ˈkwɪəri/",
+    "def_zh": "查询",
+    "def_en": "a request for data, typically from a database",
+    "examples": [
+      "The query returns all users created today."
+    ],
+    "root_affix": "源自拉丁 quaerere(寻问)",
+    "tags": [
+      "programming",
+      "data",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0377",
+    "word": "index",
+    "phonetic": "/ˈɪndeks/",
+    "def_zh": "索引",
+    "def_en": "a data structure that speeds up lookups in a database or array",
+    "examples": [
+      "Adding an index made the search far faster."
+    ],
+    "root_affix": "in-(在内)+ dex(指出,拉丁 dicere 说);本义“指示者”",
+    "tags": [
+      "programming",
+      "data",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0378",
+    "word": "deadlock",
+    "phonetic": "/ˈdedlɒk/",
+    "def_zh": "死锁",
+    "def_en": "a state where processes block each other forever, each waiting on the other",
+    "examples": [
+      "Two threads grabbing locks in opposite order caused a deadlock."
+    ],
+    "root_affix": "dead(死的)+ lock(锁)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0379",
+    "word": "throughput",
+    "phonetic": "/ˈθruːpʊt/",
+    "def_zh": "吞吐量",
+    "def_en": "the amount of work or data a system processes in a given time",
+    "examples": [
+      "Batching requests improved the throughput."
+    ],
+    "root_affix": "through(通过)+ put(放)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0380",
+    "word": "compile",
+    "phonetic": "/kəmˈpaɪl/",
+    "def_zh": "编译",
+    "def_en": "to translate source code into a lower-level or machine form",
+    "examples": [
+      "The project failed to compile after the merge."
+    ],
+    "root_affix": "com-(一起)+ pile(堆积,拉丁 compilare)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0381",
+    "word": "integer",
+    "phonetic": "/ˈɪntɪdʒə(r)/",
+    "def_zh": "整数",
+    "def_en": "a whole number without a fractional part",
+    "examples": [
+      "Store the count as an integer, not a float."
+    ],
+    "root_affix": "in-(不)+ teger(触碰,拉丁 tangere);本义“未被分割的”",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0382",
+    "word": "string",
+    "phonetic": "/strɪŋ/",
+    "def_zh": "字符串",
+    "def_en": "a sequence of characters treated as a single value",
+    "examples": [
+      "Concatenate the two strings with a plus sign."
+    ],
+    "root_affix": "源自古英语 streng(线,带),引申为字符序列",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0383",
+    "word": "loop",
+    "phonetic": "/luːp/",
+    "def_zh": "循环",
+    "def_en": "a control structure that repeats a block of code",
+    "examples": [
+      "The loop runs until the list is empty."
+    ],
+    "root_affix": "源自中古英语 loupe(环,圈)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0384",
+    "word": "stack",
+    "phonetic": "/stæk/",
+    "def_zh": "栈;堆栈",
+    "def_en": "a last-in-first-out data structure",
+    "examples": [
+      "Push the value onto the stack."
+    ],
+    "root_affix": "源自古诺斯语 stakkr(干草堆)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0385",
+    "word": "queue",
+    "phonetic": "/kjuː/",
+    "def_zh": "队列",
+    "def_en": "a first-in-first-out data structure",
+    "examples": [
+      "Jobs wait in a queue until a worker is free."
+    ],
+    "root_affix": "源自拉丁 cauda(尾巴),经法语 queue",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0386",
+    "word": "thread",
+    "phonetic": "/θred/",
+    "def_zh": "线程",
+    "def_en": "the smallest unit of execution within a process",
+    "examples": [
+      "The download runs on a separate thread."
+    ],
+    "root_affix": "源自古英语 thraed(线),引申为执行线索",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0387",
+    "word": "process",
+    "phonetic": "/ˈprəʊses/",
+    "def_zh": "进程;过程",
+    "def_en": "an instance of a running program with its own memory space",
+    "examples": [
+      "Each browser tab runs in its own process."
+    ],
+    "root_affix": "pro-(向前)+ cess-(走,拉丁 cedere)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0388",
+    "word": "kernel",
+    "phonetic": "/ˈkɜːnl/",
+    "def_zh": "内核",
+    "def_en": "the core part of an operating system that manages resources",
+    "examples": [
+      "The driver runs in kernel space."
+    ],
+    "root_affix": "源自古英语 cyrnel(种子核),核心之意",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0389",
+    "word": "protocol",
+    "phonetic": "/ˈprəʊtəkɒl/",
+    "def_zh": "协议",
+    "def_en": "a set of rules governing communication between systems",
+    "examples": [
+      "HTTP is the protocol the web is built on."
+    ],
+    "root_affix": "proto-(最初)+ -col(胶,希腊 kolla);本义首页粘贴的规则",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0390",
+    "word": "encryption",
+    "phonetic": "/ɪnˈkrɪpʃn/",
+    "def_zh": "加密",
+    "def_en": "the process of encoding data so only authorized parties can read it",
+    "examples": [
+      "End-to-end encryption protects the messages."
+    ],
+    "root_affix": "en-(使)+ crypt-(隐藏,希腊 kryptos)+ -ion",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0391",
+    "word": "token",
+    "phonetic": "/ˈtəʊkən/",
+    "def_zh": "令牌;标记",
+    "def_en": "a small unit of meaning, or a credential proving identity",
+    "examples": [
+      "The API returns an access token after login."
+    ],
+    "root_affix": "源自古英语 tacen(符号,标志)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0392",
+    "word": "parameter",
+    "phonetic": "/pəˈræmɪtə(r)/",
+    "def_zh": "参数",
+    "def_en": "a named input declared by a function or routine",
+    "examples": [
+      "The function takes two parameters."
+    ],
+    "root_affix": "para-(旁边)+ meter(测量,希腊 metron)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0393",
+    "word": "argument",
+    "phonetic": "/ˈɑːɡjumənt/",
+    "def_zh": "实参;参数(传入值)",
+    "def_en": "an actual value passed to a function when it is called",
+    "examples": [
+      "Pass the file name as the first argument."
+    ],
+    "root_affix": "argu-(使清楚,拉丁 arguere)+ -ment",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0394",
+    "word": "exception",
+    "phonetic": "/ɪkˈsepʃn/",
+    "def_zh": "异常",
+    "def_en": "an event that disrupts normal flow and can be caught and handled",
+    "examples": [
+      "Wrap the call in a try block to catch the exception."
+    ],
+    "root_affix": "ex-(出)+ cept-(拿,拉丁 capere)+ -ion",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0395",
+    "word": "namespace",
+    "phonetic": "/ˈneɪmspeɪs/",
+    "def_zh": "命名空间",
+    "def_en": "a container that groups identifiers to avoid name collisions",
+    "examples": [
+      "Put the utilities in their own namespace."
+    ],
+    "root_affix": "name(名字)+ space(空间)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0396",
+    "word": "dependency",
+    "phonetic": "/dɪˈpendənsi/",
+    "def_zh": "依赖项",
+    "def_en": "external code a project relies on to work",
+    "examples": [
+      "Install the project's dependencies first."
+    ],
+    "root_affix": "de-(向下)+ pend-(悬挂,拉丁 pendere)+ -ency",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0397",
+    "word": "binary",
+    "phonetic": "/ˈbaɪnəri/",
+    "def_zh": "二进制;二进制文件",
+    "def_en": "the base-2 number system; also a compiled executable file",
+    "examples": [
+      "Computers store everything as binary digits."
+    ],
+    "root_affix": "bin-(二,拉丁 bini 成对)+ -ary",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0398",
+    "word": "bit",
+    "phonetic": "/bɪt/",
+    "def_zh": "比特;位",
+    "def_en": "the smallest unit of data, either 0 or 1",
+    "examples": [
+      "A byte is made of eight bits."
+    ],
+    "root_affix": "binary digit(二进制数字)的缩合词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0399",
+    "word": "byte",
+    "phonetic": "/baɪt/",
+    "def_zh": "字节",
+    "def_en": "a unit of digital information usually consisting of eight bits",
+    "examples": [
+      "The file is two kilobytes in size."
+    ],
+    "root_affix": "由 bit 仿造,避免与 bite 混淆",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0400",
+    "word": "hash",
+    "phonetic": "/hæʃ/",
+    "def_zh": "哈希;散列",
+    "def_en": "a fixed-size value computed from data, used for lookups or integrity",
+    "examples": [
+      "The password is stored as a salted hash."
+    ],
+    "root_affix": "源自法语 hacher(切碎),引申为打散映射",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0401",
+    "word": "recursive",
+    "phonetic": "/rɪˈkɜːsɪv/",
+    "def_zh": "递归的",
+    "def_en": "defined in terms of itself; involving repeated self-reference",
+    "examples": [
+      "A recursive function calls itself on a smaller input."
+    ],
+    "root_affix": "re-(回)+ curs-(跑,拉丁 currere)+ -ive",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0402",
+    "word": "overflow",
+    "phonetic": "/ˌəʊvəˈfləʊ/",
+    "def_zh": "溢出",
+    "def_en": "a condition where a value exceeds the storage it is allowed",
+    "examples": [
+      "Deep recursion caused a stack overflow."
+    ],
+    "root_affix": "over-(超过)+ flow(流)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0403",
+    "word": "scope",
+    "phonetic": "/skəʊp/",
+    "def_zh": "作用域;范围",
+    "def_en": "the region of a program where a name is valid",
+    "examples": [
+      "The variable is out of scope outside the loop."
+    ],
+    "root_affix": "源自希腊 skopos(目标,观察)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0404",
+    "word": "module",
+    "phonetic": "/ˈmɒdjuːl/",
+    "def_zh": "模块",
+    "def_en": "a self-contained unit of code that can be imported",
+    "examples": [
+      "Split the code into smaller modules."
+    ],
+    "root_affix": "源自拉丁 modulus(小度量)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0405",
+    "word": "backend",
+    "phonetic": "/ˈbækend/",
+    "def_zh": "后端",
+    "def_en": "the server-side part of an application that users do not see",
+    "examples": [
+      "The backend handles authentication and storage."
+    ],
+    "root_affix": "back(后)+ end(端)合成词",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0406",
+    "word": "frontend",
+    "phonetic": "/ˈfrʌntend/",
+    "def_zh": "前端",
+    "def_en": "the client-side part of an application that users interact with",
+    "examples": [
+      "The frontend renders the data in the browser."
+    ],
+    "root_affix": "front(前)+ end(端)合成词",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0407",
+    "word": "database",
+    "phonetic": "/ˈdeɪtəbeɪs/",
+    "def_zh": "数据库",
+    "def_en": "an organized collection of data stored for efficient access",
+    "examples": [
+      "User records live in the database."
+    ],
+    "root_affix": "data(数据)+ base(基础)合成词",
+    "tags": [
+      "programming",
+      "data",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0408",
+    "word": "server",
+    "phonetic": "/ˈsɜːvə(r)/",
+    "def_zh": "服务器",
+    "def_en": "a computer or program that provides resources to clients",
+    "examples": [
+      "The web server returned a 404 error."
+    ],
+    "root_affix": "serv-(服务,拉丁 servire)+ -er",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0409",
+    "word": "client",
+    "phonetic": "/ˈklaɪənt/",
+    "def_zh": "客户端",
+    "def_en": "a program or device that requests services from a server",
+    "examples": [
+      "The mobile client caches data offline."
+    ],
+    "root_affix": "源自拉丁 cliens(依附者)",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0410",
+    "word": "request",
+    "phonetic": "/rɪˈkwest/",
+    "def_zh": "请求",
+    "def_en": "a message asking a server to perform an action or return data",
+    "examples": [
+      "The request timed out after thirty seconds."
+    ],
+    "root_affix": "re-(再)+ quest(寻求,拉丁 quaerere)",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0411",
+    "word": "response",
+    "phonetic": "/rɪˈspɒns/",
+    "def_zh": "响应",
+    "def_en": "the reply a server sends back to a client request",
+    "examples": [
+      "The response contained the JSON payload."
+    ],
+    "root_affix": "re-(回)+ spons-(承诺,拉丁 spondere)+ -e",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0412",
+    "word": "endpoint",
+    "phonetic": "/ˈendpɔɪnt/",
+    "def_zh": "端点;接口地址",
+    "def_en": "a specific URL or address at which an API can be accessed",
+    "examples": [
+      "Each endpoint maps to one operation."
+    ],
+    "root_affix": "end(端)+ point(点)合成词",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0413",
+    "word": "session",
+    "phonetic": "/ˈseʃn/",
+    "def_zh": "会话",
+    "def_en": "a period of interaction between a user and a system, often tracked by id",
+    "examples": [
+      "The session expires after fifteen minutes of inactivity."
+    ],
+    "root_affix": "sess-(坐,拉丁 sedere)+ -ion;本义“开会”",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0414",
+    "word": "cookie",
+    "phonetic": "/ˈkʊki/",
+    "def_zh": "Cookie;小型数据",
+    "def_en": "a small piece of data a website stores in the browser",
+    "examples": [
+      "The site uses a cookie to remember your language."
+    ],
+    "root_affix": "源自荷兰语 koekje(小饼干)",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0415",
+    "word": "render",
+    "phonetic": "/ˈrendə(r)/",
+    "def_zh": "渲染",
+    "def_en": "to generate visual output from data or markup",
+    "examples": [
+      "The component renders a list of cards."
+    ],
+    "root_affix": "源自古法语 rendre(给出,呈现)",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0416",
+    "word": "payload",
+    "phonetic": "/ˈpeɪləʊd/",
+    "def_zh": "负载;有效数据",
+    "def_en": "the meaningful data carried by a message, excluding headers",
+    "examples": [
+      "The request payload is encoded as JSON."
+    ],
+    "root_affix": "pay(承载)+ load(负荷)合成词",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0417",
+    "word": "buffer",
+    "phonetic": "/ˈbʌfə(r)/",
+    "def_zh": "缓冲区",
+    "def_en": "a temporary memory region for data in transit",
+    "examples": [
+      "Read the file into a buffer before parsing."
+    ],
+    "root_affix": "源自 buff(缓冲,减震)+ -er",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0418",
+    "word": "mutable",
+    "phonetic": "/ˈmjuːtəbl/",
+    "def_zh": "可变的",
+    "def_en": "describing data that can be changed after creation",
+    "examples": [
+      "Lists are mutable, but tuples are not."
+    ],
+    "root_affix": "mut-(改变,拉丁 mutare)+ -able",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0419",
+    "word": "constant",
+    "phonetic": "/ˈkɒnstənt/",
+    "def_zh": "常量;不变的",
+    "def_en": "a value that does not change during program execution",
+    "examples": [
+      "Define pi as a constant."
+    ],
+    "root_affix": "con-(一起)+ stant(站立,拉丁 stare);本义“稳固不动”",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0420",
+    "word": "operator",
+    "phonetic": "/ˈɒpəreɪtə(r)/",
+    "def_zh": "运算符;操作符",
+    "def_en": "a symbol that performs an operation on operands",
+    "examples": [
+      "The plus operator concatenates strings here."
+    ],
+    "root_affix": "oper-(工作,拉丁 operari)+ -ator",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0421",
+    "word": "expression",
+    "phonetic": "/ɪkˈspreʃn/",
+    "def_zh": "表达式",
+    "def_en": "a combination of values and operators that evaluates to a value",
+    "examples": [
+      "The expression two plus three evaluates to five."
+    ],
+    "root_affix": "ex-(出)+ press-(压,拉丁 premere)+ -ion",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0422",
+    "word": "statement",
+    "phonetic": "/ˈsteɪtmənt/",
+    "def_zh": "语句",
+    "def_en": "a single instruction that the program executes",
+    "examples": [
+      "End each statement with a semicolon."
+    ],
+    "root_affix": "state(陈述)+ -ment(名词后缀)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0423",
+    "word": "class",
+    "phonetic": "/klɑːs/",
+    "def_zh": "类(面向对象)",
+    "def_en": "a blueprint that defines the data and behavior of objects",
+    "examples": [
+      "Define a class to model each user."
+    ],
+    "root_affix": "源自拉丁 classis(等级,群组)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0424",
+    "word": "object",
+    "phonetic": "/ˈɒbdʒɪkt/",
+    "def_zh": "对象",
+    "def_en": "an instance of a class holding state and behavior",
+    "examples": [
+      "Create a new object with the constructor."
+    ],
+    "root_affix": "ob-(朝向)+ ject(投掷,拉丁 jacere);本义“摆在面前之物”",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0425",
+    "word": "instance",
+    "phonetic": "/ˈɪnstəns/",
+    "def_zh": "实例",
+    "def_en": "a concrete object created from a class",
+    "examples": [
+      "Each instance keeps its own counter."
+    ],
+    "root_affix": "in-(在内)+ stant(站立,拉丁 stare)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0426",
+    "word": "null",
+    "phonetic": "/nʌl/",
+    "def_zh": "空值;空",
+    "def_en": "a special value meaning no object or no value",
+    "examples": [
+      "The function returns null when nothing is found."
+    ],
+    "root_affix": "源自拉丁 nullus(无,没有)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0427",
+    "word": "default",
+    "phonetic": "/dɪˈfɔːlt/",
+    "def_zh": "默认值;默认",
+    "def_en": "a value used automatically when none is supplied",
+    "examples": [
+      "The default timeout is thirty seconds."
+    ],
+    "root_affix": "源自古法语 defaillir(缺失,拉丁 fallere 失败)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0428",
+    "word": "type",
+    "phonetic": "/taɪp/",
+    "def_zh": "类型",
+    "def_en": "a classification specifying which operations apply to a value",
+    "examples": [
+      "The compiler checks that the types match."
+    ],
+    "root_affix": "源自希腊 typos(印记,种类)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0429",
+    "word": "regex",
+    "phonetic": "/ˈredʒeks/",
+    "def_zh": "正则表达式",
+    "def_en": "a pattern used to match and search text (regular expression)",
+    "examples": [
+      "Use a regex to validate the email format."
+    ],
+    "root_affix": "regular(规则的)+ expression(表达式)的缩合",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0430",
+    "word": "merge",
+    "phonetic": "/mɜːdʒ/",
+    "def_zh": "合并",
+    "def_en": "to combine changes from different branches or sources",
+    "examples": [
+      "Merge the feature branch into main."
+    ],
+    "root_affix": "源自拉丁 mergere(沉入,融合)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0431",
+    "word": "branch",
+    "phonetic": "/brɑːntʃ/",
+    "def_zh": "分支",
+    "def_en": "a parallel line of development in version control",
+    "examples": [
+      "Create a branch before fixing the bug."
+    ],
+    "root_affix": "源自拉丁 branca(爪,分叉)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0432",
+    "word": "virtualization",
+    "phonetic": "/ˌvɜːtʃuəlaɪˈzeɪʃn/",
+    "def_zh": "虚拟化",
+    "def_en": "creating a software-based version of hardware or resources",
+    "examples": [
+      "Virtualization lets one server run many machines."
+    ],
+    "root_affix": "virtu-(虚拟,拉丁 virtus 能力)+ -al + -ization",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0433",
+    "word": "container",
+    "phonetic": "/kənˈteɪnə(r)/",
+    "def_zh": "容器(部署)",
+    "def_en": "a lightweight isolated environment that packages an app with its dependencies",
+    "examples": [
+      "Ship the service as a container."
+    ],
+    "root_affix": "con-(一起)+ tain-(持有,拉丁 tenere)+ -er",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0434",
+    "word": "scalability",
+    "phonetic": "/ˌskeɪləˈbɪləti/",
+    "def_zh": "可扩展性",
+    "def_en": "a system's ability to handle growing load gracefully",
+    "examples": [
+      "Caching improved the system's scalability."
+    ],
+    "root_affix": "scal-(攀登/刻度,拉丁 scala 梯子)+ -ability",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0435",
+    "word": "bandwidth",
+    "phonetic": "/ˈbændwɪdθ/",
+    "def_zh": "带宽",
+    "def_en": "the maximum rate at which data can be transferred",
+    "examples": [
+      "Video streaming needs a lot of bandwidth."
+    ],
+    "root_affix": "band(频带)+ width(宽度)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0436",
+    "word": "compilation",
+    "phonetic": "/ˌkɒmpɪˈleɪʃn/",
+    "def_zh": "编译(过程)",
+    "def_en": "the act of translating source code into executable form",
+    "examples": [
+      "Compilation failed because of a type mismatch."
+    ],
+    "root_affix": "com-(一起)+ pil-(堆积,拉丁 compilare)+ -ation",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0437",
+    "word": "garbage",
+    "phonetic": "/ˈɡɑːbɪdʒ/",
+    "def_zh": "垃圾(内存/数据)",
+    "def_en": "unused data or memory that is no longer referenced",
+    "examples": [
+      "The collector reclaims garbage automatically."
+    ],
+    "root_affix": "源自盎格鲁-法语 garbage(下水,杂碎)",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0438",
+    "word": "serialization",
+    "phonetic": "/ˌsɪəriəlaɪˈzeɪʃn/",
+    "def_zh": "序列化",
+    "def_en": "converting an object into a format that can be stored or transmitted",
+    "examples": [
+      "Serialization turns the object into JSON text."
+    ],
+    "root_affix": "seri-(系列,拉丁 series)+ -alization",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0439",
+    "word": "authentication",
+    "phonetic": "/ɔːˌθentɪˈkeɪʃn/",
+    "def_zh": "身份验证",
+    "def_en": "the process of verifying who a user or system claims to be",
+    "examples": [
+      "Authentication is required before any request."
+    ],
+    "root_affix": "authent-(真实,希腊 authentikos)+ -ication",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0440",
+    "word": "authorization",
+    "phonetic": "/ˌɔːθəraɪˈzeɪʃn/",
+    "def_zh": "授权",
+    "def_en": "determining what an authenticated user is allowed to do",
+    "examples": [
+      "Authorization decides if you can edit the file."
+    ],
+    "root_affix": "author-(权威,拉丁 auctor)+ -ization",
+    "tags": [
+      "programming",
+      "web",
+      "cs"
+    ]
+  },
+  {
+    "id": "w0441",
+    "word": "timeout",
+    "phonetic": "/ˈtaɪmaʊt/",
+    "def_zh": "超时",
+    "def_en": "a limit after which an operation is aborted if not completed",
+    "examples": [
+      "The connection dropped after a timeout."
+    ],
+    "root_affix": "time(时间)+ out(超出)合成词",
+    "tags": [
+      "programming",
+      "cs"
+    ]
+  }
+]

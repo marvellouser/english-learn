@@ -1,0 +1,1336 @@
+{
+  "print": {
+    "examples": ["Please print two copies of this report for the meeting."],
+    "root_affix": "print 本义“压印、印刷”，引申为“打印、印出”。"
+  },
+  "preserve": {
+    "examples": ["We must preserve these old forests for future generations."]
+  },
+  "ceo": {
+    "examples": ["The CEO announced the new plan to all the staff today.", "Our company hired a young CEO last year."],
+    "root_affix": "缩写词，取自 chief executive officer 三词首字母。"
+  },
+  "passage": {
+    "examples": ["Read this passage carefully and answer the questions below."],
+    "root_affix": "pass(走、通过)+ -age(名词后缀)，本义“通道、一段”。"
+  },
+  "formal": {
+    "examples": ["She wore a formal dress to the wedding dinner."]
+  },
+  "transition": {
+    "examples": ["The transition from school to work can be difficult."]
+  },
+  "existence": {
+    "examples": ["Scientists are not sure about the existence of life on Mars."],
+    "root_affix": "exist(存在)+ -ence(名词后缀)，表“存在、生存”。"
+  },
+  "participation": {
+    "examples": ["Active participation in class helps you learn faster."],
+    "root_affix": "part(部分)+ -icip(取)+ -ation(名词后缀)，“分享、参与”。"
+  },
+  "album": {
+    "examples": ["The band released a new album last month."]
+  },
+  "arrange": {
+    "examples": ["Could you arrange a meeting for us next Monday?"],
+    "root_affix": "ar-(=ad- 朝向)+ range(排成行)，“排列、安排”。"
+  },
+  "atmosphere": {
+    "examples": ["The little cafe had a warm and friendly atmosphere."],
+    "root_affix": "atmo-(蒸气、空气)+ sphere(球、层)，“大气层、气氛”。"
+  },
+  "joint": {
+    "examples": ["My knee joint hurts after the long run."],
+    "root_affix": "源自 join(连接)，指“连接处、关节”，亦作“共同的”。"
+  },
+  "reply": {
+    "examples": ["She didn't reply to my email until yesterday."],
+    "root_affix": "re-(回)+ ply(折、弯)，本义“折回”，引申“回答”。"
+  },
+  "cycle": {
+    "examples": ["The washing machine finished its cycle a moment ago."],
+    "root_affix": "源自希腊语 cycl(圆、轮)，表“周期、循环、自行车”。"
+  },
+  "lock": {
+    "examples": ["Don't forget to lock the door before you leave."],
+    "root_affix": "古英语 loc(关闭)，作名词“锁”，动词“锁上”。"
+  },
+  "opposite": {
+    "examples": ["The bank is on the opposite side of the street."]
+  },
+  "deserve": {
+    "examples": ["After working so hard, you deserve a long holiday."],
+    "root_affix": "de-(完全)+ serve(服务)，本义“尽力服务”，引申“应得”。"
+  },
+  "consistent": {
+    "examples": ["Her results have been consistent all through the year."]
+  },
+  "resistance": {
+    "examples": ["The new policy met with strong resistance from workers."],
+    "root_affix": "resist(抵抗)+ -ance(名词后缀)，“抵抗、阻力”。"
+  },
+  "discovery": {
+    "examples": ["The discovery of the cure saved many lives."]
+  },
+  "exposure": {
+    "examples": ["Long exposure to the sun can damage your skin."],
+    "root_affix": "expose(暴露)+ -ure(名词后缀)，“暴露、曝光”。"
+  },
+  "pose": {
+    "examples": ["The model held a graceful pose for the camera."]
+  },
+  "stream": {
+    "examples": ["A small stream runs through the quiet village."],
+    "root_affix": "古英语 stream(流水)，指“小河、水流”，引申“流动”。"
+  },
+  "sale": {
+    "examples": ["The shop is having a big sale this weekend."],
+    "root_affix": "源自 sell(卖)，名词形式，表“出售、销售”。"
+  },
+  "pot": {
+    "examples": ["She put the soup in a large pot on the stove."],
+    "root_affix": "古英语 pott(容器)，指“锅、罐、盆”。"
+  },
+  "grand": {
+    "examples": ["They lived in a grand old house by the lake."],
+    "root_affix": "源自拉丁 grandis(大的、宏伟的)，表“盛大、壮观”。"
+  },
+  "hello": {
+    "examples": ["She smiled and said hello to her new neighbour."]
+  },
+  "tale": {
+    "examples": ["Grandma told us an exciting tale before bed."],
+    "root_affix": "古英语 talu(叙述)，与 tell 同源，意为“故事”。"
+  },
+  "knife": {
+    "examples": ["Be careful with that sharp knife in the kitchen."]
+  },
+  "coalition": {
+    "examples": ["The two parties formed a coalition to win the election."],
+    "root_affix": "co-(共同)+ alesc(生长、结合)+ -ition，“联合、结合体”。"
+  },
+  "resolve": {
+    "examples": ["They worked all night to resolve the problem."],
+    "root_affix": "re-(强调)+ solve(松开、解决)，“解决、决心”。"
+  },
+  "racial": {
+    "examples": ["The school teaches children to respect racial differences."],
+    "root_affix": "race(种族)+ -ial(形容词后缀)，“种族的”。"
+  },
+  "phase": {
+    "examples": ["The project is now entering its final phase."],
+    "root_affix": "源自希腊 phasis(出现、相)，表“阶段、时期”。"
+  },
+  "joke": {
+    "examples": ["He told a funny joke that made everyone laugh."],
+    "root_affix": "源自拉丁 jocus(玩笑、戏言)，名词“笑话”。"
+  },
+  "coat": {
+    "examples": ["Put on your coat; it's cold outside today."],
+    "root_affix": "古法语 cote(外衣)，指“外套”，引申“涂层”。"
+  },
+  "symptom": {
+    "examples": ["A high fever is a common symptom of the flu."],
+    "root_affix": "sym-(一起)+ ptom(落下、发生)，“一起出现的征兆、症状”。"
+  },
+  "manufacturer": {
+    "examples": ["This car manufacturer is famous around the world."]
+  },
+  "philosophy": {
+    "examples": ["He studied philosophy at university for four years."],
+    "root_affix": "philo-(爱)+ sophy(智慧)，“爱智慧”，即“哲学”。"
+  },
+  "potato": {
+    "examples": ["We had baked potato and chicken for dinner."],
+    "root_affix": "源自西班牙语 patata，借自加勒比土著语，指“马铃薯”。"
+  },
+  "quote": {
+    "examples": ["She likes to quote her favourite poet in essays."],
+    "root_affix": "源自拉丁 quotare(标号、引述)，“引用、报价”。"
+  },
+  "foundation": {
+    "examples": ["A good education is the foundation of success."],
+    "root_affix": "found(建立、奠基)+ -ation(名词后缀)，“基础、建立”。"
+  },
+  "online": {
+    "examples": ["I bought these shoes online last week."],
+    "root_affix": "on(在……上)+ line(线路)，指“在线、联机”。"
+  },
+  "negotiation": {
+    "examples": ["The peace negotiation lasted for several months."],
+    "root_affix": "negotiate(谈判)+ -ion(名词后缀)，“谈判、协商”。"
+  },
+  "urge": {
+    "examples": ["I urge you to think carefully before deciding."],
+    "root_affix": "源自拉丁 urgere(催促、逼迫)，“力劝、冲动”。"
+  },
+  "occasion": {
+    "examples": ["A birthday is a special occasion for the family."],
+    "root_affix": "源自拉丁 occasio(机会、时机)，“场合、时机”。"
+  },
+  "dust": {
+    "examples": ["She wiped the dust off the old wooden shelf."],
+    "root_affix": "古英语 dust(尘土)，指“灰尘、粉末”。"
+  },
+  "elect": {
+    "examples": ["The members will elect a new leader next week."]
+  },
+  "investigator": {
+    "examples": ["The investigator found new clues at the scene."],
+    "root_affix": "investigate(调查)+ -or(表人后缀)，“调查者”。"
+  },
+  "jacket": {
+    "examples": ["He hung his jacket on the back of the chair."],
+    "root_affix": "源自法语 jaquette，-et 为小后缀，指“短上衣、夹克”。"
+  },
+  "ordinary": {
+    "examples": ["It was just an ordinary day at the office."],
+    "root_affix": "源自拉丁 ordo(顺序、规则)，“按常规的、普通的”。"
+  },
+  "glad": {
+    "examples": ["I'm so glad to see you again after all these years."],
+    "root_affix": "古英语 glæd(明亮、欢乐)，表“高兴的”。"
+  },
+  "reduction": {
+    "examples": ["The store offered a big reduction on winter coats."],
+    "root_affix": "reduce(减少)+ -tion(名词后缀)，“减少、缩减”。"
+  },
+  "rarely": {
+    "examples": ["She rarely eats meat because she prefers vegetables."],
+    "root_affix": "rare(稀少的)+ -ly(副词后缀)，“很少地”。"
+  },
+  "pack": {
+    "examples": ["I need to pack my bags before the early flight."],
+    "root_affix": "中古英语 pak(包裹)，作动词“打包、塞满”。"
+  },
+  "suicide": {
+    "examples": ["The charity works to prevent suicide among young people."],
+    "root_affix": "sui-(自己)+ -cide(杀)，“自杀”。"
+  },
+  "numerous": {
+    "examples": ["There are numerous reasons to visit this old town."],
+    "root_affix": "numer(数字)+ -ous(形容词后缀)，“数目众多的”。"
+  },
+  "substance": {
+    "examples": ["Water is a substance found everywhere on Earth."]
+  },
+  "discipline": {
+    "examples": ["Good discipline helps students focus in class."]
+  },
+  "elsewhere": {
+    "examples": ["If this shop is closed, we can look elsewhere."],
+    "root_affix": "else(其他)+ where(地方)，合成“在别处”。"
+  },
+  "iron": {
+    "examples": ["She used a hot iron to press her shirt."],
+    "root_affix": "古英语 isern(铁)，指金属“铁”，亦作“熨斗”。"
+  },
+  "moreover": {
+    "examples": ["The hotel is cheap; moreover, it's near the beach."],
+    "root_affix": "more(更多)+ over(超过)，合成连接词“此外、而且”。"
+  },
+  "passion": {
+    "examples": ["She has a real passion for painting and art."],
+    "root_affix": "源自拉丁 pati(忍受、感受)，指“强烈感情、激情”。"
+  },
+  "volunteer": {
+    "examples": ["Many students volunteer at the local hospital."],
+    "root_affix": "源自拉丁 voluntas(意愿)+ -eer(表人)，“志愿者”。"
+  },
+  "implement": {
+    "examples": ["The company will implement the new rules next month."],
+    "root_affix": "源自拉丁 implere(填满)，名词“工具”，动词“执行”。"
+  },
+  "essentially": {
+    "examples": ["The two plans are essentially the same idea."]
+  },
+  "gene": {
+    "examples": ["This gene decides the colour of your eyes."],
+    "root_affix": "源自希腊 gen(产生、起源)，指“基因”。"
+  },
+  "enforcement": {
+    "examples": ["Strict enforcement of the law keeps the roads safe."],
+    "root_affix": "en-(使)+ force(力量)+ -ment(名词后缀)，“执行、强制”。"
+  },
+  "sauce": {
+    "examples": ["She poured tomato sauce over the hot pasta."],
+    "root_affix": "源自拉丁 salsus(咸的、加盐的)，指“调味汁、酱”。"
+  },
+  "independence": {
+    "examples": ["The country celebrated its independence with a parade."]
+  },
+  "priest": {
+    "examples": ["The priest spoke gently to the worried family."],
+    "root_affix": "源自希腊 presbyteros(长老)，指“神父、牧师”。"
+  },
+  "intense": {
+    "examples": ["The summer heat was intense and hard to bear."]
+  },
+  "employer": {
+    "examples": ["My employer gave me a day off for the holiday."],
+    "root_affix": "employ(雇用)+ -er(表人后缀)，“雇主”。"
+  },
+  "shock": {
+    "examples": ["The bad news came as a great shock to us all."],
+    "root_affix": "源自法语 choc(碰撞)，指“震动、震惊”。"
+  },
+  "inspire": {
+    "examples": ["Her brave story can inspire many young readers."],
+    "root_affix": "in-(进入)+ spire(呼吸)，本义“吹入气息”，引申“激发”。"
+  },
+  "adjust": {
+    "examples": ["Please adjust the mirror before you start driving."],
+    "root_affix": "ad-(朝向)+ just(正确、合适)，“调整、使适应”。"
+  },
+  "retire": {
+    "examples": ["My father plans to retire when he turns sixty."],
+    "root_affix": "re-(回、向后)+ tire(=tirer 拉)，“退下、退休”。"
+  },
+  "kiss": {
+    "examples": ["She gave her child a kiss before school."],
+    "root_affix": "古英语 cyssan(亲吻)，名词、动词“吻”。"
+  },
+  "illness": {
+    "examples": ["He missed two weeks of work because of illness."],
+    "root_affix": "ill(生病的)+ -ness(名词后缀)，“疾病”。"
+  },
+  "visible": {
+    "examples": ["The mountains are clearly visible on a sunny day."],
+    "root_affix": "vis(看)+ -ible(可……的)，“看得见的”。"
+  },
+  "cap": {
+    "examples": ["He wore a blue cap to keep off the sun."],
+    "root_affix": "源自拉丁 cappa(头巾、帽)，指“帽子、盖子”。"
+  },
+  "competitive": {
+    "examples": ["The job market is very competitive these days."]
+  },
+  "habit": {
+    "examples": ["Reading before bed is a good habit to have."],
+    "root_affix": "源自拉丁 habere(持有)，指“惯常做的事、习惯”。"
+  },
+  "congressional": {
+    "examples": ["The new law needs congressional approval to pass."]
+  },
+  "juice": {
+    "examples": ["I drink a glass of orange juice every morning."],
+    "root_affix": "源自拉丁 jus(汤汁、液)，指“果汁、汁液”。"
+  },
+  "involvement": {
+    "examples": ["Her involvement in the project made it a success."],
+    "root_affix": "involve(卷入)+ -ment(名词后缀)，“卷入、参与”。"
+  },
+  "dominate": {
+    "examples": ["One large company tends to dominate the market."],
+    "root_affix": "domin(主人、统治)+ -ate(动词后缀)，“支配、主宰”。"
+  },
+  "previously": {
+    "examples": ["He had previously worked as a teacher in China."]
+  },
+  "whenever": {
+    "examples": ["Call me whenever you need any help."],
+    "root_affix": "when(何时)+ ever(任何时候)，“每当、无论何时”。"
+  },
+  "transfer": {
+    "examples": ["I want to transfer some money to my sister's account."]
+  },
+  "analyze": {
+    "examples": ["Scientists analyze the data to find the answer."],
+    "root_affix": "ana-(向上、彻底)+ lyze(松开、分解)，“分析”。"
+  },
+  "attach": {
+    "examples": ["Please attach the file to your email before sending."],
+    "root_affix": "at-(=ad 朝向)+ tach(钉、系)，“附上、系上”。"
+  },
+  "disaster": {
+    "examples": ["The flood was a terrible disaster for the village."]
+  },
+  "prospect": {
+    "examples": ["There is little prospect of rain this week."]
+  },
+  "boss": {
+    "examples": ["My boss asked me to finish the report by Friday."],
+    "root_affix": "源自荷兰语 baas(主人),指“老板、上司”。"
+  },
+  "complaint": {
+    "examples": ["The customer made a complaint about the cold food."]
+  },
+  "championship": {
+    "examples": ["Our team won the national championship this year."],
+    "root_affix": "champion(冠军)+ -ship(身份、状态后缀)，“冠军头衔”。"
+  },
+  "fundamental": {
+    "examples": ["Reading is a fundamental skill for every child."],
+    "root_affix": "fund(底、基础)+ -ament + -al，“基本的、根本的”。"
+  },
+  "severe": {
+    "examples": ["The country faced a severe shortage of clean water."],
+    "root_affix": "源自拉丁 severus(严厉的)，“严重的、严厉的”。"
+  },
+  "enhance": {
+    "examples": ["A few plants can enhance the look of any room."],
+    "root_affix": "en-(使)+ hance(=拉丁 altus 高)，“提高、增强”。"
+  },
+  "mystery": {
+    "examples": ["How the ring disappeared remains a mystery."],
+    "root_affix": "源自希腊 mysterion(秘密仪式)，指“神秘、奥秘”。"
+  },
+  "poverty": {
+    "examples": ["The charity helps families living in poverty."],
+    "root_affix": "源自拉丁 pauper(贫穷的)，名词“贫穷、贫困”。"
+  },
+  "impose": {
+    "examples": ["The government may impose a new tax on sugar."]
+  },
+  "entry": {
+    "examples": ["The guard checked our names before our entry."],
+    "root_affix": "源自拉丁 intrare(进入)，指“进入、入口、条目”。"
+  },
+  "evaluate": {
+    "examples": ["Teachers evaluate students' work at the end of term."],
+    "root_affix": "e-(出)+ valu(价值)+ -ate，“评估、估价”。"
+  },
+  "symbol": {
+    "examples": ["A dove is a common symbol of peace."],
+    "root_affix": "sym-(一起)+ bol(投、放)，“放在一起的标记、象征”。"
+  },
+  "maker": {
+    "examples": ["She is a skilled maker of wooden toys."],
+    "root_affix": "make(制造)+ -er(表人后缀)，“制造者”。"
+  },
+  "mood": {
+    "examples": ["The rain put everyone in a sad mood."],
+    "root_affix": "古英语 mod(心、精神)，指“心情、情绪”。"
+  },
+  "accomplish": {
+    "examples": ["With teamwork, we can accomplish a great deal."],
+    "root_affix": "ac-(朝向)+ compl(填满、完成)+ -ish，“完成、实现”。"
+  },
+  "emphasis": {
+    "examples": ["The teacher put great emphasis on clear writing."],
+    "root_affix": "em-(在内)+ phasis(显示)，“着重、强调”。"
+  },
+  "boot": {
+    "examples": ["She pulled on her boots before the snowy walk."],
+    "root_affix": "源自古法语 bote(靴子)，指“长靴”。"
+  },
+  "illustrate": {
+    "examples": ["He used a chart to illustrate his main point."],
+    "root_affix": "il-(=in 使)+ lustr(照亮)+ -ate，“阐明、举例说明”。"
+  },
+  "monitor": {
+    "examples": ["Nurses carefully monitor the patient's heart rate."],
+    "root_affix": "源自拉丁 monere(警告、提醒)，“监视、监督器”。"
+  },
+  "bean": {
+    "examples": ["She added a can of beans to the soup."],
+    "root_affix": "古英语 bean(豆)，指各种“豆子”。"
+  },
+  "creature": {
+    "examples": ["A strange creature moved quietly through the forest."],
+    "root_affix": "creat(创造)+ -ure(名词后缀)，“被造物、生物”。"
+  },
+  "evaluation": {
+    "examples": ["The doctor made a full evaluation of his health."],
+    "root_affix": "evaluate(评估)+ -ion(名词后缀)，“评价、估值”。"
+  },
+  "commander": {
+    "examples": ["The commander gave clear orders to his soldiers."]
+  },
+  "digital": {
+    "examples": ["Most people now read the news on digital screens."],
+    "root_affix": "digit(数字、手指)+ -al，“数字的”。"
+  },
+  "arrangement": {
+    "examples": ["The flower arrangement on the table looked lovely."],
+    "root_affix": "arrange(安排)+ -ment(名词后缀)，“排列、安排”。"
+  },
+  "concentrate": {
+    "examples": ["It's hard to concentrate with so much noise."]
+  },
+  "psychological": {
+    "examples": ["Stress can cause serious psychological problems."],
+    "root_affix": "psycho-(心理、精神)+ log(学)+ -ical，“心理学的”。"
+  },
+  "anger": {
+    "examples": ["He could not hide his anger at the unfair rule."],
+    "root_affix": "源自古北欧 angr(悲伤、苦恼)，指“愤怒”。"
+  },
+  "heavily": {
+    "examples": ["It rained heavily all through the night."],
+    "root_affix": "heavy(沉重的)+ -ly(副词后缀)，“沉重地、严重地”。"
+  },
+  "peak": {
+    "examples": ["We reached the snowy peak just before noon."],
+    "root_affix": "与 pike/peek 同源，指“尖端、山峰、顶点”。"
+  },
+  "approximately": {
+    "examples": ["The trip takes approximately three hours by train."],
+    "root_affix": "ap-(朝向)+ proxim(最近的)+ -ate + -ly，“大约、近于”。"
+  },
+  "missile": {
+    "examples": ["The army tested a new missile in the desert."]
+  },
+  "disorder": {
+    "examples": ["The room was left in complete disorder after the party."]
+  },
+  "equally": {
+    "examples": ["The cake was shared equally among the children."],
+    "root_affix": "equal(相等的)+ -ly(副词后缀)，“同样地、平等地”。"
+  },
+  "wire": {
+    "examples": ["A thin wire connected the lamp to the wall."],
+    "root_affix": "古英语 wir(金属丝)，指“电线、金属丝”。"
+  },
+  "vary": {
+    "examples": ["Prices vary a lot from one shop to another."],
+    "root_affix": "源自拉丁 varius(不同的)，“变化、有不同”。"
+  },
+  "round": {
+    "examples": ["The children sat in a round circle on the floor."],
+    "root_affix": "源自拉丁 rotundus(圆的)，“圆的、一轮”。"
+  },
+  "distribution": {
+    "examples": ["The fair distribution of food helped the whole village."]
+  },
+  "transportation": {
+    "examples": ["Public transportation in the city is cheap and fast."]
+  },
+  "holy": {
+    "examples": ["Many people visit this holy place every year."],
+    "root_affix": "古英语 halig(神圣的)，与 whole/heal 同源，“神圣的”。"
+  },
+  "twin": {
+    "examples": ["My twin brother and I look almost the same."],
+    "root_affix": "古英语 twinn(成双的)，与 two 同源，“双胞胎”。"
+  },
+  "command": {
+    "examples": ["The general gave the command to advance."]
+  },
+  "commission": {
+    "examples": ["The agent earns a commission on every house sold."]
+  },
+  "interpretation": {
+    "examples": ["Her interpretation of the poem was very interesting."]
+  },
+  "strongly": {
+    "examples": ["I strongly believe that honesty is important."],
+    "root_affix": "strong(强壮的)+ -ly(副词后缀)，“强有力地”。"
+  },
+  "luck": {
+    "examples": ["With a little luck, we'll catch the early bus."],
+    "root_affix": "源自中古荷兰语 luc(幸运)，指“运气、幸运”。"
+  },
+  "clinic": {
+    "examples": ["She took her sick cat to the clinic this morning."],
+    "root_affix": "源自希腊 klinikos(卧床的、病床的)，指“诊所”。"
+  },
+  "veteran": {
+    "examples": ["The old veteran shared his war stories with us."],
+    "root_affix": "源自拉丁 vetus(年老的)，指“老兵、老手”。"
+  },
+  "smell": {
+    "examples": ["I love the smell of fresh bread in the morning."],
+    "root_affix": "中古英语 smell(气味)，名词“气味”，动词“闻”。"
+  },
+  "tablespoon": {
+    "examples": ["Add one tablespoon of sugar to the mixture."],
+    "root_affix": "table(餐桌)+ spoon(勺)，合成“餐匙、大汤匙”。"
+  },
+  "capable": {
+    "examples": ["She is fully capable of running the whole team."],
+    "root_affix": "cap(抓、容纳)+ -able(能……的)，“有能力的”。"
+  },
+  "nervous": {
+    "examples": ["He felt nervous before his first job interview."],
+    "root_affix": "nerv(神经)+ -ous(形容词后缀)，“神经紧张的”。"
+  },
+  "tourist": {
+    "examples": ["The tourist took photos of the famous old bridge."],
+    "root_affix": "tour(旅行)+ -ist(表人后缀)，“游客、观光客”。"
+  },
+  "toss": {
+    "examples": ["She tossed the ball gently to the small boy."],
+    "root_affix": "中古英语 tossen(摇动、抛掷)，“投掷、摇摆”。"
+  },
+  "crucial": {
+    "examples": ["The next few days are crucial for the project."],
+    "root_affix": "源自拉丁 crux/cruc(十字)，“决定性的、关键的”。"
+  },
+  "bury": {
+    "examples": ["The dog likes to bury its bones in the garden."],
+    "root_affix": "古英语 byrgan(埋藏)，与 borough 同源，“埋葬”。"
+  },
+  "pray": {
+    "examples": ["They went to the church to pray for peace."],
+    "root_affix": "源自拉丁 precari(恳求)，“祈祷、恳求”。"
+  },
+  "tomato": {
+    "examples": ["She sliced a ripe tomato for the salad."],
+    "root_affix": "源自西班牙语 tomate，借自纳瓦特尔语，指“西红柿”。"
+  },
+  "butter": {
+    "examples": ["He spread butter thickly on his warm toast."],
+    "root_affix": "源自希腊 boutyron(牛酪)，指“黄油、奶油”。"
+  },
+  "deficit": {
+    "examples": ["The country is trying to reduce its trade deficit."],
+    "root_affix": "源自拉丁 deficere(缺少、不足)，指“赤字、不足额”。"
+  },
+  "bathroom": {
+    "examples": ["May I use your bathroom for a moment?"],
+    "root_affix": "bath(洗澡)+ room(房间)，合成“浴室、卫生间”。"
+  },
+  "objective": {
+    "examples": ["Our main objective is to finish the work on time."]
+  },
+  "electronic": {
+    "examples": ["She keeps all her notes in an electronic file."]
+  },
+  "ally": {
+    "examples": ["France was a close ally during the long war."],
+    "root_affix": "al-(=ad 朝向)+ ly(=lig 绑)，本义“结合”，引申“同盟者”。"
+  },
+  "surely": {
+    "examples": ["Surely you remember meeting her last summer?"]
+  },
+  "reputation": {
+    "examples": ["The hotel has a good reputation for clean rooms."],
+    "root_affix": "re-(再)+ put(思考、估计)+ -ation，“名声、声望”。"
+  },
+  "tower": {
+    "examples": ["The old stone tower stands above the town."],
+    "root_affix": "源自拉丁 turris(塔)，指“塔、高楼”。"
+  },
+  "mixture": {
+    "examples": ["The cake is a mixture of flour, eggs and sugar."],
+    "root_affix": "mix(混合)+ -ture(名词后缀)，“混合物”。"
+  },
+  "smoke": {
+    "examples": ["Thick smoke rose from the burning building."],
+    "root_affix": "古英语 smoca(烟)，名词“烟”，动词“冒烟、吸烟”。"
+  },
+  "confront": {
+    "examples": ["She had to confront her fear of speaking in public."]
+  },
+  "pure": {
+    "examples": ["The mountain stream had clean, pure water."],
+    "root_affix": "源自拉丁 purus(干净的)，“纯净的、纯洁的”。"
+  },
+  "glance": {
+    "examples": ["He took a quick glance at his watch."],
+    "root_affix": "中古英语 glacen(滑过、掠过)，指“一瞥、扫视”。"
+  },
+  "toy": {
+    "examples": ["The baby played happily with a soft toy."],
+    "root_affix": "中古英语 toy(嬉戏、小物件)，指“玩具”。"
+  },
+  "prisoner": {
+    "examples": ["The prisoner was kept in a small dark cell."],
+    "root_affix": "prison(监狱)+ -er(表人后缀)，“囚犯”。"
+  },
+  "dimension": {
+    "examples": ["We measured every dimension of the new table."],
+    "root_affix": "di-(=dis)+ mens(测量)+ -ion，“尺寸、维度”。"
+  },
+  "fellow": {
+    "examples": ["He is a friendly fellow who helps his neighbours."],
+    "root_affix": "源自古北欧 felagi(合伙人)，指“家伙、同伴”。"
+  },
+  "smooth": {
+    "examples": ["The road was smooth and easy to drive on."],
+    "root_affix": "古英语 smoth(平滑的)，“平滑的、流畅的”。"
+  },
+  "nearby": {
+    "examples": ["We had lunch at a nearby cafe."],
+    "root_affix": "near(近)+ by(在旁)，合成“附近的”。"
+  },
+  "peer": {
+    "examples": ["She peered through the window into the dark room."],
+    "root_affix": "另有同形词 peer(同辈),此处动词“凝视、窥视”。"
+  },
+  "designer": {
+    "examples": ["The designer showed us her new clothes."]
+  },
+  "relative": {
+    "examples": ["A distant relative came to visit us last week."],
+    "root_affix": "relat(关联、带回)+ -ive，“有关系的、亲戚”。"
+  },
+  "educator": {
+    "examples": ["The famous educator wrote many books for teachers."],
+    "root_affix": "educate(教育)+ -or(表人后缀)，“教育家”。"
+  },
+  "belt": {
+    "examples": ["He tightened his belt before the long run."],
+    "root_affix": "源自拉丁 balteus(腰带)，指“带子、地带”。"
+  },
+  "immigration": {
+    "examples": ["The country changed its immigration rules last year."],
+    "root_affix": "im-(进入)+ migr(迁移)+ -ation，“移入、移民”。"
+  },
+  "teaspoon": {
+    "examples": ["Stir in a teaspoon of salt before serving."],
+    "root_affix": "tea(茶)+ spoon(勺)，合成“茶匙、小匙”。"
+  },
+  "implication": {
+    "examples": ["The implication of his words was clear to everyone."],
+    "root_affix": "im-(向内)+ plic(折叠)+ -ation，“含义、牵连”。"
+  },
+  "perfectly": {
+    "examples": ["The two pieces fit together perfectly."]
+  },
+  "coast": {
+    "examples": ["We walked along the rocky coast at sunset."],
+    "root_affix": "源自拉丁 costa(肋、边)，引申“海岸”。"
+  },
+  "supporter": {
+    "examples": ["She is a loyal supporter of the local team."]
+  },
+  "accompany": {
+    "examples": ["A nurse will accompany the patient to the hospital."],
+    "root_affix": "ac-(朝向)+ company(陪伴、同伴)，“陪伴、伴随”。"
+  },
+  "silver": {
+    "examples": ["She wore a thin silver ring on her finger."],
+    "root_affix": "古英语 seolfor(银)，指金属“银”及“银色”。"
+  },
+  "teenager": {
+    "examples": ["As a teenager, she loved playing the guitar."],
+    "root_affix": "teen(十几岁)+ age(年龄)+ -er，“青少年”。"
+  },
+  "recognition": {
+    "examples": ["She finally got recognition for her hard work."],
+    "root_affix": "re-(再)+ cogn(知道)+ -ition，“认出、认可”。"
+  },
+  "retirement": {
+    "examples": ["He spends his retirement growing vegetables."],
+    "root_affix": "retire(退休)+ -ment(名词后缀)，“退休”。"
+  },
+  "recovery": {
+    "examples": ["Her recovery after the illness was quick."],
+    "root_affix": "re-(再)+ cover(取得、覆盖)+ -y，“恢复、复原”。"
+  },
+  "flag": {
+    "examples": ["The national flag waved high above the school."],
+    "root_affix": "中古英语 flag(旗)，指“旗帜、标志”。"
+  },
+  "whisper": {
+    "examples": ["She leaned over to whisper a secret in my ear."],
+    "root_affix": "古英语 hwisprian(低语)，拟声词，“耳语”。"
+  },
+  "gentleman": {
+    "examples": ["The kind gentleman opened the door for us."],
+    "root_affix": "gentle(高贵的、温和的)+ man(人)，“绅士”。"
+  },
+  "corn": {
+    "examples": ["The farmer grew corn in the wide field."],
+    "root_affix": "古英语 corn(谷粒)，指“玉米、谷物”。"
+  },
+  "inner": {
+    "examples": ["The inner room was warmer than the hall."],
+    "root_affix": "in(内)+ -er(比较级后缀)，“内部的、内心的”。"
+  },
+  "moon": {
+    "examples": ["The full moon lit up the quiet garden."],
+    "root_affix": "古英语 mona(月)，与 month 同源，指“月亮”。"
+  },
+  "junior": {
+    "examples": ["He works as a junior nurse at the clinic."],
+    "root_affix": "源自拉丁 junior(更年轻的)，“年少的、下级的”。"
+  },
+  "swing": {
+    "examples": ["The children love to swing in the park."],
+    "root_affix": "古英语 swingan(挥动)，指“摇摆、秋千”。"
+  },
+  "throat": {
+    "examples": ["My throat hurts, so I'll drink some warm tea."],
+    "root_affix": "古英语 throte(喉)，指“咽喉、喉咙”。"
+  },
+  "salary": {
+    "examples": ["She earns a good salary at her new job."],
+    "root_affix": "源自拉丁 salarium(买盐的钱)，引申“薪水”。"
+  },
+  "observer": {
+    "examples": ["An observer watched the game from the stands."],
+    "root_affix": "observe(观察)+ -er(表人后缀)，“观察者”。"
+  },
+  "publication": {
+    "examples": ["The book's publication was delayed by a month."],
+    "root_affix": "public(公开的)+ -ation，“出版、出版物”。"
+  },
+  "dig": {
+    "examples": ["They began to dig a hole for the new tree."],
+    "root_affix": "中古英语 diggen(挖)，“挖、掘”。"
+  },
+  "crop": {
+    "examples": ["The farmers harvested a fine crop of wheat."],
+    "root_affix": "古英语 cropp(穗、顶端)，引申“农作物、收成”。"
+  },
+  "permanent": {
+    "examples": ["She found a permanent job after months of searching."],
+    "root_affix": "per-(贯穿、始终)+ man(停留)+ -ent，“永久的”。"
+  },
+  "phenomenon": {
+    "examples": ["The northern lights are a beautiful natural phenomenon."],
+    "root_affix": "源自希腊 phainein(显现)，指“现象”。"
+  },
+  "anxiety": {
+    "examples": ["She felt great anxiety before the exam results."],
+    "root_affix": "源自拉丁 anxius(忧虑的)，“焦虑、忧虑”。"
+  },
+  "unlike": {
+    "examples": ["Unlike her sister, she enjoys cold weather."],
+    "root_affix": "un-(不)+ like(相像)，“不像、和……不同”。"
+  },
+  "literally": {
+    "examples": ["He was so tired that he literally fell asleep standing."],
+    "root_affix": "liter(字母、文字)+ -al + -ly，“逐字地、确实地”。"
+  },
+  "resist": {
+    "examples": ["I couldn't resist the smell of fresh coffee."],
+    "root_affix": "re-(回、反)+ sist(站立)，本义“站住不动”，“抵抗”。"
+  },
+  "convention": {
+    "examples": ["Thousands of fans came to the comic convention."]
+  },
+  "embrace": {
+    "examples": ["She ran to embrace her old friend at the station."],
+    "root_affix": "em-(使进入)+ brace(=拉丁 bracchium 手臂)，“拥抱”。"
+  },
+  "assist": {
+    "examples": ["A kind man stopped to assist us with the map."],
+    "root_affix": "as-(朝向)+ sist(站立)，“站到旁边帮助”，即“协助”。"
+  },
+  "exhibition": {
+    "examples": ["We visited an art exhibition at the museum."],
+    "root_affix": "ex-(出)+ hibit(持有)+ -ion，“展出、展览”。"
+  },
+  "construct": {
+    "examples": ["Workers will construct a new bridge over the river."]
+  },
+  "viewer": {
+    "examples": ["The show attracts millions of viewers each night."],
+    "root_affix": "view(观看)+ -er(表人后缀)，“观看者、观众”。"
+  },
+  "pan": {
+    "examples": ["She fried the eggs in a small frying pan."],
+    "root_affix": "古英语 panne(平锅)，指“平底锅、浅盘”。"
+  },
+  "consultant": {
+    "examples": ["The company hired a consultant to improve sales."]
+  },
+  "administrator": {
+    "examples": ["The administrator handles all the school records."],
+    "root_affix": "ad-(朝向)+ minister(服务、管理)+ -ator，“管理人”。"
+  },
+  "occasionally": {
+    "examples": ["We occasionally meet for coffee on weekends."],
+    "root_affix": "occasion(场合)+ -al + -ly，“偶尔、有时”。"
+  },
+  "mayor": {
+    "examples": ["The mayor opened the new park this morning."],
+    "root_affix": "源自拉丁 major(较大的、较高的)，指“市长”。"
+  },
+  "consideration": {
+    "examples": ["After careful consideration, she accepted the offer."]
+  },
+  "pink": {
+    "examples": ["She painted the small bedroom a soft pink."],
+    "root_affix": "原指石竹花，后转指其“粉红色”。"
+  },
+  "secure": {
+    "examples": ["Make sure the windows are secure before you sleep."],
+    "root_affix": "se-(脱离)+ cure(忧虑)，本义“无忧的”，“安全的”。"
+  },
+  "historic": {
+    "examples": ["The signing of the treaty was a historic moment."],
+    "root_affix": "histor(历史)+ -ic，“历史上著名的、有历史意义的”。"
+  },
+  "buck": {
+    "examples": ["This old jacket only cost me a few bucks."],
+    "root_affix": "原指雄鹿，旧时以鹿皮交易，引申俚语“元、美元”。"
+  },
+  "poem": {
+    "examples": ["She wrote a short poem about the autumn leaves."],
+    "root_affix": "源自希腊 poiema(创作物)，指“诗”。"
+  },
+  "grandmother": {
+    "examples": ["My grandmother bakes the best apple pie."],
+    "root_affix": "grand(尊长一辈)+ mother(母亲)，“祖母、外祖母”。"
+  },
+  "bind": {
+    "examples": ["She used a rope to bind the boxes together."],
+    "root_affix": "古英语 bindan(捆绑)，与 band/bond 同源，“绑、约束”。"
+  },
+  "fifth": {
+    "examples": ["This is the fifth time he has been late."],
+    "root_affix": "five(五)+ -th(序数后缀)，“第五”。"
+  },
+  "constantly": {
+    "examples": ["The baby cried constantly through the night."]
+  },
+  "enterprise": {
+    "examples": ["The young man started his own small enterprise."],
+    "root_affix": "enter-(=inter 之间)+ prise(=prendre 抓取)，“事业、企业”。"
+  },
+  "favor": {
+    "examples": ["Could you do me a favor and close the window?"],
+    "root_affix": "源自拉丁 favere(支持、喜爱)，“好意、恩惠”。"
+  },
+  "apparent": {
+    "examples": ["It was apparent that she had not slept well."],
+    "root_affix": "ap-(朝向)+ par(出现、显现)+ -ent，“明显的”。"
+  },
+  "stomach": {
+    "examples": ["I shouldn't eat so much on an empty stomach."],
+    "root_affix": "源自希腊 stomachos(胃口、喉),指“胃、肚子”。"
+  },
+  "weigh": {
+    "examples": ["Please weigh the apples before you pay."],
+    "root_affix": "古英语 wegan(举起、称量)，与 weight 同源，“称重”。"
+  },
+  "install": {
+    "examples": ["A worker came to install the new washing machine."],
+    "root_affix": "in-(进入)+ stall(位置、座)，“安装、就位”。"
+  },
+  "sensitive": {
+    "examples": ["Her skin is very sensitive to strong sunlight."]
+  },
+  "mail": {
+    "examples": ["I'll mail the parcel to you tomorrow morning."],
+    "root_affix": "源自古法语 male(袋子)，指“邮件、邮寄”。"
+  },
+  "recipe": {
+    "examples": ["She followed her mother's recipe for soup."],
+    "root_affix": "源自拉丁 recipere(取、收)的祈使形，“食谱、处方”。"
+  },
+  "reasonable": {
+    "examples": ["The shop sells good clothes at reasonable prices."],
+    "root_affix": "reason(理性、理由)+ -able，“合理的、明理的”。"
+  },
+  "elementary": {
+    "examples": ["My son started elementary school this year."],
+    "root_affix": "element(元素、要素)+ -ary，“基本的、初级的”。"
+  },
+  "wooden": {
+    "examples": ["The children built a small wooden boat."],
+    "root_affix": "wood(木头)+ -en(由……制成)，“木制的”。"
+  },
+  "aggressive": {
+    "examples": ["The dog became aggressive when strangers came near."],
+    "root_affix": "ag-(朝向)+ gress(走、步)+ -ive，“进攻的、好斗的”。"
+  },
+  "concert": {
+    "examples": ["We went to a piano concert last Saturday night."]
+  },
+  "false": {
+    "examples": ["He gave the police a false name and address."],
+    "root_affix": "源自拉丁 fallere(欺骗)，“错误的、虚假的”。"
+  },
+  "intention": {
+    "examples": ["She had no intention of leaving the company."],
+    "root_affix": "in-(向内)+ tent(伸展、紧张)+ -ion，“意图、目的”。"
+  },
+  "channel": {
+    "examples": ["Could you change to the news channel, please?"],
+    "root_affix": "源自拉丁 canalis(管、渠)，与 canal 同源，“频道、海峡”。"
+  },
+  "extreme": {
+    "examples": ["The desert has extreme heat during the day."],
+    "root_affix": "源自拉丁 extremus(最外的)，“极端的、尽头的”。"
+  },
+  "tube": {
+    "examples": ["She squeezed the last paint from the tube."],
+    "root_affix": "源自拉丁 tubus(管)，指“管、软管”。"
+  },
+  "protein": {
+    "examples": ["Eggs and beans are rich in protein."]
+  },
+  "absence": {
+    "examples": ["Her absence from class was noticed by the teacher."]
+  },
+  "rapidly": {
+    "examples": ["The city is growing rapidly year by year."],
+    "root_affix": "rapid(迅速的)+ -ly(副词后缀)，“迅速地”。"
+  },
+  "jail": {
+    "examples": ["The thief spent two years in jail."],
+    "root_affix": "源自拉丁 cavea(笼、洞),经古法语 jaiole，指“监狱”。"
+  },
+  "diversity": {
+    "examples": ["The city is famous for its cultural diversity."]
+  },
+  "pace": {
+    "examples": ["She walked at a slow, steady pace."],
+    "root_affix": "源自拉丁 passus(步)，指“步速、步调”。"
+  },
+  "employment": {
+    "examples": ["The new factory created jobs and full employment."],
+    "root_affix": "employ(雇用)+ -ment(名词后缀)，“雇用、就业”。"
+  },
+  "speaker": {
+    "examples": ["The main speaker talked about climate change."],
+    "root_affix": "speak(说)+ -er(表人/物后缀)，“讲话者、扬声器”。"
+  },
+  "essay": {
+    "examples": ["She wrote a short essay about her summer trip."],
+    "root_affix": "源自拉丁 exigere(称量、考察)，引申“随笔、短文”。"
+  },
+  "impression": {
+    "examples": ["He made a good impression at the interview."],
+    "root_affix": "im-(向内)+ press(压)+ -ion，“压印、印象”。"
+  },
+  "respondent": {
+    "examples": ["Each respondent answered ten simple questions."],
+    "root_affix": "re-(回)+ spond(承诺、回应)+ -ent，“应答者”。"
+  },
+  "giant": {
+    "examples": ["A giant wave crashed onto the empty beach."],
+    "root_affix": "源自希腊 gigas(巨人)，指“巨人、巨物”。"
+  },
+  "cake": {
+    "examples": ["She baked a chocolate cake for his birthday."],
+    "root_affix": "源自古北欧 kaka(饼)，指“蛋糕、饼”。"
+  },
+  "negotiate": {
+    "examples": ["They will negotiate the price of the house tomorrow."],
+    "root_affix": "neg-(不)+ oti(空闲)+ -ate，本义“不得闲”，“谈判”。"
+  },
+  "historian": {
+    "examples": ["The historian studied old letters from the war."],
+    "root_affix": "histor(历史)+ -ian(表人后缀)，“历史学家”。"
+  },
+  "restore": {
+    "examples": ["Workers will restore the old church next year."],
+    "root_affix": "re-(再)+ stor(=拉丁 staurare 建立)，“恢复、修复”。"
+  },
+  "substantial": {
+    "examples": ["She received a substantial sum from the sale."]
+  },
+  "pop": {
+    "examples": ["She loves to listen to pop music after school."],
+    "root_affix": "拟声词，模仿“砰”声；亦为 popular 的简称。"
+  },
+  "specialist": {
+    "examples": ["He saw a heart specialist at the hospital."]
+  },
+  "origin": {
+    "examples": ["No one knows the true origin of this old song."],
+    "root_affix": "源自拉丁 oriri(升起、开始)，“起源、出身”。"
+  },
+  "approval": {
+    "examples": ["The plan got final approval from the manager."],
+    "root_affix": "approve(批准)+ -al(名词后缀)，“赞成、批准”。"
+  },
+  "criticize": {
+    "examples": ["It's easy to criticize, but harder to do better."],
+    "root_affix": "critic(批评者)+ -ize(动词后缀)，“批评、指责”。"
+  },
+  "advise": {
+    "examples": ["The doctor advised her to rest for a week."],
+    "root_affix": "ad-(朝向)+ vise(=vis 看)，“看清后给建议”，“劝告”。"
+  },
+  "quietly": {
+    "examples": ["She closed the door quietly so as not to wake him."],
+    "root_affix": "quiet(安静的)+ -ly(副词后缀)，“安静地”。"
+  },
+  "conventional": {
+    "examples": ["He prefers conventional methods to new ones."]
+  },
+  "depth": {
+    "examples": ["Divers measured the depth of the cold lake."],
+    "root_affix": "deep(深的)+ -th(名词后缀)，“深度”。"
+  },
+  "disability": {
+    "examples": ["The building has ramps for people with a disability."]
+  },
+  "wealth": {
+    "examples": ["He gave much of his wealth to charity."],
+    "root_affix": "weal(幸福、福利)+ -th(名词后缀)，“财富、富裕”。"
+  },
+  "shell": {
+    "examples": ["The child found a pink shell on the beach."],
+    "root_affix": "古英语 scell(壳)，与 scale 同源，“贝壳、外壳”。"
+  },
+  "biological": {
+    "examples": ["The river is home to many biological species."],
+    "root_affix": "bio-(生命)+ log(学)+ -ical，“生物学的”。"
+  },
+  "effectively": {
+    "examples": ["The new plan effectively cut waiting times."]
+  },
+  "onion": {
+    "examples": ["Chop the onion finely before adding it to the pan."],
+    "root_affix": "源自拉丁 unio(一、单球),指“洋葱”。"
+  },
+  "deputy": {
+    "examples": ["The deputy took charge while the boss was away."],
+    "root_affix": "源自拉丁 deputare(指派),指“副手、代理人”。"
+  },
+  "flat": {
+    "examples": ["We laid the map flat on the table."],
+    "root_affix": "源自古北欧 flatr(平的)，“平坦的”。"
+  },
+  "brand": {
+    "examples": ["She only buys clothes from her favourite brand."],
+    "root_affix": "古英语 brand(烙印)，旧时以烙印标记，引申“商标、牌子”。"
+  },
+  "assure": {
+    "examples": ["I can assure you that the work is safe."],
+    "root_affix": "as-(朝向)+ sure(确定)，“使确信、保证”。"
+  },
+  "mad": {
+    "examples": ["He was mad at me for losing his keys."],
+    "root_affix": "古英语 gemædd(发疯的)，“疯狂的、生气的”。"
+  },
+  "award": {
+    "examples": ["She won an award for her excellent writing."],
+    "root_affix": "a-(=ad)+ ward(=guard 看守、判定)，“裁定、授予”。"
+  },
+  "dealer": {
+    "examples": ["The car dealer offered us a fair price."],
+    "root_affix": "deal(交易、分配)+ -er(表人后缀)，“经销商”。"
+  },
+  "utility": {
+    "examples": ["The new phone has many useful utility apps."],
+    "root_affix": "util(有用的)+ -ity(名词后缀)，“实用、公用事业”。"
+  },
+  "precisely": {
+    "examples": ["The train left at precisely nine o'clock."]
+  },
+  "arise": {
+    "examples": ["New problems may arise during the long trip."],
+    "root_affix": "a-(=on 起)+ rise(升起)，“出现、产生”。"
+  },
+  "nevertheless": {
+    "examples": ["It was raining; nevertheless, they went out."]
+  },
+  "highway": {
+    "examples": ["We drove along the busy highway for two hours."],
+    "root_affix": "high(主要的)+ way(路)，合成“公路、大道”。"
+  },
+  "clinical": {
+    "examples": ["The new drug passed all its clinical tests."],
+    "root_affix": "clinic(诊所)+ -al，“临床的、门诊的”。"
+  },
+  "routine": {
+    "examples": ["Morning exercise is part of my daily routine."],
+    "root_affix": "源自法语 route(路线)+ -ine，“常规、例行公事”。"
+  },
+  "wage": {
+    "examples": ["The workers asked for a higher daily wage."],
+    "root_affix": "源自古法语 wagier(抵押、担保),指“工资”。"
+  },
+  "normally": {
+    "examples": ["I normally wake up at seven on workdays."],
+    "root_affix": "normal(正常的)+ -ly(副词后缀)，“通常、正常地”。"
+  },
+  "phrase": {
+    "examples": ["Try to use this phrase in your next sentence."],
+    "root_affix": "源自希腊 phrasis(说话、表达)，指“短语、词组”。"
+  },
+  "ingredient": {
+    "examples": ["Flour is the main ingredient in most bread."],
+    "root_affix": "in-(进入)+ gred(走)+ -ient，“走进去的东西、成分”。"
+  },
+  "stake": {
+    "examples": ["They tied the young tree to a wooden stake."],
+    "root_affix": "古英语 staca(桩)，指“桩、赌注”。"
+  },
+  "fiber": {
+    "examples": ["Fruit and vegetables are full of healthy fiber."],
+    "root_affix": "源自拉丁 fibra(丝、纤维)，指“纤维”。"
+  },
+  "activist": {
+    "examples": ["The activist spoke loudly for workers' rights."],
+    "root_affix": "active(积极的)+ -ist(表人后缀)，“积极分子”。"
+  },
+  "snap": {
+    "examples": ["The dry branch will snap if you bend it."],
+    "root_affix": "源自荷兰语 snappen(猛咬)，拟声，“折断、猛咬”。"
+  },
+  "terrorism": {
+    "examples": ["The world must work together to stop terrorism."],
+    "root_affix": "terror(恐怖)+ -ism(主义后缀)，“恐怖主义”。"
+  },
+  "refugee": {
+    "examples": ["The refugee found a safe home in a new country."],
+    "root_affix": "refuge(避难)+ -ee(受动者后缀)，“难民、避难者”。"
+  },
+  "incorporate": {
+    "examples": ["We should incorporate her ideas into the plan."],
+    "root_affix": "in-(进入)+ corpor(身体)+ -ate，“纳入身体、合并”。"
+  },
+  "ultimate": {
+    "examples": ["Their ultimate goal is to help poor children."],
+    "root_affix": "源自拉丁 ultimus(最后的)，“最终的、根本的”。"
+  },
+  "corporation": {
+    "examples": ["She works for a large software corporation."]
+  },
+  "hip": {
+    "examples": ["He hurt his hip when he fell on the ice."],
+    "root_affix": "古英语 hype(臀)，指“臀部、髋”。"
+  },
+  "switch": {
+    "examples": ["Please switch off the light when you leave."],
+    "root_affix": "源自低地德语 swisch(细枝、鞭)，引申“开关、转换”。"
+  },
+  "assumption": {
+    "examples": ["His plan was based on a wrong assumption."],
+    "root_affix": "as-(朝向)+ sumpt(拿、取)+ -ion，“假定、承担”。"
+  },
+  "gear": {
+    "examples": ["He packed all his camping gear in the car."],
+    "root_affix": "源自古北欧 gervi(装备)，指“齿轮、装备”。"
+  },
+  "barrier": {
+    "examples": ["Language can be a barrier when you travel."],
+    "root_affix": "源自古法语 barre(横木)+ -ier，“障碍、栅栏”。"
+  },
+  "minor": {
+    "examples": ["The car had only minor damage after the crash."],
+    "root_affix": "源自拉丁 minor(较小的)，“较小的、次要的”。"
+  },
+  "assign": {
+    "examples": ["The teacher will assign homework after the lesson."]
+  },
+  "council": {
+    "examples": ["The city council voted to build a new park."],
+    "root_affix": "源自拉丁 concilium(集会)，指“委员会、会议”。"
+  },
+  "provision": {
+    "examples": ["The contract has a clear provision about pay."]
+  },
+  "killer": {
+    "examples": ["The police are still searching for the killer."],
+    "root_affix": "kill(杀)+ -er(表人/物后缀)，“杀人者”。"
+  },
+  "gang": {
+    "examples": ["A gang of boys played football in the street."],
+    "root_affix": "古英语 gang(一群、行走)，指“一帮、一群”。"
+  },
+  "classic": {
+    "examples": ["This novel is a classic of English literature."],
+    "root_affix": "源自拉丁 classicus(第一流的)，“经典的、第一流的”。"
+  },
+  "chemical": {
+    "examples": ["The factory uses a chemical to clean the metal."],
+    "root_affix": "chem(化学)+ -ical，“化学的、化学药品”。"
+  },
+  "label": {
+    "examples": ["Read the label before you wash this shirt."],
+    "root_affix": "源自古法语 label(布条),指“标签、标志”。"
+  },
+  "teen": {
+    "examples": ["The film is very popular with teen audiences."],
+    "root_affix": "源自 thirteen 至 nineteen 的 -teen，泛指“青少年(的)”。"
+  },
+  "vacation": {
+    "examples": ["We went to the beach during the summer vacation."],
+    "root_affix": "vac(空)+ -ation，本义“空闲”，指“假期”。"
+  },
+  "advocate": {
+    "examples": ["She is a strong advocate for clean energy."],
+    "root_affix": "ad-(朝向)+ voc(呼叫)+ -ate，本义“被召来辩护”，“提倡者”。"
+  },
+  "draft": {
+    "examples": ["He wrote a rough draft of the letter first."],
+    "root_affix": "与 draw(拉、抽)同源，“草稿、汇票、征兵”。"
+  },
+  "extraordinary": {
+    "examples": ["She showed extraordinary courage during the fire."],
+    "root_affix": "extra-(超出)+ ordinary(平常的)，“非凡的、特别的”。"
+  },
+  "heaven": {
+    "examples": ["The old book describes a peaceful heaven."],
+    "root_affix": "古英语 heofon(天)，指“天堂、天空”。"
+  },
+  "rough": {
+    "examples": ["The path was rough and full of stones."],
+    "root_affix": "古英语 ruh(粗糙的、多毛的)，“粗糙的、粗暴的”。"
+  },
+  "yell": {
+    "examples": ["Don't yell at the children; speak gently."],
+    "root_affix": "古英语 giellan(大叫)，拟声词，“叫喊”。"
+  },
+  "pregnant": {
+    "examples": ["She is pregnant and expecting the baby in May."]
+  },
+  "distant": {
+    "examples": ["We could see distant hills beyond the river."]
+  },
+  "drama": {
+    "examples": ["The class is putting on a school drama next week."],
+    "root_affix": "源自希腊 dran(做、行动)，指“戏剧、剧本”。"
+  },
+  "satellite": {
+    "examples": ["The weather satellite sends pictures of the clouds."],
+    "root_affix": "源自拉丁 satelles(随从、卫兵)，引申“卫星”。"
+  },
+  "personally": {
+    "examples": ["Personally, I think the plan is too expensive."],
+    "root_affix": "person(个人)+ -al + -ly，“亲自地、就个人而言”。"
+  },
+  "clock": {
+    "examples": ["The clock on the wall says half past four."],
+    "root_affix": "源自中世纪拉丁 clocca(钟、铃)，指“时钟”。"
+  },
+  "chocolate": {
+    "examples": ["She gave each child a small piece of chocolate."],
+    "root_affix": "源自纳瓦特尔语 xocolatl，经西班牙语，指“巧克力”。"
+  },
+  "sweep": {
+    "examples": ["He likes to sweep the kitchen floor every morning."],
+    "root_affix": "古英语 swapan(扫)，与 swift 相关，“扫除”。"
+  },
+  "ceiling": {
+    "examples": ["The old room had a high, white ceiling."],
+    "root_affix": "源自拉丁 caelum(天)，引申“天花板、上限”。"
+  },
+  "universal": {
+    "examples": ["Music is a universal language across the world."]
+  },
+  "spin": {
+    "examples": ["Watch the coin spin on the smooth table."],
+    "root_affix": "古英语 spinnan(纺、旋)，“旋转、纺织”。"
+  },
+  "button": {
+    "examples": ["Press the green button to start the machine."],
+    "root_affix": "源自古法语 boton(芽、纽扣)，指“纽扣、按钮”。"
+  },
+  "bell": {
+    "examples": ["The school bell rings at eight every morning."],
+    "root_affix": "古英语 belle(铃)，与 bellow 相关，“铃、钟”。"
+  },
+  "rank": {
+    "examples": ["He rose quickly through the ranks of the army."],
+    "root_affix": "源自古法语 renc(行列)，指“等级、排”。"
+  },
+  "darkness": {
+    "examples": ["The whole town fell into darkness during the storm."],
+    "root_affix": "dark(黑暗的)+ -ness(名词后缀)，“黑暗”。"
+  },
+  "super": {
+    "examples": ["We had a super time at the party last night."],
+    "root_affix": "源自拉丁 super(在……之上)，口语作“极好的、超级的”。"
+  },
+  "yield": {
+    "examples": ["These trees yield a lot of fruit each summer."],
+    "root_affix": "古英语 gieldan(付出、产生)，“出产、屈服”。"
+  },
+  "fence": {
+    "examples": ["A low wooden fence ran around the garden."],
+    "root_affix": "由 defence(防御)缩略而来，指“围栏、栅栏”。"
+  },
+  "portrait": {
+    "examples": ["A large portrait of the king hung on the wall."]
+  },
+  "survival": {
+    "examples": ["Water is essential for the survival of all life."]
+  },
+  "roughly": {
+    "examples": ["The trip will take roughly two hours by car."],
+    "root_affix": "rough(粗略的、粗糙的)+ -ly(副词后缀)，“大约、粗暴地”。"
+  }
+}

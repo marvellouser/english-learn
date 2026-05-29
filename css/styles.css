@@ -1,0 +1,1181 @@
+/* styles.css
+ * Mobile-first base styles for the vocab PWA.
+ * Study-view / rating styles are appended later by another task.
+ */
+
+/* --- Theme variables ----------------------------------------------------- */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  --radius: 12px;
+  --space: 16px;
+  --max-width: 480px;
+
+  --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+}
+
+/* --- Reset / base -------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-stack);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* Respect iOS safe-area insets in standalone mode. */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* --- App layout ---------------------------------------------------------- */
+#app {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space);
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: var(--space) 0;
+  text-align: center;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+/* --- Card (placeholder; extended by study view later) -------------------- */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space);
+  margin: var(--space) 0;
+}
+
+/* --- Button (placeholder) ------------------------------------------------ */
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  min-height: 44px; /* iOS tap target */
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--color-primary-dark);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* --- Nav (placeholder) --------------------------------------------------- */
+.app-nav {
+  display: flex;
+  gap: var(--space);
+  justify-content: center;
+  padding: var(--space) 0;
+}
+
+/* === Study-view / rating styles appended below by a later task =========== */
+
+/* --- Study theme additions ---------------------------------------------- */
+:root {
+  --color-again: #ef4444;
+  --color-again-dark: #dc2626;
+  --color-hard: #f59e0b;
+  --color-hard-dark: #d97706;
+  --color-good: #22c55e;
+  --color-good-dark: #16a34a;
+  --tap-target: 44px;
+  /* Height reserved for the fixed bottom nav (matches #app bottom padding and
+     the .bottom-nav footprint). Used by the full-height study layout. */
+  --nav-height: 72px;
+}
+
+/* Secondary button variant (e.g. "再来一组"). */
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--color-border);
+}
+
+/* --- Study header + progress bar ---------------------------------------- */
+.study-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0 var(--space);
+}
+
+.study-back {
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  width: var(--tap-target);
+  height: var(--tap-target);
+  min-width: var(--tap-target);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+.study-back:hover,
+.study-back:focus {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.study-progress {
+  flex: 1;
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.study-progress-bar {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.study-counter {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  min-width: 56px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Flip card ----------------------------------------------------------- */
+/* The card stretches to fill its flex region (see .study-card-region below)
+   so short cards look substantial; min-height keeps a floor when the viewport
+   is unusually short. The 3D faces are absolutely positioned, so the card and
+   its inner wrapper must both have a concrete height to fill. */
+.study-card {
+  perspective: 1000px;
+  min-height: 320px;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.study-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.study-card.is-flipped .study-card-inner {
+  transform: rotateY(180deg);
+}
+
+.study-face {
+  position: absolute;
+  inset: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  padding: var(--space);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow-y: auto;
+}
+.study-face-back {
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+  padding-top: 24px;
+}
+
+/* Card badge (new vs review). */
+.study-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+}
+.study-badge-new {
+  background: #ecfdf5;
+  color: var(--color-good-dark);
+}
+.study-badge-review {
+  background: #eff6ff;
+  color: var(--color-primary-dark);
+}
+
+.study-word {
+  margin: 4px 0 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  word-break: break-word;
+}
+.study-word-sm {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+.study-phonetic {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-muted);
+}
+.study-hint {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+/* Pronounce button: round, large tap target. */
+.study-pronounce {
+  font-size: 1.4rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+.study-pronounce:hover,
+.study-pronounce:focus {
+  background: var(--color-surface);
+}
+.study-pronounce:active {
+  transform: scale(0.92);
+}
+
+/* Back-face content. */
+.study-def-zh {
+  margin: 6px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+.study-def-en {
+  margin: 0 0 6px;
+  color: var(--color-muted);
+  text-align: center;
+}
+.study-examples {
+  margin: 8px 0;
+  padding-left: 20px;
+  align-self: stretch;
+  text-align: left;
+}
+.study-examples li {
+  margin-bottom: 4px;
+}
+.study-root-affix {
+  align-self: stretch;
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  text-align: left;
+}
+.study-label {
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* --- Actions / ratings --------------------------------------------------- */
+.study-actions {
+  display: flex;
+  justify-content: center;
+  padding: var(--space) 0;
+}
+.study-actions .btn {
+  width: 100%;
+}
+
+.study-ratings {
+  display: flex;
+  gap: 8px;
+  padding: var(--space) 0;
+}
+.study-rating {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 6px;
+  min-height: var(--tap-target);
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.12s ease;
+}
+.study-rating:active {
+  transform: scale(0.97);
+}
+.study-rating:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.study-rating-num {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+.rating-again {
+  background: var(--color-again);
+}
+.rating-again:hover,
+.rating-again:focus {
+  background: var(--color-again-dark);
+}
+.rating-hard {
+  background: var(--color-hard);
+}
+.rating-hard:hover,
+.rating-hard:focus {
+  background: var(--color-hard-dark);
+}
+.rating-good {
+  background: var(--color-good);
+}
+.rating-good:hover,
+.rating-good:focus {
+  background: var(--color-good-dark);
+}
+
+/* --- Empty / summary screens -------------------------------------------- */
+.study-empty {
+  text-align: center;
+}
+.study-empty-emoji {
+  font-size: 2.5rem;
+  margin: 0 0 8px;
+}
+
+.study-summary {
+  text-align: center;
+}
+.study-summary-total {
+  font-size: 1.1rem;
+  margin: 0 0 var(--space);
+}
+.study-summary-list,
+.study-summary-breakdown {
+  list-style: none;
+  margin: 0 0 var(--space);
+  padding: 0;
+}
+.study-summary-list li,
+.study-summary-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+.study-summary-list li:last-child,
+.study-summary-breakdown li:last-child {
+  border-bottom: none;
+}
+.study-summary-key {
+  color: var(--color-muted);
+}
+.study-summary-breakdown .rating-again {
+  background: transparent;
+  color: var(--color-again-dark);
+  font-weight: 600;
+}
+.study-summary-breakdown .rating-hard {
+  background: transparent;
+  color: var(--color-hard-dark);
+  font-weight: 600;
+}
+.study-summary-breakdown .rating-good {
+  background: transparent;
+  color: var(--color-good-dark);
+  font-weight: 600;
+}
+
+/* === Home dashboard + settings + bottom nav (TASK-006) =================== */
+
+/* Reserve space so the fixed bottom nav never covers content. */
+#app {
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+
+/* --- Home dashboard ------------------------------------------------------ */
+.home-streak {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+.home-streak strong {
+  color: var(--color-hard-dark);
+}
+
+.home-section-title,
+.settings-heading {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.home-today-grid {
+  display: flex;
+  gap: var(--space);
+}
+.home-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 8px;
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+.home-stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.home-stat-label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+.home-stat-review .home-stat-num {
+  color: var(--color-primary);
+}
+.home-stat-new .home-stat-num {
+  color: var(--color-good-dark);
+}
+.home-clear {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: var(--space) 0;
+}
+.home-actions .btn {
+  width: 100%;
+}
+.home-cta {
+  font-size: 1.05rem;
+  padding: 14px 20px;
+}
+
+.home-stats-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.home-stats-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+.home-stats-list li:last-child {
+  border-bottom: none;
+}
+.home-stats-key {
+  color: var(--color-muted);
+}
+
+/* --- Settings view ------------------------------------------------------- */
+.settings-title {
+  flex: 1;
+  text-align: left;
+  font-size: 1.4rem;
+}
+.settings-section {
+  margin: var(--space) 0;
+}
+.settings-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.settings-field-label {
+  font-weight: 600;
+}
+.settings-input {
+  font: inherit;
+  width: 88px;
+  padding: 10px 12px;
+  text-align: right;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.settings-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.settings-hint {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+}
+.settings-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+.settings-actions .btn {
+  width: 100%;
+}
+.settings-danger {
+  width: 100%;
+  background: var(--color-again);
+}
+.settings-danger:hover,
+.settings-danger:focus {
+  background: var(--color-again-dark);
+}
+.settings-feedback {
+  margin: var(--space) 0;
+  min-height: 1.2em;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.settings-feedback-ok {
+  color: var(--color-good-dark);
+}
+.settings-feedback-error {
+  color: var(--color-again-dark);
+}
+
+/* --- Persistent bottom navigation --------------------------------------- */
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font: inherit;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  background: transparent;
+  border: none;
+  padding: 8px 4px;
+  min-height: 56px;
+  cursor: pointer;
+}
+.bottom-nav-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.bottom-nav-item.is-active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* === Study full-height layout (ENH-3) =================================== */
+/* Goal: the study screen fills the viewport ABOVE the fixed bottom nav with no
+   large blank gap. It is a flex column: a fixed-height header on top, a flexible
+   card region that grows and scrolls internally, and a rating/actions row pinned
+   at the bottom. Scoped to .study-screen so home/settings are unaffected. */
+.study-screen {
+  display: flex;
+  flex-direction: column;
+  /* Fallback first, then the safe-area-aware dynamic-viewport calc. */
+  height: 100vh;
+  height: calc(
+    100dvh - var(--nav-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+  );
+  /* #app already pads by --space; subtract its top/bottom padding so the screen
+     ends exactly above the nav without overflowing. */
+  margin: calc(-1 * var(--space)) 0;
+  padding: var(--space) 0;
+}
+
+/* Header: fixed height, never shrinks, sits at the top. */
+.study-screen .study-header {
+  flex: 0 0 auto;
+  padding: 0 0 12px;
+}
+
+/* Card region: grows to fill the remaining space; scrolls internally when the
+   card content (long examples / 词根词缀) overflows, instead of leaving the page
+   with dead space below. */
+.study-card-region {
+  flex: 1 1 auto;
+  min-height: 0; /* allow the flex child to actually shrink + scroll */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
+
+/* Inside the region the card stretches to fill the available height (so short
+   cards look big) but can grow taller than the region for long content. */
+.study-card-region .study-card {
+  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+}
+.study-card-region .study-card-inner {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* Card faces: top-align content with comfortable padding; scroll within the
+   face when a single side overflows. The front face stays centred for the
+   word + phonetic; the back face top-aligns its definition/examples. */
+.study-card-region .study-face {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.study-card-region .study-face-front {
+  justify-content: center;
+}
+.study-card-region .study-face-back {
+  justify-content: flex-start;
+}
+
+/* Rating / actions row: never shrinks, pinned at the bottom of the screen just
+   above the fixed nav, full width, large tap targets. */
+.study-screen .study-ratings,
+.study-screen .study-actions {
+  flex: 0 0 auto;
+  padding: 12px 0 0;
+}
+.study-screen .study-rating {
+  min-height: 56px; /* larger bottom tap targets */
+  font-size: 1rem;
+}
+.study-screen .study-actions .btn {
+  min-height: 52px;
+}
+
+/* === Vocab-test full-height redesign (UI ENH) =========================== */
+/* Shared full-height shell, mirroring .study-screen: a flex column that fills
+   the viewport above the fixed bottom nav with no large bottom gap. Scoped to
+   .vocab-screen so other views are unaffected. */
+.vocab-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(
+    100dvh - var(--nav-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+  );
+  margin: calc(-1 * var(--space)) 0;
+  padding: var(--space) 0;
+}
+.vocab-screen .study-header {
+  flex: 0 0 auto;
+  padding: 0 0 12px;
+}
+
+/* --- Intro screen: centered card --------------------------------------- */
+.vocab-intro-region {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.vocab-intro-card {
+  width: 100%;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+}
+.vocab-intro-emoji {
+  font-size: 2.6rem;
+  margin: 0 0 8px;
+}
+.vocab-intro-title {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.vocab-intro-lead {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+.vocab-intro-sub {
+  margin: 0 0 24px;
+  font-size: 0.85rem;
+}
+.vocab-start-btn {
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 16px 20px;
+  min-height: 56px;
+}
+
+/* --- Question screen ---------------------------------------------------- */
+/* Middle region grows and centers the LARGE word + phonetic. */
+.vocab-question-region {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--space) 0;
+}
+.vocab-word {
+  margin: 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  word-break: break-word;
+}
+.vocab-phonetic {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--color-muted);
+}
+
+/* Options: full-width, stacked, large tappable buttons (NOT chips). */
+.vocab-options {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0 0;
+}
+.vocab-option {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 1.05rem;
+  text-align: left;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  min-height: 52px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+.vocab-option:hover,
+.vocab-option:focus {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+}
+.vocab-option:active {
+  transform: scale(0.99);
+}
+.vocab-option:disabled {
+  cursor: default;
+}
+/* Tap feedback: chosen-correct / correct-reveal go green, wrong goes red. */
+.vocab-option.is-correct {
+  background: #ecfdf5;
+  border-color: var(--color-good);
+  color: var(--color-good-dark);
+  font-weight: 600;
+}
+.vocab-option.is-wrong {
+  background: #fef2f2;
+  border-color: var(--color-again);
+  color: var(--color-again-dark);
+  font-weight: 600;
+}
+
+/* --- Result screen ------------------------------------------------------ */
+.vocab-result-region {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.vocab-result-hero {
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px var(--space);
+  margin: 0 0 var(--space);
+}
+.vocab-result-hero-label {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+}
+.vocab-result-hero-num {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+.vocab-result-hero-num strong {
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+.vocab-result-breakdown {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space);
+  margin: 0 0 var(--space);
+}
+.vocab-result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.vocab-result-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+.vocab-result-row:last-child {
+  border-bottom: none;
+}
+.vocab-result-head {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.vocab-result-label {
+  flex: 1.4 1 0;
+}
+.vocab-result-score,
+.vocab-result-rate,
+.vocab-result-est {
+  flex: 1 1 0;
+  text-align: right;
+}
+.vocab-result-programming {
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.95rem;
+}
+.vocab-result-programming strong {
+  color: var(--color-primary);
+}
+.vocab-caveat {
+  margin: 0 0 var(--space);
+}
+.vocab-result-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 0 0;
+}
+.vocab-result-actions .btn {
+  width: 100%;
+  min-height: 52px;
+}
+
+/* === Clickable home dashboard tiles (UI ENH) ============================ */
+/* Reset the native button look on the today-stat tiles and add an affordance. */
+button.home-stat {
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+}
+button.home-stat:hover,
+button.home-stat:focus {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+button.home-stat:active {
+  transform: scale(0.98);
+}
+
+/* Learning-overview list rows become clickable navigation targets. */
+.home-stats-item {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+.home-stats-item:hover,
+.home-stats-item:focus {
+  background: var(--color-surface);
+  outline: none;
+}
+.home-stats-val {
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+.home-stats-hint {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+/* === Word-list / browse view (UI ENH) =================================== */
+/* Full-height flex column: fixed header (search + chips + count) then a list
+   body that scrolls and fits above the fixed bottom nav. */
+.wordlist-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(
+    100dvh - var(--nav-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+  );
+  margin: calc(-1 * var(--space)) 0;
+  padding: var(--space) 0;
+}
+.wordlist-screen .study-header {
+  flex: 0 0 auto;
+  padding: 0 0 8px;
+}
+
+.wordlist-controls {
+  flex: 0 0 auto;
+}
+.wordlist-search {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.wordlist-search:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.wordlist-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+}
+.wordlist-chip {
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  min-height: 36px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.wordlist-chip:hover,
+.wordlist-chip:focus {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.wordlist-chip.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+.wordlist-count {
+  margin: 10px 0 8px;
+  font-size: 0.85rem;
+}
+
+/* List body: the only scrolling region. */
+.wordlist-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.wordlist-empty {
+  text-align: center;
+  padding: var(--space);
+}
+
+.wordlist-row {
+  border-bottom: 1px solid var(--color-border);
+}
+.wordlist-row.is-open {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+}
+.wordlist-row-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 12px 8px;
+  min-height: 52px;
+  cursor: pointer;
+}
+.wordlist-row-head:hover,
+.wordlist-row-head:focus {
+  outline: none;
+  background: var(--color-surface);
+}
+.wordlist-row-main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.wordlist-row-word {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  word-break: break-word;
+}
+.wordlist-row-phonetic {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.wordlist-row-def {
+  flex: 0 1 auto;
+  max-width: 45%;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Expanded detail. */
+.wordlist-detail {
+  padding: 0 8px 14px;
+}
+.wordlist-def-en {
+  margin: 0 0 8px;
+  color: var(--color-muted);
+}
+.wordlist-examples {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+.wordlist-examples li {
+  margin-bottom: 4px;
+}
+.wordlist-root-affix {
+  margin: 0 0 8px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+}
+.wordlist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+.wordlist-tag {
+  font-size: 0.72rem;
+  color: var(--color-primary-dark);
+  background: #eff6ff;
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.wordlist-srs {
+  margin: 0;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}

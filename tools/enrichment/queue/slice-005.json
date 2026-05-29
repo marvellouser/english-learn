@@ -1,0 +1,2102 @@
+[
+{
+"word": "print",
+"def_zh": "n. 打印, 版, 印刷物, 痕迹, 印刷业, 印刷字体, 图片, 印花布, 印章；v. 打印, 印刷, 铭记, 留印记于, 用印刷体写",
+"freq": 2207,
+"needs_root": true
+},
+{
+"word": "preserve",
+"def_zh": "vt. 保护, 保持, 保存, 维持, 腌, 禁猎；vi. 加工食品, 禁猎",
+"freq": 2209,
+"needs_root": false
+},
+{
+"word": "ceo",
+"def_zh": "abbr. 首席执行官；执行总裁（chief executive officer）",
+"freq": 2210,
+"needs_root": true
+},
+{
+"word": "passage",
+"def_zh": "n. 通道, 通过, 移居, 航行, 一段, 走廊；vi. 通过, 经过, 航行, 横渡, 争吵",
+"freq": 2210,
+"needs_root": true
+},
+{
+"word": "formal",
+"def_zh": "a. 正式的, 形式的, 礼仪的, 拘于礼节的, 拘谨的；n. 正式的社交活动",
+"freq": 2211,
+"needs_root": false
+},
+{
+"word": "transition",
+"def_zh": "n. 转变, 转换, 变迁, 过渡时期, 临时转调；跃迁",
+"freq": 2212,
+"needs_root": false
+},
+{
+"word": "existence",
+"def_zh": "n. 存在, 生存；存在, 存在状态, 实体",
+"freq": 2213,
+"needs_root": true
+},
+{
+"word": "participation",
+"def_zh": "n. 参与, 分享；参与, 参股",
+"freq": 2214,
+"needs_root": true
+},
+{
+"word": "album",
+"def_zh": "n. 粘贴簿, 唱片套；白色物",
+"freq": 2215,
+"needs_root": true
+},
+{
+"word": "arrange",
+"def_zh": "v. 安排, 排列, 达成协议；重排",
+"freq": 2216,
+"needs_root": true
+},
+{
+"word": "atmosphere",
+"def_zh": "n. 大气, 空气, 气氛；大气; 大气压",
+"freq": 2217,
+"needs_root": true
+},
+{
+"word": "joint",
+"def_zh": "n. 连接处, 接合, 关节；a. 共同的, 联合的, 连接的, 合办的",
+"freq": 2218,
+"needs_root": true
+},
+{
+"word": "reply",
+"def_zh": "n. 答复, 回答, 答辩；vi. 答复, 回答, 回击, 反响, 答辩",
+"freq": 2219,
+"needs_root": true
+},
+{
+"word": "cycle",
+"def_zh": "n. 周期, 循环, 自行车, 一段时间, 整套；vi. 循环, 轮转, 骑自行车",
+"freq": 2220,
+"needs_root": true
+},
+{
+"word": "lock",
+"def_zh": "n. 锁, 刹车, 水闸, 一缕头发；vt. 锁, 锁上, 拘禁, 隐藏, (用锁等)拴住, 刹住",
+"freq": 2221,
+"needs_root": true
+},
+{
+"word": "opposite",
+"def_zh": "a. 相对的, 相反的, 对面的；prep. 对面",
+"freq": 2222,
+"needs_root": false
+},
+{
+"word": "deserve",
+"def_zh": "vt. 该得到, 值得；vi. 应得报答",
+"freq": 2224,
+"needs_root": true
+},
+{
+"word": "consistent",
+"def_zh": "a. 一致的, 坚持的, 并立的, 坚固的",
+"freq": 2225,
+"needs_root": false
+},
+{
+"word": "resistance",
+"def_zh": "n. 抵抗力, 反抗, 耐力, 阻力, 电阻；抵抗; 抗性; 阻力; 抗药性; 电阻",
+"freq": 2226,
+"needs_root": true
+},
+{
+"word": "discovery",
+"def_zh": "n. 发现, 被发现的事物；要求告知, 发现, 发觉",
+"freq": 2227,
+"needs_root": false
+},
+{
+"word": "exposure",
+"def_zh": "n. 暴露, 揭发, 揭露；曝光量; 照射; 照射量",
+"freq": 2229,
+"needs_root": true
+},
+{
+"word": "pose",
+"def_zh": "n. 姿势, 姿态, 装模作样, 伪装；vi. 摆姿势, 装模作样, 假装",
+"freq": 2230,
+"needs_root": false
+},
+{
+"word": "stream",
+"def_zh": "n. 水流, 小河, 流出, 趋势, 人潮；vt. 流出, 流动, 展开",
+"freq": 2231,
+"needs_root": true
+},
+{
+"word": "sale",
+"def_zh": "n. 出售, 卖, 拍卖, 销售额, 廉价出售；卖, 出售; 销售(货)",
+"freq": 2234,
+"needs_root": true
+},
+{
+"word": "pot",
+"def_zh": "n. 盆, 罐, 壶, 坩埚, 奖杯；vt. 装入盆中, 在锅中煮, 随手射击",
+"freq": 2235,
+"needs_root": true
+},
+{
+"word": "grand",
+"def_zh": "a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的；重大的, 主要的, 伟大的",
+"freq": 2237,
+"needs_root": true
+},
+{
+"word": "hello",
+"def_zh": "interj. 喂, 嘿",
+"freq": 2238,
+"needs_root": true
+},
+{
+"word": "tale",
+"def_zh": "n. 故事, 谎言, 谣言, 陈述, 叙述；虚语, 诽语, 谣言",
+"freq": 2239,
+"needs_root": true
+},
+{
+"word": "knife",
+"def_zh": "n. 小刀, 匕首；vt. 切割, 伤害, 切, 戳",
+"freq": 2240,
+"needs_root": true
+},
+{
+"word": "coalition",
+"def_zh": "n. 结合体, 结合, 联合；联合, 联盟",
+"freq": 2241,
+"needs_root": true
+},
+{
+"word": "resolve",
+"def_zh": "vi. 决定, 分解, 决心；vt. 使分解, 解析, 解决, 消除, 决心",
+"freq": 2242,
+"needs_root": true
+},
+{
+"word": "racial",
+"def_zh": "a. 人种的, 种族的；种族的",
+"freq": 2243,
+"needs_root": true
+},
+{
+"word": "phase",
+"def_zh": "n. 时期, 局面, 方面, 位相, 相, 阶段；vt. 使调整相位, 使定相, 使一致, 逐步执行, 实行",
+"freq": 2244,
+"needs_root": true
+},
+{
+"word": "joke",
+"def_zh": "n. 笑话, 玩笑, 笑柄；v. 开玩笑, 取笑, 作弄",
+"freq": 2246,
+"needs_root": true
+},
+{
+"word": "coat",
+"def_zh": "n. 外套；vt. 外面覆盖, 给...穿外套",
+"freq": 2247,
+"needs_root": true
+},
+{
+"word": "symptom",
+"def_zh": "n. 症状, 征候, 征兆；症状",
+"freq": 2249,
+"needs_root": true
+},
+{
+"word": "manufacturer",
+"def_zh": "n. 制造业者, 厂商；制造人, 制造商, 制造厂",
+"freq": 2251,
+"needs_root": false
+},
+{
+"word": "philosophy",
+"def_zh": "n. 哲学, 人生观, 哲学思想, 哲理, 基本原理, 见解, 达观, 沉着",
+"freq": 2252,
+"needs_root": true
+},
+{
+"word": "potato",
+"def_zh": "n. 马铃薯",
+"freq": 2253,
+"needs_root": true
+},
+{
+"word": "quote",
+"def_zh": "n. 引用；vt. 引述, 举证, 报(价)",
+"freq": 2255,
+"needs_root": true
+},
+{
+"word": "foundation",
+"def_zh": "n. 基础, 根据, 建立；地基",
+"freq": 2256,
+"needs_root": true
+},
+{
+"word": "online",
+"def_zh": "联机",
+"freq": 2257,
+"needs_root": true
+},
+{
+"word": "negotiation",
+"def_zh": "n. 谈判, 磋商, 交涉；谈判, 协商",
+"freq": 2259,
+"needs_root": true
+},
+{
+"word": "urge",
+"def_zh": "n. 冲动, 推动力, 迫切的要求；vt. 驱策, 力劝, 竭力主张, 推动",
+"freq": 2261,
+"needs_root": true
+},
+{
+"word": "occasion",
+"def_zh": "n. 场合, 时机, 机会, 诱因, 理由；vt. 惹起, 引起",
+"freq": 2262,
+"needs_root": true
+},
+{
+"word": "dust",
+"def_zh": "n. 灰尘, 尘埃, 粉末, 花粉, 土, 骚乱；vt. 拂去灰尘, 撒, 弄成粉末",
+"freq": 2263,
+"needs_root": true
+},
+{
+"word": "elect",
+"def_zh": "n. 当选人, 被选的人；a. 被选的, 选出的",
+"freq": 2265,
+"needs_root": false
+},
+{
+"word": "investigator",
+"def_zh": "n. 调查者, 审查者；审查员, 侦查员, 调查员",
+"freq": 2266,
+"needs_root": true
+},
+{
+"word": "jacket",
+"def_zh": "n. 夹克, 外套, 护套；vt. 给...穿夹克, 给...装护套",
+"freq": 2267,
+"needs_root": true
+},
+{
+"word": "ordinary",
+"def_zh": "a. 平常的, 普通的, 平凡的；n. 平常的人(或事)",
+"freq": 2268,
+"needs_root": true
+},
+{
+"word": "glad",
+"def_zh": "a. 高兴的, 喜欢的, 情愿的",
+"freq": 2269,
+"needs_root": true
+},
+{
+"word": "reduction",
+"def_zh": "n. 减少, 缩影, 变化；还原",
+"freq": 2270,
+"needs_root": true
+},
+{
+"word": "rarely",
+"def_zh": "adv. 很少地, 罕有地",
+"freq": 2271,
+"needs_root": true
+},
+{
+"word": "pack",
+"def_zh": "n. 包裹, 一伙, 一副, 背包, 包装；vt. 包装, 捆扎, 塞满, 压紧, 挑选",
+"freq": 2273,
+"needs_root": true
+},
+{
+"word": "suicide",
+"def_zh": "n. 自杀, 自杀者；v. 自杀",
+"freq": 2274,
+"needs_root": true
+},
+{
+"word": "numerous",
+"def_zh": "a. 很多的, 数目众多的, 多数的；多数的, 甚多的",
+"freq": 2275,
+"needs_root": true
+},
+{
+"word": "substance",
+"def_zh": "n. 物质, 实质, 主旨, 资产, 本质, 牢固；物质",
+"freq": 2277,
+"needs_root": false
+},
+{
+"word": "discipline",
+"def_zh": "n. 训练, 纪律；vt. 训练, 惩罚",
+"freq": 2278,
+"needs_root": false
+},
+{
+"word": "elsewhere",
+"def_zh": "adv. 在别处",
+"freq": 2279,
+"needs_root": true
+},
+{
+"word": "iron",
+"def_zh": "n. 铁, 熨斗, 铁器, 坚强, 烙铁, 镣铐；vt. 烫平, 熨, 用铁包",
+"freq": 2280,
+"needs_root": true
+},
+{
+"word": "moreover",
+"def_zh": "adv. 而且, 此外",
+"freq": 2282,
+"needs_root": true
+},
+{
+"word": "passion",
+"def_zh": "n. 激情, 酷爱, 热爱, 强烈感情, 耶稣受难(故事)",
+"freq": 2283,
+"needs_root": true
+},
+{
+"word": "volunteer",
+"def_zh": "n. 志愿者；a. 志愿的",
+"freq": 2284,
+"needs_root": true
+},
+{
+"word": "implement",
+"def_zh": "n. 工具, 器具, 手段；vt. 实现, 使生效, 执行",
+"freq": 2285,
+"needs_root": true
+},
+{
+"word": "essentially",
+"def_zh": "adv. 本质上, 本来",
+"freq": 2286,
+"needs_root": false
+},
+{
+"word": "gene",
+"def_zh": "n. 基因；基因(遗传因子)",
+"freq": 2287,
+"needs_root": true
+},
+{
+"word": "enforcement",
+"def_zh": "n. 执行, 强制；实施, 加强, 厉行",
+"freq": 2288,
+"needs_root": true
+},
+{
+"word": "sauce",
+"def_zh": "n. 酱油, 调味汁, 酱；vt. 给...调味, 使增加趣味",
+"freq": 2289,
+"needs_root": true
+},
+{
+"word": "independence",
+"def_zh": "n. 独立, 自立, 自主；自主性, 独立性",
+"freq": 2291,
+"needs_root": false
+},
+{
+"word": "priest",
+"def_zh": "n. 祭司, 牧师, 神父, 神质人员, 僧侣, 泰斗",
+"freq": 2293,
+"needs_root": true
+},
+{
+"word": "intense",
+"def_zh": "a. 非常的, 强烈的, 紧张的, 热情的；强的",
+"freq": 2295,
+"needs_root": false
+},
+{
+"word": "employer",
+"def_zh": "n. 雇主, 老板；雇主, 业主",
+"freq": 2297,
+"needs_root": true
+},
+{
+"word": "shock",
+"def_zh": "n. 震动, 冲突, 震惊, 冲击, 突击, 禾束堆, 休克, 长毛狗；vt. 使震动, 使休克, 使受电击, 震惊得",
+"freq": 2298,
+"needs_root": true
+},
+{
+"word": "inspire",
+"def_zh": "vt. 使感动, 激发, 启示, 吸入, 鼓舞, 产生, 使生灵感；vi. 吸入, 赋予灵感",
+"freq": 2299,
+"needs_root": true
+},
+{
+"word": "adjust",
+"def_zh": "vt. 调整, 使适应于, 校准；vi. 适应于, 被调节, 相互熟悉而适应",
+"freq": 2300,
+"needs_root": true
+},
+{
+"word": "retire",
+"def_zh": "n. 隐居；vi. 引退, 退役, 退休, 退去, 撤退, 退却",
+"freq": 2301,
+"needs_root": true
+},
+{
+"word": "kiss",
+"def_zh": "n. 吻；vt. 吻",
+"freq": 2302,
+"needs_root": true
+},
+{
+"word": "illness",
+"def_zh": "n. 疾病, 恶意；病",
+"freq": 2303,
+"needs_root": true
+},
+{
+"word": "visible",
+"def_zh": "a. 看得见的, 明显的, 显然的；n. 可见物",
+"freq": 2304,
+"needs_root": true
+},
+{
+"word": "cap",
+"def_zh": "n. 盖子, 帽子；vt. 戴帽子, 覆盖, 胜过",
+"freq": 2306,
+"needs_root": true
+},
+{
+"word": "competitive",
+"def_zh": "a. 竞争的；竞争的",
+"freq": 2307,
+"needs_root": false
+},
+{
+"word": "habit",
+"def_zh": "n. 习惯, 嗜好, 习性；vt. 使穿衣",
+"freq": 2308,
+"needs_root": true
+},
+{
+"word": "congressional",
+"def_zh": "a. 会议的, 议会的, 国会的；代表大会的, 大会的, 议会的",
+"freq": 2309,
+"needs_root": false
+},
+{
+"word": "juice",
+"def_zh": "n. 汁, 活力, 体液；vt. 挤出汁来, 加汁",
+"freq": 2310,
+"needs_root": true
+},
+{
+"word": "involvement",
+"def_zh": "n. 卷入, 牵连, 包含, 困窘；财政困难, 经济上的困窘",
+"freq": 2311,
+"needs_root": true
+},
+{
+"word": "dominate",
+"def_zh": "v. 支配, 占优势",
+"freq": 2312,
+"needs_root": true
+},
+{
+"word": "previously",
+"def_zh": "adv. 先, 先前, 以前, 前, (非正式)过早, 过急, 在前, 在...以前, 在先；先前地",
+"freq": 2313,
+"needs_root": false
+},
+{
+"word": "whenever",
+"def_zh": "conj. 每当；adv. 不论何时, 每逢",
+"freq": 2314,
+"needs_root": true
+},
+{
+"word": "transfer",
+"def_zh": "n. 迁移, 移动, 传递, 转让, 转移, 过户, 汇兑, 换车；vt. 使转移, 调转, 调任, 改变, 传递, 转让",
+"freq": 2315,
+"needs_root": false
+},
+{
+"word": "analyze",
+"def_zh": "vt. 分析, 细察, 分解；分析",
+"freq": 2316,
+"needs_root": true
+},
+{
+"word": "attach",
+"def_zh": "vt. 附上, 使依附, 使附属, 使喜爱, 系, 缚；vi. 附属, 归属, 联系在一起",
+"freq": 2320,
+"needs_root": true
+},
+{
+"word": "disaster",
+"def_zh": "n. 灾祸, 不幸, 彻底失败",
+"freq": 2321,
+"needs_root": false
+},
+{
+"word": "prospect",
+"def_zh": "n. 景色, 展望；vt. 勘探, 勘察",
+"freq": 2323,
+"needs_root": false
+},
+{
+"word": "boss",
+"def_zh": "n. 老板, 上司, 岩瘤, 浮雕, 母牛；vt. 指挥, 控制, 浮雕",
+"freq": 2324,
+"needs_root": true
+},
+{
+"word": "complaint",
+"def_zh": "n. 诉苦, 抱怨, 控诉；陈诉; 病",
+"freq": 2325,
+"needs_root": false
+},
+{
+"word": "championship",
+"def_zh": "n. 冠军身份, 冠军称号, 捍卫",
+"freq": 2326,
+"needs_root": true
+},
+{
+"word": "fundamental",
+"def_zh": "n. 基本原理, 原则, 基波；a. 基本的, 重要的, 原音的",
+"freq": 2328,
+"needs_root": true
+},
+{
+"word": "severe",
+"def_zh": "a. 严格的, 尖锐的, 严肃的, 严重的, 严厉的, 朴素的；严厉的, 苛刻的, 严重的",
+"freq": 2330,
+"needs_root": true
+},
+{
+"word": "enhance",
+"def_zh": "vt. 提高, 加强, 增加",
+"freq": 2331,
+"needs_root": true
+},
+{
+"word": "mystery",
+"def_zh": "n. 秘密, 神秘, 奥秘",
+"freq": 2332,
+"needs_root": true
+},
+{
+"word": "poverty",
+"def_zh": "n. 贫穷, 贫困, 缺乏；贫乏, 缺乏",
+"freq": 2333,
+"needs_root": true
+},
+{
+"word": "impose",
+"def_zh": "vt. 征(税), 把...强加于, 以...欺骗；vi. 利用, 欺骗, 施加影响",
+"freq": 2334,
+"needs_root": false
+},
+{
+"word": "entry",
+"def_zh": "n. 登录, 条目, 进入, 入口, 报关；登录项, 输入项, 条目",
+"freq": 2338,
+"needs_root": true
+},
+{
+"word": "evaluate",
+"def_zh": "vt. 评估, 评价, 赋值",
+"freq": 2339,
+"needs_root": true
+},
+{
+"word": "symbol",
+"def_zh": "n. 符号, 象征, 代号, 信条；符号; 码元",
+"freq": 2340,
+"needs_root": true
+},
+{
+"word": "maker",
+"def_zh": "n. 制造者, 上帝；制造者, 出票人",
+"freq": 2343,
+"needs_root": true
+},
+{
+"word": "mood",
+"def_zh": "n. 心情, 气氛, 生气, 基调；心境",
+"freq": 2344,
+"needs_root": true
+},
+{
+"word": "accomplish",
+"def_zh": "vt. 完成, 达到, 实现, 使完美",
+"freq": 2345,
+"needs_root": true
+},
+{
+"word": "emphasis",
+"def_zh": "n. 强调, 加强, 重点, 强语气",
+"freq": 2346,
+"needs_root": true
+},
+{
+"word": "boot",
+"def_zh": "n. 长靴, 踢, 解雇, 效用；vt. 使穿靴, 踢, 解雇, 有用",
+"freq": 2347,
+"needs_root": true
+},
+{
+"word": "illustrate",
+"def_zh": "vt. 举例说明, 作图解, 阐明；vi. 举例说明",
+"freq": 2348,
+"needs_root": true
+},
+{
+"word": "monitor",
+"def_zh": "n. 监督器, 级长, 监听员, 班长, 监视器, 告诫物；v. 监视, 监听, 监督",
+"freq": 2349,
+"needs_root": true
+},
+{
+"word": "bean",
+"def_zh": "n. 豆子；油嘴; 豆",
+"freq": 2352,
+"needs_root": true
+},
+{
+"word": "creature",
+"def_zh": "n. 人, 动物, 创造物, 生物",
+"freq": 2353,
+"needs_root": true
+},
+{
+"word": "evaluation",
+"def_zh": "n. 评估, 估价, 求值；鉴定; 评价; 求值",
+"freq": 2354,
+"needs_root": true
+},
+{
+"word": "commander",
+"def_zh": "n. 司令官, 指挥官",
+"freq": 2355,
+"needs_root": false
+},
+{
+"word": "digital",
+"def_zh": "a. 数字显示的, 数字的；n. 数字仪表, 数字式电子表(或时钟)",
+"freq": 2356,
+"needs_root": true
+},
+{
+"word": "arrangement",
+"def_zh": "n. 排列, 整齐, 安排；排列",
+"freq": 2357,
+"needs_root": true
+},
+{
+"word": "concentrate",
+"def_zh": "n. 浓缩, 精选；v. 集中, 专心",
+"freq": 2358,
+"needs_root": false
+},
+{
+"word": "psychological",
+"def_zh": "a. 心理学的, 精神上的, 心灵的；心理上的, 心理学的",
+"freq": 2361,
+"needs_root": true
+},
+{
+"word": "anger",
+"def_zh": "n. 忿怒；vt. 激怒, 使发怒",
+"freq": 2362,
+"needs_root": true
+},
+{
+"word": "heavily",
+"def_zh": "adv. 很重地, 严重地, 难以忍受地",
+"freq": 2363,
+"needs_root": true
+},
+{
+"word": "peak",
+"def_zh": "n. 山峰, 巅, 山顶, 顶点, 尖峰, 帽舌；a. 最高的, 最大值的",
+"freq": 2364,
+"needs_root": true
+},
+{
+"word": "approximately",
+"def_zh": "adv. 大约, 大致, 近于；大约, 近似",
+"freq": 2365,
+"needs_root": true
+},
+{
+"word": "missile",
+"def_zh": "n. 发射物, 导弹, 飞弹, 火箭；a. 可发射的",
+"freq": 2367,
+"needs_root": false
+},
+{
+"word": "disorder",
+"def_zh": "n. 杂乱, 混乱；vt. 扰乱, 使失调",
+"freq": 2368,
+"needs_root": false
+},
+{
+"word": "equally",
+"def_zh": "adv. 相等地, 同样地, 平等地",
+"freq": 2369,
+"needs_root": true
+},
+{
+"word": "wire",
+"def_zh": "n. 电线, 电报, 电信, 铁丝网, 金属丝；vt. 用金属丝捆扎, 拍电报",
+"freq": 2370,
+"needs_root": true
+},
+{
+"word": "vary",
+"def_zh": "vt. 改变, 使多样化；vi. 变化, 有不同, 违反",
+"freq": 2371,
+"needs_root": true
+},
+{
+"word": "round",
+"def_zh": "n. 圆, 圆形物, 巡回, 循环, 一轮, 一回合, 一局, 范围, 轮唱；a. 圆的, 球形的, 丰满的, 肥胖的, 完全的, 大概的, 完美的, 圆润的",
+"freq": 2372,
+"needs_root": true
+},
+{
+"word": "distribution",
+"def_zh": "n. 分配；分布",
+"freq": 2373,
+"needs_root": false
+},
+{
+"word": "transportation",
+"def_zh": "n. 运输, 输送, 交通车辆；运转, 运输, 运输费",
+"freq": 2374,
+"needs_root": false
+},
+{
+"word": "holy",
+"def_zh": "a. 神圣的, 圣洁的, 至善的；n. 神圣的东西",
+"freq": 2375,
+"needs_root": true
+},
+{
+"word": "twin",
+"def_zh": "n. 双胞胎中一人, 一对非常相像的人(或物)中的一个；a. 双胞胎的, 成对的, 孪生的",
+"freq": 2376,
+"needs_root": true
+},
+{
+"word": "command",
+"def_zh": "n. 命令, 指挥, 控制, 部队, 司令部；v. 命令, 指挥, 控制",
+"freq": 2378,
+"needs_root": false
+},
+{
+"word": "commission",
+"def_zh": "n. 委任状, 任官令, 所委职责, 佣金, 犯, 委托, 所托之事；vt. 委任, 委托制作, 使服役",
+"freq": 2379,
+"needs_root": false
+},
+{
+"word": "interpretation",
+"def_zh": "n. 解释, 演出, 翻译；插值; 插值法; 解释",
+"freq": 2380,
+"needs_root": false
+},
+{
+"word": "strongly",
+"def_zh": "adv. 强有力地, 坚强地, 激烈地",
+"freq": 2383,
+"needs_root": true
+},
+{
+"word": "luck",
+"def_zh": "n. 运气, 幸运, 好运, 侥幸；vi. 靠好运成功",
+"freq": 2384,
+"needs_root": true
+},
+{
+"word": "clinic",
+"def_zh": "n. 诊所, 临床教学；诊所(门诊部); 临床(讲解); 临床(学)科",
+"freq": 2388,
+"needs_root": true
+},
+{
+"word": "veteran",
+"def_zh": "n. 老手, 退伍军人, 老兵, 老树；a. 老兵的, 老练的, 经验丰富的",
+"freq": 2389,
+"needs_root": true
+},
+{
+"word": "smell",
+"def_zh": "n. 味道, 气味, 嗅觉, 嗅, 臭味, 气息；vt. 闻, 探出, 察觉, 发出...的气味",
+"freq": 2390,
+"needs_root": true
+},
+{
+"word": "tablespoon",
+"def_zh": "n. 大汤匙；汤匙, 大匙(15毫升)",
+"freq": 2391,
+"needs_root": true
+},
+{
+"word": "capable",
+"def_zh": "a. 有能力的, 能的, 能干的",
+"freq": 2392,
+"needs_root": true
+},
+{
+"word": "nervous",
+"def_zh": "a. 神经紧张的, 不安的, 神经的；神经的; 神经质的, 神经过敏的",
+"freq": 2393,
+"needs_root": true
+},
+{
+"word": "tourist",
+"def_zh": "n. 观光客, 旅行者；a. 旅游的",
+"freq": 2394,
+"needs_root": true
+},
+{
+"word": "toss",
+"def_zh": "n. 投掷, 抛, 摇摆, 震荡, 掷钱币决定；vt. 投掷, 猛抬, 摇荡, 使不安, 掷钱币决定",
+"freq": 2396,
+"needs_root": true
+},
+{
+"word": "crucial",
+"def_zh": "a. 决定性的, 重要的, 严厉的；十字形的; 决断的, 定局的",
+"freq": 2397,
+"needs_root": true
+},
+{
+"word": "bury",
+"def_zh": "vt. 埋葬, 埋藏",
+"freq": 2398,
+"needs_root": true
+},
+{
+"word": "pray",
+"def_zh": "v. 祈祷, 恳求, 请",
+"freq": 2399,
+"needs_root": true
+},
+{
+"word": "tomato",
+"def_zh": "n. 番茄, 西红柿",
+"freq": 2400,
+"needs_root": true
+},
+{
+"word": "butter",
+"def_zh": "n. 奶油, 黄油；vt. 涂黄油于",
+"freq": 2402,
+"needs_root": true
+},
+{
+"word": "deficit",
+"def_zh": "n. 赤字, 不足额；短缺",
+"freq": 2403,
+"needs_root": true
+},
+{
+"word": "bathroom",
+"def_zh": "n. 浴室, 厕所",
+"freq": 2404,
+"needs_root": true
+},
+{
+"word": "objective",
+"def_zh": "n. 目的, 目标, 宗旨, 宾格, 实物；a. 客观的, 如实的, 无偏见的, 宾格的",
+"freq": 2406,
+"needs_root": false
+},
+{
+"word": "electronic",
+"def_zh": "a. 电子的；电子工业协会接口",
+"freq": 2407,
+"needs_root": false
+},
+{
+"word": "ally",
+"def_zh": "n. 同盟者, 同盟国, 助手；vt. 使联盟, 使联合, 使有关系",
+"freq": 2408,
+"needs_root": true
+},
+{
+"word": "surely",
+"def_zh": "adv. 的确地, 安全地；保证, 保证人, 保证金",
+"freq": 2410,
+"needs_root": false
+},
+{
+"word": "reputation",
+"def_zh": "n. 名誉, 名声, 声望；名声, 名誉, 公认证据",
+"freq": 2411,
+"needs_root": true
+},
+{
+"word": "tower",
+"def_zh": "n. 塔, 高楼, 堡垒；vi. 高耸, 翱翔",
+"freq": 2412,
+"needs_root": true
+},
+{
+"word": "mixture",
+"def_zh": "n. 混合, 混淆, 混合物；混合物",
+"freq": 2413,
+"needs_root": true
+},
+{
+"word": "smoke",
+"def_zh": "n. 烟, 雾气, 烟熏剂, 抽烟, 烟色；vi. 吸烟, 冒烟, 弥漫",
+"freq": 2414,
+"needs_root": true
+},
+{
+"word": "confront",
+"def_zh": "vt. 使面对, 对抗, 遭遇, 使对质, 比较；对证, 使对质, 比较",
+"freq": 2415,
+"needs_root": false
+},
+{
+"word": "pure",
+"def_zh": "a. 纯的, 纯净的, 纯洁的, 清白的, 完美的, 无瑕的, 抽象的；的, 纯净的",
+"freq": 2416,
+"needs_root": true
+},
+{
+"word": "glance",
+"def_zh": "n. 一瞥, 闪光, 掠过, 辉矿类；vi. 扫视, 闪光, 掠过, 提到, 略说",
+"freq": 2417,
+"needs_root": true
+},
+{
+"word": "toy",
+"def_zh": "n. 玩具, 小玩艺儿, 小型的东西, 消遣；a. 供玩耍的, 作为玩具的",
+"freq": 2418,
+"needs_root": true
+},
+{
+"word": "prisoner",
+"def_zh": "n. 囚犯, 犯人, 战俘；犯人, 囚犯, 扣押犯",
+"freq": 2419,
+"needs_root": true
+},
+{
+"word": "dimension",
+"def_zh": "n. 尺寸, 次元, 面积, 维数；vt. 标出尺寸",
+"freq": 2420,
+"needs_root": true
+},
+{
+"word": "fellow",
+"def_zh": "n. 男人, 朋友, 同事；a. 同伴的, 同事的, 同道的",
+"freq": 2421,
+"needs_root": true
+},
+{
+"word": "smooth",
+"def_zh": "a. 平滑的, 平稳的, 流畅的, 和蔼的, 安祥的, 圆滑的, 调匀的, 无毛的；vt. 使光滑, 烫平, 使平和, 消除",
+"freq": 2422,
+"needs_root": true
+},
+{
+"word": "nearby",
+"def_zh": "a. 附近的, 近旁的；adv. 在附近, 近旁地",
+"freq": 2423,
+"needs_root": true
+},
+{
+"word": "peer",
+"def_zh": "n. 同等的人, 匹敌, 贵族；vi. 凝视, 窥视, 费力地看, 隐现",
+"freq": 2424,
+"needs_root": true
+},
+{
+"word": "designer",
+"def_zh": "n. 设计者, 谋划者, 制图者；设计员",
+"freq": 2426,
+"needs_root": false
+},
+{
+"word": "relative",
+"def_zh": "n. 亲戚, 关系词；a. 有关系的, 相对的, 比较的",
+"freq": 2428,
+"needs_root": true
+},
+{
+"word": "educator",
+"def_zh": "n. 教育家",
+"freq": 2429,
+"needs_root": true
+},
+{
+"word": "belt",
+"def_zh": "n. 带子, 地带；带, 腰带, 束带, 地带, 区",
+"freq": 2430,
+"needs_root": true
+},
+{
+"word": "immigration",
+"def_zh": "n. 移民, 移居；移民",
+"freq": 2431,
+"needs_root": true
+},
+{
+"word": "teaspoon",
+"def_zh": "n. 茶匙；茶匙(4毫升)",
+"freq": 2432,
+"needs_root": true
+},
+{
+"word": "implication",
+"def_zh": "n. 牵连, 含义, 暗示；推断, 含蓄之意, 暗示",
+"freq": 2434,
+"needs_root": true
+},
+{
+"word": "perfectly",
+"def_zh": "adv. 完全地, 无瑕疵地, 完整地",
+"freq": 2435,
+"needs_root": false
+},
+{
+"word": "coast",
+"def_zh": "n. 海岸, 滑坡；v. 沿海岸而行",
+"freq": 2436,
+"needs_root": true
+},
+{
+"word": "supporter",
+"def_zh": "n. 支持者, 后盾, 迫随者, 护身织物；支持者, 赡养者, 抚养者",
+"freq": 2437,
+"needs_root": false
+},
+{
+"word": "accompany",
+"def_zh": "vt. 陪伴, 伴随, 补充, 为...伴奏；vi. 伴奏, 伴唱",
+"freq": 2438,
+"needs_root": true
+},
+{
+"word": "silver",
+"def_zh": "n. 银, 银币, 银器；a. 银的, 银制的, 银器的",
+"freq": 2439,
+"needs_root": true
+},
+{
+"word": "teenager",
+"def_zh": "n. 十三岁到十九岁的少年",
+"freq": 2440,
+"needs_root": true
+},
+{
+"word": "recognition",
+"def_zh": "n. 赞誉, 认得, 识别, 承认, 认可, 认识；认识",
+"freq": 2441,
+"needs_root": true
+},
+{
+"word": "retirement",
+"def_zh": "n. 退休, 隐居, 撤退；退休, 退股, (固定资产)报废",
+"freq": 2442,
+"needs_root": true
+},
+{
+"word": "recovery",
+"def_zh": "n. 恢复, 复原, 痊愈, 重获；恢复",
+"freq": 2443,
+"needs_root": true
+},
+{
+"word": "flag",
+"def_zh": "n. 标志, 旗标, 旗子, 信号旗, 菖蒲；vt. 悬旗, 打旗号, 铺石板",
+"freq": 2444,
+"needs_root": true
+},
+{
+"word": "whisper",
+"def_zh": "n. 耳语, 密谈, 谣传, 沙沙声；vi. 耳语, 密谈, 沙沙地响",
+"freq": 2446,
+"needs_root": true
+},
+{
+"word": "gentleman",
+"def_zh": "n. 绅士, 先生",
+"freq": 2447,
+"needs_root": true
+},
+{
+"word": "corn",
+"def_zh": "n. 玉蜀黍, 谷类, 谷粒, 鸡眼；vt. 使成颗粒, 腌",
+"freq": 2448,
+"needs_root": true
+},
+{
+"word": "inner",
+"def_zh": "a. 内部的, 内心的；n. 内部",
+"freq": 2449,
+"needs_root": true
+},
+{
+"word": "moon",
+"def_zh": "n. 月亮, 月球, 月光；vi. 闲荡",
+"freq": 2450,
+"needs_root": true
+},
+{
+"word": "junior",
+"def_zh": "n. 年少者, 地位较低者, 大学三年级学生；a. 年少的, 下级的, 后进的",
+"freq": 2451,
+"needs_root": true
+},
+{
+"word": "swing",
+"def_zh": "n. 摇摆, 振幅, 音律, 节奏, 涨落, 秋千, 旋转, 行动自由；vi. 摇摆, 悬挂, 旋转, 大摇大摆地走, 转向",
+"freq": 2453,
+"needs_root": true
+},
+{
+"word": "throat",
+"def_zh": "n. 咽喉, 喉咙, 嗓音；vt. 用喉音说, 开沟于",
+"freq": 2454,
+"needs_root": true
+},
+{
+"word": "salary",
+"def_zh": "n. 薪水；vt. 给...加薪",
+"freq": 2455,
+"needs_root": true
+},
+{
+"word": "observer",
+"def_zh": "n. 观察者, 遵守者, 观察员；观察者, 观察员, 监场员",
+"freq": 2456,
+"needs_root": true
+},
+{
+"word": "publication",
+"def_zh": "n. 出版物, 出版, 公布；发布",
+"freq": 2459,
+"needs_root": true
+},
+{
+"word": "dig",
+"def_zh": "vt. 挖, 翻土, 发掘；vi. 挖掘",
+"freq": 2460,
+"needs_root": true
+},
+{
+"word": "crop",
+"def_zh": "n. 农作物, 产量, 平头；vt. 收割, 修剪, 种植",
+"freq": 2461,
+"needs_root": true
+},
+{
+"word": "permanent",
+"def_zh": "a. 永久的, 不变的, 固定的, 持久的；n. 烫发",
+"freq": 2464,
+"needs_root": true
+},
+{
+"word": "phenomenon",
+"def_zh": "n. 现象, 迹象, 表现, 奇迹, 奇才；现象",
+"freq": 2466,
+"needs_root": true
+},
+{
+"word": "anxiety",
+"def_zh": "n. 焦虑, 忧虑, 令人焦虑的事；焦虑",
+"freq": 2467,
+"needs_root": true
+},
+{
+"word": "unlike",
+"def_zh": "a. 不像的, 不同的；prep. 不像, 和...不同",
+"freq": 2468,
+"needs_root": true
+},
+{
+"word": "literally",
+"def_zh": "adv. 逐字地, 按照字面上地, 不夸张地",
+"freq": 2469,
+"needs_root": true
+},
+{
+"word": "resist",
+"def_zh": "v. 抵抗, 耐得住, 抵制, 反抗；n. 防染材料",
+"freq": 2470,
+"needs_root": true
+},
+{
+"word": "convention",
+"def_zh": "n. 大会, 协定, 惯例, 约定；约定",
+"freq": 2472,
+"needs_root": false
+},
+{
+"word": "embrace",
+"def_zh": "n. 拥抱；vt. 拥抱, 互相拥抱, 包含, 收买",
+"freq": 2473,
+"needs_root": true
+},
+{
+"word": "assist",
+"def_zh": "n. 帮助, 协助；vt. 帮助, 促进",
+"freq": 2475,
+"needs_root": true
+},
+{
+"word": "exhibition",
+"def_zh": "n. 表现, 展览会, 展览品；投药, 展览, 展出",
+"freq": 2476,
+"needs_root": true
+},
+{
+"word": "construct",
+"def_zh": "vt. 构造, 建造, 对...进行构思, 作图；n. 构成物",
+"freq": 2477,
+"needs_root": false
+},
+{
+"word": "viewer",
+"def_zh": "n. 观察者, 看电视者, 视察员, 观察器；指示器",
+"freq": 2478,
+"needs_root": true
+},
+{
+"word": "pan",
+"def_zh": "n. 平锅, 浅盘, 盆地, 硬土层, 拍摄全景；v. 上下左右移动, 摇镜头, 淘洗, 淘金",
+"freq": 2479,
+"needs_root": true
+},
+{
+"word": "consultant",
+"def_zh": "n. 顾问, 征询意见者；顾问医师",
+"freq": 2480,
+"needs_root": false
+},
+{
+"word": "administrator",
+"def_zh": "n. 管理人, 行政官；遗产管理人员",
+"freq": 2484,
+"needs_root": true
+},
+{
+"word": "occasionally",
+"def_zh": "adv. 有时候, 偶而",
+"freq": 2485,
+"needs_root": true
+},
+{
+"word": "mayor",
+"def_zh": "n. 市长；市长",
+"freq": 2486,
+"needs_root": true
+},
+{
+"word": "consideration",
+"def_zh": "n. 考虑, 原因；考虑, 思考, 报酬",
+"freq": 2487,
+"needs_root": false
+},
+{
+"word": "pink",
+"def_zh": "n. 粉红色, 石竹花, 化身, 典范, 头面人物, 极度；a. 粉红的, 石竹科的, 比较激进的, 脸色发红的, 精致的, 有点下流的",
+"freq": 2488,
+"needs_root": true
+},
+{
+"word": "secure",
+"def_zh": "a. 无虑的, 安心的, 安全的, 可靠的, 保险的；vt. 固定, 获得, 保证, 使安全, 掩护, 招致",
+"freq": 2489,
+"needs_root": true
+},
+{
+"word": "historic",
+"def_zh": "a. 历史上著名的, 有历史性的",
+"freq": 2492,
+"needs_root": true
+},
+{
+"word": "buck",
+"def_zh": "n. 元, 雄鹿, 纨绔子弟, 鞍马, 培克(赌博时的庄家标志), 碱水, 自夸, 谈话；vi. 马背突然拱起, 反对, 吹牛, 闲聊",
+"freq": 2493,
+"needs_root": true
+},
+{
+"word": "poem",
+"def_zh": "n. 诗, 诗般美的事物",
+"freq": 2494,
+"needs_root": true
+},
+{
+"word": "grandmother",
+"def_zh": "n. 祖母, 女祖先",
+"freq": 2495,
+"needs_root": true
+},
+{
+"word": "bind",
+"def_zh": "vt. 绑, 约束, 装订, 包扎, 使结合；vi. 凝固, 有约束力",
+"freq": 2496,
+"needs_root": true
+},
+{
+"word": "fifth",
+"def_zh": "num. 第五, 五分之一",
+"freq": 2497,
+"needs_root": true
+},
+{
+"word": "constantly",
+"def_zh": "adv. 不变地, 不断地, 时常地",
+"freq": 2498,
+"needs_root": false
+},
+{
+"word": "enterprise",
+"def_zh": "n. 企业, 事业心, 进取心, 干事业；企业",
+"freq": 2499,
+"needs_root": true
+},
+{
+"word": "favor",
+"def_zh": "n. 好意, 喜爱；vt. 赐予, 支持, 喜欢, 证实",
+"freq": 2500,
+"needs_root": true
+},
+{
+"word": "apparent",
+"def_zh": "a. 清晰可见的, 显然的, 表面上的；外在的",
+"freq": 2502,
+"needs_root": true
+},
+{
+"word": "stomach",
+"def_zh": "n. 胃, 食欲, 欲望, 肚子；vt. 吃下, 忍受",
+"freq": 2503,
+"needs_root": true
+},
+{
+"word": "weigh",
+"def_zh": "vt. 称...重量, 衡量, 把...压弯, 考虑, 权衡, 起锚；vi. 称分量, 有意义, 重压, 起锚",
+"freq": 2504,
+"needs_root": true
+},
+{
+"word": "install",
+"def_zh": "vt. 安装, 安置, 使就职；安装, 安装程序; DOS内部命令:安装常驻程序",
+"freq": 2505,
+"needs_root": true
+},
+{
+"word": "sensitive",
+"def_zh": "a. 敏感的, 易感的, 灵敏的, 感光的；敏感的, 灵敏的, 感度高的",
+"freq": 2506,
+"needs_root": false
+},
+{
+"word": "mail",
+"def_zh": "n. 邮件, 邮政, 邮递, 盔甲；vt. 邮寄, 给...穿盔甲",
+"freq": 2508,
+"needs_root": true
+},
+{
+"word": "recipe",
+"def_zh": "n. 食谱, 处方, 秘诀；取(处方头语), 处方",
+"freq": 2509,
+"needs_root": true
+},
+{
+"word": "reasonable",
+"def_zh": "a. 合理的, 明理的, 适当的；合理的, 公道的, 正当的",
+"freq": 2510,
+"needs_root": true
+},
+{
+"word": "elementary",
+"def_zh": "a. 初步的, 基本的；元素的, 基础的, 初级的",
+"freq": 2511,
+"needs_root": true
+},
+{
+"word": "wooden",
+"def_zh": "a. 木制的, 呆笨的, 木然的",
+"freq": 2512,
+"needs_root": true
+},
+{
+"word": "aggressive",
+"def_zh": "a. 侵略的, 挑畔的, 进取的；侵略的, 爱挑衅的, 行为过火的",
+"freq": 2514,
+"needs_root": true
+},
+{
+"word": "concert",
+"def_zh": "n. 音乐会, 和声, 一致；vt. 协力, 协调",
+"freq": 2515,
+"needs_root": false
+},
+{
+"word": "false",
+"def_zh": "a. 错误的, 虚伪的, 假的, 不老实的；adv. 不准确地, 欺诈地",
+"freq": 2516,
+"needs_root": true
+},
+{
+"word": "intention",
+"def_zh": "n. 意图, 目的, 含义；愈合, 意向",
+"freq": 2517,
+"needs_root": true
+},
+{
+"word": "channel",
+"def_zh": "n. 海峡, 航道, 频道；vt. 引导, 在...上挖沟, 形成河道",
+"freq": 2518,
+"needs_root": true
+},
+{
+"word": "extreme",
+"def_zh": "n. 极端, 末端；a. 极端的, 尽头的, 极度的, 偏激的",
+"freq": 2519,
+"needs_root": true
+},
+{
+"word": "tube",
+"def_zh": "n. 管, 软管, 隧道；vt. 把...装管, 使通过管子",
+"freq": 2520,
+"needs_root": true
+},
+{
+"word": "protein",
+"def_zh": "n. 蛋白质；a. 蛋白质的",
+"freq": 2523,
+"needs_root": false
+},
+{
+"word": "absence",
+"def_zh": "n. 缺席, 缺乏, 没有；失神",
+"freq": 2524,
+"needs_root": false
+},
+{
+"word": "rapidly",
+"def_zh": "adv. 飞快地, 迅速地, 赶紧地",
+"freq": 2527,
+"needs_root": true
+},
+{
+"word": "jail",
+"def_zh": "n. 监牢, 监狱, 拘留所；vt. 监禁, 下狱",
+"freq": 2528,
+"needs_root": true
+},
+{
+"word": "diversity",
+"def_zh": "n. 差异, 多样性；多样性",
+"freq": 2531,
+"needs_root": false
+},
+{
+"word": "pace",
+"def_zh": "n. 速度, 步调, 步法；vi. 踱步, 缓慢走",
+"freq": 2533,
+"needs_root": true
+},
+{
+"word": "employment",
+"def_zh": "n. 雇用, 职业, 工作；职业, 雇用, 职工招请",
+"freq": 2534,
+"needs_root": true
+},
+{
+"word": "speaker",
+"def_zh": "n. 说话人, 讲演者, 发言人, 喇叭, 扬声器；扬声器",
+"freq": 2535,
+"needs_root": true
+},
+{
+"word": "essay",
+"def_zh": "n. 随笔, 短文, 评论, 企图；vt. 试图",
+"freq": 2536,
+"needs_root": true
+},
+{
+"word": "impression",
+"def_zh": "n. 印象, 意念, 盖印, 印记, 印数, 底色, 效果；压迹, 印模, 印象, 影响",
+"freq": 2537,
+"needs_root": true
+},
+{
+"word": "respondent",
+"def_zh": "a. 回答的, 应答的, 反射的；n. 应答者, 被告",
+"freq": 2538,
+"needs_root": true
+},
+{
+"word": "giant",
+"def_zh": "n. 巨人, 大力士, 巨大怪物；a. 庞大的, 巨大的",
+"freq": 2539,
+"needs_root": true
+},
+{
+"word": "cake",
+"def_zh": "n. 蛋糕, 块, 饼；vt. 使结块, 加块状物于",
+"freq": 2540,
+"needs_root": true
+},
+{
+"word": "negotiate",
+"def_zh": "vi. 商议, 谈判, 交涉；vt. 谈妥, 转让, 处理",
+"freq": 2541,
+"needs_root": true
+},
+{
+"word": "historian",
+"def_zh": "n. 历史学家, 记事者",
+"freq": 2542,
+"needs_root": true
+},
+{
+"word": "restore",
+"def_zh": "vt. 回复, 恢复, 归还, 修补, 修复；vt. 还原",
+"freq": 2543,
+"needs_root": true
+},
+{
+"word": "substantial",
+"def_zh": "n. 重要材料(或事物), 有实际价值的东西；a. 实质上的, 物质的, 有内容的, 结实的",
+"freq": 2544,
+"needs_root": false
+},
+{
+"word": "pop",
+"def_zh": "n. 砰然声, 枪击, 含气饮料, 流行音乐, 通俗艺术；a. 流行的, 热门的, 通俗的",
+"freq": 2545,
+"needs_root": true
+},
+{
+"word": "specialist",
+"def_zh": "n. 专门医师, 专家；a. 专业的, 专家的",
+"freq": 2546,
+"needs_root": false
+},
+{
+"word": "origin",
+"def_zh": "n. 起源, 起因, 出身, 开端；原点; 起始地址; 信件来源的相关数据",
+"freq": 2547,
+"needs_root": true
+},
+{
+"word": "approval",
+"def_zh": "n. 赞成, 批准；核准",
+"freq": 2549,
+"needs_root": true
+},
+{
+"word": "criticize",
+"def_zh": "v. 批评, 吹毛求疵, 非难",
+"freq": 2550,
+"needs_root": true
+},
+{
+"word": "advise",
+"def_zh": "vt. 劝告, 给...出主意, 通知, 建议；vi. 提意见, 商量",
+"freq": 2552,
+"needs_root": true
+},
+{
+"word": "quietly",
+"def_zh": "adv. 安静地, 沉着地, 秘密地",
+"freq": 2553,
+"needs_root": true
+},
+{
+"word": "conventional",
+"def_zh": "a. 传统的, 习惯的, 约定的；惯例的, 常规的, 传统的",
+"freq": 2554,
+"needs_root": false
+},
+{
+"word": "depth",
+"def_zh": "n. 深度, 深处, 深奥；深度",
+"freq": 2555,
+"needs_root": true
+},
+{
+"word": "disability",
+"def_zh": "n. 无力, 无能, 残疾；劳动能力丧失, 病废",
+"freq": 2558,
+"needs_root": false
+},
+{
+"word": "wealth",
+"def_zh": "n. 财富, 资源, 财产, 丰富, 富裕, 大量；财富",
+"freq": 2559,
+"needs_root": true
+},
+{
+"word": "shell",
+"def_zh": "n. 贝壳, 壳, 外形, 炮弹；vt. 去壳, 脱落, 炮轰",
+"freq": 2560,
+"needs_root": true
+},
+{
+"word": "biological",
+"def_zh": "a. 生物学的；生物学的",
+"freq": 2564,
+"needs_root": true
+},
+{
+"word": "effectively",
+"def_zh": "adv. 有效地, 有力地, 实际上",
+"freq": 2566,
+"needs_root": false
+},
+{
+"word": "onion",
+"def_zh": "n. 洋葱；vt. 因洋葱使掉泪",
+"freq": 2567,
+"needs_root": true
+},
+{
+"word": "deputy",
+"def_zh": "n. 副手，代理人",
+"freq": 2568,
+"needs_root": true
+},
+{
+"word": "flat",
+"def_zh": "a. 平坦的, 单调的, 无力的, 浅的, 萧条的, 干脆的, 无聊的；adv. 平直地, 断然地",
+"freq": 2569,
+"needs_root": true
+},
+{
+"word": "brand",
+"def_zh": "n. 商标, 牌子, 烙印；vt. 打烙印于",
+"freq": 2570,
+"needs_root": true
+},
+{
+"word": "assure",
+"def_zh": "vt. 保证, 使确信, 弄清楚, 担保；确信, 保证, 保障",
+"freq": 2571,
+"needs_root": true
+},
+{
+"word": "mad",
+"def_zh": "a. 疯狂的, 发疯的, 生气的, 愚蠢的, 狂欢的；n. 狂怒",
+"freq": 2572,
+"needs_root": true
+},
+{
+"word": "award",
+"def_zh": "n. 奖品, 裁定, 判决；vt. 授予, 给予",
+"freq": 2573,
+"needs_root": true
+},
+{
+"word": "dealer",
+"def_zh": "n. 经销商, 商人；交易员, 贩卖商",
+"freq": 2575,
+"needs_root": true
+},
+{
+"word": "utility",
+"def_zh": "n. 功用, 有用之物, 实用, 公用事业, 实用程序；a. 实用的, 有多种用途的",
+"freq": 2578,
+"needs_root": true
+},
+{
+"word": "precisely",
+"def_zh": "adv. 精确地, 明确地, 刻板地, 拘泥地, 正好, 恰恰, 对, 正是如此, 确实如此, 不错",
+"freq": 2579,
+"needs_root": false
+},
+{
+"word": "arise",
+"def_zh": "vi. 站立, 出现, 起来",
+"freq": 2581,
+"needs_root": true
+},
+{
+"word": "nevertheless",
+"def_zh": "adv. 然而, 虽然如此；conj. 然而",
+"freq": 2582,
+"needs_root": false
+},
+{
+"word": "highway",
+"def_zh": "n. 公路, 大道, 捷径；公路, 大路",
+"freq": 2583,
+"needs_root": true
+},
+{
+"word": "clinical",
+"def_zh": "a. 临床的, 门诊部的；临床的, 临证的",
+"freq": 2584,
+"needs_root": true
+},
+{
+"word": "routine",
+"def_zh": "n. 常规, 日常工作, 惯例, 例行公事；a. 日常的, 常规的",
+"freq": 2585,
+"needs_root": true
+},
+{
+"word": "wage",
+"def_zh": "n. 工资, 报应, 报偿；vt. 开展, 进行",
+"freq": 2586,
+"needs_root": true
+},
+{
+"word": "normally",
+"def_zh": "adv. 正规地, 合规则, 正常地",
+"freq": 2588,
+"needs_root": true
+},
+{
+"word": "phrase",
+"def_zh": "n. 惯用语, 词组, 成语, 措词, 乐句；vt. 用短语表达, 把(乐曲)分成短句",
+"freq": 2589,
+"needs_root": true
+},
+{
+"word": "ingredient",
+"def_zh": "n. 成分, 因素；配合剂; 拼料; 成分; 组分",
+"freq": 2590,
+"needs_root": true
+},
+{
+"word": "stake",
+"def_zh": "n. 桩, 炮烙刑, 木柱, 赌注, 奖金；vt. 打桩, 用桩撑, 下赌注, 资助",
+"freq": 2591,
+"needs_root": true
+},
+{
+"word": "fiber",
+"def_zh": "n. 纤维, 构造, 纤维制品；纤维",
+"freq": 2594,
+"needs_root": true
+},
+{
+"word": "activist",
+"def_zh": "n. 激进主义分子",
+"freq": 2595,
+"needs_root": true
+},
+{
+"word": "snap",
+"def_zh": "vt. 使突然中断, 猛咬, 争夺, 拉断, 使有啪啪声, 厉声说, 突然射击, 用快照拍摄；vi. 咬, 扑, 抓, 折断, 劈啪地响, 厉声说, 砰然关上",
+"freq": 2597,
+"needs_root": true
+},
+{
+"word": "terrorism",
+"def_zh": "n. 恐怖主义, 恐怖统治, 恐怖状态；胁迫, 暴政, 恐怖政治",
+"freq": 2598,
+"needs_root": true
+},
+{
+"word": "refugee",
+"def_zh": "n. 难民, 流亡者；避难者, 流亡者, 难民",
+"freq": 2599,
+"needs_root": true
+},
+{
+"word": "incorporate",
+"def_zh": "a. 合并的, 组成公司的, 一体化的；vt. 吸收, 合并, 使组成公司, 体现",
+"freq": 2600,
+"needs_root": true
+},
+{
+"word": "ultimate",
+"def_zh": "n. 终极, 根本, 顶点, 基本原则；a. 终极的, 根本的, 极限的, 最远的, 最后的, 最大的",
+"freq": 2601,
+"needs_root": true
+},
+{
+"word": "corporation",
+"def_zh": "n. 公司, 合作, 法人团体；法人团体, 社团, 法人",
+"freq": 2602,
+"needs_root": false
+},
+{
+"word": "hip",
+"def_zh": "n. 臀部, 蔷薇果, 忧郁；a. 熟悉内情的",
+"freq": 2603,
+"needs_root": true
+},
+{
+"word": "switch",
+"def_zh": "n. 开关, 电闸, 转换, 软枝, 鞭子, 道岔；vt. 转变, 切换, 摆动, 转换, 使转轨",
+"freq": 2604,
+"needs_root": true
+},
+{
+"word": "assumption",
+"def_zh": "n. 假定, 自负, 担任, 假装；假定, 承担",
+"freq": 2606,
+"needs_root": true
+},
+{
+"word": "gear",
+"def_zh": "n. 齿轮, 工具；vt. 以齿轮连起, 开动, 使适应, 安排",
+"freq": 2607,
+"needs_root": true
+},
+{
+"word": "barrier",
+"def_zh": "n. 障碍, 栅栏；势垒; 阻片; 阻挡层",
+"freq": 2609,
+"needs_root": true
+},
+{
+"word": "minor",
+"def_zh": "n. 未成年人, 副修科目；a. 较小的, 二流的, 未成年的",
+"freq": 2610,
+"needs_root": true
+},
+{
+"word": "assign",
+"def_zh": "vt. 分配, 指派, 赋值；赋值",
+"freq": 2611,
+"needs_root": false
+},
+{
+"word": "council",
+"def_zh": "n. 会议, 委员会；委员会",
+"freq": 2612,
+"needs_root": true
+},
+{
+"word": "provision",
+"def_zh": "n. (政府提供的)钱和设备, 准备, 供应品, 规定, 条款；vt. 供给...食物及必需品",
+"freq": 2612,
+"needs_root": false
+},
+{
+"word": "killer",
+"def_zh": "n. (非正式)杀人者, 屠杀者, 猛兽, 致死(疾病), 杀手, 止痛药, 限制器, 瞄准器；删除程序; 断路器",
+"freq": 2613,
+"needs_root": true
+},
+{
+"word": "gang",
+"def_zh": "n. 队, 群, 帮；vi. 成群结队, 结成一伙",
+"freq": 2614,
+"needs_root": true
+},
+{
+"word": "classic",
+"def_zh": "n. 古典作品, 杰作, 大艺术家；a. 第一流的, 最优秀的, 古典的",
+"freq": 2616,
+"needs_root": true
+},
+{
+"word": "chemical",
+"def_zh": "n. 化学药品；a. 化学的, 化学上用的",
+"freq": 2617,
+"needs_root": true
+},
+{
+"word": "label",
+"def_zh": "n. 标签, 称号, 商标, 标志；vt. 贴标签于, 标注",
+"freq": 2619,
+"needs_root": true
+},
+{
+"word": "teen",
+"def_zh": "n. 愤怒, 悲哀",
+"freq": 2620,
+"needs_root": true
+},
+{
+"word": "vacation",
+"def_zh": "n. 假期, 休假；假期, 停审期, 休庭期",
+"freq": 2622,
+"needs_root": true
+},
+{
+"word": "advocate",
+"def_zh": "n. 提倡者, 拥护者；vt. 主张, 提倡",
+"freq": 2623,
+"needs_root": true
+},
+{
+"word": "draft",
+"def_zh": "n. 气流, 草稿, 汇票, 草案；vt. 起草, 征兵",
+"freq": 2624,
+"needs_root": true
+},
+{
+"word": "extraordinary",
+"def_zh": "a. 非常的, 特别的, 非凡的；非常的, 特别的, 临时的",
+"freq": 2625,
+"needs_root": true
+},
+{
+"word": "heaven",
+"def_zh": "n. 天堂, 上帝, 天空",
+"freq": 2626,
+"needs_root": true
+},
+{
+"word": "rough",
+"def_zh": "n. 粗糙的东西, 毛坯, 未加工品, 梗概, 草图, 暴徒, 艰难；a. 粗糙的, 粗暴的, 蓬乱的, 草率的, 大致的, 简陋的, 暴风雨的, 艰难的",
+"freq": 2627,
+"needs_root": true
+},
+{
+"word": "yell",
+"def_zh": "vi. 叫喊, 大叫, (齐声)呐喊欢呼；vt. 喊叫着说",
+"freq": 2628,
+"needs_root": true
+},
+{
+"word": "pregnant",
+"def_zh": "a. 怀孕的, 充满的, 思想丰富的, 成果丰硕的；妊娠的, 有孕的",
+"freq": 2629,
+"needs_root": false
+},
+{
+"word": "distant",
+"def_zh": "a. 远的, 疏远的；远期的",
+"freq": 2630,
+"needs_root": false
+},
+{
+"word": "drama",
+"def_zh": "n. 戏剧, 戏剧艺术",
+"freq": 2631,
+"needs_root": true
+},
+{
+"word": "satellite",
+"def_zh": "n. 人造卫星；伴行静脉, 陪静脉, 陪病部, 随体, 卫星",
+"freq": 2632,
+"needs_root": true
+},
+{
+"word": "personally",
+"def_zh": "adv. 亲自地, 个别地, 当面, 就本人而言, 针对个人地",
+"freq": 2633,
+"needs_root": true
+},
+{
+"word": "clock",
+"def_zh": "n. 时钟, 计时器, (袜子上的)绣花边花；vt. 绣花样, 记时, 记录",
+"freq": 2635,
+"needs_root": true
+},
+{
+"word": "chocolate",
+"def_zh": "n. 巧克力；a. 巧克力制的",
+"freq": 2636,
+"needs_root": true
+},
+{
+"word": "sweep",
+"def_zh": "n. 扫除, 打扫, 肃清, 视野, 范围, 全胜；vt. 扫除, 掸去, 猛拉, 扫荡, 肃清, 冲走, 刮起, 环视, 掠过, 扫射",
+"freq": 2639,
+"needs_root": true
+},
+{
+"word": "ceiling",
+"def_zh": "n. 天花板；顶点, 顶线, 上限",
+"freq": 2641,
+"needs_root": true
+},
+{
+"word": "universal",
+"def_zh": "a. 全世界的, 普遍的, 宇宙的, 通用的；n. 一般概念",
+"freq": 2642,
+"needs_root": false
+},
+{
+"word": "spin",
+"def_zh": "n. 旋转, 自旋, 疾驰, 情绪低落；vt. 纺织, 纺, 使旋转, 编造",
+"freq": 2644,
+"needs_root": true
+},
+{
+"word": "button",
+"def_zh": "n. 钮扣, 按钮；vi. 扣住",
+"freq": 2645,
+"needs_root": true
+},
+{
+"word": "bell",
+"def_zh": "n. 铃, 钟；响铃命令",
+"freq": 2646,
+"needs_root": true
+},
+{
+"word": "rank",
+"def_zh": "n. 等级, 排, 横列, 队伍, 阶级；a. 茂密丛生的, 恶臭的, 十足的, 粗俗的",
+"freq": 2647,
+"needs_root": true
+},
+{
+"word": "darkness",
+"def_zh": "n. 黑暗, 暗, 深色, 隐密, 模糊, 无知",
+"freq": 2649,
+"needs_root": true
+},
+{
+"word": "super",
+"def_zh": "n. 跑龙套角色, 冗员, 特级品, 特大号, 管理人；a. 上等的, 特大的, 超级的, 极好的, 十分的, 过分的",
+"freq": 2651,
+"needs_root": true
+},
+{
+"word": "yield",
+"def_zh": "n. 生产量, 投资收益；vt. 出产, 给予, 让出, 放弃, 使屈服",
+"freq": 2652,
+"needs_root": true
+},
+{
+"word": "fence",
+"def_zh": "n. 围墙, 栅栏, 买卖赃物的人, 剑术；vt. 用篱笆围住, 练习剑术, 防护",
+"freq": 2653,
+"needs_root": true
+},
+{
+"word": "portrait",
+"def_zh": "n. 肖像, 人像, 半身像, 描写, 竖排格式；纵向",
+"freq": 2655,
+"needs_root": false
+},
+{
+"word": "survival",
+"def_zh": "n. 生存, 残存, 幸存者；a. 赖以生存的",
+"freq": 2656,
+"needs_root": false
+},
+{
+"word": "roughly",
+"def_zh": "adv. 概略地, 粗糙地, 粗暴地",
+"freq": 2657,
+"needs_root": true
+}
+]
