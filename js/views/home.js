@@ -20,6 +20,9 @@ import { navigate } from '../app.js';
 
 const PROGRAMMING_TAG = 'programming';
 
+// Day labels indexed by JS Date.getDay() (0=Sun..6=Sat) for the plan line.
+const DAY_LABELS = ['日', '一', '二', '三', '四', '五', '六'];
+
 /**
  * Escape for safe HTML text/attribute insertion.
  * @param {*} value
@@ -34,6 +37,24 @@ function esc(value) {
 }
 
 /**
+ * Build a subtle one-line plan summary, e.g. "计划：周一/三/五 · 提醒 20:00".
+ * Shows the full week as "每天" when all 7 days are selected. Returns '' when no
+ * study days are configured. studyDays uses JS Date.getDay() indexes.
+ * @param {Array<number>} studyDays
+ * @param {string} reminderTime - 'HH:MM'
+ * @returns {string}
+ */
+function formatPlanLine(studyDays, reminderTime) {
+  const days = Array.isArray(studyDays) ? studyDays.slice().sort((a, b) => a - b) : [];
+  if (days.length === 0) return '';
+  const daysText =
+    days.length === 7
+      ? '每天'
+      : '周' + days.map((d) => DAY_LABELS[d] || '?').join('/');
+  return `计划：${daysText} · 提醒 ${reminderTime}`;
+}
+
+/**
  * Compute dashboard stats from already-loaded data. Kept separate from the DOM
  * so the numbers are easy to reason about/test.
  *
@@ -42,7 +63,7 @@ function esc(value) {
  * @param {Array<object>} args.reviewStates
  * @param {{dailyNewLimit:number, dailyReviewLimit:(number|null)}} args.settings
  * @param {string} args.todayISO
- * @returns {{dueCount:number, newCount:number, streak:number, totalWords:number, learnedCount:number, programmingCount:number}}
+ * @returns {{dueCount:number, newCount:number, streak:number, totalWords:number, learnedCount:number, programmingCount:number, mistakeCount:number}}
  */
 export function computeDashboard({ words, reviewStates, settings, todayISO }) {
   // Today's queue (reviews + capped new) for the full set.
@@ -56,9 +77,12 @@ export function computeDashboard({ words, reviewStates, settings, todayISO }) {
 
   // Lifetime stats.
   let learnedCount = 0;
+  // 错题本 size: words whose review state carries any lapse (lapses > 0).
+  let mistakeCount = 0;
   for (const s of reviewStates) {
     const isNew = s && s.reps === 0 && (s.lastReviewed === null || s.lastReviewed === undefined);
     if (s && !isNew) learnedCount += 1;
+    if (s && typeof s.lapses === 'number' && s.lapses > 0) mistakeCount += 1;
   }
 
   let programmingCount = 0;
@@ -74,6 +98,7 @@ export function computeDashboard({ words, reviewStates, settings, todayISO }) {
     totalWords: words.length,
     learnedCount,
     programmingCount,
+    mistakeCount,
   };
 }
 
@@ -91,6 +116,7 @@ export async function renderHome(root) {
 
   let stats;
   let lastVocabEstimate;
+  let planSettings = null;
   try {
     const [words, reviewStates, settings, vocabEstimate] = await Promise.all([
       getAllWords(),
@@ -100,6 +126,7 @@ export async function renderHome(root) {
     ]);
     stats = computeDashboard({ words, reviewStates, settings, todayISO: today() });
     lastVocabEstimate = vocabEstimate;
+    planSettings = settings;
   } catch (err) {
     console.error('[home] failed to load dashboard data:', err);
     root.innerHTML = `
@@ -110,6 +137,19 @@ export async function renderHome(root) {
   }
 
   const todayTotal = stats.dueCount + stats.newCount;
+
+  // Optional subtle plan line: shown only when the reminder is enabled. Includes
+  // the configured study days, reminder time, and today's remaining count.
+  const planHtml =
+    planSettings && planSettings.reminderEnabled === true
+      ? (() => {
+          const line = formatPlanLine(planSettings.studyDays, planSettings.reminderTime);
+          if (!line) return '';
+          const remaining =
+            todayTotal > 0 ? ` · 今日剩余 ${esc(todayTotal)}` : ' · 今日已完成 ✓';
+          return `<p class="home-plan-line muted">${esc(line)}${remaining}</p>`;
+        })()
+      : '';
 
   // Optional dashboard line: last measured vocabulary estimate.
   const lastEstimateHtml =
@@ -123,6 +163,7 @@ export async function renderHome(root) {
     <header class="app-header">
       <h1 class="app-title">背单词</h1>
       <p class="home-streak">🔥 连续学习 <strong>${stats.streak}</strong> 天</p>
+      ${planHtml}
     </header>
 
     <section class="home-today card">
@@ -163,6 +204,9 @@ export async function renderHome(root) {
         </li>
         <li class="home-stats-item" role="button" tabindex="0" data-route="words/programming" aria-label="查看编程词汇">
           <span class="home-stats-key">编程词</span><span class="home-stats-val">${stats.programmingCount} ›</span>
+        </li>
+        <li class="home-stats-item home-stats-mistakes" role="button" tabindex="0" data-route="mistakes" aria-label="查看错题本">
+          <span class="home-stats-key">错题本 (${stats.mistakeCount})</span><span class="home-stats-val">${stats.mistakeCount} ›</span>
         </li>
       </ul>
       <p class="home-stats-hint muted">点击任意一项查看词汇列表</p>

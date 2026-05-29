@@ -30,6 +30,24 @@ function esc(value) {
 }
 
 /**
+ * Human-readable label for the Notification permission state.
+ * @param {('default'|'granted'|'denied'|'unsupported'|string)} permission
+ * @returns {string}
+ */
+function permissionLabel(permission) {
+  switch (permission) {
+    case 'granted':
+      return '通知：已允许';
+    case 'denied':
+      return '通知：已拒绝（请在系统设置中开启）';
+    case 'unsupported':
+      return '此设备不支持网页通知';
+    default:
+      return '通知：默认（未授权）';
+  }
+}
+
+/**
  * Render the settings view into the mount root.
  * @param {HTMLElement} root
  */
@@ -48,6 +66,38 @@ export async function renderSettings(root) {
     ? Number(settings.dailyNewLimit)
     : DEFAULT_DAILY_NEW_LIMIT;
   const ttsEnabled = settings.ttsEnabled === true;
+
+  // Study-plan / reminder state (defaults applied in getSettings).
+  // WEEKDAY CONVENTION: studyDays uses JS Date.getDay() indexes (0=Sun..6=Sat).
+  const studyDays = Array.isArray(settings.studyDays) ? settings.studyDays : [0, 1, 2, 3, 4, 5, 6];
+  const reminderEnabled = settings.reminderEnabled === true;
+  const reminderTime =
+    typeof settings.reminderTime === 'string' && /^\d{1,2}:\d{2}$/.test(settings.reminderTime)
+      ? settings.reminderTime
+      : '20:00';
+
+  // Day chips ordered Mon..Sun for display, but each carries its JS getDay()
+  // index as the value persisted into studyDays.
+  const DAY_CHIPS = [
+    { idx: 1, label: '一' },
+    { idx: 2, label: '二' },
+    { idx: 3, label: '三' },
+    { idx: 4, label: '四' },
+    { idx: 5, label: '五' },
+    { idx: 6, label: '六' },
+    { idx: 0, label: '日' },
+  ];
+  const daysHtml = DAY_CHIPS.map((d) => {
+    const on = studyDays.indexOf(d.idx) !== -1;
+    return `<button class="reminder-day-chip${on ? ' is-on' : ''}" type="button"
+              data-day="${d.idx}" aria-pressed="${on ? 'true' : 'false'}"
+              aria-label="周${esc(d.label)}">${esc(d.label)}</button>`;
+  }).join('');
+
+  // Notification support + current permission status (default/granted/denied).
+  const notifSupported = typeof window !== 'undefined' && 'Notification' in window;
+  const notifPermission = notifSupported ? Notification.permission : 'unsupported';
+  const permLabel = permissionLabel(notifPermission);
 
   root.innerHTML = `
     <header class="study-header">
@@ -71,6 +121,36 @@ export async function renderSettings(root) {
                data-field="ttsEnabled" aria-label="朗读发音"${ttsEnabled ? ' checked' : ''} />
       </label>
       <p class="settings-hint muted">默认关闭，仅显示音标。开启后学习卡片显示朗读按钮（系统语音音质有限）。</p>
+    </section>
+
+    <section class="card settings-section">
+      <h2 class="settings-heading">学习计划与提醒</h2>
+
+      <p class="settings-field-label reminder-subhead">每周学习日</p>
+      <div class="reminder-days" data-region="reminder-days" role="group" aria-label="每周学习日">
+        ${daysHtml}
+      </div>
+      <p class="settings-hint muted">点击切换学习日（周一到周日）。仅在选中的日子提醒。</p>
+
+      <label class="settings-field settings-field-toggle">
+        <span class="settings-field-label">开启到点提醒</span>
+        <input class="settings-checkbox" type="checkbox"
+               data-field="reminderEnabled" aria-label="开启到点提醒"${reminderEnabled ? ' checked' : ''} />
+      </label>
+
+      <label class="settings-field reminder-time-field">
+        <span class="settings-field-label">提醒时间</span>
+        <input class="settings-input reminder-time-input" type="time"
+               value="${esc(reminderTime)}" data-field="reminderTime" aria-label="提醒时间" />
+      </label>
+
+      <div class="reminder-notif-row">
+        <button class="btn btn-secondary reminder-notif-btn" type="button"
+                data-act="request-notify"${notifSupported ? '' : ' disabled'}>允许通知</button>
+        <span class="reminder-notif-status muted" data-region="notif-status">${esc(permLabel)}</span>
+      </div>
+
+      <p class="settings-hint reminder-ios-note">iOS 限制：网页 App 在<strong>关闭</strong>状态无法定时弹通知。本提醒在你<strong>打开 App</strong> 时（或 App 开着到点时）生效；如需关掉也能准时提醒，请在 iPhone「时钟」或「快捷指令」里另设一个每日闹钟。</p>
     </section>
 
     <section class="card settings-section">
@@ -147,6 +227,98 @@ function wire(root) {
         console.error('[settings] failed to save ttsEnabled:', err);
         feedback('保存失败，请重试。', 'error');
         ttsToggle.checked = !value;
+      }
+    });
+  }
+
+  // --- Study-plan / reminder controls ------------------------------------
+  // Weekly day chips: each click toggles that JS getDay() index in studyDays
+  // and persists immediately. studyDays uses 0=Sun..6=Sat.
+  const dayChips = root.querySelectorAll('[data-day]');
+  dayChips.forEach((chip) => {
+    chip.addEventListener('click', async () => {
+      const idx = Number(chip.dataset.day);
+      if (!Number.isFinite(idx)) return;
+      try {
+        const current = await getSettings();
+        const days = Array.isArray(current.studyDays) ? current.studyDays.slice() : [];
+        const at = days.indexOf(idx);
+        let next;
+        if (at === -1) {
+          next = days.concat(idx).sort((a, b) => a - b);
+        } else {
+          next = days.filter((d) => d !== idx);
+        }
+        await updateSetting('studyDays', next);
+        const on = next.indexOf(idx) !== -1;
+        chip.classList.toggle('is-on', on);
+        chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+        feedback(next.length ? '已更新学习日。' : '已清空学习日（不会提醒）。', 'ok');
+      } catch (err) {
+        console.error('[settings] failed to save studyDays:', err);
+        feedback('保存失败，请重试。', 'error');
+      }
+    });
+  });
+
+  // Reminder enable toggle: persist on change.
+  const reminderToggle = root.querySelector('[data-field="reminderEnabled"]');
+  if (reminderToggle) {
+    reminderToggle.addEventListener('change', async () => {
+      const value = reminderToggle.checked === true;
+      try {
+        await updateSetting('reminderEnabled', value);
+        feedback(value ? '已开启到点提醒。' : '已关闭到点提醒。', 'ok');
+      } catch (err) {
+        console.error('[settings] failed to save reminderEnabled:', err);
+        feedback('保存失败，请重试。', 'error');
+        reminderToggle.checked = !value;
+      }
+    });
+  }
+
+  // Reminder time: persist on change.
+  const timeInput = root.querySelector('[data-field="reminderTime"]');
+  if (timeInput) {
+    timeInput.addEventListener('change', async () => {
+      const value = timeInput.value;
+      if (!/^\d{1,2}:\d{2}$/.test(value)) {
+        feedback('时间格式无效。', 'error');
+        return;
+      }
+      try {
+        await updateSetting('reminderTime', value);
+        feedback(`已设置提醒时间 ${value}。`, 'ok');
+      } catch (err) {
+        console.error('[settings] failed to save reminderTime:', err);
+        feedback('保存失败，请重试。', 'error');
+      }
+    });
+  }
+
+  // Request notification permission. MUST be triggered by this user gesture.
+  const notifBtn = root.querySelector('[data-act="request-notify"]');
+  const notifStatus = root.querySelector('[data-region="notif-status"]');
+  if (notifBtn) {
+    const supported = typeof window !== 'undefined' && 'Notification' in window;
+    if (!supported) {
+      notifBtn.disabled = true;
+    }
+    notifBtn.addEventListener('click', async () => {
+      if (!supported) return;
+      try {
+        const result = await Notification.requestPermission();
+        if (notifStatus) notifStatus.textContent = permissionLabel(result);
+        if (result === 'granted') {
+          feedback('已允许通知。', 'ok');
+        } else if (result === 'denied') {
+          feedback('通知被拒绝，可在系统设置中重新开启。', 'error');
+        } else {
+          feedback('通知权限未变更。', 'ok');
+        }
+      } catch (err) {
+        console.error('[settings] requestPermission failed:', err);
+        feedback('无法请求通知权限。', 'error');
       }
     });
   }

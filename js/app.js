@@ -11,11 +11,13 @@
 
 import { BASE_PATH, DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT } from './config.js';
 import { openDB, getSetting, putSetting, importWords } from './db.js';
+import { initReminders } from './reminder.js';
 import makeStudyView from './views/study.js';
 import makeHomeView from './views/home.js';
 import makeSettingsView from './views/settings-view.js';
 import makeVocabTestView from './views/vocab-test.js';
 import makeWordListView from './views/word-list.js';
+import makeMistakesView from './views/mistakes.js';
 
 // ---------------------------------------------------------------------------
 // Service worker registration
@@ -66,14 +68,22 @@ export function mount(viewFn) {
 //
 // 'home' is the default landing view (empty hash -> home). 'settings' renders
 // the settings/backup view. Both come from their dedicated view modules.
+//
+// 'study' segment 'mistakes' is special: '#/study/mistakes' enters the 错题本
+// review mode (source='mistakes'), NOT a tag filter. Any other segment is a tag.
 const routes = {
   '': makeHomeView(),
   home: makeHomeView(),
   settings: makeSettingsView(),
-  study: (params) => makeStudyView({ tagFilter: params[0] || null }),
+  study: (params) =>
+    params[0] === 'mistakes'
+      ? makeStudyView({ source: 'mistakes' })
+      : makeStudyView({ tagFilter: params[0] || null }),
   // '#/words'            -> filter = 'all'
   // '#/words/learned'    -> filter = 'learned' (also new/due/programming or any tag)
   words: (params) => makeWordListView({ filter: params[0] || 'all' }),
+  // '#/mistakes' -> the 错题本 (mistake notebook) view.
+  mistakes: makeMistakesView(),
   'vocab-test': makeVocabTestView(),
 };
 
@@ -218,6 +228,10 @@ export async function bootstrap() {
   // [EXTENSION POINT] open DB + first-run seed (TASK-002).
   // Runs before the home view renders so data is ready for later views.
   await initData();
+
+  // Study-plan reminders: start AFTER the DB/seed is ready so checkReminder can
+  // build today's queue. Defensive internally; never throws into the shell.
+  initReminders();
 
   // Home/study/settings routes are registered statically in the `routes` table
   // above; the persistent bottom nav is rendered on each route change.

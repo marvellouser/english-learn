@@ -34,7 +34,7 @@ export const DB_VERSION = 1;
 // Service worker cache version. Must match CACHE_NAME in service-worker.js.
 // Bumped v1 -> v2 so existing installs drop the old cache and fetch the new
 // ~7500-word frequency-ranked data/seed-words.json.
-export const CACHE_NAME = 'vocab-pwa-v2';
+export const CACHE_NAME = 'vocab-pwa-v3';
 
 // --- Helpers ----------------------------------------------------------------
 

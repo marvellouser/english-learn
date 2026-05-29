@@ -294,6 +294,8 @@ export function putSetting(key, value) {
  * immediately (due === today), so they surface on the first study session.
  * introducedOn stays null until the card is first studied; the daily new-card
  * cap counts states whose introducedOn equals today (see srs.buildDailyQueue).
+ * lapses starts at 0; it is incremented by srs.applyReview on a failed review
+ * and drives the 错题本 (mistake notebook) membership (lapses > 0).
  * @param {string} id - word id
  * @returns {object}
  */
@@ -306,6 +308,7 @@ function initialReviewState(id) {
     due: today(),
     lastReviewed: null,
     introducedOn: null,
+    lapses: 0,
   };
 }
 

@@ -9,7 +9,7 @@
 // records to these functions.
 //
 // reviewState shape (mirrors db.js, keyPath 'id'):
-//   { id, ease, interval, reps, due, lastReviewed, introducedOn }
+//   { id, ease, interval, reps, due, lastReviewed, introducedOn, lapses }
 //     ease         : number  >= 1.3, default 2.5
 //     interval     : integer days, new card = 0
 //     reps         : integer count of consecutive successful reviews, new = 0
@@ -19,6 +19,10 @@
 //                    introduced, or null while still a brand-new card. Used to
 //                    enforce a real per-day NEW-card cap (so re-entering the
 //                    study session mid-day resumes instead of restarting).
+//     lapses       : integer count of times the card was failed (rated 不认识 /
+//                    quality < 3), default 0. A word with lapses > 0 is surfaced
+//                    in the 错题本 (mistake notebook). Only ever incremented here;
+//                    cleared (back to 0) explicitly by the UI / settings.
 //
 // A "new" (not-yet-introduced) card is identified by reps === 0 && lastReviewed === null.
 
@@ -148,10 +152,16 @@ export function gradeFromRating(rating) {
  *   returned state always carries an introducedOn field (string or null) so the
  *   daily NEW-card cap can count what was introduced today.
  *
- * @param {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:(string|null), introducedOn?:(string|null)}} state
+ * lapses:
+ *   A running count of failures used to drive the 错题本 (mistake notebook).
+ *   On failure (q < 3) it is incremented by 1; otherwise the existing
+ *   state.lapses is carried through unchanged (defaulting to 0 when absent on
+ *   legacy records). The returned state always carries a numeric lapses field.
+ *
+ * @param {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:(string|null), introducedOn?:(string|null), lapses?:number}} state
  * @param {number} quality - SM-2 grade 0..5 (see gradeFromRating)
  * @param {string|Date} today - 'YYYY-MM-DD' (or Date) of the review
- * @returns {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:string, introducedOn:(string|null)}} new state
+ * @returns {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:string, introducedOn:(string|null), lapses:number}} new state
  */
 export function applyReview(state, quality, today) {
   const todayISO = isoDate(today);
@@ -169,6 +179,9 @@ export function applyReview(state, quality, today) {
     : state.introducedOn === undefined
       ? null
       : state.introducedOn;
+
+  // Carry the lapse counter; default 0 on legacy records lacking the field.
+  const prevLapses = typeof state.lapses === 'number' ? state.lapses : 0;
 
   // Ease is updated on every grade, then floored at 1.3.
   const easeDelta = 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
@@ -201,6 +214,8 @@ export function applyReview(state, quality, today) {
     due: addDays(todayISO, nextInterval),
     lastReviewed: todayISO,
     introducedOn: nextIntroducedOn,
+    // A failure (q < 3) enters / deepens the 错题本; success carries the count.
+    lapses: quality < 3 ? prevLapses + 1 : prevLapses,
   };
 }
 

@@ -31,6 +31,10 @@ const BACKUP_APP = 'vocab-pwa';
 const BACKUP_VERSION = 1;
 
 // Settings keys owned by the app (used by export/import to round-trip them).
+// The study-plan/reminder keys (studyDays, reminderEnabled, reminderTime) are
+// included so a backup carries the user's plan. reminderLastNotified is an
+// internal, day-scoped dedup marker and is intentionally NOT backed up (it would
+// only re-suppress today's notification on a restore and keeps backups stable).
 const SETTING_KEYS = [
   'dailyNewLimit',
   'dailyReviewLimit',
@@ -38,10 +42,20 @@ const SETTING_KEYS = [
   'seeded',
   'ttsEnabled',
   'lastVocabEstimate',
+  'studyDays',
+  'reminderEnabled',
+  'reminderTime',
 ];
 
 // Pronunciation (TTS) is OFF by default: phonetic-only cards. Opt-in via settings.
 const DEFAULT_TTS_ENABLED = false;
+
+// --- Study-plan / reminder defaults -----------------------------------------
+// WEEKDAY CONVENTION: studyDays uses JS Date.getDay() indexes:
+//   0 = 周日(Sun), 1 = 周一(Mon), ... 6 = 周六(Sat). Default = all 7 days.
+const DEFAULT_STUDY_DAYS = [0, 1, 2, 3, 4, 5, 6];
+const DEFAULT_REMINDER_ENABLED = false;
+const DEFAULT_REMINDER_TIME = '20:00';
 
 // ---------------------------------------------------------------------------
 // Settings wrappers
@@ -49,15 +63,33 @@ const DEFAULT_TTS_ENABLED = false;
 
 /**
  * Read the user-facing settings with sensible defaults.
- * @returns {Promise<{ dailyNewLimit: number, dailyReviewLimit: (number|null), ttsEnabled: boolean }>}
+ * studyDays uses JS Date.getDay() indexes (0=Sun..6=Sat).
+ * @returns {Promise<{ dailyNewLimit: number, dailyReviewLimit: (number|null), ttsEnabled: boolean, studyDays: Array<number>, reminderEnabled: boolean, reminderTime: string }>}
  */
 export async function getSettings() {
-  const [dailyNewLimit, dailyReviewLimit, ttsEnabled] = await Promise.all([
+  const [
+    dailyNewLimit,
+    dailyReviewLimit,
+    ttsEnabled,
+    studyDays,
+    reminderEnabled,
+    reminderTime,
+  ] = await Promise.all([
     getSetting('dailyNewLimit', DEFAULT_DAILY_NEW_LIMIT),
     getSetting('dailyReviewLimit', DEFAULT_DAILY_REVIEW_LIMIT),
     getSetting('ttsEnabled', DEFAULT_TTS_ENABLED),
+    getSetting('studyDays', DEFAULT_STUDY_DAYS),
+    getSetting('reminderEnabled', DEFAULT_REMINDER_ENABLED),
+    getSetting('reminderTime', DEFAULT_REMINDER_TIME),
   ]);
-  return { dailyNewLimit, dailyReviewLimit, ttsEnabled: ttsEnabled === true };
+  return {
+    dailyNewLimit,
+    dailyReviewLimit,
+    ttsEnabled: ttsEnabled === true,
+    studyDays: Array.isArray(studyDays) ? studyDays : DEFAULT_STUDY_DAYS,
+    reminderEnabled: reminderEnabled === true,
+    reminderTime: typeof reminderTime === 'string' ? reminderTime : DEFAULT_REMINDER_TIME,
+  };
 }
 
 /**
@@ -76,9 +108,10 @@ export function updateSetting(key, value) {
 
 /**
  * Build the fresh "new card" review state. Mirrors db.js initialReviewState():
- * due today, never reviewed, default ease, not-yet-introduced.
+ * due today, never reviewed, default ease, not-yet-introduced, no lapses (so a
+ * reset also empties the 错题本).
  * @param {string} id
- * @returns {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:null, introducedOn:null}}
+ * @returns {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:null, introducedOn:null, lapses:number}}
  */
 function freshState(id) {
   return {
@@ -89,6 +122,7 @@ function freshState(id) {
     due: today(),
     lastReviewed: null,
     introducedOn: null,
+    lapses: 0,
   };
 }
 

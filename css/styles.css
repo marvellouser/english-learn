@@ -471,6 +471,11 @@ body {
 .home-streak strong {
   color: var(--color-hard-dark);
 }
+.home-plan-line {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
 
 .home-section-title,
 .settings-heading {
@@ -655,6 +660,139 @@ body {
 .bottom-nav-item.is-active {
   color: var(--color-primary);
   font-weight: 600;
+}
+
+/* === Study-plan reminder (banner + settings controls) =================== */
+/* In-app reminder banner: a fixed bar pinned to the BOTTOM, sitting directly
+   above the bottom nav so it never overlaps it. Safe-area aware. */
+.reminder-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* Sit above the fixed bottom nav (72px) plus the safe-area inset. */
+  bottom: calc(72px + env(safe-area-inset-bottom));
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px var(--space);
+  background: var(--color-primary);
+  color: #ffffff;
+  border-top: 1px solid var(--color-primary-dark);
+  box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.12);
+}
+.reminder-banner[hidden] {
+  display: none;
+}
+.reminder-banner-text {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+.reminder-banner-go {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.reminder-banner-go:hover,
+.reminder-banner-go:focus {
+  background: var(--color-surface);
+}
+.reminder-banner-close {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+.reminder-banner-close:hover,
+.reminder-banner-close:focus {
+  opacity: 1;
+}
+
+/* Settings: weekly day chips + reminder controls. */
+.reminder-subhead {
+  margin: 0 0 8px;
+}
+.reminder-days {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.reminder-day-chip {
+  flex: 1 1 0;
+  min-width: 36px;
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 10px 0;
+  text-align: center;
+  color: var(--color-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.reminder-day-chip.is-on {
+  color: #ffffff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  font-weight: 600;
+}
+.reminder-time-field {
+  margin-top: 12px;
+}
+.reminder-time-input {
+  width: auto;
+  min-width: 120px;
+  text-align: left;
+}
+.reminder-notif-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.reminder-notif-btn {
+  width: auto;
+  flex: 0 0 auto;
+}
+.reminder-notif-status {
+  font-size: 0.85rem;
+}
+.reminder-ios-note {
+  margin-top: 12px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.reminder-ios-note strong {
+  color: var(--color-text);
+}
+
+/* When the reminder banner is visible, lift #app bottom padding so content is
+   not hidden behind both the banner and the nav. The banner is ~48px tall. */
+body:has(#reminder-banner:not([hidden])) #app {
+  padding-bottom: calc(72px + 56px + env(safe-area-inset-bottom));
 }
 
 /* === Study full-height layout (ENH-3) =================================== */
@@ -1178,4 +1316,85 @@ button.home-stat:active {
   margin: 0;
   font-size: 0.8rem;
   font-variant-numeric: tabular-nums;
+}
+
+/* === 错题本 (mistake notebook) view ===================================== */
+/* Reuses the full-height .wordlist-screen flex column; only the header summary,
+   the lapse badge, and the per-row action need extra rules. */
+.mistakes-controls {
+  margin-bottom: 8px;
+}
+.mistakes-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.mistakes-count {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+.mistakes-review-btn {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 8px 18px;
+  min-height: 40px;
+}
+.mistakes-review-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.mistakes-sorts {
+  margin-top: 10px;
+}
+
+/* The list row head reuses .wordlist-row-head (flex: word | def | badge). */
+.mistakes-badge {
+  flex: 0 0 auto;
+  align-self: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-again-dark);
+  background: #fef2f2;
+  border: 1px solid var(--color-again);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Per-row "移出错题本" action inside the expanded detail. */
+.mistakes-detail-actions {
+  margin-top: 4px;
+}
+.mistakes-remove {
+  width: auto;
+  padding: 6px 14px;
+  min-height: 36px;
+  font-size: 0.85rem;
+}
+
+/* Empty state. */
+.mistakes-empty {
+  text-align: center;
+}
+.mistakes-empty-emoji {
+  font-size: 2.4rem;
+  margin: 0 0 8px;
+}
+
+/* Study session "错题" badge + the in-session mode label. */
+.study-badge-mistake {
+  background: #fef2f2;
+  color: var(--color-again-dark);
+}
+.study-mode-label {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-again-dark);
+  letter-spacing: 0.03em;
 }

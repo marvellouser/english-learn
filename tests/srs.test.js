@@ -165,6 +165,49 @@ test('applyReview does not mutate the input state', () => {
 });
 
 // --------------------------------------------------------------------------
+// applyReview: lapses (错题本 / mistake-notebook membership)
+// --------------------------------------------------------------------------
+
+test('applyReview increments lapses on 不认识 and carries it through on 模糊/认识', () => {
+  // Brand-new card has no lapses field; a failure stamps lapses = 1.
+  const s0 = newState();
+  const lapsed = applyReview(s0, gradeFromRating('again'), TODAY);
+  assert.equal(lapsed.lapses, 1, '不认识 increments lapses (0 -> 1)');
+
+  // 模糊 (hard, q=3) is a pass -> lapses carried unchanged.
+  const hard = applyReview(lapsed, gradeFromRating('hard'), addDays(TODAY, 1));
+  assert.equal(hard.lapses, 1, '模糊 carries lapses through unchanged');
+
+  // 认识 (good, q=5) is a pass -> lapses carried unchanged.
+  const good = applyReview(hard, gradeFromRating('good'), addDays(TODAY, 2));
+  assert.equal(good.lapses, 1, '认识 carries lapses through unchanged');
+});
+
+test('applyReview accumulates lapses across multiple failures', () => {
+  let s = newState();
+  for (let i = 1; i <= 3; i += 1) {
+    s = applyReview(s, gradeFromRating('again'), addDays(TODAY, i));
+    assert.equal(s.lapses, i, `lapse #${i} accumulates`);
+  }
+  // A pass in between does not reset the accumulated count.
+  s = applyReview(s, gradeFromRating('good'), addDays(TODAY, 4));
+  assert.equal(s.lapses, 3, 'a pass keeps the accumulated lapse count');
+  s = applyReview(s, gradeFromRating('again'), addDays(TODAY, 5));
+  assert.equal(s.lapses, 4, 'a later failure resumes accumulating');
+});
+
+test('applyReview output always includes a numeric lapses field; legacy records default 0', () => {
+  // Legacy record lacking lapses -> a pass yields lapses 0.
+  const legacy = { id: 'w9', ease: 2.5, interval: 5, reps: 2, due: TODAY, lastReviewed: '2026-05-20' };
+  const passed = applyReview(legacy, gradeFromRating('good'), TODAY);
+  assert.equal(passed.lapses, 0, 'legacy + pass -> lapses 0');
+  // Legacy record lacking lapses -> a failure yields lapses 1.
+  const failed = applyReview(legacy, gradeFromRating('again'), TODAY);
+  assert.equal(failed.lapses, 1, 'legacy + failure -> lapses 1');
+  assert.equal(typeof passed.lapses, 'number', 'lapses is always numeric');
+});
+
+// --------------------------------------------------------------------------
 // buildDailyQueue
 // --------------------------------------------------------------------------
 

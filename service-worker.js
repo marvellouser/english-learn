@@ -2,7 +2,7 @@
 // Manual, dependency-free cache-first service worker for the vocab PWA.
 // Keep CACHE_NAME in sync with CACHE_NAME in js/config.js.
 
-const CACHE_NAME = 'vocab-pwa-v2';
+const CACHE_NAME = 'vocab-pwa-v3';
 
 // App shell assets to precache on install.
 // All paths are relative to the service worker scope (the app root), so the
@@ -13,6 +13,18 @@ const APP_SHELL = [
   './css/styles.css',
   './js/app.js',
   './js/config.js',
+  './js/db.js',
+  './js/srs.js',
+  './js/tts.js',
+  './js/settings.js',
+  './js/reminder.js',
+  './js/vocab-estimate.js',
+  './js/views/home.js',
+  './js/views/study.js',
+  './js/views/settings-view.js',
+  './js/views/vocab-test.js',
+  './js/views/word-list.js',
+  './js/views/mistakes.js',
   './manifest.json',
   './data/seed-words.json',
   './icons/icon-192.png',

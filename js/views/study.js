@@ -25,6 +25,7 @@ import {
   buildDailyQueue,
   gradeFromRating,
   applyReview,
+  freqRank,
   INITIAL_EASE,
 } from '../srs.js';
 import { navigate } from '../app.js';
@@ -69,18 +70,64 @@ function esc(value) {
 }
 
 /**
+ * Build the on-demand "复习错题" (mistake review) session queue. PURE: takes the
+ * already-loaded words + review states and returns an ordered queue of every
+ * lapsed word (reviewState.lapses > 0), REGARDLESS of due date, since this is a
+ * deliberate on-demand review rather than the daily schedule. Ordered by lapse
+ * count descending (most-missed first), then by COCA frequency ascending
+ * (common words first), then id for determinism. The daily new-card cap does
+ * not apply here.
+ *
+ * @param {Array<object>} words - all word records
+ * @param {Array<object>} reviewStates - all review-state records
+ * @returns {Array<{wordId:string, isNew:boolean}>} ordered queue
+ */
+function buildMistakeQueue(words, reviewStates) {
+  const wordById = new Map();
+  for (const w of words) {
+    if (w && typeof w.id === 'string') wordById.set(w.id, w);
+  }
+
+  const lapsed = [];
+  for (const s of reviewStates) {
+    if (!s || typeof s.id !== 'string') continue;
+    const lapses = typeof s.lapses === 'number' ? s.lapses : 0;
+    if (lapses > 0 && wordById.has(s.id)) lapsed.push(s);
+  }
+
+  lapsed.sort((a, b) => {
+    const la = typeof a.lapses === 'number' ? a.lapses : 0;
+    const lb = typeof b.lapses === 'number' ? b.lapses : 0;
+    if (la !== lb) return lb - la; // more lapses first
+    const fa = freqRank(wordById.get(a.id));
+    const fb = freqRank(wordById.get(b.id));
+    if (fa !== fb) return fa - fb; // more frequent first
+    return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+  });
+
+  // Mistakes are reviews of already-introduced words, never "new" cards.
+  return lapsed.map((s) => ({ wordId: s.id, isNew: false }));
+}
+
+/**
  * Render the study view into the given root element.
  *
  * @param {HTMLElement} root - the #app mount element (cleared by mount())
- * @param {{ tagFilter?: (string|null) }} [opts]
+ * @param {{ tagFilter?: (string|null), source?: (string|null) }} [opts]
+ *   source === 'mistakes' switches to the on-demand 错题本 review mode (queue
+ *   built from lapsed words, ignoring due date and the daily new cap). Any other
+ *   value behaves as the normal daily queue (optionally restricted by tagFilter).
  */
-export async function renderStudy(root, { tagFilter = null } = {}) {
+export async function renderStudy(root, { tagFilter = null, source = null } = {}) {
   if (!root) return;
+
+  const isMistakeMode = source === 'mistakes';
+  const headerTitle = isMistakeMode ? '复习错题' : '学习';
 
   // Loading placeholder while we read IndexedDB.
   root.innerHTML = `
-    <header class="app-header"><h1 class="app-title">学习</h1></header>
-    <section class="card"><p class="muted">正在准备今日卡片…</p></section>
+    <header class="app-header"><h1 class="app-title">${headerTitle}</h1></header>
+    <section class="card"><p class="muted">正在准备卡片…</p></section>
   `;
 
   // ---- Load data ---------------------------------------------------------
@@ -90,8 +137,10 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
   let dailyReviewLimit;
   let ttsEnabled;
   try {
+    // Mistake mode reviews lapsed words across the whole deck, so it never
+    // restricts by tag; the daily queue may restrict by tag via getWordsByTag.
     [words, reviewStates] = await Promise.all([
-      tagFilter ? getWordsByTag(tagFilter) : getAllWords(),
+      !isMistakeMode && tagFilter ? getWordsByTag(tagFilter) : getAllWords(),
       getAllReviewState(),
     ]);
     dailyNewLimit = await getSetting('dailyNewLimit', undefined);
@@ -107,17 +156,21 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
 
   const todayISO = today();
 
+  // Build the session queue. Mistake mode pulls every lapsed word (ignoring due
+  // date + the daily new cap); the normal mode builds the bounded daily queue.
   // When restricting by tag, getWordsByTag returns only matching words, but
   // buildDailyQueue filters reviewStates by the word set it is given. Pass the
   // same tagFilter so its internal scoping is consistent even if extra states
   // exist for out-of-scope words.
-  const queue = buildDailyQueue({
-    words,
-    reviewStates,
-    settings: { dailyNewLimit, dailyReviewLimit },
-    todayISO,
-    tagFilter,
-  });
+  const queue = isMistakeMode
+    ? buildMistakeQueue(words, reviewStates)
+    : buildDailyQueue({
+        words,
+        reviewStates,
+        settings: { dailyNewLimit, dailyReviewLimit },
+        todayISO,
+        tagFilter,
+      });
 
   // Index words by id for O(1) lookup during the session.
   const wordById = new Map();
@@ -133,7 +186,7 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
 
   // ---- Empty queue: friendly done state ----------------------------------
   if (queue.length === 0) {
-    renderEmpty(root, tagFilter);
+    renderEmpty(root, tagFilter, isMistakeMode);
     return;
   }
 
@@ -197,9 +250,15 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
         ? `<button class="study-pronounce" type="button" aria-label="朗读单词" data-act="speak">🔊</button>`
         : '';
 
-    const tag = entry.isNew
-      ? `<span class="study-badge study-badge-new">新词</span>`
-      : `<span class="study-badge study-badge-review">复习</span>`;
+    const tag = isMistakeMode
+      ? `<span class="study-badge study-badge-mistake">错题</span>`
+      : entry.isNew
+        ? `<span class="study-badge study-badge-new">新词</span>`
+        : `<span class="study-badge study-badge-review">复习</span>`;
+
+    const modeLabelHtml = isMistakeMode
+      ? `<p class="study-mode-label">复习错题</p>`
+      : '';
 
     root.innerHTML = `
       <div class="study-screen">
@@ -211,6 +270,7 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
           </div>
           <span class="study-counter">${index + 1} / ${total}</span>
         </header>
+        ${modeLabelHtml}
 
         <div class="study-card-region">
           <section class="study-card${flipped ? ' is-flipped' : ''}" data-act="flip" tabindex="0"
@@ -330,8 +390,9 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
   function renderSummary() {
     teardownKeys();
     const reviewed = tally.again + tally.hard + tally.good;
+    const summaryTitle = isMistakeMode ? '错题复习完成 🎉' : '本组完成 🎉';
     root.innerHTML = `
-      <header class="app-header"><h1 class="app-title">本组完成 🎉</h1></header>
+      <header class="app-header"><h1 class="app-title">${summaryTitle}</h1></header>
       <section class="study-summary card">
         <p class="study-summary-total">共学习 <strong>${reviewed}</strong> 张卡片</p>
         <ul class="study-summary-list">
@@ -355,7 +416,7 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
     );
     root.querySelector('[data-act="again"]').addEventListener('click', () => {
       // Re-enter the study view to rebuild the queue from the now-updated states.
-      renderStudy(root, { tagFilter }).catch((err) =>
+      renderStudy(root, { tagFilter, source }).catch((err) =>
         console.error('[study] re-enter failed:', err)
       );
     });
@@ -383,8 +444,26 @@ export async function renderStudy(root, { tagFilter = null } = {}) {
   renderCard();
 }
 
-/** Friendly "nothing due" state. */
-function renderEmpty(root, tagFilter) {
+/** Friendly "nothing due" state. In mistake mode the 错题本 is empty. */
+function renderEmpty(root, tagFilter, isMistakeMode = false) {
+  if (isMistakeMode) {
+    root.innerHTML = `
+      <header class="app-header"><h1 class="app-title">复习错题</h1></header>
+      <section class="study-empty card">
+        <p class="study-empty-emoji">🎯</p>
+        <p>错题本是空的，没有需要复习的错题。</p>
+        <p class="muted">学习时点错的词会自动收进错题本。</p>
+      </section>
+      <nav class="app-nav">
+        <button class="btn" type="button" data-act="home">返回首页</button>
+      </nav>
+    `;
+    root.querySelector('[data-act="home"]').addEventListener('click', () =>
+      navigate('home')
+    );
+    return;
+  }
+
   const scope = tagFilter ? `（${esc(tagFilter)}）` : '';
   root.innerHTML = `
     <header class="app-header"><h1 class="app-title">学习${scope}</h1></header>
@@ -417,8 +496,9 @@ function renderError(root, message) {
 
 /**
  * Default export: a factory producing a mount-compatible render function bound
- * to the given options. Lets app.js do `mount(makeStudyView({ tagFilter }))`.
- * @param {{ tagFilter?: (string|null) }} [opts]
+ * to the given options. Lets app.js do `mount(makeStudyView({ tagFilter }))` or
+ * `mount(makeStudyView({ source: 'mistakes' }))` for the 错题本 review mode.
+ * @param {{ tagFilter?: (string|null), source?: (string|null) }} [opts]
  * @returns {(root: HTMLElement) => void}
  */
 export default function makeStudyView(opts = {}) {
