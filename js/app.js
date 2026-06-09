@@ -9,8 +9,8 @@
 //
 // EXTENSION POINTS for later tasks are marked with `// [EXTENSION POINT]`.
 
-import { BASE_PATH, DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT, DATA_VERSION } from './config.js';
-import { openDB, getSetting, putSetting, importWords } from './db.js';
+import { BASE_PATH, DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT } from './config.js';
+import { openDB, getSetting, putSetting } from './db.js';
 import { initReminders } from './reminder.js';
 import makeStudyView from './views/study.js';
 import makeHomeView from './views/home.js';
@@ -179,62 +179,39 @@ function renderBottomNav(activeName) {
 }
 
 // ---------------------------------------------------------------------------
-// First-run seeding (TASK-002)
+// First-run initialization
 // ---------------------------------------------------------------------------
 
 /**
- * Open the database and import the bundled vocabulary into IndexedDB.
+ * Load data + initialize first-run defaults.
  *
- * Runs on first launch AND whenever the bundled dataset version (DATA_VERSION)
- * differs from what was last imported — so an already-seeded install picks up
- * an expanded/updated dataset (e.g. 441 -> 7500 words, new `freq` field,
- * enriched examples) instead of being stuck on the old data.
+ * The vocabulary is now a STATIC asset (data/seed-words.json) loaded straight
+ * into memory by db.js — there is no per-word seeding step and no DATA_VERSION
+ * re-import, because every launch reads the latest static words from the CDN.
  *
- * The re-import is NON-DESTRUCTIVE: importWords() overwrites word records
- * (updating definitions/freq/examples/root_affix) and creates review state
- * only for words that don't have one yet, so existing learning progress is
- * preserved. Failures are logged but do not crash the app shell.
+ * The only persisted setup is writing the baseline settings to Cloudflare D1 the
+ * very first time the deployment is used (when no 'seeded' marker exists yet).
+ * Existing user-changed settings are never clobbered. Failures are logged but do
+ * not crash the app shell.
  */
 async function initData() {
   try {
+    // Loads the static vocabulary + cloud progress (review states + settings)
+    // into memory so later views render against ready data.
     await openDB();
 
     const firstRun = (await getSetting('seeded', false)) !== true;
-    const storedDataVersion = await getSetting('dataVersion', null);
-    const needsSync = firstRun || storedDataVersion !== DATA_VERSION;
-    if (!needsSync) {
-      return;
-    }
-
-    const res = await fetch('./data/seed-words.json', { cache: 'no-cache' });
-    if (!res.ok) {
-      throw new Error(`seed fetch failed: ${res.status} ${res.statusText}`);
-    }
-    const seed = await res.json();
-
-    // Updates existing word records + adds new words; preserves review state.
-    const result = await importWords(seed, { source: 'seed' });
-    console.info(
-      `[app] vocabulary synced to ${DATA_VERSION}:`,
-      result || `${seed.length} words`,
-    );
-
-    // Persist baseline defaults on the very first run only (don't clobber
-    // user-changed settings on later re-syncs).
     if (firstRun) {
       await putSetting('dailyNewLimit', DEFAULT_DAILY_NEW_LIMIT);
       await putSetting('dailyReviewLimit', DEFAULT_DAILY_REVIEW_LIMIT);
       await putSetting('streak', 0);
       // Pronunciation is OFF by default (phonetic-only); opt-in via settings.
       await putSetting('ttsEnabled', false);
+      // Written last so an interrupted first run retries the defaults next launch.
+      await putSetting('seeded', true);
     }
-
-    // Mark seeded + record the synced data version last, so an interrupted
-    // run retries on next launch.
-    await putSetting('seeded', true);
-    await putSetting('dataVersion', DATA_VERSION);
   } catch (err) {
-    console.error('[app] data init/seed failed:', err);
+    console.error('[app] data init failed:', err);
   }
 }
 

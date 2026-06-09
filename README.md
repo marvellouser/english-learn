@@ -1,6 +1,8 @@
 # 英语单词记忆 (English Vocab PWA)
 
-一个**本地、离线**的英语单词记忆 PWA（渐进式 Web 应用）。打开网页即可使用，安装到 iPhone 主屏后可完全离线运行，所有数据保存在你自己的设备上。
+一个部署在 **Cloudflare** 上的英语单词记忆 PWA（渐进式 Web 应用）。打开网页即可使用，可安装到 iPhone 主屏。学习**进度保存在 Cloudflare D1 云数据库**中，换设备 / 清空浏览器数据都不会丢（需联网读写进度）。
+
+> **部署说明见 [`DEPLOY_CLOUDFLARE.md`](./DEPLOY_CLOUDFLARE.md)**——里面是你需要在 Cloudflare 上操作的完整步骤（建 D1、建表、建 Pages、绑定、部署）。
 
 ---
 
@@ -11,8 +13,9 @@
 - **按词频学习**：新词的学习顺序按**真实词频从高到低**排列（最常用的词先学），让你优先掌握高频高价值词汇。
 - **词频分层词汇量测试**：词汇量估算改用 **8 个词频段**（1-1000、1001-2000…7001-8000，每段假定 1000 词）分层抽样，比旧的按考试标签估算更科学。
 - **卡片内容**：中英双语卡片，包含音标、TTS 发音（朗读）、例句、词根词缀等记忆辅助信息。
-- **数据备份**：支持 JSON 导出 / 导入，方便备份进度或在设备之间迁移。
-- **纯静态、无构建**：原生 ES 模块 + Service Worker + IndexedDB，**无需任何打包器或构建步骤**，仓库可以原样部署。
+- **云端进度**：学习进度（复习状态 + 设置）通过 Cloudflare Pages Functions 读写 **Cloudflare D1** 数据库；词库本身是静态资源放在 CDN。
+- **数据备份**：支持 JSON 导出 / 导入，方便备份进度或迁移。
+- **无打包构建**：前端是原生 ES 模块 + Service Worker；后端是 `/functions/api/*` 的 Pages Functions，**无需打包器**，仓库可原样部署到 Cloudflare Pages。
 
 > **说明**：ECDICT 词频底库已完成；每个单词的**例句与词根词缀**正在按词频从高到低**逐步用 AI 补全**（高频词优先），目前高频部分的例句/词根仍在陆续完善中。
 
@@ -20,71 +23,43 @@
 
 ## 本地预览
 
-本应用使用 Service Worker，**必须**通过 `http(s)://` 或 `localhost` 访问，**不能**直接用 `file://` 双击打开 HTML（否则 Service Worker 无法注册、离线功能失效）。
-
-### 🚀 一键启动（推荐）
-
-直接 **双击项目根目录里的 `start.command`**（macOS）。它会自动找一个空闲端口、启动本地服务并打开浏览器；要停止就按 `Ctrl+C` 或关闭弹出的终端窗口。
-
-> 终端里也可运行：`./start.command`。首次若提示无法打开，在“系统设置 → 隐私与安全性”里允许一次即可。
-
-### 手动方式
-
-在项目根目录启动一个本地静态服务器即可：
+> ⚠️ 迁移到 Cloudflare 后，本地预览**需要带 API**（D1）。旧的 `start.command` / `python3 -m http.server` 只能跑静态页面，**不会运行 `/api/*`**，进度无法读写。请用 Cloudflare 的 wrangler：
 
 ```bash
-# 在项目根目录执行（自带 Python3 的 macOS / Linux 直接可用）
-python3 -m http.server 8000
+# 1) 给本地 D1 建表（只需一次）
+wrangler d1 execute vocab --local --file=./schema.sql
+
+# 2) 启动本地 Pages（自动识别 /functions 并注入本地 D1）
+wrangler pages dev .
 ```
 
-然后浏览器打开：
-
-```
-http://localhost:8000
-```
-
-> 其他等价方式：`npx serve`、VS Code 的 Live Server 插件等，任意能提供 http 静态服务的工具都可以。
+打开命令行提示的地址（通常 `http://localhost:8788`）。详见 [`DEPLOY_CLOUDFLARE.md`](./DEPLOY_CLOUDFLARE.md) 的「本地开发」一节。
 
 ---
 
-## 部署到 GitHub Pages (手动)
+## 部署到 Cloudflare
 
-本项目是**纯静态站点，无需构建**，直接把整个文件夹推送到 GitHub 仓库再开启 Pages 即可。
+本项目部署到 **Cloudflare Pages（静态站点 + Functions）+ Cloudflare D1（数据库）**。
 
-> **重要**：以下命令需要**由你本人执行**。本项目的构建/生成流程**不会**自动 `git init`、自动提交或自动推送，也不会替你创建远程仓库。
+完整、可照着做的步骤（建 D1、建表、建 Pages 项目、绑定数据库、部署、验证）见独立文档：
 
-### 步骤
+👉 **[`DEPLOY_CLOUDFLARE.md`](./DEPLOY_CLOUDFLARE.md)**
 
-1. 在 GitHub 上**新建一个空仓库**（例如命名为 `english-learn`，不要勾选自动生成 README）。
+最快路径（命令行）概览：
 
-2. 在项目根目录执行（把 `<user>` 和 `<repo>` 换成你的用户名和仓库名）：
+```bash
+wrangler login
+wrangler d1 create vocab                                  # 复制输出的 database_id 填进 wrangler.toml
+wrangler d1 execute vocab --remote --file=./schema.sql    # 建表
+wrangler pages project create english-learn --production-branch main
+wrangler pages deploy . --project-name english-learn      # 部署，得到 https://english-learn.pages.dev
+```
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: offline vocab PWA prototype"
-   git branch -M main
-   git remote add origin https://github.com/<user>/<repo>.git
-   git push -u origin main
-   ```
+> 之后到 Dashboard → 该 Pages 项目 → Settings → Functions → D1 database bindings 确认绑定名为 **`DB`** 指向 **`vocab`**（Production / Preview 各一条）。
 
-3. 在仓库页面开启 Pages：
-   **Settings → Pages → Build and deployment → Source 选 “Deploy from a branch” → Branch 选 `main`，folder 选 `/ (root)` → Save**。
+### 关于路径
 
-4. 等待 1–2 分钟，Pages 会给出站点地址：
-
-   ```
-   https://<user>.github.io/<repo>/
-   ```
-
-### 关于子路径 (base path)
-
-GitHub Pages 的项目站点部署在子路径下（如 `https://<user>.github.io/english-learn/`），而不是域名根目录。
-
-本应用**全部使用相对路径**（HTML/manifest/Service Worker 中均为 `./...`，`js/config.js` 还会通过 `import.meta.url` 动态推算 `BASE_PATH`），因此**在任意子路径下都能正常工作**，无需任何额外配置。
-
-- 如果你将来绑定了**自定义域名**并部署在域名根目录，应用同样可以正常运行——相对路径在根目录和子路径下都成立。
-- `.nojekyll` 文件用于关闭 GitHub Pages 的 Jekyll 处理，确保所有静态资源（包括以下划线开头的文件名）原样提供，不被改写或忽略。
+本应用**全部使用相对路径**（`js/config.js` 通过 `import.meta.url` 动态推算 `BASE_PATH`），在 `*.pages.dev` 根目录、自定义域名根目录、任意子路径下都能正常工作，API 端点 `/api/*` 与站点同源、无需 CORS。
 
 ---
 
@@ -99,26 +74,25 @@ GitHub Pages 的项目站点部署在子路径下（如 `https://<user>.github.i
 4. 确认名称后点「添加」，主屏上会出现应用图标。
 5. 从**主屏图标**打开，即为独立全屏 App 体验。
 
-> **离线说明**：首次需要**联网加载一次**，Service Worker 会缓存应用外壳与种子词库；之后即可**完全离线使用**（学习数据保存在设备本地的 IndexedDB 中）。
+> **联网说明**：应用外壳与词库由 Service Worker 缓存，秒开；但**学习/保存进度需要联网**（进度走 Cloudflare D1，已选「纯在线」模式）。`/api/*` 不会被 Service Worker 缓存，进度始终从服务器读最新。
 
 ---
 
 ## 数据与备份
 
-- 所有学习进度（单词、复习状态、设置等）都保存在**设备本地的 IndexedDB** 中，不会上传到任何服务器。
-- 使用应用内的 **JSON 导出 / 导入**功能即可备份进度，或在不同设备 / 浏览器之间迁移数据。
-- **注意**：在 Safari 中**清除网站数据 / 清除历史记录**会**清空本应用的全部进度**。重要数据请先用 JSON 导出做好备份。
+- 学习进度（复习状态、设置）保存在 **Cloudflare D1 云数据库**，通过同源 API `/api/review-states`、`/api/settings` 读写；词库本身是 CDN 上的静态文件。
+- 换设备、清空浏览器数据**不会丢进度**（进度在云端，不在本地）。
+- 使用应用内的 **JSON 导出 / 导入**功能可备份/迁移进度；也可用 `wrangler d1 export vocab --remote` 直接导出整库（见 [`DEPLOY_CLOUDFLARE.md`](./DEPLOY_CLOUDFLARE.md)）。
+- 当前为**单一共享数据**模式：URL 谁打开都是同一份进度。若需多人隔离，见部署文档文末「同步密钥」方案。
 
 ---
 
 ## 更新 App
 
-本应用通过 Service Worker 离线缓存，更新流程如下：
-
-1. 修改代码后，把新版本推送到 GitHub 仓库（`git add . && git commit && git push`），GitHub Pages 会自动重新发布。
+1. 修改代码后重新部署：`wrangler pages deploy . --project-name english-learn`（或 `git push`，若已连接 Git 自动发布）。
 2. 在设备上**重新打开 App**：Service Worker 会在后台拉取新版本。
-3. 如果发布了对缓存资源的改动而页面没刷新成新版，**提升缓存版本号**即可强制更新：
-   同时修改 `service-worker.js` 里的 `CACHE_NAME` 和 `js/config.js` 里的 `CACHE_NAME`（两者必须保持一致，例如 `vocab-pwa-v1` → `vocab-pwa-v2`），再推送。激活时旧缓存会被自动清理。
+3. 若改了缓存资源而页面没刷新成新版，**提升缓存版本号**强制更新：同时修改 `service-worker.js` 与 `js/config.js` 里的 `CACHE_NAME`（两者必须一致，例如 `vocab-pwa-v8` → `vocab-pwa-v9`），再部署。激活时旧缓存会被自动清理。
+4. 若改了数据库结构（`schema.sql`），用 `wrangler d1 execute vocab --remote --file=./schema.sql` 应用到云端 D1。
 
 ---
 
@@ -128,15 +102,22 @@ GitHub Pages 的项目站点部署在子路径下（如 `https://<user>.github.i
 english-learn/
 ├── index.html            # 应用外壳 / 挂载点，加载 manifest 与入口脚本（相对路径）
 ├── manifest.json         # PWA 清单：名称、图标、start_url/scope 均为相对路径
-├── service-worker.js     # 离线缓存（cache-first），预缓存应用外壳与种子词库
-├── .nojekyll             # 关闭 GitHub Pages 的 Jekyll 处理，资源原样提供
+├── service-worker.js     # 静态资源缓存（cache-first）；/api/* 显式不缓存
+├── DEPLOY_CLOUDFLARE.md  # ★ Cloudflare 部署完整步骤（你需要做的操作）
+├── wrangler.toml         # Cloudflare Pages + D1 绑定配置（需填入 database_id）
+├── schema.sql            # Cloudflare D1 建表脚本（review_state + settings）
 ├── README.md             # 本文档
+├── functions/
+│   └── api/
+│       ├── review-states.js  # GET/PUT 复习状态（Pages Function -> D1）
+│       ├── settings.js       # GET/PUT 设置（Pages Function -> D1）
+│       └── reset.js          # POST 一次性清空进度
 ├── css/
 │   └── styles.css        # 应用样式
 ├── js/
-│   ├── app.js            # 入口：注册 SW、哈希路由、首次启动播种数据
-│   ├── config.js         # 运行时配置：BASE_PATH、每日上限、DB/缓存版本
-│   └── db.js             # IndexedDB 封装；importWords() 通用导入钩子
+│   ├── app.js            # 入口：注册 SW、哈希路由、首启写入默认设置
+│   ├── config.js         # 运行时配置：BASE_PATH、每日上限、缓存版本
+│   └── db.js             # 云数据层：静态词库入内存 + 进度走 D1 API
 ├── data/
 │   └── seed-words.json   # 内置约 7500 个单词（ECDICT 词频底库 + 441 个人工精校种子词 + programming 主题词，每词含 freq 词频排名）
 ├── tools/
@@ -168,4 +149,4 @@ english-learn/
    - 词根词缀采用 `tools/affixes.json` 知识库做**规则化标注**，仅在能可靠匹配前缀/词根时标注，否则留空（不臆造）。
 2. **按词频学习（已完成）**：`js/srs.js` 的每日新词队列按真实 `freq` 升序排列（最常用先学），词频缺失时回退到旧的标签分层；`js/vocab-estimate.js` 的词汇量测试改为 **8 个词频段**分层抽样与估算。
 3. **AI 生成例句 / 词根词缀（进行中）**：在 ECDICT 底库之上，用 AI 按词频从高到低**逐步补全**每个单词的例句与词根词缀（高频词优先）；新词当前 `examples` 暂为空，随补全逐步填充。
-4. **统一导入**：完整数据集仍通过现有的预留钩子 **`importWords(words, { source })`**（位于 `js/db.js`）导入 IndexedDB——与首次播种走同一条路径，扩容时无需改动数据写入逻辑。
+4. **静态加载**：完整词库作为静态文件 `data/seed-words.json` 由 Cloudflare CDN 提供，应用启动时一次性读入内存（不进数据库）。备份恢复仍走 `js/db.js` 的 `importWords()` 钩子；扩容只需重跑 `build_vocab.py` 重新生成该 JSON 并重新部署。

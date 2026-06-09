@@ -17,13 +17,14 @@ import {
   today,
   getAllWords,
   getAllReviewState,
-  putReviewState,
+  bulkPutReviewStates,
+  resetReviewStates,
   importWords,
   bulkPutWords,
   getSetting,
   putSetting,
 } from './db.js';
-import { INITIAL_EASE, DEFAULT_DIFFICULTY_MIX, normalizeDifficultyMix } from './srs.js';
+import { DEFAULT_DIFFICULTY_MIX, normalizeDifficultyMix } from './srs.js';
 import { DEFAULT_DAILY_NEW_LIMIT, DEFAULT_DAILY_REVIEW_LIMIT } from './config.js';
 
 // Backup envelope identity. Imports are validated against this app tag.
@@ -114,40 +115,16 @@ export function updateSetting(key, value) {
 // ---------------------------------------------------------------------------
 
 /**
- * Build the fresh "new card" review state. Mirrors db.js initialReviewState():
- * due today, never reviewed, default ease, not-yet-introduced, no lapses (so a
- * reset also empties the 错题本).
- * @param {string} id
- * @returns {{id:string, ease:number, interval:number, reps:number, due:string, lastReviewed:null, introducedOn:null, lapses:number}}
- */
-function freshState(id) {
-  return {
-    id,
-    ease: INITIAL_EASE,
-    interval: 0,
-    reps: 0,
-    due: today(),
-    lastReviewed: null,
-    introducedOn: null,
-    lapses: 0,
-  };
-}
-
-/**
- * Reset all learning progress: every reviewState row returns to a brand-new
- * state (so all words become new again) and the streak resets to 0. Word data
- * is preserved. Confirm-gating is the caller's (UI) responsibility.
- * @returns {Promise<{ reset: number }>} number of review states reset
+ * Reset all learning progress: delete every review-state row in Cloudflare D1 in
+ * a single request (so all words become new again — a word with no row is a
+ * brand-new card, which also empties the 错题本) and reset the streak to 0. Word
+ * data is preserved. Confirm-gating is the caller's (UI) responsibility.
+ * @returns {Promise<{ reset: number }>} number of stored review states cleared
  */
 export async function resetProgress() {
-  const states = await getAllReviewState();
-  for (const s of states) {
-    if (s && typeof s.id === 'string') {
-      await putReviewState(freshState(s.id));
-    }
-  }
+  const reset = await resetReviewStates();
   await putSetting('streak', 0);
-  return { reset: states.length };
+  return { reset };
 }
 
 // ---------------------------------------------------------------------------
@@ -329,13 +306,11 @@ export async function importData(fileOrText) {
     }
   }
 
-  // 2. Restore review states (overwrite per id), preserving backed-up progress.
+  // 2. Restore review states (bulk overwrite per id) in one request, preserving
+  //    backed-up progress.
   let stateCount = 0;
-  for (const s of reviewState) {
-    if (s && typeof s.id === 'string') {
-      await putReviewState(s);
-      stateCount += 1;
-    }
+  if (reviewState.length > 0) {
+    stateCount = await bulkPutReviewStates(reviewState);
   }
 
   // 3. Restore settings (overwrite per key).

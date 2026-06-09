@@ -34,7 +34,9 @@ export const DB_VERSION = 1;
 // Service worker cache version. Must match CACHE_NAME in service-worker.js.
 // Bump whenever shipped code/data changes so existing installs drop the old
 // cache and fetch fresh assets (incl. the latest data/seed-words.json).
-export const CACHE_NAME = 'vocab-pwa-v7';
+// NOTE: the /api/* endpoints (Cloudflare D1 progress) are explicitly NOT cached
+// by the service worker, so progress is always read fresh from the server.
+export const CACHE_NAME = 'vocab-pwa-v8';
 
 // Bundled-dataset version. Bump this whenever data/seed-words.json changes
 // (new words, new fields like `freq`, enriched examples). On launch the app

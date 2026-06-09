@@ -2,7 +2,7 @@
 // Manual, dependency-free cache-first service worker for the vocab PWA.
 // Keep CACHE_NAME in sync with CACHE_NAME in js/config.js.
 
-const CACHE_NAME = 'vocab-pwa-v7';
+const CACHE_NAME = 'vocab-pwa-v8';
 
 // App shell assets to precache on install.
 // All paths are relative to the service worker scope (the app root), so the
@@ -82,6 +82,13 @@ self.addEventListener('fetch', (event) => {
   // cache.put() for those, and we only own same-origin app assets anyway.
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) {
+    return;
+  }
+
+  // Never serve the Cloudflare D1-backed API from cache: learning progress must
+  // always be read fresh from the server (and writes already bypass this handler
+  // as non-GET requests). Let the browser fetch /api/* directly.
+  if (url.pathname.includes('/api/')) {
     return;
   }
 

@@ -1,0 +1,23 @@
+# wrangler.toml
+# Cloudflare Pages + Functions + D1 configuration for the vocab PWA.
+#
+# This is a PAGES project (static site in the repo root + Functions in /functions).
+# `pages_build_output_dir = "."` tells Wrangler the whole repo root is the static
+# output (there is no build step). The /functions directory is auto-detected and
+# served under /api/*.
+#
+# IMPORTANT: fill in `database_id` after you create the D1 database:
+#   wrangler d1 create vocab
+# then paste the printed database_id below (and into the Pages dashboard binding).
+
+name = "english-learn"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "."
+
+# D1 binding. The Functions code reads it as `env.DB`.
+# Keep binding = "DB" identical in the Pages dashboard (Settings -> Functions ->
+# D1 database bindings) so dashboard deploys and `wrangler pages dev` match.
+[[d1_databases]]
+binding = "DB"
+database_name = "vocab"
+database_id = "67ea77e2-79b4-4a52-8afd-b07a61240e5d"
